@@ -10,6 +10,21 @@ The XDC Network supports digital smart contracts, which, among other things, can
 
 A recently published whitepaper showcases the XDC Network’s proposed upgrade to its decentralized consensus engine (XDPoS 2.0). This protocol upgrade forecasts a network with forensics capabilities, accountability and attributability, creating the ability to identify malicious actors with cryptographic integrity directly from blockchain records.
 
+| Document                   | Description                                                                                                                                                     |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| XDC Network Overview       | Describes XDC Network key concepts and design principles.                                                                                                       |
+| Getting Started            | Documentation for getting started with XDC Network.                                                                                                             |
+| Smart Contracts            | Tools and resources for smart contract development.                                                                                                             |
+| Installation and Operation | Illustrates how to set up and operate nodes on the XDC Network.                                                                                                 |
+| dApp Developers            | Development resources and references for dApp developers.  This section contains XDC Network API references and provides end-to-end dApp development tutorials. |
+
+**Disclaimer**: Some notes are derived from Ethereum documents as the XDC Network source code was forked from Ethereum.  As the XDC Network evolves, XDC Community Docs will continue to be updated.  Here are some websites for reference:&#x20;
+
+* [https://ethereum.org/developers/](https://ethereum.org/developers/)
+* [https://github.com/ethereum/go-ethereum/wiki](https://github.com/ethereum/go-ethereum/wiki)
+* [https://trufflesuite.com/docs](https://trufflesuite.com/docs)
+* [https://web3js.readthedocs.io/en/1.0/](https://web3js.readthedocs.io/en/1.0/)
+
 {% hint style="info" %}
 **Good to know:** providing a brief overview of your product and its core use cases is a great place to start with product docs. Your product might seem obvious to you – you made it! However, to others, even folks who are trying your product after reading your site or getting a sales demo, it can still be unclear. This is your chance to clarify your product and set the right expectations!
 {% endhint %}
