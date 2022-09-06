@@ -82,6 +82,9 @@
 * Tutorials
 * Solutions
 * How-to Articles
+  * How To deploy your first smart contract on the XDC Network using Remix
+  * How To deploy your first smart contract on the XDC Network using Hardhat
+  * How To deploy your first smart contract on the XDC Network using Truffle/Gnache
 * Community Support
 
 ## Fundamentals
