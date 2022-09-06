@@ -1,6 +1,23 @@
 # Table of contents
 
 * [Welcome](README.md)
+* Get Started
+  * Blockchain Basics
+    * What is a Blockchain
+    * Why XDC Network
+  * XDC Design
+  * Dev Environment
+  * Smart Contracts
+  * Tokenization
+  * Integration
+  * XIPs
+* Get Details
+* Tools
+* Run a Node
+* Changelog
+* Tutorials
+* Gitbook
+* About
 
 ## Guides
 
