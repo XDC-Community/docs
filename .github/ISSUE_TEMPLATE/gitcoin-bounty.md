@@ -10,21 +10,23 @@ assignees: MrBlockchain22
 
 #Prize Title
 
-Foundry Grant.  All monies paid will be in XDC.
+This is the GitHub issue dedicated to the Gitcoin bounty set up by the XDC Community for the xxx documentation. The bounty will have specific requirements the contributor must follow to be considered for the bounty. Please see the specific requirements.
 
-## What will you be creating?
+##Description
 
-You will be creating documentation for the XDC Community.  Some documentation has already been created, and you will read through it to ensure that it works as intended, reads clearly, or to decide if it needs clarification.  Those items without documentation will be created from scratch.
-
-##Total Bounty Prize
+###Amount of Bounty
 
 Total sum of $xx,xxx.xx worth of XDC for this event.
 - Each submission will be paid according to the amount of work submitted
 
-##Event Description
+###What will you be creating?
 
-This event will be an ongoing collaboration focused on creating documentation for the XDC Network by the XDC Community.  All documentation will be open source and uploaded here: (insert link)
+You will be creating xxx for the XDC Network. Some documentation has already been created, and you will read through it to ensure it works as intended, reads clearly, or if it needs better clarification, then make those changes. Those items without documentation will be created from scratch. Documentation will have images that describe or represents what's being done or described in your tutorial.
+
+##Details
+
+Provide details for the bounty
 
 ##Resources
 
-These are some resources you have available to you where you will the necessary information to complete your submission.  (Insert links here)
+Provide resources specific to this bounty
