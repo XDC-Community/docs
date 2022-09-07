@@ -2,7 +2,7 @@
 name: Gitcoin Bounty
 about: This template can be used to create an issue against which a Gitcoin bounty
   can be linked
-title: Gitcoin Bountuy
+title: Gitcoin Bounty
 labels: bounty
 assignees: MrBlockchain22
 
