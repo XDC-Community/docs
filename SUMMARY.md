@@ -1,91 +1,91 @@
 # Table of contents
 
 * [Welcome](README.md)
-* Get Started
-  * Blockchain Basics
-    * What is a Blockchain
-    * Why XDC Network
-  * XDC Design
-    * Consensus Mechanism
-    * Accounts
-    * Transactions
-    * Computation
-    * Storage
-    * Transaction Fees
-    * XDC
-    * Tokenomics
-    * Governance
-  * Dev Environment
-    * Remix
-    * Hardhat
-    * XDC Truffle & Ganache Integrations
-    * Setup Dev Environment
-  * Smart Contracts
-  * Tokenization
-  * Integration
-  * XIPs
-* Get Details
-  * Account Details
-  * Transaction Details
-  * Smart Contract Details
-    * XRC Standards
-    * XIP Proposals
-  * Wallet Integration
-    * XDCPay
-    * Wallet Connect
-    * Metamask
-  * Networks
-    * Overview
-    * Mainnet
-    * Apothem
-    * Leo
-    * Orion
-  * EVM Compatibility
-    * XDC Fork Details
-    * EIP to XIP
-  * Bridges
-    * XDC -> ETH
-    * XDC -> BTC
-    * XDC -> XRP
-* Tools
-  * Dev Network Tools
-    * Blockchain Forensics
-    * XDPoS 2.0
-  * SDKs & Programming
-    * Soliditiy
-    * Python
-    * Switft
-    * Java
-    * Javascript
-  * APIs & Packages
-    * npm i xdc-connect
-    * npm i XDC3
-    * XDC RPCs
-  * Network Tools
-    * Explorers
-    * Testnet Faucets
-    * 1 Click Masternode Installer
-* Run a Node
-  * Masternode
-    * Full Node
-    * Standby Node
-    * Archival Node (RPC)
-  * Private Permissioned Node
-    * Geth Puppeth
-* Changelog
-* Tutorials
-* Gitbook
-* About
+* [Get Started](get-started/README.md)
+  * [Blockchain Basics](get-started/blockchain-basics/README.md)
+    * [What is a Blockchain](get-started/blockchain-basics/what-is-a-blockchain.md)
+    * [Why XDC Network](get-started/blockchain-basics/why-xdc-network.md)
+  * [XDC Design](get-started/xdc-design/README.md)
+    * [Consensus Mechanism](get-started/xdc-design/consensus-mechanism.md)
+    * [Accounts](get-started/xdc-design/accounts.md)
+    * [Transactions](get-started/xdc-design/transactions.md)
+    * [Computation](get-started/xdc-design/computation.md)
+    * [Storage](get-started/xdc-design/storage.md)
+    * [Transaction Fees](get-started/xdc-design/transaction-fees.md)
+    * [XDC](get-started/xdc-design/xdc.md)
+    * [Tokenomics](get-started/xdc-design/tokenomics.md)
+    * [Governance](get-started/xdc-design/governance.md)
+  * [Dev Environment](get-started/dev-environment/README.md)
+    * [Remix](get-started/dev-environment/remix.md)
+    * [Hardhat](get-started/dev-environment/hardhat.md)
+    * [XDC Truffle & Ganache Integrations](get-started/dev-environment/xdc-truffle-and-ganache-integrations.md)
+    * [Setup Dev Environment](get-started/dev-environment/setup-dev-environment.md)
+  * [Smart Contracts](get-started/smart-contracts.md)
+  * [Tokenization](get-started/tokenization.md)
+  * [Integration](get-started/integration.md)
+  * [XIPs](get-started/xips.md)
+* [Get Details](get-details/README.md)
+  * [Account Details](get-details/account-details.md)
+  * [Transaction Details](get-details/transaction-details.md)
+  * [Smart Contract Details](get-details/smart-contract-details/README.md)
+    * [XRC Standards](get-details/smart-contract-details/xrc-standards.md)
+    * [XIP Proposals](get-details/smart-contract-details/xip-proposals.md)
+  * [Wallet Integration](get-details/wallet-integration/README.md)
+    * [XDCPay](get-details/wallet-integration/xdcpay.md)
+    * [Wallet Connect](get-details/wallet-integration/wallet-connect.md)
+    * [Metamask](get-details/wallet-integration/metamask.md)
+  * [Networks](get-details/networks/README.md)
+    * [Overview](get-details/networks/overview.md)
+    * [Mainnet](get-details/networks/mainnet.md)
+    * [Apothem](get-details/networks/apothem.md)
+    * [Leo](get-details/networks/leo.md)
+    * [Orion](get-details/networks/orion.md)
+  * [EVM Compatibility](get-details/evm-compatibility/README.md)
+    * [XDC Fork Details](get-details/evm-compatibility/xdc-fork-details.md)
+    * [EIP to XIP](get-details/evm-compatibility/eip-to-xip.md)
+  * [Bridges](get-details/bridges/README.md)
+    * [XDC -> ETH](get-details/bridges/xdc-greater-than-eth.md)
+    * [XDC -> BTC](get-details/bridges/xdc-greater-than-btc.md)
+    * [XDC -> XRP](get-details/bridges/xdc-greater-than-xrp.md)
+* [Tools](tools/README.md)
+  * [Dev Network Tools](tools/dev-network-tools/README.md)
+    * [Blockchain Forensics](tools/dev-network-tools/blockchain-forensics.md)
+    * [XDPoS 2.0](tools/dev-network-tools/xdpos-2.0.md)
+  * [SDKs & Programming](tools/sdks-and-programming/README.md)
+    * [Soliditiy](tools/sdks-and-programming/soliditiy.md)
+    * [Python](tools/sdks-and-programming/python.md)
+    * [Switft](tools/sdks-and-programming/switft.md)
+    * [Java](tools/sdks-and-programming/java.md)
+    * [Javascript](tools/sdks-and-programming/javascript.md)
+  * [APIs & Packages](tools/apis-and-packages/README.md)
+    * [npm i xdc-connect](tools/apis-and-packages/npm-i-xdc-connect.md)
+    * [npm i XDC3](tools/apis-and-packages/npm-i-xdc3.md)
+    * [XDC RPCs](tools/apis-and-packages/xdc-rpcs.md)
+  * [Network Tools](tools/network-tools/README.md)
+    * [Explorers](tools/network-tools/explorers.md)
+    * [Testnet Faucets](tools/network-tools/testnet-faucets.md)
+    * [1 Click Masternode Installer](tools/network-tools/1-click-masternode-installer.md)
+* [Run a Node](run-a-node/README.md)
+  * [Masternode](run-a-node/masternode/README.md)
+    * [Full Node](run-a-node/masternode/full-node.md)
+    * [Standby Node](run-a-node/masternode/standby-node.md)
+    * [Archival Node (RPC)](run-a-node/masternode/archival-node-rpc.md)
+  * [Private Permissioned Node](run-a-node/private-permissioned-node/README.md)
+    * [Geth Puppeth](run-a-node/private-permissioned-node/geth-puppeth.md)
+* [Changelog](changelog.md)
+* [Tutorials](tutorials.md)
+* [Gitbook](gitbook.md)
+* [About](about.md)
 
 ## Learn
 
-* Tutorials
-* Solutions
-* How-to Articles
-  * How To deploy your first smart contract on the XDC Network using Remix
-  * How To deploy your first smart contract on the XDC Network using Hardhat
-  * How To deploy your first smart contract on the XDC Network using Truffle/Gnache
-* Community Support
+* [Tutorials](learn/tutorials.md)
+* [Solutions](learn/solutions.md)
+* [How-to Articles](learn/how-to-articles/README.md)
+  * [How To deploy your first smart contract on the XDC Network using Remix](learn/how-to-articles/how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-remix.md)
+  * [How To deploy your first smart contract on the XDC Network using Hardhat](learn/how-to-articles/how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-hardhat.md)
+  * [How To deploy your first smart contract on the XDC Network using Truffle/Gnache](learn/how-to-articles/how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle-gnache.md)
+* [Community Support](learn/community-support.md)
 
 ## Fundamentals
 
