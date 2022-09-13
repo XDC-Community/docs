@@ -64,7 +64,7 @@ npm install --save-dev @nomicfoundation/hardhat-toolbox
 Now, you will have a folder structure as below
 <img width="1159" alt="Screenshot 2022-09-13 at 11 59 40 AM" src="https://user-images.githubusercontent.com/35517007/189841745-2c5cd395-ce05-4124-9a44-e4aea01e124f.png">
 
-- In the contract folder, create a new file and write your contract inside it. (creating Owner.sol for reference).
+- In the contract folder, create a new file and write your contract inside it. (creating `Owner.sol` for reference).
 
 <img width="1680" alt="Screenshot 2022-09-13 at 12 05 54 PM" src="https://user-images.githubusercontent.com/35517007/189841976-c3ee4435-2b30-4cad-aa50-f478fef407ba.png">
 
@@ -78,7 +78,7 @@ If this returns errors, check your contract and rectify them.
 
 ## Deployment
 
-For writing the script to deploy the contract, create deploy.js in scripts folder, if it is already not there. Copy the following code in the deploy.js.
+For writing the script to deploy the contract, create `deploy.js` in `scripts` folder, if it is already not there. Copy the following code in the `deploy.js`.
 
 ```python
 const hre = require("hardhat");
