@@ -45,8 +45,8 @@ In the same directory, run
 ```bash
 npx hardhat
 ```
+<img width="569" alt="Screenshot 2022-09-13 at 11 56 26 AM" src="https://user-images.githubusercontent.com/35517007/189841544-480b1a9c-b5d8-483c-a77e-b04501f6f121.png">
 
-Screenshot 2022-09-13 at 11.04.44 AM
 
 - Select `Create a Javascript project` or `Create a Typescript project` according to your requirement.
 - Specify Hardhat Project root or press enter for already specified path.
@@ -62,12 +62,11 @@ npm install --save-dev @nomicfoundation/hardhat-toolbox
 ## Write Smart Contract
 
 Now, you will have a folder structure as below
-
-Screenshot 2022-09-13 at 11.59.40 AM
+<img width="1159" alt="Screenshot 2022-09-13 at 11 59 40 AM" src="https://user-images.githubusercontent.com/35517007/189841745-2c5cd395-ce05-4124-9a44-e4aea01e124f.png">
 
 - In the contract folder, create a new file and write your contract inside it. (creating Owner.sol for reference).
 
-Screenshot 2022-09-13 at 12.05.54 PM
+<img width="1680" alt="Screenshot 2022-09-13 at 12 05 54 PM" src="https://user-images.githubusercontent.com/35517007/189841976-c3ee4435-2b30-4cad-aa50-f478fef407ba.png">
 
 - To compile the contract, write the following in the terminal
 
@@ -105,22 +104,25 @@ main()
 
 - To add XDC testnet network to metamask.(If you are using XDC Pay you don't have to follow this step)
 
-Screenshot 2022-09-13 at 12.31.31 PM
+
+<img width="1047" alt="Screenshot 2022-09-13 at 12 31 31 PM" src="https://user-images.githubusercontent.com/35517007/189842148-a3d20b76-e14a-44fa-9c94-445825acd42b.png">
+
 
 - To add XDC mainnet network to metamask.(If you are using XDC Pay you don't have to follow this step)
 
-Screenshot 2022-09-13 at 12.35.05 PM
+<img width="1047" alt="Screenshot 2022-09-13 at 12 35 05 PM" src="https://user-images.githubusercontent.com/35517007/189842216-01c87935-4b4e-49bc-89ea-11026250dbf8.png">
+
 
 - Dont know how to get your private key? [Read-here](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key)
 
 - Make a `.env` at the root of the project to store the private key and network url.
 
 ```python
-XINFIN_NETWORK_URL="enter-network-url-here"
+XINFIN_NETWORK_URL="enter-network-rpc-url-here"
 WALLET_PRIVATE_KEY="enter-your-private-key-here"
 ```
 
-- To be able to import env file variable, please install `dotenv` from your terminal.
+- To be able to import env file variables, please install `dotenv` from your terminal.
 
 ```bash
 npm install dotenv
@@ -154,7 +156,7 @@ After writing code for the setup and contract, go back to the terminal. Make sur
 npx hardhat run scripts/deploy.js --network xinfin
 ```
 
-**Voila! You did it.**
+**Voila! 🎉 You did it.**
 
 Copy the `contract address` or `transaction hash`(incase of testnet) and check it's deployment status on the block scan.
 
