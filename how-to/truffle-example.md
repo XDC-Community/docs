@@ -10,7 +10,19 @@ keywords:
   - truffle
 ---
 
-## Overview
+# 🧭 Table of contents
+
+- [🧭 Table of contents](#-table-of-contents)
+- [📰 Overview](#-overview)
+- [🚀 Setting up the development environment](#-setting-up-the-development-environment)
+  - [⚒️ Starting a new Truffle Project](#-starting-a-new-truffle-project)
+  - [⚒️ Configuring Apothem Network on Truffle](#-configuring-apothem-network-on-truffle)
+  - [⚒️ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
+- [🍕 Writing our first Smart Contract](#-writing-our-first-smart-contract)
+  - [🍕 Compiling](#-compiling)
+  - [🍕 Deploying](#-deploying)
+
+# 📰 Overview
 [Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine.
 
 ### What you will learn
@@ -21,7 +33,7 @@ This guide aims at teaching how to create a smart contract using Truffle and dep
 - Deploy contract on Matic Network
 - Check the deployment status on Polygonscan.
 
-## Setting up the development environment
+# 🚀 Setting up the development environment
 
 There are a few technical requirements before we start. Please install the following:
 
@@ -30,172 +42,203 @@ There are a few technical requirements before we start. Please install the follo
 
 Once we have those installed, we only need one command to install Truffle:
 
-    npm install -g truffle
-
-To verify that Truffle is installed properly, type **`truffle version`** on a terminal. If you see an error, make sure that your npm modules are added to your path.
-
-:::note
-
-What follows is an adapted version of the [<ins>Truffle quickstart guide</ins>](https://www.trufflesuite.com/docs/truffle/quickstart) article. 
-:::
-
-## Creating a project
-### MetaCoin project
-
-We will use one of Truffle's boilerplates which you can find on their [Truffle Boxes](https://trufflesuite.com/boxes/) page. [MetaCoin box](https://trufflesuite.com/boxes/metacoin/) creates a token that can be transferred between accounts.
-
-1. Start by creating a new directory for this Truffle project:
-
 ```bash
-mkdir MetaCoin
-cd MetaCoin
+npm install -g truffle
 ```
 
-2. Download the MetaCoin box:
+To verify that Truffle is installed properly, type **`truffle version`** on a terminal. You should see something like:
 
 ```bash
-truffle unbox metacoin
+Truffle v5.5.27 (core: 5.5.27)
+Ganache v7.4.0
+Solidity v0.5.16 (solc-js)
+Node v16.16.0
+Web3.js v1.7.4
 ```
 
-With that last step, you have created a Truffle project cointaining folders with contracts, deployment, testing and configuration files.
+If you see an error instead, make sure that your npm modules are added to your path.
 
-This is the smart contract data from the `metacoin.sol` file:
+## ⚒ Starting a new Truffle Project
+
+Lets start by setting up our folder, we are creating a project called `Pizza`, create a new `Pizza` folder by running on terminal
+
+```bash
+mkdir Pizza && cd Pizza
+```
+
+And running the `truffle init`. If truffle is correctly installed on your local environment, you should see the following message:
+
+```bash
+Starting init...
+================
+
+> Copying project files to /home/your/path/to/Pizza
+
+Init successful, sweet!
+
+Try our scaffold commands to get started:
+  $ truffle create contract YourContractName # scaffold a contract
+  $ truffle create test YourTestName         # scaffold a test
+
+http://trufflesuite.com/docs
+```
+
+And your folder files will look like this:
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78161484/189928139-f8448866-b691-486c-a300-2b7dd21f10c1.png" alt="Step 01"/>
+</p>
+
+## ⚒ Configuring Apothem Network on Truffle
+
+In order to get started deploying new contracts on Apothem, we need to install two new dependencies that will be used in the `truffle-config.js` file. These dependencies are `@truffle/hdwallet-provider` and `dotenv`. First choose your preferred package manager, in this example we are using `yarn` but you can also use `npm`.
+
+ If you never used `yarn` before, you might need to install it first. ‼️You can skip this step if you already have yarn installed‼️.
+
+```sh
+npm install --global yarn
+```
+
+Initialize your package manager on your folder and install the required dependencies:
+
+```sh
+yarn init -y
+yarn add @truffle/hdwallet-provider dotenv
+```
+
+To get started deploying smart contracts to Apothem Network you will also need a **24-Word Mnemonic Phrase**. To configure your wallet, create a new `.env` file and write your mnemonic, you can run:
+
+```sh
+touch .env
+echo MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe curve obey >> .env
+```
+
+Remember to change the **24-Word Mnemonic** above for your own mnemonic. The contents of your `.env` file should read as follow:
+
+```jsx
+MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe curve obey
+```
+
+
+🚨 **Do not use the mnemonic in the example above in production or you can risk losing your assets and/or the ownership of your smart contracts!** 🚨
+
+And finally, we can configure the `truffle-config.js` file for both Apothem and XinFin Networks by writting:
+
+```jsx
+require('dotenv').config();
+const { MNEMONIC } = process.env;
+const HDWalletProvider = require('@truffle/hdwallet-provider');
+
+module.exports = {
+
+  networks: {
+
+    xinfin: {
+      provider: () => new HDWalletProvider(
+        MNEMONIC,
+        'https://erpc.xinfin.network'),
+      network_id: 50,
+      gasLimit: 6721975,
+      confirmation: 2,
+    },
+
+    apothem: {
+      provider: () => new HDWalletProvider(
+        MNEMONIC,
+        'https://erpc.apothem.network'),
+      network_id: 51,
+      gasLimit: 6721975,
+      confirmation: 2,
+    }
+  },
+
+  mocha: {
+  },
+
+  compilers: {
+    solc: {
+      version: "0.8.16",
+    }
+  },
+};
+```
+
+## ⚒ Adding Testnet XDC to Development Wallet
+
+It is possible to list all XDC addresses bound to your mnemonic on truffle by accessing the truffle console:
+
+```sh
+truffle console --network apothem
+```
+
+Once the truffle console CLI opens, you can run:
+
+```sh
+truffle(apothem)> accounts
+```
+
+And the console should log all accounts bound to your mnemonic phrase as follow:
+
+```jsx
+[
+  '0xA4e66f4Cc17752f331eaC6A20C00756156719519',
+  '0x0431d52FE37F3839895018272dfa3bA189fcE07E',
+  '0x11A6D9727c16064950473a4c8A92dC294190f7fF',
+  '0x4464DDF9969E9a8e5CfF02E3706AEB4ccA92A314',
+  '0xFa73bE6AA126DEC47ce14a22B7BAaF8BAFaB59Fb',
+  '0xEdFFc4e7476f05f43cA3e6f5784349dE6E6373D5',
+  '0x07795c732Bb013165FADCE64B884bf9971Bf9636',
+  '0x5dF551A53bEaAB8bb2307eF459aA5AAFbb5F73cc',
+  '0x910435b01e6Aa66dE22769062998F6AE98566f23',
+  '0x573b009b2dE9A95531f82DA10BB0D793050329d2'
+]
+```
+
+These accounts are on the Ethereum standard format starting with `0x`, but we can simply switch `0x` for `xdc` and we have our main deployment account `xdcA4e66f4Cc17752f331eaC6A20C00756156719519`.
+
+With this account in hand, we can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png" alt="Step 02"/>
+</p>
+
+# 🍕 Writing our first Smart Contract
+
+Lets create a simple `Pizza.sol` contract on Solidity, the Pizza contract should have a `constructor` where the deployer can define the pizza size, a `eatSlice` method to consume slices available and a `bakeNewPizza` to refill all slices only if the previous pizza have been entirely eaten! 😋
+
+Lets start by creating the `Pizza.sol` file:
+
+```sh
+touch ./contracts/Pizza.sol
+```
+
+And write the following code to `Pizza.sol`:
 
 ```solidity
 // SPDX-License-Identifier: MIT
-// Tells the Solidity compiler to compile only from v0.8.13 to v0.9.0
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.16;
 
-import "./ConvertLib.sol";
+contract Pizza {
+    uint256 public PIZZA_SIZE;
+    uint256 public slices;
 
-// This is just a simple example of a coin-like contract.
-// It is not ERC20 compatible and cannot be expected to talk to other
-// coin/token contracts.
-
-contract MetaCoin {
-	mapping (address => uint) balances;
-
-	event Transfer(address indexed _from, address indexed _to, uint256 _value);
-
-	constructor() {
-		balances[tx.origin] = 10000;
-	}
-
-	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
-		if (balances[msg.sender] < amount) return false;
-		balances[msg.sender] -= amount;
-		balances[receiver] += amount;
-		emit Transfer(msg.sender, receiver, amount);
-		return true;
-	}
-
-	function getBalanceInEth(address addr) public view returns(uint){
-		return ConvertLib.convert(getBalance(addr),2);
-	}
-
-	function getBalance(address addr) public view returns(uint) {
-		return balances[addr];
-	}
-}
-```
-
-:::note
-
-Notice that ConvertLib is being imported just after the `pragma` statement. In this project, there are actually two smart contracts that will be deployed at the end: one is Metacoin, contatining all the send and balance logic; the other is ConvertLib, a library used to convert values.
-
-:::
-
-### Testing the contract
-
-You can run a Solidity and Javascript tests.
-
-1. In a terminal, run the Solidity test:
-
-```bash
-truffle test ./test/TestMetaCoin.sol
-```
-
-You should see the following output:
-
-![img](/img/truffle/test1.png)
-
-2. Run the JavaScript test:
-
-```bash
-truffle test ./test/metacoin.js
-```
-
-You should see the following output:
-
-![img](/img/truffle/test2.png)
-
-### Compiling the contract
-Compile the smart contract:
-
-```bash
-truffle compile
-```
-
-You will see the following output:
-
-![img](/img/truffle/compile.png)
-
-### Configuring the smart contract
-
-Before actually depolying the contract, you need to set up the `truffle-config.js` file, inserting network and compilers data. 
-
-- Go to truffle-config.js
-- Update the truffle-config with matic-network-crendentials.
-
-```js
-const HDWalletProvider = require('@truffle/hdwallet-provider');
-const fs = require('fs');
-const mnemonic = fs.readFileSync(".secret").toString().trim();
-
-module.exports = {
-  networks: {
-    development: {
-      host: "127.0.0.1",     // Localhost (default: none)
-      port: 8545,            // Standard Ethereum port (default: none)
-      network_id: "*",       // Any network (default: none)
-    },
-    matic: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rpc-mumbai.maticvigil.com`),
-      network_id: 80001,
-      confirmations: 2,
-      timeoutBlocks: 200,
-      skipDryRun: true
-    },
-  },
-
-  // Set default mocha options here, use special reporters etc.
-  mocha: {
-    // timeout: 100000
-  },
-
-  // Configure your compilers
-  compilers: {
-    solc: {
-        version: "0.8.13",
+    constructor(uint256 _pizzaSize) {
+        PIZZA_SIZE = _pizzaSize;
+        slices = 0;
+        slices += PIZZA_SIZE;
     }
-  }
+
+    function eatPizza() external {
+        require(slices > 1, "No Slices Left. Lets Bake a new Pizza!");
+        slices -= 1;
+    }
+
+    function bakeNewPizza() external {
+        require(slices == 0, "There still slices from a previous Pizza!");
+        slices += PIZZA_SIZE;
+    }
 }
 ```
 
-Notice, it requires mnemonic to be passed in for maticProvider, this is the seed phrase for the account you'd like to deploy from. Create a new `.secret` file in the root directory and enter your 12-word mnemonic seed phrase to get started. To get the seed words from Metamask wallet, you can go to Metamask settings, then from the menu, choose Security and Privacy where you will see a button that says "reveal seed words". 
-
-### Deploying on Matic Network
-
-Add Matic to your wallet using https://faucet.polygon.technology/.
-
-Run this command in the root of the the project directory:
-
-![img](/img/truffle/deployed-contract.png)
-
-:::note
-
-Remember your address, transaction_hash and other details provided would differ. Above is just to provide an idea of the structure.
-
-:::
-
-**Congratulations! You have successfully deployed a Smart Contract using Truffle. Now you can interact with it check its deployment status here: https://mumbai.polygonscan.com/.**
+## 🍕 Compiling
+## 🍕 Deploying
