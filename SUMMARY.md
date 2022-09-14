@@ -56,7 +56,7 @@
     * [Python](tools/sdks-and-programming/python.md)
     * [Swift](tools/sdks-and-programming/switft.md)
     * [Java](tools/sdks-and-programming/java.md)
-    * [Javascript](tools/sdks-and-programming/javascript.md)
+    * [Android SDK](tools/sdks-and-programming/javascript.md)
   * [APIs & Packages](tools/apis-and-packages/README.md)
     * [npm i xdc-connect](tools/apis-and-packages/npm-i-xdc-connect.md)
     * [npm i XDC3](tools/apis-and-packages/npm-i-xdc3.md)
