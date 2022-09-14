@@ -58,6 +58,7 @@
     * [Java SDK](tools/sdks-and-programming/java.md)
     * [Android SDK](tools/sdks-and-programming/javascript.md)
     * [GO SDK](tools/sdks-and-programming/go-sdk.md)
+    * [.NET SDK](tools/sdks-and-programming/.net-sdk.md)
   * [APIs & Packages](tools/apis-and-packages/README.md)
     * [npm i xdc-connect](tools/apis-and-packages/npm-i-xdc-connect.md)
     * [npm i XDC3](tools/apis-and-packages/npm-i-xdc3.md)
