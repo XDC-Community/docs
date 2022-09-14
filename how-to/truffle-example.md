@@ -390,7 +390,7 @@ It should log a transaction confirmation (Or rejection) object like the followin
 }
 ```
 
-This Transaction is reflected in the corresponding block explorer imediately, [as can be seen here!](https://explorer.xinfin.network/txs/0x0153f15932d79ad7ac0b26df299defa1b55aded33284928b3e441d9fea5c3de7)
+This transaction is immediately reflected in the corresponding block explorer, [as seen here!](https://explorer.xinfin.network/txs/0x0153f15932d79ad7ac0b26df299defa1b55aded33284928b3e441d9fea5c3de7)
 
 # 🔍 Veryfing Contracts on the Block Explorer
 
@@ -438,9 +438,17 @@ If everything is correctly filled out, your contract page on the block explorer 
   <img width=70% src="https://user-images.githubusercontent.com/78161484/190029029-2547af3f-d32c-48d6-a785-e47b1f7a91c5.png" alt="Verify 03"/>
 </p>
 
+In this page you can Read from, Write to, or simply read the information tied to your Smart Contract on the blockchain:
+
+<p align="center">
+  <img width=70% src="https://user-images.githubusercontent.com/78161484/190030842-4ab30b85-f87b-43d1-a8b2-8d089abb1a34.png" alt="Verify 03"/>
+</p>
 
 
+---
 
+For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).<br>
+For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).
 
 
 
