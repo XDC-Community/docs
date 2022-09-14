@@ -108,7 +108,7 @@ yarn init -y
 yarn add @truffle/hdwallet-provider dotenv
 ```
 
-To get started deploying smart contracts to Apothem Network you will also need a **24-Word Mnemonic Phrase**. To configure your wallet, create a new `.env` file and write your mnemonic, you can run:
+You will also need a **24-Word Mnemonic Phrase**. To configure your wallet, create a new `.env` file and write your mnemonic by running:
 
 ```sh
 touch .env
@@ -196,7 +196,7 @@ And the console should log all accounts bound to your mnemonic phrase as follow:
 ]
 ```
 
-These accounts are on the Ethereum standard format starting with `0x`, but we can simply switch `0x` for `xdc` and we have our main deployment account `xdcA4e66f4Cc17752f331eaC6A20C00756156719519`.
+These accounts are on the Ethereum standard format starting with `0x`, but we can simply switch `0x` for `xdc`. By default, the deployment account is the first account from the list above: `xdcA4e66f4Cc17752f331eaC6A20C00756156719519`.
 
 With this account in hand, we can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
 
