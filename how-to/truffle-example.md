@@ -93,7 +93,7 @@ And your folder files will look like this:
 
 ## ⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle
 
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to install two new dependencies that will be used in the `truffle-config.js` file. These dependencies are `@truffle/hdwallet-provider` and `dotenv`. First choose your preferred package manager, in this example we are using `yarn` but you can also use `npm`.
+In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to install two new dependencies that will be used in the `truffle-config.js` file. These dependencies are `@truffle/hdwallet-provider` and `dotenv`. First choose your preferred package manager. In this example we are using `yarn` but you can also use `npm`.
 
  If you never used `yarn` before, you might need to install it first. ‼️You can skip this step if you already have yarn installed‼️.
 
