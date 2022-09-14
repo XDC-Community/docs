@@ -10,15 +10,15 @@ The XDC Network supports digital smart contracts, which, among other things, can
 
 A recently published whitepaper showcases the XDC Network’s proposed upgrade to its decentralized consensus engine (XDPoS 2.0). This protocol upgrade forecasts a network with forensics capabilities, accountability and attributability, creating the ability to identify malicious actors with cryptographic integrity directly from blockchain records.
 
-| Document                   | Description                                                                                                                                                     |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| XDC Network Overview       | Describes XDC Network key concepts and design principles.                                                                                                       |
-| Getting Started            | Documentation for getting started with XDC Network.                                                                                                             |
-| Smart Contracts            | Tools and resources for smart contract development.                                                                                                             |
-| Installation and Operation | Illustrates how to set up and operate nodes on the XDC Network.                                                                                                 |
-| dApp Developers            | Development resources and references for dApp developers.  This section contains XDC Network API references and provides end-to-end dApp development tutorials. |
+| Document                   | Description                                                                                                                                                    |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| XDC Network Overview       | Describes XDC Network key concepts and design principles.                                                                                                      |
+| Getting Started            | Documentation for getting started with XDC Network.                                                                                                            |
+| Smart Contracts            | Tools and resources for smart contract development.                                                                                                            |
+| Installation and Operation | Illustrates how to set up and operate nodes on the XDC Network.                                                                                                |
+| dApp Developers            | Development resources and references for dApp developers. This section contains XDC Network API references and provides end-to-end dApp development tutorials. |
 
-**Disclaimer**: Some notes are derived from Ethereum documents as the XDC Network source code was forked from Ethereum.  As the XDC Network evolves, XDC Community Docs will continue to be updated.  Here are some websites for reference:&#x20;
+**Disclaimer**: Some notes are derived from Ethereum documents as the XDC Network source code was forked from Ethereum. As the XDC Network evolves, XDC Community Docs will continue to be updated. Here are some websites for reference:
 
 * [https://ethereum.org/developers/](https://ethereum.org/developers/)
 * [https://github.com/ethereum/go-ethereum/wiki](https://github.com/ethereum/go-ethereum/wiki)
@@ -75,20 +75,20 @@ Follow our handy guides to get started on the basics as quickly as possible:
 
 Learn the fundamentals of MyProduct to get a deeper understanding of our main features:
 
-{% content-ref url="fundamentals/projects.md" %}
-[projects.md](fundamentals/projects.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/members.md" %}
-[members.md](fundamentals/members.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/task-lists.md" %}
-[task-lists.md](fundamentals/task-lists.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
-{% content-ref url="fundamentals/tasks.md" %}
-[tasks.md](fundamentals/tasks.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% hint style="info" %}
