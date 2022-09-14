@@ -36,7 +36,7 @@
     * [Metamask](get-details/wallet-integration/metamask.md)
   * [Networks](get-details/networks/README.md)
     * [Overview](get-details/networks/overview.md)
-    * [Mainnet](get-details/networks/mainnet.md)
+    * [Mainnet (XDPos)](get-details/networks/mainnet.md)
     * [Apothem](get-details/networks/apothem.md)
     * [Leo](get-details/networks/leo.md)
     * [Orion](get-details/networks/orion.md)
