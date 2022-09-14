@@ -448,7 +448,8 @@ In this page you can Read from, Write to, or simply read the information tied to
 ---
 
 For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).<br>
-For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).
+For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
+Resources used during the deployment of the Pizza Smart Contract can be found at [The Pizza Contract Folder](./how-to/Pizza).
 
 
 
