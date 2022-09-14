@@ -31,6 +31,7 @@
     * [XRC Standards](get-details/smart-contract-details/xrc-standards.md)
       * [XRC20](get-details/smart-contract-details/xrc-standards/xrc20.md)
       * [XRC721](get-details/smart-contract-details/xrc-standards/xrc721.md)
+      * [XRC1155](get-details/smart-contract-details/xrc-standards/xrc1155.md)
     * [XIP Proposals](get-details/smart-contract-details/xip-proposals.md)
   * [Wallet Integration](get-details/wallet-integration/README.md)
     * [XDCPay](get-details/wallet-integration/xdcpay.md)
