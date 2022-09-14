@@ -78,7 +78,7 @@
     * [Geth Puppeth](run-a-node/private-permissioned-node/geth-puppeth.md)
 * [Changelog](changelog.md)
 * [Tutorials](tutorials.md)
-* [Gitbook](gitbook.md)
+* [Contributing and Feedback Guide](gitbook.md)
 * [About](about.md)
 
 ## Learn
