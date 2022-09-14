@@ -54,7 +54,7 @@
   * [SDKs & Programming](tools/sdks-and-programming/README.md)
     * [Soliditiy](tools/sdks-and-programming/soliditiy.md)
     * [Python](tools/sdks-and-programming/python.md)
-    * [Switft](tools/sdks-and-programming/switft.md)
+    * [Swift](tools/sdks-and-programming/switft.md)
     * [Java](tools/sdks-and-programming/java.md)
     * [Javascript](tools/sdks-and-programming/javascript.md)
   * [APIs & Packages](tools/apis-and-packages/README.md)
