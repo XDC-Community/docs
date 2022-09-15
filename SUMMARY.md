@@ -89,5 +89,5 @@
 * [How-to Articles](learn/how-to-articles/README.md)
   * [How To deploy your first smart contract on the XDC Network using Remix](learn/how-to-articles/how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-remix.md)
   * [How To deploy your first smart contract on the XDC Network using Hardhat](learn/how-to-articles/how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-hardhat.md)
-  * [How To deploy your first smart contract on the XDC Network using Truffle/Gnache](learn/how-to-articles/how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle-gnache.md)
+  * [How To deploy your first smart contract on the XDC Network using Truffle](learn/how-to-articles/how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle-gnache.md)
 * [Community Support](learn/community-support.md)
