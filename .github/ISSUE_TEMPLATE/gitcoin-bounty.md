@@ -21,7 +21,7 @@ Only one participant will be selected as the winner for the bounty, and they wil
 ## **Description**
 
 ## **Amount of Bounty**
-Grant Sponsor: XDC Foundation. All monies paid will be in XDC.
+Grant Sponsor: [XDC Foundation](https://www.xdc.org/). All monies paid will be in XDC.
 
 ## **What will you be creating?**
 You will be creating how to documentation for the XDC Network. Some documentation has already been created, and you will read through it to ensure it works as intended, reads clearly or if it needs better clarfication, then make those changes. Those items without documentation will be created from scratch.  Documentation will have images that describe or represents what's being done or described in your tutorial. 
@@ -50,9 +50,7 @@ You will be creating how to documentation for the XDC Network. Some documentatio
 This section can be used if you are deploying contracts on the network. Otherwise it can be ommited when you create your bounty. 
     
 ## **Total Prize of Bounty**
-Total sum of up to $X,XXX worth of XDC for this event.
-
-Each submission will be paid according to the amount of work submitted. Only one winner will be chosen and announced within 7 working days after bounty has expired.  
+Total sum of up to $1,000.00 USD worth of XDC for this event, reward amount assigned at judge's discretion.
 
 ## **Further Details**
 This event will be an ongoing collaboration to create "how to" documentation for the XDC Network. All documentation will be open source and uploaded here: 
