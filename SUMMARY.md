@@ -43,6 +43,7 @@
   * [EVM Compatibility](get-details/evm-compatibility/README.md)
     * [XDC Fork Details](get-details/evm-compatibility/xdc-fork-details.md)
     * [EIP to XIP](get-details/evm-compatibility/eip-to-xip.md)
+    * [ERC to XRC Migration](get-details/evm-compatibility/erc-to-xrc-migration.md)
   * [Bridges](get-details/bridges/README.md)
     * [XDC -> ETH](get-details/bridges/xdc-greater-than-eth.md)
     * [XDC -> BTC](get-details/bridges/xdc-greater-than-btc.md)
