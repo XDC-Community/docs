@@ -8,24 +8,20 @@ assignees: MrBlockchain22
 
 ---
 
-This is the GitHub issue template dedicated for the Gitcoin bounty set up by the XDC Community.  The bounty will have specific requirements the contributor must follow to be considered for the bounty.  Please see specific requirements. 
-
-## Please follow the instructions if you need clarification or a step by step posted here: https://xdcf.atlassian.net/wiki/spaces/XDOC/pages/edit-v2/6193153
-
 ## **Judging Criteria**
 
-All submissions must contain clear and concise information with explicit instruction and images describing each step required to execute the process.  An accompanying video in addition to the written content is highly desired.
+All submissions must contain clear and concise information with explicit instruction and images describing each step required to execute the process. An accompanying video in addition to the written content is highly desired.
 
-All submissions will be put through an industry standard plagiarism detection tool to ensure that all submissions are the work and ideas of the person submitting for the bounty.  If the plagiarism tools flags your submission you will be disqualified from participation in the bounty.
+All submissions will be put through an industry standard plagiarism detection tool to ensure that all submissions are the work and ideas of the person submitting for the bounty. If the plagiarism tools flags your submission you will be disqualified from participation in the bounty.
 
-You will be provided with resources (if available) as an aid to help you get started.  The sole act of submitting content for the bounty does not automatically qualify you for the bounty.  Our team will review all submissions and will choose the submission whose content best fits the needs and requirements of the bounty.
+You will be provided with resources (if available) as an aid to help you get started. The sole act of submitting content for the bounty does not automatically qualify you for the bounty. Our team will review all submissions and will choose the submission whose content best fits the needs and requirements of the bounty.
 
-Participants that are selected as winners for the bounty will be notified within 7 working days after the bounty has ended.
+Only one participant will be selected as the winner for the bounty, and they will be notified within 7 working days after the bounty has ended.
 
 ## **Description**
 
 ## **Amount of Bounty**
-Foundry Grant. All monies paid will be in XDC.
+Grant Sponsor: XDC Foundation. All monies paid will be in XDC.
 
 ## **What will you be creating?**
 You will be creating how to documentation for the XDC Network. Some documentation has already been created, and you will read through it to ensure it works as intended, reads clearly or if it needs better clarfication, then make those changes. Those items without documentation will be created from scratch.  Documentation will have images that describe or represents what's being done or described in your tutorial. 
