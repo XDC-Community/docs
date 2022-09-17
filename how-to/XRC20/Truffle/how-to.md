@@ -44,11 +44,11 @@ In this tutorial, you will learn how to set up Truffle and use it to build, test
 XRC20 is a set of rules to standardize assets on the XinFin network. Every XRC20 Token must be able to execute the following methods:
 
 - `totalSupply()`
-- `balanceOf(address tokenOwner)` 
-- `allowance(address tokenOwner, address spender)`
-- `transfer(address to, uint tokens)`
-- `approve(address spender, uint tokens)`
-- `transferFrom(address from, address to, uint tokens)`
+- `balanceOf(address account)` 
+- `allowance(address owner, address spender)`
+- `transfer(address recipient, uint amount)`
+- `approve(address spender, uint amount)`
+- `transferFrom(address sender, address recipient, uint amount)`
 
 These are the minimum required methods that allow an asset on the XinFin network to be called an XRC20 token. Also, a XRC20 token must be able to emit the following `Events` on the blockchain:
 
@@ -120,8 +120,9 @@ http://trufflesuite.com/docs
 And your folder files will look like this:
 
 <p align="center">
-  <img src="" alt="Step 01"/>
+  <img src="https://user-images.githubusercontent.com/78161484/190839624-495ef863-e177-4c62-81ca-680e5e6a4cab.png" alt="Step 01"/>
 </p>
+
 
 ## ⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle
 
@@ -235,3 +236,7 @@ With this account in hand, we can head to the [Apothem Faucet](https://faucet.ap
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png" alt="Step 02"/>
 </p>
+
+# 💵 Writing our first XRC20 Token
+
+The entire source code for this simple XRC20 Token we are going through in this tutorial is available in the [XRC20 Contract Folder](./XRC20/contracts/MyToken.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](#-about-xrc20-tokens)
