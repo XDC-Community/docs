@@ -13,21 +13,21 @@ contract XRC20Token {
     uint8 public decimals;
 
     uint256 private _totalSupply;
-
-    event Approval(address indexed owner, address indexed spender, uint value);
-    event Transfer(address indexed from, address indexed to, uint value);
     
     mapping(address => uint) private balances;
     mapping(address => mapping(address => uint)) private allowances;
 
-    constructor(string memory _name, string memory _symbol, uint8 _decimals, uint8 _initialSupply) {
+    event Approval(address indexed owner, address indexed spender, uint value);
+    event Transfer(address indexed from, address indexed to, uint value);    
+
+    constructor(string memory _name, string memory _symbol, uint8 _decimals, uint256 _initialSupply) {
         name = _name;
         symbol = _symbol;
         decimals = _decimals;
 
-        _totalSupply += _initialSupply;
-        balances[msg.sender] = _initialSupply;
-        emit Transfer(address(0), msg.sender, _initialSupply);
+        _totalSupply += _initialSupply * 10 ** decimals;
+        balances[msg.sender] = _totalSupply;
+        emit Transfer(address(0), msg.sender, _totalSupply);
     }
 
 
