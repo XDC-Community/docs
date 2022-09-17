@@ -64,9 +64,33 @@ npm install --save-dev @nomicfoundation/hardhat-toolbox
 Now, you will have a folder structure as below
 <img width="1159" alt="Screenshot 2022-09-13 at 11 59 40 AM" src="https://user-images.githubusercontent.com/35517007/189841745-2c5cd395-ce05-4124-9a44-e4aea01e124f.png">
 
-- In the contract folder, create a new file and write your contract inside it. (creating `Owner.sol` for reference).
+- In the contract folder, create a new file and write your contract inside it. (creating `Pizza.sol` for reference. The code for Pizza.sol is given below).
 
-<img width="1680" alt="Screenshot 2022-09-13 at 12 05 54 PM" src="https://user-images.githubusercontent.com/35517007/189841976-c3ee4435-2b30-4cad-aa50-f478fef407ba.png">
+```python
+  // SPDX-License-Identifier: MIT
+  pragma solidity ^0.8.16;
+
+  contract Pizza {
+      uint256 public PIZZA_SIZE;
+      uint256 public slices;
+
+      constructor(uint256 _pizzaSize) {
+          PIZZA_SIZE = _pizzaSize;
+          slices = 0;
+          slices += PIZZA_SIZE;
+      }
+
+      function eatSlice() public {
+          require(slices > 0, "No Slices Left. Lets Bake a new Pizza!");
+          slices -= 1;
+      }
+
+      function bakeNewPizza() public {
+          require(slices == 0, "There still slices from a previous Pizza!");
+          slices += PIZZA_SIZE;
+      }
+  }
+```
 
 - To compile the contract, write the following in the terminal
 
@@ -85,12 +109,12 @@ const hre = require("hardhat");
 
 async function main() {
   // make sure to change the name of your contract
-  const Owner = await hre.ethers.getContractFactory("Owner");
-  const owner = await Owner.deploy();
+  const Pizza = await hre.ethers.getContractFactory("Pizza");
+  const pizza = await Pizza.deploy();
 
-  await owner.deployed();
+  await pizza.deployed();
 
-  console.log("owner contract address:", owner.address);
+  console.log("pizza contract address:", pizza.address);
 }
 
 // Call the main function and catch if there is any error
