@@ -137,15 +137,29 @@ main()
 
 <img width="1047" alt="Screenshot 2022-09-13 at 12 35 05 PM" src="https://user-images.githubusercontent.com/35517007/189842216-01c87935-4b4e-49bc-89ea-11026250dbf8.png">
 
-
-- Dont know how to get your private key? [Read-here](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-export-an-account-s-private-key)
-
+## Setup .env file
+>Make sure you do not push this file to github. 
 - Make a `.env` at the root of the project to store the private key and network url.
 
 ```python
 XINFIN_NETWORK_URL="enter-network-rpc-url-here"
 WALLET_PRIVATE_KEY="enter-your-private-key-here"
 ```
+
+- Dont know how to get your private key? Open you XDC pay wallet extension and click on the three dots on the top-left. This will open a popup.
+<img width="360" alt="Screenshot 2022-09-18 at 12 27 44 AM" src="https://user-images.githubusercontent.com/35517007/190872826-b3437164-e6a8-487d-91c7-4a1d85d341d1.png">
+
+Click on the `Export Private key` inside the popup.
+
+<img width="360" alt="Screenshot 2022-09-18 at 12 31 05 AM" src="https://user-images.githubusercontent.com/35517007/190872880-c0c34a79-b81f-40f5-895d-d29714ef42b6.png">
+
+Enter the password that you used while creating the account.
+
+<img width="360" alt="Screenshot 2022-09-18 at 12 31 20 AM" src="https://user-images.githubusercontent.com/35517007/190872906-4cf58f76-bb80-4a53-a496-b05a33217758.png">
+
+Copy your private key. This key will be used to sign transactions when deploying the contract through hardhat.
+
+<img width="360" alt="Screenshot 2022-09-18 at 12 31 35 AM" src="https://user-images.githubusercontent.com/35517007/190872961-7ffb8329-2601-4346-bbb0-7a4ff38fd5f8.png">
 
 - To be able to import env file variables, please install `dotenv` from your terminal.
 
