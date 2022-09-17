@@ -241,7 +241,7 @@ With this account in hand, we can head to the [Apothem Faucet](https://faucet.ap
 
 # 💵 Writing our first XRC20 Token
 
-The entire source code for this simple XRC20 Token we are going through in this tutorial is available in the [XRC20 Contract Folder](./XRC20/contracts/MyToken.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](#-about-xrc20-tokens).
+The source code for the XRC20 Token used in this tutorial is available here: [XRC20 Contract Folder](./XRC20/contracts/MyToken.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](#-about-xrc20-tokens).
 
 Lets start by creating the `XRC20.sol` file:
 
@@ -249,7 +249,7 @@ Lets start by creating the `XRC20.sol` file:
 touch ./contracts/XRC20.sol
 ```
 
-And lets start by writting the shell of our smart contract by writing on our `XRC20.sol` file:
+And write the shell of our smart contract by writing:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -267,7 +267,7 @@ contract XRC20Token {
 
 ## 💵 Constants
 
-Inside our `contract XRC20Token` We will instantiate `name`, `symbol` and `decimals` as public variables, a private `_totalSupply` that will be used on our `totalSupply()` method later on and two mapping variables `balances` and `allowances`, that are key/value variables that maps user balances and approved spending allowances to other user tokens:
+Inside our `contract XRC20Token` We will instantiate `name`, `symbol` and `decimals` as public variables, a private `_totalSupply` that will be used on our `totalSupply()` method later on and two mapping variables `balances` and `allowances`, that are key/value variables that maps user balances and approved spending allowances to other users:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -296,7 +296,7 @@ contract XRC20Token {
 
 ## 💵 Events
 
-As mentioned in [📰 About XRC20 Tokens](#-about-xrc20-tokens). Events are very important part of a Smart Contract logic. Events have `indexed` variables that are variables that can be filtered by off-chain interfaces. We might be tempted to index all the variables that are tied to an on-chain event, however we can't go crazy about it since Solidity has a _3 indexed variable_ limitation for Events. Lets write both `Approval` and `Transfer` events:
+As mentioned in [📰 About XRC20 Tokens](#-about-xrc20-tokens). Events are very important part of a Smart Contract logic. Events have `indexed` variables that are variables that can be filtered by off-chain interfaces. We might be tempted to index all the variables that are tied to an on-chain event, however we can't go crazy about it since Solidity has a _maximum of 3 indexed variable_ limitation for Events. Lets write both `Approval` and `Transfer` events:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -318,7 +318,7 @@ contract XRC20Token {
     mapping(address => uint) private balances;
     mapping(address => mapping(address => uint)) private allowances;
  
-    // Notice we indexed only addresses in Approval and Transfer since it 
+    // Notice we indexed only the ADDRESSES in Approval and Transfer since it 
     // would be not practical to filter transactions nor approvals by value.
     
     event Approval(address indexed owner, address indexed spender, uint value);
@@ -352,9 +352,6 @@ contract XRC20Token {
     
     mapping(address => uint) private balances;
     mapping(address => mapping(address => uint)) private allowances;
- 
-    // Notice we indexed only addresses in Approval and Transfer since it 
-    // would be not practical to filter transactions nor approvals by value.
     
     event Approval(address indexed owner, address indexed spender, uint value);
     event Transfer(address indexed from, address indexed to, uint value);
@@ -409,7 +406,7 @@ contract XRC20Token {
 }
 ```
 
-And here we have implemented everything we needed to make our token compliant with the XRC20 Standard. Of course there are more features we can implement to this contract, such as the [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) library that replace naive mathematical operations for methods that will avoid `underflows` and `overflows`, and supply managing methods such as `mint` and `burn`.
+And here we have implemented everything we needed to make our token compliant with the XRC20 Standard. Of course there are more features we can implement to this contract, such as the [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) library that replace naive mathematical operations for methods that will avoid `underflows` and `overflows`, and supply management methods such as `mint` and `burn`.
 
 ## 💵 Compiling and Deploying
 
