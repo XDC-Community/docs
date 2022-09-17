@@ -20,8 +20,10 @@ keywords:
   - [⚒️ Configuring XDC Mainnet and Apothem Testnet on Truffle](#-configuring-xdc-mainnet-and-apothem-testnet-on-truffle)
   - [⚒️ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
 - [💵 Writing our first XRC20 Token](#-writing-our-first-xrc20-token)
-  - [💵 Compiling](#-compiling)
-  - [💵 Deploying](#-deploying)
+  - [💵 Constants](#-constants)
+  - [💵 Events](#-events)
+  - [💵 Methods](#-methods)
+  - [💵 Compiling and Deploying](#-compiling-and-deploying)
   - [💵 Interacting with your contract using Truffle Console](#-interacting-with-your-contract-using-truffle-console)
 - [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
 
@@ -239,4 +241,94 @@ With this account in hand, we can head to the [Apothem Faucet](https://faucet.ap
 
 # 💵 Writing our first XRC20 Token
 
-The entire source code for this simple XRC20 Token we are going through in this tutorial is available in the [XRC20 Contract Folder](./XRC20/contracts/MyToken.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](#-about-xrc20-tokens)
+The entire source code for this simple XRC20 Token we are going through in this tutorial is available in the [XRC20 Contract Folder](./XRC20/contracts/MyToken.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](#-about-xrc20-tokens).
+
+Lets start by creating the `XRC20.sol` file:
+
+```sh
+touch ./contracts/XRC20.sol
+```
+
+And lets start by writting the shell of our smart contract by writing on our `XRC20.sol` file:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.0 <0.9.0;
+
+/**
+ * @title XRC20 Token
+ * @dev This is the a XinFin Network Compatible XRC20 token.
+ */
+
+contract XRC20Token {
+
+}
+```
+
+## 💵 Constants
+
+Inside our `contract XRC20Token` We will instantiate `name`, `symbol` and `decimals` as public variables, a private `_totalSupply` that will be used on our `totalSupply()` method later on and two mapping variables `balances` and `allowances`, that are key/value variables that maps user balances and approved spending allowances to other user tokens:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.0 <0.9.0;
+
+/**
+ * @title XRC20 Token
+ * @dev This is the a XinFin Network Compatible XRC20 token.
+ */
+
+contract XRC20Token {
+
+    string public name;
+    string public symbol;
+    uint8 public decimals;
+
+    uint256 private _totalSupply;
+    
+    mapping(address => uint) private balances;
+    mapping(address => mapping(address => uint)) private allowances;
+    
+    // To be Continued ... 
+
+}
+```
+
+## 💵 Events
+
+As mentioned in [📰 About XRC20 Tokens](#-about-xrc20-tokens). Events are very important part of a Smart Contract logic. Events have `indexed` variables that are variables that can be filtered by off-chain interfaces. We might be tempted to index all the variables that are tied to an on-chain event, however we can't go crazy about it since Solidity has a _3 indexed variable_ limitation for Events. Lets write both `Approval` and `Transfer` events:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.0 <0.9.0;
+
+/**
+ * @title XRC20 Token
+ * @dev This is the a XinFin Network Compatible XRC20 token.
+ */
+
+contract XRC20Token {
+
+    string public name;
+    string public symbol;
+    uint8 public decimals;
+
+    uint256 private _totalSupply;
+    
+    mapping(address => uint) private balances;
+    mapping(address => mapping(address => uint)) private allowances;
+ 
+    // Notice we indexed only addresses in Approval and Transfer since it 
+    // would be not practical to filter transactions nor approvals by value.
+    
+    event Approval(address indexed owner, address indexed spender, uint value);
+    event Transfer(address indexed from, address indexed to, uint value);
+      
+    // To be Continued ... 
+
+}
+```
+
+## 💵 Methods
+
+
