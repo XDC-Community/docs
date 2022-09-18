@@ -68,7 +68,7 @@ Now, you will have a folder structure as below
 
 ```python
   // SPDX-License-Identifier: MIT
-  pragma solidity ^0.8.16;
+  pragma solidity ^0.8.9;
 
   contract Pizza {
       uint256 public PIZZA_SIZE;
@@ -143,7 +143,7 @@ main()
 
 ```python
 XINFIN_NETWORK_URL="enter-network-rpc-url-here"
-WALLET_PRIVATE_KEY="enter-your-private-key-here"
+XINFIN_PRIVATE_KEY="enter-your-private-key-here"
 ```
 
 - Dont know how to get your private key? Open you XDC pay wallet extension and click on the three dots on the top-left. This will open a popup.
