@@ -298,9 +298,6 @@ We can easily test our contract with the help of that contract address. To start
 
 For more information about Remix IDE, Please Visit [Remix IDE Documentation](https://remix-ide.readthedocs.io/en/latest/).<br>
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
-Resources used during the deployment of the Pizza Smart Contract can be found at [The Pizza Contract Folder](./Pizza).
-
-
 
 
 
