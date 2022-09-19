@@ -110,8 +110,9 @@ module.exports = {
     ],
 }
 ```
+Create a file at the project root named `privateKey`, this file will hold the private key from Ganache that you copied earlier.  Also create a file at project root named `privateKey.apothem`, this file will hold the private key for the Apothem testnet wallet that you will create further on in the tutorial.
 
-Last, paste the private key from Ganache to `privateKey` in the project folder and change `http://127.0.0.1:7545` to the RPC server URL in Ganache. Make sure there is NO newline characters in the file. We also need to create `privateKey.apothem` because it's referenced in `coralX-config.js`.
+Paste the private key from Ganache to `privateKey` in the project folder and change `http://127.0.0.1:7545` to the RPC server URL in Ganache. Make sure there is NO newline characters in the file. We also need to create `privateKey.apothem` because it's referenced in `coralX-config.js`.
 
 ```bash
 touch privateKey.apothem
