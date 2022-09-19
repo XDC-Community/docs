@@ -330,20 +330,20 @@ For deployment on the XDC Apothem Testnet. In either case, you need to have enou
 - Navigate to Deploy and Transactions ![alt](https://user-images.githubusercontent.com/60708843/190074569-0f6cccdb-08d6-41e9-8c54-9ac9c648a283.png).
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/60708843/190075329-676cc9e6-170d-46f3-92eb-8d023c24d608.png">
+  <img src="https://user-images.githubusercontent.com/60708843/191081766-041a0e2a-c55e-4ee7-bdca-d1716c334741.png">
 </p>
 
 - Choose Injected Web3 as the Environment.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/60708843/190122488-9f142cda-4f48-4cb0-a8b5-888695c12e18.png">
+  <img src="https://user-images.githubusercontent.com/60708843/191082336-eaf54032-7a83-4330-9507-d1c59fb1baf8.png">
 </p>
 
 - Confirm the popup to add the account to Remix IDE now.
 - Next, choose the account to which you want to deploy the contract.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/60708843/190123093-c5979b6a-6026-491b-ab8f-1ae7c34b84ec.png">
+  <img src="https://user-images.githubusercontent.com/60708843/191082662-b62c084e-5849-49bc-8c2d-a83d49e40a79.png">
 </p>
 
 - Choose the contract you want to use.
@@ -380,13 +380,13 @@ Next, navigate to the [XDC Block explorer](https://explorer.apothem.network/) an
 From there, we need to get the transaction details as well as the **`To Address`** where the contract is deployed. 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/60708843/190077393-8aeddc44-b374-47c6-bb52-2d957c140519.png">
+  <img src="https://user-images.githubusercontent.com/60708843/191083637-324e1863-6753-47f1-8c2e-1a8c25c22f21.png">
 </p>
 
-Here we have a `XRC20` contract deployed on XDC Apothem Testnet, we can search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
+Here we have a `XRC20` contract deployed on XDC Apothem Testnet, we can search for our newly deployed contract on [Apothem Block Explorer](https://explorer.apothem.network/):
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190028078-ebc0f083-28a5-4772-88c1-ef49e91681fa.png" alt="Verify 01"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191084100-6c61a512-65f0-486a-87ec-8209a17a17f8.png" alt="Verify 01"/>
 </p>
 
 And click in the `Verify And Publish` Option. 
@@ -400,13 +400,13 @@ We will be redirected to the Contract verification page where we need to fill ou
 Once everything is filled out, press Submit!
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875635-f6d3aa36-47b2-4b09-ad6a-fe6df3fb11f1.png" alt="Verify 02"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191086658-e402f798-6f4e-4a25-a5f0-c2db463390d1.png" alt="Verify 02"/>
 </p>
 
 If everything is correctly filled out, your contract page on the block explorer should display a new tab called `Contract`:
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875780-6223b4b0-fecc-4e79-83bc-c810c5b0351c.png" alt="Verify 03"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191087001-72eb36c7-19f2-4623-b021-b1afc560327d.png" alt="Verify 03"/>
 </p>
 
 In this page you can Read from, Write to, or simply read the information tied to your XRC-20 token on the blockchain:
@@ -422,22 +422,22 @@ With your XDCPay wallet, it is possible to interact with verified Smart Contract
 Lets head to the `Contract` tab on the explorer, choose `Write Contract` and click in `Connect to Web3` to connect your XDCPay wallet.
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190876289-57de5994-809a-4307-b68d-6bb37e3601af.png" alt="Verify 04"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191087973-a2982bf6-abef-4163-9eff-7cbfe55c37d0.png" alt="Verify 04"/>
 </p>
 
 Lets try transfering `500 MTK` tokens that we have just created to a new wallet `xdc0431d52fe37f3839895018272dfa3ba189fce07e`. Lets fill out the `recipient` field with the new wallet address, and fill out the `amout` field with `500 * 10^18`. Remember that our token have 18 decimals, and when we write numbers with decimals to the blockchain we have to account for the decimals because the Virtual Machine do not understand floating numbers like we humans do:
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190876402-32e800d4-b456-499d-8255-ba10aa35c0af.png" alt="Verify 05"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191092620-25f7c9ff-c631-45ad-ae8e-df680c9c9ed2.png" alt="Verify 05"/>
 </p>
 
 After clicking in `Write`, we need to confirm the transaction on the XDCPay wallet:
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/190876653-eb8e558b-2b09-4c0f-ad5f-a3d17a54bf30.png" alt="Verify 05"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191092847-5a9288a5-6e47-4be8-ad34-f8e8abfd1448.png" alt="Verify 05"/>
 </p>
 
-And we can check our successful transaction on the [Block Explorer!](https://explorer.xinfin.network/txs/0xa365a7edea3af9ed22c6dffb2f24987f1941f21dbd4d9bbb13b11022439de96a#overview)
+And we can check our successful transaction on the [Block Explorer!](https://explorer.apothem.network/txs/0xf9e57c65e3415d661caf09f1bf01ed2b48ab1daf7c45b3eae42cd429804dfe71#overview)
 
 ---
 
