@@ -173,7 +173,9 @@ Lets try compiling the `Pizza.sol` contract:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/60708843/190067640-a9fea4c3-383a-4478-befd-01149b26433e.png">
 </p>
-- After Successful Compilation, it will show <img src="https://user-images.githubusercontent.com/60708843/190067983-4451282c-348c-4872-a57d-b2e698b59cad.png">.
+
+- After Successful Compilation, it will show ![alt](https://user-images.githubusercontent.com/60708843/190067983-4451282c-348c-4872-a57d-b2e698b59cad.png)
+
 - Once our contract has been compiled, we can deploy it to the Apothem Test Network.
 
 
