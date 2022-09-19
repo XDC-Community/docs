@@ -171,7 +171,7 @@ Lets try compiling the `Pizza.sol` contract:
 - Next, select **`Compile Pizza.sol`**.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/60708843/190067640-a9fea4c3-383a-4478-befd-01149b26433e.png">
+  <img src="https://user-images.githubusercontent.com/60708843/191068355-eccc73c6-d7be-4d0b-ae69-e9cad4f94139.png">
 </p>
 
 - After Successful Compilation, it will show ![alt](https://user-images.githubusercontent.com/60708843/190067983-4451282c-348c-4872-a57d-b2e698b59cad.png)
@@ -186,30 +186,34 @@ For deployment on the XDC Apothem Testnet. In either case, you need to have enou
 - Navigate to Deploy and Transactions ![alt](https://user-images.githubusercontent.com/60708843/190074569-0f6cccdb-08d6-41e9-8c54-9ac9c648a283.png).
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/60708843/190075329-676cc9e6-170d-46f3-92eb-8d023c24d608.png">
+  <img src="https://user-images.githubusercontent.com/60708843/191068992-c110873f-6c01-4843-b50f-229220392231.png">
 </p>
 
 - Choose Injected Web3 as the Environment.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/60708843/190122488-9f142cda-4f48-4cb0-a8b5-888695c12e18.png">
+  <img src="https://user-images.githubusercontent.com/60708843/191069823-c1b9c78d-e217-49e5-b86b-972ba14f02c6.png">
 </p>
 
 - Confirm the popup to add the account to Remix IDE now.
 - Next, choose the account to which you want to deploy the contract.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/60708843/190123093-c5979b6a-6026-491b-ab8f-1ae7c34b84ec.png">
+  <img src="https://user-images.githubusercontent.com/60708843/191070126-3f4806f0-4e0d-4ea9-a8de-983c9b1f4d6f.png">
 </p>
 
 - Choose the contract you want to use.
+- Add the number of Pizza slices that we wish to create the pizza and deploy the contract.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/60708843/191071346-650c1ea1-c254-4266-b41d-0ed08acaa4f5.png">
+</p>
+
 - A popup will appear, which we must confirm in order to create the transaction for contract deployment.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/60708843/190075747-c7d1f7a6-2737-49ac-bd72-681a84bd95b0.png">
 </p>
-
-- Following confirmation, we might be shown a message stating that the transaction was successful.
 
 
 # 🔍 Veryfing Contracts on the Block Explorer
@@ -231,13 +235,13 @@ Next, navigate to the [XDC Block explorer](https://explorer.apothem.network/) an
 From there, we need to get the transaction details as well as the **`To Address`** where the contract is deployed. 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/60708843/190077393-8aeddc44-b374-47c6-bb52-2d957c140519.png">
+  <img src="https://user-images.githubusercontent.com/60708843/191072000-7aed020a-bd12-4536-ab68-dd45f0044121.png">
 </p>
 
 Here we have a `Pizza` contract deployed on XDC Apothem Testnet, we can search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190028078-ebc0f083-28a5-4772-88c1-ef49e91681fa.png" alt="Verify 01"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191072440-378183b9-0993-47d3-a7c8-9525b2ac1e04.png" alt="Verify 01"/>
 </p>
 
 And click in the `Verify And Publish` Option. 
@@ -251,19 +255,19 @@ We will be redirected to the Contract verification page where we need to fill ou
 Once everything is filled out, press Submit!
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190028508-003c942d-685a-4d14-9d93-264e7ff4a0b5.png" alt="Verify 02"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191073606-85912e16-e061-4b78-a423-6623d2e8d64d.png" alt="Verify 02"/>
 </p>
 
 If everything is correctly filled out, your contract page on the block explorer should display a new tab called `Contract`:
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190029029-2547af3f-d32c-48d6-a785-e47b1f7a91c5.png" alt="Verify 03"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191074148-2de679fb-1757-4dfa-b635-aec6d1faab59.png" alt="Verify 03"/>
 </p>
 
 In this page you can Read from, Write to, or simply read the information tied to your Smart Contract on the blockchain:
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190030842-4ab30b85-f87b-43d1-a8b2-8d089abb1a34.png" alt="Verify 03"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191074476-afe017e7-5529-40de-ab16-d8caaf61dae1.png" alt="Verify 03"/>
 </p>
 
 
@@ -276,7 +280,7 @@ We can easily test our contract with the help of that contract address. To start
 - Navigate to the deploy section, paste the contract address, and then click the **`At Address`** Button. 
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/60708843/190077815-03dae243-ce9e-4b4f-892f-995b494e7fbb.png" alt="Verify 03"/>
+  <img src="https://user-images.githubusercontent.com/60708843/191074867-7287bc46-3e37-41e8-aa41-1ea55ac1d85a.png" alt="Verify 03"/>
 </p>
 
 - We would then be shown all of the different functions and variables that were available for us to see and use.
@@ -287,7 +291,7 @@ We can easily test our contract with the help of that contract address. To start
 </p>
 
 
-- This transaction is immediately reflected in the corresponding block explorer, [as seen here!](https://explorer.apothem.network/txs/0xdfd2c530d962569f3d89ca3b255598f57b1897f24854114dac3e95e42700f97e)
+- This transaction is immediately reflected in the corresponding block explorer, [as seen here!](https://explorer.apothem.network/txs/0xbd07e02b75269798aba446db913336e1250325a1c395ef5a003ab56a1a22013f#overview)
 
 
 ---
