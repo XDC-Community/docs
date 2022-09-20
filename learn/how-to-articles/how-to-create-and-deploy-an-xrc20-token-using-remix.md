@@ -14,17 +14,19 @@ keywords:
 
 - [🧭 Table of contents](#-table-of-contents)
 - [📰 Overview](#-overview)
+    - [What you will learn](#what-you-will-learn)
+    - [What you will do](#what-you-will-do)
   - [📰 About XRC20 Tokens](#-about-xrc20-tokens)
 - [🚀 Setting up the development environment](#-setting-up-the-development-environment)
-  - [⚒️ Creating XDCPay Wallet for signing transactions](#%EF%B8%8F-creating-xdcpay-wallet-for-signing-transactions)
-  - [⚒️ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
+  - [⚒️ Creating XDCPay Wallet for signing transactions](#️-creating-xdcpay-wallet-for-signing-transactions)
+  - [⚒ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
 - [💵 Writing our first XRC20 Token](#-writing-our-first-xrc20-token)
   - [💵 Constants](#-constants)
   - [💵 Events](#-events)
   - [💵 Methods](#-methods)
   - [💵 Compiling and Deploying](#-compiling-and-deploying)
-- [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
-- [🔍 Interacting with your contract on the Block Explorer](#-interacting-with-your-contract-on-the-block-explorer) 
+- [🔍 Verifying Contracts on the Block Explorer](#-verifying-contracts-on-the-block-explorer)
+  - [🔍 Interacting with your contract on the Block Explorer](#-interacting-with-your-contract-on-the-block-explorer)
 
 # 📰 Overview
 [Remix IDE](https://remix.xinfin.network/#optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.7+commit.e28d00a7.js) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine.
