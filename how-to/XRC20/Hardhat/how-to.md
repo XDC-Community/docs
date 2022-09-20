@@ -61,9 +61,12 @@ Welcome to Hardhat v2.11.2
 
 You setting up project should have the following folder structure:
 
+![folder_structure](https://user-images.githubusercontent.com/102393474/191152321-56d4a9d0-fa0a-4111-9163-0428f04deda7.png)
+
 As you can see, hardhat also created some template files, but we will ignore them for this tutorial.
 
 ## Adding XDC Testnet and Mainnet to hardhat
+
 
 ### `.env` file
 
@@ -140,9 +143,17 @@ module.exports = {
 
 Here is how you can get your private key using XDCPay wallet extension
 
+![stage0](https://user-images.githubusercontent.com/102393474/191152379-10d7597e-f2fc-4a6c-aeba-310327ea8092.png)
+![stage1](https://user-images.githubusercontent.com/102393474/191152385-b94f3fa6-32fc-41f5-a2dd-84c7e77c25b1.png)
+![stage2](https://user-images.githubusercontent.com/102393474/191152390-5586639f-78c1-476f-ad78-942bddffa90f.png)
+![stage3](https://user-images.githubusercontent.com/102393474/191152394-427fc9d9-9f16-4668-b901-b59662753f61.png)
+
+
 Finally, we can request some testnet funds for deploying and testing our token.
 
 Go to https://faucet.apothem.network/ and paste your address and press `Request 1000 XDC`
+
+![faucet](https://user-images.githubusercontent.com/102393474/191152426-77e7ab6d-4190-4c69-9d06-b0ea6e4ea0ca.png)
 
 ## Writing XRC20 token smart contract
 
