@@ -499,7 +499,7 @@ And we can check our successful transaction on the [Block Explorer!](https://exp
 
 ---
 
-For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).<br>
+For more information about Hardhat, Please Visit [Hardhat Documentation](https://hardhat.org/tutorial).<br>
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
 Resources used during the deployment of the XRC20 Token can be found at [XRC20 Contract Folder](./XRC20).
 
