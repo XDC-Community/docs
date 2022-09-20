@@ -354,7 +354,7 @@ For deployment on the XDC Apothem Testnet. In either case, you need to have enou
   <img src="https://user-images.githubusercontent.com/60708843/191030657-fe4a5df4-6514-4c8c-9d8f-e86249a8a9d1.png">
 </p>
 
-- A popup will appear, which we must confirm in order to create the transaction for contract deployment.
+- Press the "transact" button on the bottom right and a popup will appear, which we must confirm in order to create the transaction for contract deployment.
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/60708843/190075747-c7d1f7a6-2737-49ac-bd72-681a84bd95b0.png">
@@ -431,7 +431,7 @@ Lets try transfering `500 MTK` tokens that we have just created to a new wallet 
   <img src="https://user-images.githubusercontent.com/60708843/191092620-25f7c9ff-c631-45ad-ae8e-df680c9c9ed2.png" alt="Verify 05"/>
 </p>
 
-After clicking in `Write`, we need to confirm the transaction on the XDCPay wallet:
+After clicking in `Write`, we need to confirm the transaction on the XDCPay wallet: (note the Amount is 500000000000000000000.0000)
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/60708843/191092847-5a9288a5-6e47-4be8-ad34-f8e8abfd1448.png" alt="Verify 05"/>
