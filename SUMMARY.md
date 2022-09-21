@@ -95,4 +95,5 @@
   * [How to deploy a smart contract to the XDC Network using CoralX](learn/how-to-articles/how-to-deploy-a-smart-contract-to-the-xdc-network-using-coralx.md)
   * [How To Create and Deploy an XRC20 Token Using Remix](learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-remix.md)
   * [How To Create and Deploy an XRC20 Token Using Hardhat](learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-hardhat.md)
+  * [How to Send an XRC20 Transaction on the XDC Network Using ethers.js](learn/how-to-articles/how-to-send-an-xrc20-transaction-on-the-xdc-network-using-ethers.js.md)
 * [Community Support](learn/community-support.md)
