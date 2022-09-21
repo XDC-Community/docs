@@ -14,15 +14,17 @@ keywords:
 
 - [🧭 Table of contents](#-table-of-contents)
 - [📰 Overview](#-overview)
+    - [What you will learn](#what-you-will-learn)
+    - [What you will do](#what-you-will-do)
   - [📰 About XRC20 Tokens](#-about-xrc20-tokens)
 - [🚀 Setting up the development environment](#-setting-up-the-development-environment)
-  - [⚒️ Starting a new NPM Project and Installing Dependencies](#-starting-a-new-npm-project-and-installing-dependencies)
-- [💵 Transacting an XRC20 token contract on the XDC Network with ethers](#-transacting-an-xrc20-token-contract-on-the-xdc-network-with-ethers)
+  - [⚒ Starting a new NPM Project and Installing Dependencies](#-starting-a-new-npm-project-and-installing-dependencies)
+  - [💵 Transacting an XRC20 token contract on the XDC Network with ethers](#-transacting-an-xrc20-token-contract-on-the-xdc-network-with-ethers)
   - [💵 Add funds to wallet using Apothem Faucet](#-add-funds-to-wallet-using-apothem-faucet)
-  - [💵 What is an XDC transaction](#-what-is-an-XDC-transaction)
+  - [💵 What is an XDC transaction](#-what-is-an-xdc-transaction)
   - [💵 Setting up env file](#-setting-up-env-file)
   - [💵 Using ethers to transact XRC20](#-using-ethers-to-transact-xrc20)
-- [🔍 Verifying transaction via Apothem network explorer](#-veryfing-transaction-via-Apothem-network-explorer)
+  - [🔍 Verifying transaction via Apothem network explorer](#-verifying-transaction-via-apothem-network-explorer)
 
 # 📰 Overview
 [Ethers.js](https://github.com/ethers-io/ethers.js/) is a library written in Javascript which simplifies blockchain interactions.
@@ -195,6 +197,15 @@ const number_of_tokens = ethers.utils.parseUnits('10', decimals)
 ```
 
 This is some arguments which we will use in our transaction. `recipient_address` is the recipient we want send tokens to, `your_xrc20_token_address` is XRC20 token we will transfer, `decimals` is decimals value for your token and `number_of_tokens` is amount of tokens we will send.
+
+```javascript
+const recipient_address = "0x585dd46bfa516cc4325d877c614321f22ec7ce5e"
+const your_xrc20_token_address = process.env.XRC20_TOKEN_ADDRESS
+const decimals = 18
+const number_of_tokens = ethers.utils.parseUnits('10', decimals)
+```
+
+If you would like to send the tokens to a different `recipient_address` simply replace`wallet.address` with the XDC address you would like to send the tokens to, being sure to replace the "xdc" prefix with "0x".
 
 ```javascript
 const contract = new ethers.Contract(
