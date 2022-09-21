@@ -94,10 +94,9 @@ Before sending actual transactions we have to do some preparations.
 ## 💵 Add funds to wallet using Apothem Faucet
 
 Go to https://faucet.apothem.network/ and paste your address and press `Request 1000 XDC`
+![faucet](https://user-images.githubusercontent.com/102393474/191441945-6eee9b64-acef-4901-bf22-62becd342f93.png)
 
 If you don't have XDC address yet, you can create new wallet using [XDCPay](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo)
-
-Set up new wallet and then copy your address
 
 ## 💵 What is an XDC transaction
 
@@ -128,6 +127,11 @@ If you don't have any XRC20 token, you can follow one of those tutorials to crea
 - [Create XRC20 token using Remix](https://github.com/XDC-Community/docs/blob/main/how-to/XRC20/Remix/how-to.md)
 - [Create XRC20 token using Truffle](https://github.com/XDC-Community/docs/blob/main/how-to/XRC20/Truffle/how-to.md)
 
+If you don't know what private key is or how to get it, this is how you can copy your private key from XDCPay 
+![stage0](https://user-images.githubusercontent.com/102393474/191442289-32269ab1-5b5a-4a94-b4a1-00a1d35a6358.png)
+![stage1](https://user-images.githubusercontent.com/102393474/191442300-45cc3af3-674c-4fcd-9310-e8ae1daa731f.png)
+![stage2](https://user-images.githubusercontent.com/102393474/191442310-4ada2b4f-43d0-4bd0-88f9-991e3a9cf9f4.png)
+![stage3](https://user-images.githubusercontent.com/102393474/191442321-10a88d6b-664e-453b-a653-e938fc3c63b9.png)
 
 ## 💵 Using ethers to transact XRC20
 
@@ -207,7 +211,7 @@ const receipt = await contract.transfer(recipient_address, number_of_tokens)
 console.log(receipt.hash)
 ```
 
-Now let run it!
+Now lets run it!
 
 ```sh
 node send_token.js
@@ -225,12 +229,16 @@ After running our script, we received a transaction hash. We can use it to check
 To do this, go to https://explorer.apothem.network and paste your transaction hash in search field.
 
 You should see this.
+![txinfo](https://user-images.githubusercontent.com/102393474/191441715-334960ee-4b40-455a-a14a-2e1b49e60609.png)
 
 Here we can see that our transaction ended with success.
+![txstatus](https://user-images.githubusercontent.com/102393474/191441672-128fd5f5-a394-497c-8bea-27528901635f.png)
 
 This is how much we ended up paying for our transaction.
+![txprice](https://user-images.githubusercontent.com/102393474/191441705-df45c604-86aa-4e07-9680-5ae530be7cbb.png)
 
 And here is how much tokens we sent.
+![tokenamount](https://user-images.githubusercontent.com/102393474/191441729-eeb9d535-dd31-4cac-8aaa-fe19b7b2dce9.png)
 
 ---
 
