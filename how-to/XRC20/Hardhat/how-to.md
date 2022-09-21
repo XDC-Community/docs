@@ -14,10 +14,12 @@ keywords:
 
 - [🧭 Table of contents](#-table-of-contents)
 - [📰 Overview](#-overview)
+    - [What you will learn](#what-you-will-learn)
+    - [What you will do](#what-you-will-do)
   - [📰 About XRC20 Tokens](#-about-xrc20-tokens)
-- [⚒️ Starting a new Hardhat Project](#-starting-a-new-hardhat-project)
-  - [⚒️ Configuring XDC Mainnet and Apothem Testnet on Hardhat](#-configuring-xdc-mainnet-and-apothem-testnet-on-hardhat)
-  - [⚒️ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
+- [⚒ Starting a new Hardhat Project](#-starting-a-new-hardhat-project)
+  - [⚒ Configuring XDC Mainnet and Apothem Testnet on Hardhat](#-configuring-xdc-mainnet-and-apothem-testnet-on-hardhat)
+  - [⚒ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
 - [💵 Writing our first XRC20 Token](#-writing-our-first-xrc20-token)
   - [💵 Constants](#-constants)
   - [💵 Events](#-events)
@@ -182,6 +184,11 @@ Let's check our Signer's Address on Hardhat by accessing the hardhat console:
 
 ```sh
 npx hardhat console --network xinfin
+```
+If you get an error that hardhat is not installed locally and are running on a Windows OS you will need to execute:
+
+```sh
+npm install --save-dev @nomicfoundation/hardhat-toolbox
 ```
 
 Once the hardhat console CLI opens, you can run:
