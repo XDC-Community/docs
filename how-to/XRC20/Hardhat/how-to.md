@@ -405,7 +405,7 @@ And write the following script to the `deploy.js` file:
 ```jsx
 async function main() {
   const XRC20 = await ethers.getContractFactory("XRC20Token");
-  const myToken = await XRC20.deploy("MyToken", "MY", 18, 1000);
+  const myToken = await XRC20.deploy("MyToken", "MTK", 18, 1000);
 
   await myToken.deployed();
   
