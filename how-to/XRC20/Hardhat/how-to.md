@@ -207,7 +207,7 @@ With this account in hand, we can head to the [Apothem Faucet](https://faucet.ap
 
 The source code for the XRC20 Token used in this tutorial is available here: [XRC20 Contract Folder](./XRC20/contracts/XRC20.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](#-about-xrc20-tokens).
 
-ets start by creating the `XRC20.sol` file:
+Lets start by creating the `XRC20.sol` file:
 
 ```sh
 touch ./contracts/XRC20.sol
