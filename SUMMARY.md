@@ -94,4 +94,5 @@
   * [How To Create and Deploy an XRC20 Token Using Truffle](learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-truffle.md)
   * [How to deploy a smart contract to the XDC Network using CoralX](learn/how-to-articles/how-to-deploy-a-smart-contract-to-the-xdc-network-using-coralx.md)
   * [How To Create and Deploy an XRC20 Token Using Remix](learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-remix.md)
+  * [How To Create and Deploy an XRC20 Token Using Hardhat](learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-hardhat.md)
 * [Community Support](learn/community-support.md)
