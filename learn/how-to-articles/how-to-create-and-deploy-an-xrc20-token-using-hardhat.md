@@ -212,7 +212,7 @@ With this account in hand, we can head to the [Apothem Faucet](https://faucet.ap
 
 # 💵 Writing our first XRC20 Token
 
-The source code for the XRC20 Token used in this tutorial is available here: [XRC20 Contract Folder](./XRC20/contracts/XRC20.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](#-about-xrc20-tokens).
+The source code for the XRC20 Token used in this tutorial is available here: [XRC20 Contract Folder](./../../how-to/XRC20/Hardhat/XRC20/contracts/XRC20.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](#-about-xrc20-tokens).
 
 Lets start by creating the `XRC20.sol` file:
 
