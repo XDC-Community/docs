@@ -4,15 +4,41 @@
 
 ### Join the XDC Community
 
-There are many ways to join the XDC Network community and engage with others participating in its ecosystem. The following links are not an official&#x20;
+There are many ways to join the XDC Network community and engage with others participating in its ecosystem. The following links will get you started.&#x20;
 
-#### Twitter
+#### Twitter and Social Media
 
-[XDC Community](https://twitter.com/xdc\_community)
+[XDC Community](https://twitter.com/xdc\_community)&#x20;
 
-[XDC Foundation](https://twitter.com/XDCFoundation)
+[XDC Foundation](https://twitter.com/XDCFoundation) Twitter
 
-[XinFin](https://twitter.com/XinFin\_Official)
+[XDC Foundation](https://www.linkedin.com/company/xdc-foundation/) Linkedin
+
+[XDC Foundation](https://www.youtube.com/channel/UCXAAtlD-CRraNJKzDTF4pfg/featured) YouTube
+
+[XinFin](https://twitter.com/XinFin\_Official) Twitter
+
+[XinFin](https://www.linkedin.com/company/xinfin/) Linkedin
+
+#### Talk XDC Network
+
+[Discord](https://discord.gg/MFeHJ6C5gn) XDC Community Discord for building on XDC
+
+[XDC.DEV](https://www.xdc.dev/) Developers Forum&#x20;
+
+[XinFin](https://www.reddit.com/r/xinfin/) Reddit
+
+[XDC Foundation](https://www.reddit.com/r/XDC\_Foundation/) Reddit
+
+
+
+
+
+
+
+
+
+
 
 
 
