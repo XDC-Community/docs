@@ -54,7 +54,8 @@ In general the issue reporting process has two steps:
 Here is a list of the most common repositories that you can reference for issue creation.
 
 * **Protocol Level Issues**: [https://github.com/XinFinOrg/XDPoSChain/issues](https://github.com/XinFinOrg/XDPoSChain/issues)
-* **RPC Server Issues**: Post the issue on the GitHub repository associated with the product or platform, and be sure to tag [@blocksscanio](https://www.xdc.dev/blocksscanio) on your [xdc.dev](https://www.xdc.dev/) post.
+* **Block Explorer Issues**: [https://github.com/XinFinOrg/XDCScan/issues](https://github.com/XinFinOrg/XDCScan/issues), and be sure to tag [@blocksscanio](https://www.xdc.dev/blocksscanio) on your [xdc.dev](https://www.xdc.dev/) post
+* **RPC Server Issues**: Post the issue on the GitHub repository associated with the product or platform, and be sure to tag [@blocksscanio](https://www.xdc.dev/blocksscanio) on your [xdc.dev](https://www.xdc.dev/) post
 * **XDCPay**: [https://github.com/XDCFoundation/xdc-pay-xdcpay/issues](https://github.com/XDCFoundation/xdc-pay-xdcpay/issues)
 * **Origin**: [https://github.com/XDCFoundation/xdc-origin-webapp/issues](https://github.com/XDCFoundation/xdc-origin-webapp/issues)
 * **Apothem Testnet**: [https://github.com/XinFinOrg/Faucet/issues](https://github.com/XinFinOrg/Faucet/issues)
