@@ -1,15 +1,3 @@
----
-id: xrc20-token-hardhat
-title: XRC20 using Hardhat
-description: "Use Hardhat to deploy an XRC20 Token."
-keywords:
-  - docs
-  - apothem
-  - token
-  - XRC20
-  - hardhat
----
-
 # 🧭 Table of contents
 
 - [🧭 Table of contents](#-table-of-contents)
@@ -17,16 +5,14 @@ keywords:
   - [What you will learn](#what-you-will-learn)
   - [What you will do](#what-you-will-do)
 - [⚒ Starting a new Hardhat Project](#-starting-a-new-hardhat-project)
-  - [Prerequisites](#-prerequisites)
-  - [⚒ Configuring XDC Mainnet and Apothem Testnet on Hardhat](#-configuring-xdc-mainnet-and-apothem-testnet-on-hardhat)
-  - [⚒ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
-- [💵 Writing our first XRC20 Token](#-writing-our-first-xrc20-token)
-  - [💵 Constants](#-constants)
-  - [💵 Events](#-events)
-  - [💵 Methods](#-methods)
-  - [💵 Compiling and Deploying](#-compiling-and-deploying)
+  - [Prerequisites](#prerequisites)
+  - [⚒ Setup for a Hardhat Project](#setup-for-a-hardhat-project)
+- [💵 Write Smart Contract Using OpenZeppelin](#-write-smart-contract-using-openzeppelin)
+- [💻 Compile the Contract](#compile-the-contract)
+- [Writing a script file to deploy the contract](#writing-a-script-file-to-deploy-the-contract)
+- [Setup .env file](#setup-env-file)
+- [Configuring XDC Mainnet and Apothem Testnet on Hardhat](#-configuring-xdc-mainnet-and-apothem-testnet-on-hardhat)
 - [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
-  - [🔍 Interacting with your contract on the Block Explorer](#-interacting-with-your-contract-on-the-block-explorer)
 
 # 📰 Overview
 
@@ -40,7 +26,9 @@ OpenZeppelin contracts are written in solidity and uses ERC standards for Ethere
 
 ### What you will learn
 
-In this tutorial, you will learn how to set up Hardhat and use it to build, test and deploy a smart contract build with openzeppelin on both the XDC Network mainnet and XDC Apothem testnet.
+In this tutorial, you will learn how to set up Hardhat and use it to build, test and deploy a smart contract build with openzeppelin on both the XDC Network mainnet and XDC Apothem testnet. 
+
+The complete tutorial code can be found [here](https://github.com/ArpitaGanatra/docs/tree/main/how-to/openzeppelin/xdc-openzeppelin).
 
 ### What you will do
 
@@ -99,9 +87,10 @@ npm install --save-dev @nomicfoundation/hardhat-toolbox
 ```
 
 Now, you will have a folder structure as below
-<img width="1159" alt="Screenshot 2022-09-13 at 11 59 40 AM" src="https://user-images.githubusercontent.com/35517007/189841745-2c5cd395-ce05-4124-9a44-e4aea01e124f.png">
+<img width="1680" alt="Screenshot 2022-09-25 at 12 12 40 AM" src="https://user-images.githubusercontent.com/35517007/192116380-698146f9-860f-4748-95f6-cba2cfa2edde.png">
 
-# Write Smart Contract Using OpenZeppelin
+
+# 💵 Write Smart Contract Using OpenZeppelin
 
 To use openzeppelin contracts, install the package in the project using
 
@@ -274,7 +263,7 @@ npm install dotenv
 
 - Open the `hardhat.config.js` file. Now we will add the network url and private key of our wallet to this file, so that we can deploy our contract. Your `harhat.config.js` should look like this.
 
-````jsx
+```jsx
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
@@ -291,58 +280,8 @@ module.exports = {
     },
   },
 };
-
-
-
-
-
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to install a new dependency called `dotenv` that will be used in the `hardhat.config.js` file:
-
-```bash
-npm install dotenv
-````
-
-We will need to configure a `.env` file with XDC Mainnet and Apothem Testnet RPC endpoints, plus the _Private Key_ of the wallet we are using for deployment. Lets start by running:
-
-```bash
-touch .env
 ```
 
-And writting the following info in our .env file:
-
-```bash
-XINFIN_NETWORK_URL=https://erpc.xinfin.network
-APOTHEM_NETWORK_URL=https://erpc.apothem.network
-PRIVATE_KEY=202e3c9d30bbeca38d6578659919d4c3dc989ae18c16756690877fdc4dfa607f
-```
-
-🚨 **Do not use the Private Key in the example above in production or you can risk losing your assets!** 🚨
-
-And finally, we can configure the `hardhat.config.js` file for both Apothem and XinFin Networks by writting:
-
-```jsx
-require("@nomicfoundation/hardhat-toolbox");
-require("dotenv").config({ path: ".env" });
-
-const XINFIN_NETWORK_URL = process.env.XINFIN_NETWORK_URL;
-const APOTHEM_NETWORK_URL = process.env.APOTHEM_NETWORK_URL;
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
-
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
-  solidity: "0.8.17",
-  networks: {
-    xinfin: {
-      url: XINFIN_NETWORK_URL,
-      accounts: [PRIVATE_KEY],
-    },
-    apothem: {
-      url: APOTHEM_NETWORK_URL,
-      accounts: [PRIVATE_KEY],
-    },
-  },
-};
-```
 
 ## 💵 Deploying the contract
 
@@ -350,7 +289,7 @@ After writing code for the setup and contract, go back to the terminal. Make sur
 
 For XDC mainnet:
 
-```sh
+```bash
 npx hardhat run scripts/deploy.js --network xinfin
 ```
 
@@ -371,6 +310,8 @@ My token contract address: 0xc8Ac88d77b9870D289806F54AfF9057f170bAb21
 ## 🔍 Veryfing Contracts on the Block Explorer
 
 Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
+
+Change the prefix `0x` to `xdc` to look for your contract on [XinFin Block Explorer](https://explorer.xinfin.network/)
 
 ---
 
