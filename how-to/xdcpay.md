@@ -84,21 +84,21 @@ In order to add custom XRC20, XRC721, and XRC1155 tokens, we need to have XDCPay
 - Here, We are adding a XRC20 stablecoin xUSDT .We need xUSDT token smart contract address is **'xdcD4B5f10D61916Bd6E0860144a91Ac658dE8a1437'** . Best way to find top XRC20 token is XDC Explorer [link](https://explorer.xinfin.network/tokens/xrc20)
 
 <p align="center">
-  <img src="https://github.com/mogithehurt/test/blob/86eaa6fa908b7ac2536f2f276061538bd8c44673/Screenshot%202022-09-23%20150635.png">
+  <img src="https://user-images.githubusercontent.com/114102465/192079787-8c625ad6-e129-47bf-8471-ea555b64b6f4.png">
 </p>
 
 - Step 1:- Click on Tokens
 - Step 2:- Click on Add Token
 
 <p align="center">
-  <img src="https://github.com/mogithehurt/test/blob/86eaa6fa908b7ac2536f2f276061538bd8c44673/Screenshot%202022-09-23%20150535.png">
+  <img src="https://user-images.githubusercontent.com/114102465/192079855-3b22c16b-b00b-4a70-9b7a-513d25a2f41b.png">
 </p>
 
 - Step 3:-Paste copied smart contract address (Token symbol and Decimal of precision feilds will automatically updated)
 - Step 4:-Click on Add 
 
 <p align="center">
-  <img src="https://github.com/mogithehurt/test/blob/062ecc1b487b1dd6bb3ae43fe0c0925c0c173ff8/Screenshot%202022-09-23%20150718.png">
+  <img src="https://user-images.githubusercontent.com/114102465/192079894-86f08c69-1e27-499f-a94b-7768fb73979f.png">
 </p>
 
 - We added a XRC20 token successfully.
@@ -110,20 +110,20 @@ In order to add custom XRC20, XRC721, and XRC1155 tokens, we need to have XDCPay
 - You can find top NFTs contract [here](https://explorer.xinfin.network/tokens/nft)
 
 <p align="center">
-  <img src="https://github.com/mogithehurt/test/blob/c1b451055cea6af536c0e4f260e1189955e42155/Screenshot%202022-09-23%20175400.png">
+  <img src="https://user-images.githubusercontent.com/114102465/192079925-e2406852-004e-478b-afa7-6a6102f5da4d.png">
 </p>
 
 - Step 1:-Click on Add Token.
 
 <p align="center">
-  <img src="https://github.com/mogithehurt/test/blob/c1b451055cea6af536c0e4f260e1189955e42155/Screenshot%202022-09-23%20175439.png">
+  <img src="https://user-images.githubusercontent.com/114102465/192079946-5fb4cc93-b575-4335-a186-edae2e12956f.png">
 </p>
 
 - Step 2:-Paste copied NFTs smart contract address (Token symbol  will automatically updated and set Decimal of precision feilds value to 0).
 - Step 3:-Click on Add.
 
 <p align="center">
-  <img src="https://github.com/mogithehurt/test/blob/c1b451055cea6af536c0e4f260e1189955e42155/Screenshot%202022-09-23%20175459.png">
+  <img src="https://user-images.githubusercontent.com/114102465/192079967-af57f7d2-6e35-4103-b234-bab554e7d53e.png">
 </p>
 
 - We added a XRC721 NFT token successfully.
@@ -134,20 +134,20 @@ In order to add custom XRC20, XRC721, and XRC1155 tokens, we need to have XDCPay
 - You can find top XRC1155 NFTs contract [here](https://explorer.xinfin.network/tokens/nft1155) 
 
 <p align="center">
-  <img src="https://github.com/mogithehurt/test/blob/1d112e71a6de9eb65b5bc87c6f2edfa0723e9ea9/Screenshot%202022-09-23%20193922.png">
+  <img src="https://user-images.githubusercontent.com/114102465/192079989-03155bd8-18dd-4bac-bd00-ac1674873f20.png">
 </p>
 
 - Step 1:-Click on Add Token
 
 <p align="center">
-  <img src="https://github.com/mogithehurt/test/blob/1d112e71a6de9eb65b5bc87c6f2edfa0723e9ea9/Screenshot%202022-09-23%20193950.png">
+  <img src="https://user-images.githubusercontent.com/114102465/192080027-bafea874-f752-49a9-b0a7-cde04b9f0fd3.png">
 </p>
 
 - Step 2:-Paste copied XRC1155 NFTs smart contract address (Token symbol  will automatically updated and set Decimal of precision feilds value to 0)
 - Step 3:-Click on Add.
 
 <p align="center">
-  <img src="https://github.com/mogithehurt/test/blob/1d112e71a6de9eb65b5bc87c6f2edfa0723e9ea9/Screenshot%202022-09-23%20194010.png">
+  <img src="https://user-images.githubusercontent.com/114102465/192080039-80e0d440-5a46-46ef-b928-309803cbca4b.png">
 </p>
 
 - We added a XRC1155 NFT token successfully.
