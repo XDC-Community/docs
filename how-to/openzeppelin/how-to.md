@@ -28,7 +28,7 @@ OpenZeppelin contracts are written in solidity and uses ERC standards for Ethere
 
 In this tutorial, you will learn how to set up Hardhat and use it to build, test and deploy a smart contract build with openzeppelin on both the XDC Network mainnet and XDC Apothem testnet. 
 
-The complete tutorial code can be found [here](https://github.com/ArpitaGanatra/docs/tree/main/how-to/openzeppelin/xdc-openzeppelin).
+The complete tutorial code can be found [here](./xdc-openzeppelin).
 
 ### What you will do
 
@@ -317,4 +317,4 @@ Change the prefix `0x` to `xdc` to look for your contract on [XinFin Block Explo
 
 For more information about Hardhat, Please Visit [Hardhat Documentation](https://hardhat.org/tutorial).<br>
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
-Resources used during the deployment of the XRC20 Token can be found at [XRC20 Contract Folder](./XRC20).
+Resources used during the deployment of the openzeppelin ERC20 Token can be found [here](https://docs.openzeppelin.com/contracts/4.x/erc20).
