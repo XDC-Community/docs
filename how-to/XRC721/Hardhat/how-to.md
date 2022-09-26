@@ -469,12 +469,6 @@ Downloading compiler 0.8.16
 Compiled 1 Solidity files successfully
 ```
 
-And your folder should look like this:
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/191273560-8f666f6c-c7b9-4bad-8369-46337f6243b2.png" alt="Folder 02"/>
-</p>
-
 In order to deploy our newly compiled contract artifacts to the blockchain, we need to create a deployment script into the script folder:
 
 ```sh
