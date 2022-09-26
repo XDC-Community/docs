@@ -32,6 +32,7 @@
     * [XIP Proposals](get-details/smart-contract-details/xip-proposals.md)
   * [Wallet Integration](get-details/wallet-integration/README.md)
     * [XDCPay](get-details/wallet-integration/xdcpay.md)
+    * [XDCPay Changelist](get-details/wallet-integration/xdcpay-changelist.md)
     * [Wallet Connect](get-details/wallet-integration/wallet-connect.md)
     * [Metamask](get-details/wallet-integration/metamask.md)
   * [Networks](get-details/networks/README.md)

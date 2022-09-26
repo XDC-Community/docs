@@ -35,17 +35,17 @@ In general the issue reporting process has two steps:
 
 1.  On [xdc.dev](https://www.xdc.dev/) (after having created an account) click on the "Create Post" button in the upper right hand corner.
 
-    <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 2.  Add a descriptive title to your post and be sure to provide a link back to the GitHub issue in the body of the post.
 
-    <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
     Within the body of the post be sure to provide as much context as possible, including screenshots that help illustrate the issue.  The post on xdc.dev will raise the issue with XDC Developer Community and also give you a way to provide detailed information to the developers who will be working on resolving your issue.
 3. As an example of a post describing an issue please reference: [https://www.xdc.dev/menezesphill/ethereum-compatible-rpc-endpoint-on-apothem-rejecting-remote-calls-jel](https://www.xdc.dev/menezesphill/ethereum-compatible-rpc-endpoint-on-apothem-rejecting-remote-calls-jel)
 4. Once your post is complete, hit the "Publish" button on the bottom left hand corner of the screen to make the post live.
 5.  You can use the comments section below your post to engage with developers to answer questions or provide further feedback on your issue.
 
-    <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 
 
