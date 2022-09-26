@@ -524,6 +524,12 @@ Token Successfully Deployed!
 Token address: 0xbC5bA2B6e2f74EC1e8e5A310a42F65D185691Af2
 ```
 
+And this is how our freshly minted NFT looks on [Apothem Block Explorer](https://explorer.apothem.network/)
+
+![XRC721_0](https://user-images.githubusercontent.com/102393474/192279556-98d2fcb1-06aa-4b5b-8462-05a84489026b.png)
+![xrc721_1](https://user-images.githubusercontent.com/102393474/192279202-f9204bec-48a8-4a0a-8d7f-cd2c93218a42.png)
+
+
 # 🔍 Veryfing Contracts on the Block Explorer
 
 Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
