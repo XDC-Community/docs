@@ -447,7 +447,7 @@ contract XRC721 is ERC721 {
         _tokenIds.increment();
 
         uint256 newItemId = _tokenIds.current();
-        _mint(player, newItemId);
+        _mint(tokenOwner, newItemId);
 
         return newItemId;
     }
