@@ -79,7 +79,7 @@ The interface shown above will appear initially on the Settings tab. Without scr
 
 This is a feature that allows you to add more than one wallet. It can be useful both in development and in real life. Since you'll be making applications, you will need to test one account and get your accounts to interact on a smart contract.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Adding accounts
 
@@ -153,7 +153,7 @@ Aside from the XDC token, there are also different kinds of tokens that you can 
 
 ### Add tokens
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 From the main interface, go to the top left menu icon beneath the 'Home' button. You can add a token that you made from an XRC20 standard contract, or you can search for someone else's token. Assuming that you have one already, let's go with adding your own first.
 
@@ -169,7 +169,7 @@ Now, let's move on to the searching of the token.
 
 Same as before, if you go to the menu icon again, on the Search tab, you will see this interface:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 As shown above, EURG is a known example of a crypto token. If you have received EURG tokens in an instance, you can search and verify them from here and add them to your token list.
 
@@ -177,7 +177,7 @@ As shown above, EURG is a known example of a crypto token. If you have received 
 
 If you forgot your secret backup phrase, you can get it from your settings. Go back to settings from the top-right menu button.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>
 
 When you get inside Settings, you will find the Reveal Seed Words section if you scroll down in the middle. If you click the Reveal Seed Words button, the secret backup phrase will be shown and you can copy it.&#x20;
 
