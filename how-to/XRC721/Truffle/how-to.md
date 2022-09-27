@@ -264,10 +264,10 @@ Inside our contract, we would be importing the scripts from **`OpenZeppelin`** G
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.16;
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract XRC721 is ERC721 {
     using Counters for Counters.Counter;
@@ -357,19 +357,16 @@ We do not need to write this code in our contract. It is already implemented wit
 We need to create the `constructor` that is a function called only once when the contract is deployed, where we can parse as arguments information such as the token name and symbol. We would also create another function `createToken` which will take an address and `mint` our created `XRC721 NFT Token` to that address:
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.16;
 
-// import "@openzeppelin/contracts/token/ERC721/ERC721Full.sol";
-// import "@openzeppelin/contracts/drafts/Counters.sol";
-
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol";
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract XRC721 is ERC721 {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor(string memory name, string memory symbol) ERC721(name, symbol) {
+    constructor(string memory _name, string memory _symbol) ERC721(_name, _symbol) {
     }
 
     function createToken(address tokenOwner) public returns (uint256) {
