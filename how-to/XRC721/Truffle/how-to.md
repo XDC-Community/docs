@@ -262,6 +262,12 @@ contract XRC721 {
 
 Inside our contract, we would be importing the scripts from **`OpenZeppelin`** Github repository. These form the foundation for our contract which is having all the code of different functions which needs to be implemented in our contract. We are also importing the **`Counters`** from **`OpenZeppelin`** Github repository which is used to keep account of the counter of the current tokenId.
 
+First we have to import `OpenZeppelin` using this command:
+
+`npm i @openzeppelin/contracts`
+
+Then we have to import both `ERC721` and `Counters` contract to our code:
+
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.16;
