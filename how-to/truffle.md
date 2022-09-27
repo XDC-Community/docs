@@ -4,7 +4,7 @@ title: Using Truffle Example
 description:  "Use Truffle to deploy a Smart Contract."
 keywords:
   - docs
-  - apothem
+  - Apothem
   - smart
   - contract
   - truffle
