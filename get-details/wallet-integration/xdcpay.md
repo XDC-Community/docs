@@ -65,7 +65,7 @@ It is very helpful since you'll use your account a lot on your smart contract de
 
 Moreover, if you want to switch the value from fiat to dx, you can do that by going to the Settings from the top right three lines button, as shown here:
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 When clicked, a window will show up under it. You can see from the bottom-most part, which is the Settings button with the gear icon. Click that button and it should show this:
 
@@ -79,7 +79,7 @@ The interface shown above will appear initially on the Settings tab. Without scr
 
 This is a feature that allows you to add more than one wallet. It can be useful both in development and in real life. Since you'll be making applications, you will need to test one account and get your accounts to interact on a smart contract.
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ### Adding accounts
 
@@ -93,7 +93,7 @@ When you go back, you'll have your new account created. It also has a unique add
 
 ### Importing accounts
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 If you have an existing account, you can click on Import Account. You will be redirected to an interface where you will have to put a secret backup phrase in the private key string text input of the Private Key category. If you want to import JSON, you can do so by changing it in JSON. The last thing to do is to click the Import button.
 
@@ -141,7 +141,7 @@ After you set everything, click Next. And you'll be sent to the confirmation int
 
 ### Confirmation Interface
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 It is the exact interface whenever you make transactions on XDC using XDCPay. You'll see a lot of prompting interfaces once you start developing.
 
@@ -153,7 +153,7 @@ Aside from the XDC token, there are also different kinds of tokens that you can 
 
 ### Add tokens
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 From the main interface, go to the top left menu icon beneath the 'Home' button. You can add a token that you made from an XRC20 standard contract, or you can search for someone else's token. Assuming that you have one already, let's go with adding your own first.
 
@@ -169,7 +169,7 @@ Now, let's move on to the searching of the token.
 
 Same as before, if you go to the menu icon again, on the Search tab, you will see this interface:
 
-<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 As shown above, EURG is a known example of a crypto token. If you have received EURG tokens in an instance, you can search and verify them from here and add them to your token list.
 
@@ -177,7 +177,7 @@ As shown above, EURG is a known example of a crypto token. If you have received 
 
 If you forgot your secret backup phrase, you can get it from your settings. Go back to settings from the top-right menu button.
 
-<figure><img src="../../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 When you get inside Settings, you will find the Reveal Seed Words section if you scroll down in the middle. If you click the Reveal Seed Words button, the secret backup phrase will be shown and you can copy it.&#x20;
 
