@@ -33,24 +33,24 @@ description: Use Remix to deploy a Smart Contract.
 
 #### What you will learn
 
-This guide aims at teaching how to create a smart contract using Remix IDE and deploying it on XDC Network.
+This guide aims to teach how to create a smart contract using Remix IDE and deploying it on XDC Network.
 
 #### What you will do
 
 * Setup Remix IDE
-* Creating XDCPay Wallet and using faucet for test XDC tokens
-* Deploy contract on XDC Network
+* Create an XDCPay Wallet and use faucet to test XDC tokens
+* Deploy contract on the XDC Network
 * Check the deployment status on [xinfin.network](https://xinfin.network/#stats).
 
 ## 🚀 Setting up the development environment
 
-Remix is an online solidity IDE for compiling and deploying solidity code to EVM compatible blockchains. To begin working on a new smart contract, we must first create a new file in the contracts folder on the left side of the view pane.
+Remix is an online solidity IDE for compiling and deploying solidity code to EVM-compatible blockchains. To begin working on a new smart contract, we must first create a new file in the contracts folder on the left side of the view pane.
 
 ![](https://user-images.githubusercontent.com/60708843/190065372-1e43e443-f13b-463a-abb6-7497ae7c8b8c.png)
 
 ### ⚒️ Creating XDCPay Wallet for signing transactions
 
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to have XDCPay wallet to sign our transactions and store XDC tokens.
+In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to have an XDCPay wallet to sign our transactions and store XDC tokens.
 
 * First we have to install the chrome extension of [XDCPay](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo).
 
@@ -61,7 +61,7 @@ In order to get started deploying new contracts on XDC Mainnet and/or Apothem, w
 
 ![](https://user-images.githubusercontent.com/60708843/190069353-3214410d-0526-41c9-9c1c-1170a10840c6.png)
 
-* Create a new XDCPay wallet by setting up a strong password or use an existing Seed Phrase **`12 or 24-Word Mnemonic Phrase`** to recover your existing wallet here.
+* Create a new XDCPay wallet by setting up a strong password or use an existing seed phrase **`12 or 24-Word Mnemonic Phrase`** to recover your existing wallet here.
 
 ![](https://user-images.githubusercontent.com/60708843/190121441-7b972e85-8ec0-47c2-adae-4e6c3fb01528.png)
 
@@ -74,7 +74,7 @@ In order to get started deploying new contracts on XDC Mainnet and/or Apothem, w
 
 ### ⚒ Adding Testnet XDC to Development Wallet
 
-Initially, our account would be empty, and we would require some XDC tokens to initiate blockchain transactions. We would use a faucet to fill our wallet with test XDC tokens for this. These tokens are worthless in and of themselves. They are simply used to test your contracts on the testnet in order to avoid losing your real money.
+Initially, your account would be empty, and it would require some XDC tokens to initiate blockchain transactions. You would use a faucet to fill your wallet with test XDC tokens for this. These tokens are worthless in and of themselves. They are simply used to test your contracts on the testnet in order to avoid losing your real money.
 
 * First, make a copy of your wallet address. Your wallet address would look like **`xdc057ac7de8ad6f21c7bb0dcc6a389ff9161b3b943`**. These account address are interchangeable with Ethereum network. We can access these accounts on Ethereum network by simply changing the initial `xdc` with `0x`.
 
@@ -156,12 +156,12 @@ Lets try compiling the `Pizza.sol` contract:
 
 ![](https://user-images.githubusercontent.com/60708843/191068355-eccc73c6-d7be-4d0b-ae69-e9cad4f94139.png)
 
-* After Successful Compilation, it will show ![alt](https://user-images.githubusercontent.com/60708843/190067983-4451282c-348c-4872-a57d-b2e698b59cad.png)
+* After successful compilation, it will show ![alt](https://user-images.githubusercontent.com/60708843/190067983-4451282c-348c-4872-a57d-b2e698b59cad.png)
 * Once our contract has been compiled, we can deploy it to the Apothem Test Network.
 
 ### 🍕 Deploying
 
-For deployment on the XDC Apothem Testnet. In either case, you need to have enough funds to pay for gas fees on the address that is being used for development.
+To deploy on the XDC Apothem Testnet, you need to have enough funds to pay for gas fees on the address that is being used for development.
 
 * Navigate to Deploy and Transactions ![alt](https://user-images.githubusercontent.com/60708843/190074569-0f6cccdb-08d6-41e9-8c54-9ac9c648a283.png).
 
@@ -171,23 +171,23 @@ For deployment on the XDC Apothem Testnet. In either case, you need to have enou
 
 ![](https://user-images.githubusercontent.com/60708843/191069823-c1b9c78d-e217-49e5-b86b-972ba14f02c6.png)
 
-* Confirm the popup to add the account to Remix IDE now.
+* Confirm the pop-up to add the account to Remix IDE now.
 * Next, choose the account to which you want to deploy the contract.
 
 ![](https://user-images.githubusercontent.com/60708843/191070126-3f4806f0-4e0d-4ea9-a8de-983c9b1f4d6f.png)
 
 * Choose the contract you want to use.
-* Add the number of Pizza slices that we wish to create the pizza and deploy the contract.
+* Add the number of pizza slices that you wish to create the pizza and deploy the contract.
 
 ![](https://user-images.githubusercontent.com/60708843/191071346-650c1ea1-c254-4266-b41d-0ed08acaa4f5.png)
 
-* A popup will appear, which we must confirm in order to create the transaction for contract deployment.
+* A popup will appear, which you must confirm in order to create the transaction for contract deployment.
 
 ![](https://user-images.githubusercontent.com/60708843/190075747-c7d1f7a6-2737-49ac-bd72-681a84bd95b0.png)
 
 ## 🔍 Veryfing Contracts on the Block Explorer
 
-Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
+Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify your contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
 First lets check the address our contract is deployed. Go to your wallet and get the most recent transaction details, then copy the transaction address.
 
@@ -234,8 +234,8 @@ We can easily test our contract with the help of that contract address. To start
 
 ![Verify 03](https://user-images.githubusercontent.com/60708843/191074867-7287bc46-3e37-41e8-aa41-1ea55ac1d85a.png)
 
-* We would then be shown all of the different functions and variables that were available for us to see and use.
-* When we click that button after running our `eatSlice()` method, a transaction is started and its value is stored on the network. It should log a transaction confirmation (Or rejection) object
+* You will then be shown all of the different functions and variables that were available for us to see and use.
+* When you click that button after running our `eatSlice()` method, a transaction is started and its value is stored on the network. It should log a transaction confirmation (Or rejection) object
 
 ![Verify 03](https://user-images.githubusercontent.com/60708843/190078140-9cba86b1-40e7-46e2-b492-730db149d7fa.png)
 
