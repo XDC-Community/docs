@@ -264,7 +264,9 @@ Inside our contract, we would be importing the scripts from **`OpenZeppelin`** G
 
 First we have to import `OpenZeppelin` using this command:
 
-`npm i @openzeppelin/contracts`
+```sh
+npm i @openzeppelin/contracts
+```
 
 Then we have to import both `ERC721` and `Counters` contract to our code:
 
