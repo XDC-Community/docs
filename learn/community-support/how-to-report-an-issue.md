@@ -35,7 +35,7 @@ In general the issue reporting process has two steps:
 
 1.  On [xdc.dev](https://www.xdc.dev/) (after having created an account) click on the "Create Post" button in the upper right hand corner.
 
-    <figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 2.  Add a descriptive title to your post and be sure to provide a link back to the GitHub issue in the body of the post.
 
     <figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>

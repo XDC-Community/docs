@@ -1,10 +1,3 @@
----
-description: >-
-  XDC Masternodes are defined as full nodes or backup nodes based on the reward
-  based they are receiving as rewards. Full nodes get 10% of the total XDC
-  staked. Backup nodes get 8% of the XDC staked.
----
-
 # Full Node (Docker version)
 
 We are going to follow these steps to set up an XDC Masternode.&#x20;
@@ -12,6 +5,16 @@ We are going to follow these steps to set up an XDC Masternode.&#x20;
 ## Setting up XDC Network Masternode Docker version
 
 The server or VPS used for the masternode should be facing the internet directly with a public IP and without NAT.&#x20;
+
+There are written steps starting from step 1, or you can watch the video tutorial:
+
+{% embed url="https://www.youtube.com/watch?v=1A20eVTJYvs" %}
+Setting up XDC Network Masternode via Docker
+{% endembed %}
+
+{% embed url="https://www.youtube.com/watch?v=ZQF3f0Zd6-k" %}
+Downlaoding an XDC Snapshot&#x20;
+{% endembed %}
 
 ## Step 1
 

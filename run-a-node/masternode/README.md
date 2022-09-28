@@ -11,7 +11,7 @@ description: >-
 
 There are 3 ways that an XDC Network Masternode can be deployed.  One way is the one-click installer, as shown here:&#x20;
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can find the instructions [here](https://xinfin.org/setup-masternode) or visit the [Github](https://github.com/XDCFoundation/XDCNetwork-Masternode) repository and follow the "Method 1". &#x20;
 
@@ -19,7 +19,7 @@ You can find the instructions [here](https://xinfin.org/setup-masternode) or vis
 
 The second way is to set up an XDC Network Masternode via a Bootstrap script by following the steps described [here](https://github.com/XinFinOrg/XinFin-Node).&#x20;
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Method 3
 
