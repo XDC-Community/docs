@@ -1,7 +1,7 @@
 ---
 id: defi-app-truffle
 title: DeFi App using Truffle and Ganache
-description:  "Use Truffle and Ganace to create DeFi App"
+description:  "Use Truffle and Ganache to create DeFi App"
 keywords:
   - docs
   - apothem
@@ -331,9 +331,7 @@ Compiling your contracts...
 
 And your folder should look like this:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/190875030-27137576-84b6-45a1-be1d-f52f55d6488f.png" alt="Step 03"/>
-</p>
+![folder_struct](https://user-images.githubusercontent.com/102393474/192887344-772b3e7a-a43a-47b1-a255-3a6f04f11ba5.png)
 
 In order to deploy our newly compiled contract artifacts to the blockchain, we need to create a deployment script into the migrations folder:
 
@@ -363,7 +361,11 @@ module.exports = async function (deployer) {
 }
 ```
 
-Now lets run it on a ganache local network. First, open Ganache app and choose `Quickstart` option to start local blockchain network. Then, deploy contracts by running:
+Now lets run it on a ganache local network. First, open Ganache app and choose `Quickstart` option to start local blockchain network. 
+
+![ganache_home](https://user-images.githubusercontent.com/102393474/192887131-53f9bcec-9843-4027-8ec1-8b442c2d2bb7.png)
+
+Then, deploy contracts by running:
 
 ```sh
 truffle migrate
@@ -421,6 +423,12 @@ Summary
 > Total deployments:   2
 > Final cost:          0.06297366 ETH
 ```
+
+And this is what you will see from Ganache app.
+![ganache_0](https://user-images.githubusercontent.com/102393474/192887165-4e766c71-5167-4ef7-9e00-2568ece97580.png)
+
+![ganache_1](https://user-images.githubusercontent.com/102393474/192887171-6ba7b46d-80d4-4d0b-96a5-092cca193a30.png)
+
 
 ## 💵 Testing FarmToken contract
 
