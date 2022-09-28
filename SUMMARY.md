@@ -81,7 +81,6 @@
     * [Geth Puppeth](run-a-node/private-permissioned-node/geth-puppeth.md)
 * [Changelog](changelog.md)
 * [Tutorials](tutorials.md)
-* [Contributing and Feedback Guide](gitbook.md)
 * [About](about.md)
 
 ## Learn
@@ -100,5 +99,5 @@
   * [How to Create an XRC20 Token Using an XRC20 Factory Smart Contract](learn/how-to-articles/how-to-create-an-xrc20-token-using-an-xrc20-factory-smart-contract.md)
   * [How to Create and Deploy an XRC20 Token Using Hardhat and TypeScript](learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-hardhat-and-typescript.md)
 * [Community Support](learn/community-support.md)
-  * [How to Contribute](learn/community-support/how-to-contribute.md)
   * [How to Report an Issue](learn/community-support/how-to-report-an-issue.md)
+  * [Contributing and Feedback Guide](learn/community-support/gitbook.md)
