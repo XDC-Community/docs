@@ -74,7 +74,7 @@
     * [1 Click Masternode Installer](tools/network-tools/1-click-masternode-installer.md)
 * [Run a Node](run-a-node/README.md)
   * [Masternode](run-a-node/masternode/README.md)
-    * [Full Node](run-a-node/masternode/full-node.md)
+    * [Full Node (Docker version)](run-a-node/masternode/full-node.md)
     * [Standby Node](run-a-node/masternode/standby-node.md)
     * [Archival Node (RPC)](run-a-node/masternode/archival-node-rpc.md)
   * [Private Permissioned Node](run-a-node/private-permissioned-node/README.md)
