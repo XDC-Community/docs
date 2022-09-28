@@ -93,7 +93,7 @@ When you go back, you'll have your new account created. It also has a unique add
 
 ### Importing accounts
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 If you have an existing account, you can click on Import Account. You will be redirected to an interface where you will have to put a secret backup phrase in the private key string text input of the Private Key category. If you want to import JSON, you can do so by changing it in JSON. The last thing to do is to click the Import button.
 
@@ -107,7 +107,7 @@ In the example above, you can see that two accounts are already added: Account 1
 
 Switching networks is an important thing about XDCPay. As you have recently seen, we're using the main XDC Network. But that's not the development network; there's another network available for developers.
 
-<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 As you can see in the picture above, we're on the Main network. Below is the developers' network, XDC Apothem Network. If you're using Remix directly with injected Web3 setting, Localhost: 8545 is for your local XDC network.
 
@@ -153,7 +153,7 @@ Aside from the XDC token, there are also different kinds of tokens that you can 
 
 ### Add tokens
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 From the main interface, go to the top left menu icon beneath the 'Home' button. You can add a token that you made from an XRC20 standard contract, or you can search for someone else's token. Assuming that you have one already, let's go with adding your own first.
 

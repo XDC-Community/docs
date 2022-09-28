@@ -6,15 +6,15 @@ We are going to follow these steps to set up an XDC Masternode.&#x20;
 
 The server or VPS used for the masternode should be facing the internet directly with a public IP and without NAT.&#x20;
 
-There are written steps starting from step 1, or you can watch the video tutorial:
+There are written steps starting from step 1, or you can watch the video tutorials:
+
+### Setting up an XDC Network Masternode via Docker
 
 {% embed url="https://www.youtube.com/watch?v=1A20eVTJYvs" %}
-Setting up XDC Network Masternode via Docker
-{% endembed %}
+
+### Downloading an XDC Network Snapshot:&#x20;
 
 {% embed url="https://www.youtube.com/watch?v=ZQF3f0Zd6-k" %}
-Downlaoding an XDC Snapshot&#x20;
-{% endembed %}
 
 ## Step 1
 
