@@ -29,7 +29,7 @@ For contributing to the manual, the following is needed to get started:
 
 This repo has two branches:
 
-* `master`: reserved for production only.&#x20;
+* `master`: reserved for production only.
   * Any changes merged in to `master` will automatically be reflected on Gitbook.
 * `develop`: the default branch used for development and content changes.
 
