@@ -148,7 +148,7 @@ We just need to compile the Solidity file, by changing the Remix tab to `Solidit
 
 For this tutorial, we gonna deploy the contract using a web3 wallet compatible with XDC Network, the [*XDCPay*](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo). Install the wallet and create a new account, after that we need to have network gas for interacting with the blockchain.
 
-> :warning: Don't forget to check if you are connected to the **XDC Apothem** testnet network
+> :warning: Because we are just testing, check if you are connected to the **XDC Apothem** testnet network.
 
 Visit the [XDC Apothem network faucet](https://faucet.apothem.network/), enter the public address of your account, and `Request 1000 XDC`. After the success message from the faucet, you can confirm if you have 1000 XDC tokens transferred to your wallet.
 
@@ -165,7 +165,7 @@ Now that we have gas, deploy the contract we previously create. Just change to d
 After that, you should see a pop-up notification to accept/deny the deployment transaction, accept by clicking on `Submit`.
 
 <p align="center">
-  <img width=35% valign="middle" src="../.gitbook/assets/openzeppelin-example-verify01.png" alt="Verify"/> <img width=35% valign="middle" src="../.gitbook/assets/openzeppelin-example-verify02.png" alt="Verify"/>
+  <img width=35% valign="middle" src="../.gitbook/assets/openzeppelin-example-deploy04.png" alt="Verify"/> <img width=35% valign="middle" src="../.gitbook/assets/openzeppelin-example-verify01.png" alt="Verify"/>
 </p>
 
 Wait for the blockchain confirmation in the `Transactions` tab of your wallet. You can now copy the transaction hash `0xe487f01b027172ce171f5980e465307da5bdb66a0425904ff8f48f25f797b15d` :partying_face::partying_face:
@@ -175,10 +175,32 @@ Wait for the blockchain confirmation in the `Transactions` tab of your wallet. Y
 Open the [**XDC Apothem Network Explorer**](https://explorer.apothem.network/) and search for the previously copied hash. Here, at explorer, we can check all the transactions that occur on the network, including the deployment of our contract. Check the `To` address, should be your contract address (starting with `xdc...`).
 
 <p align="center">
+  <img width=70% valign="middle" src="../.gitbook/assets/openzeppelin-example-verify02.png" alt="Verify"/>
+</p>
+
+Search for the contract address on the explorer, we can see that the contract isn't verified. Click on `Verify and Publish` that will open the verification page.
+
+<p align="center">
   <img width=70% valign="middle" src="../.gitbook/assets/openzeppelin-example-verify03.png" alt="Verify"/>
 </p>
 
-Once the contract is verified, just go to `Contract` > `Read Contract` tab, and here you can perform reading actions (for example, getting the balance of an account, getting the contract owner, etc.).
+Now, we have to submit the source code, name, address, and compiler version of the contract. With this, the final user can confirm if the contract was been verified or not, but also interact with it directly on the explorer.
+
+> :information_source: When using external dependencies in your code (for example OpenZeppelin imports or other imports), we need to flat all the code before verifying.
+
+On the bottom-left corner in Remix, open `Plugin Manager` and install the `Flattener` plugin. Change to `Flattener` tab on the left navigation bar and click on `contracts/Flattern PizzaFreeVoucher.sol` (this will copy the flat code to your clipboard).
+
+<p align="center">
+  <img width=40% valign="middle" src="../.gitbook/assets/openzeppelin-example-flat01.png" alt="Flat the source code"/> <img width=40% valign="middle" src="../.gitbook/assets/openzeppelin-example-flat02.png" alt="Flat the source code"/>
+</p>
+
+Back to the verification page, paste this code, and fill in the rest of the information. Finally, click `Submit`.
+
+<p align="center">
+  <img width=60% valign="middle" src="../.gitbook/assets/openzeppelin-example-verify04.png" alt="Verify"/>
+</p>
+
+Once the contract is verified, just navigate to `Contract` > `Read Contract` tab, and here you can perform reading actions, such as getting the balance of an account, getting the contract owner, etc.
 
 <p align="center">
   <img width=60% valign="middle" src="../.gitbook/assets/openzeppelin-example-interact01.png" alt="Interact"/>
@@ -190,11 +212,11 @@ Let's mint our first non-fungible token by changing to the `Write Contract` tab.
   <img width=50% valign="middle" src="../.gitbook/assets/openzeppelin-example-interact02.png" alt="Interact"/> <img width=25% valign="middle" src="../.gitbook/assets/openzeppelin-example-interact03.png" alt="Interact"/>
 </p>
 
-Accept the action by submitting the transaction.
+Accept the action by submitting the transaction :rocket:
 
-# Confirm balance
+# Confirm the balance
 
-If the mint transaction was confirmed, congratulations! The target address now has one free pizza voucher. :rocket:
+If the mint transaction was confirmed, congratulations! The target address now has one free pizza voucher.
 
 <p align="center">
   <img width=70% valign="middle" src="../.gitbook/assets/openzeppelin-example-interact04.png" alt="Interact"/>
@@ -206,4 +228,4 @@ You can pick the voucher contract address (`xdcF26E1ac69D9e173C96848FbD1bBE8759f
   <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-wallet-token01.png" alt="Confirm wallet"/> <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-wallet-token02.png" alt="Confirm wallet"/> <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-wallet-token03.png" alt="Confirm wallet"/>
 </p>
 
-Now you can see the voucher NFT in your wallet! :rocket::rocket:
+Now you can see the voucher NFT in your wallet :rocket::rocket:
