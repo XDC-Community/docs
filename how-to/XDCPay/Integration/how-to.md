@@ -262,8 +262,8 @@ This Provider will provide the following list of features to our React App:
  - A `connect` method;
  - A `disconnect` method;
  - An `account` variable;
- - An `networkId` variable;
- - An `chainId` variable;
+ - A `networkId` variable;
+ - A `chainId` variable;
  - A `connected` boolean variable;
 
 Our folder should look like this:
