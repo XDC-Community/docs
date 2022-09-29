@@ -1,16 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styles from "./styles.module.scss";
+import { Web3ModalContext } from "../../contexts/Web3ModalProvider";
 
 const Content: React.FC = () => {
-  const [inputData, setInputData] = useState("");
+  const [xdcAddress, setXdcAddress] = useState("");
+  const [xdcBalance, setXdcBalance] = useState("");
+  const [currentChainId, setCurrentChainId] = useState("");
   const [walletStatus, setWalletStatus] = useState(false);
 
-  function ellipseAddress(
-    address: string = "",
-    width: number = 4
-  ): string {
-    return `${address.slice(0, width + 2)}...${address.slice(-width)}`;
-  }
+  const { account, chainId, web3 } = useContext(Web3ModalContext);
+
+  const getBalance = async () => {
+    if (web3 && account) {
+      const balance = await web3.eth.getBalance(account);
+      
+      setXdcBalance((Number(balance)/1e18).toString());
+    } else {
+      setXdcBalance("");
+    }
+  };
+
+  const getChainId = () => {
+    if (web3 && chainId) {
+      setCurrentChainId(String(chainId));
+    } else {
+      setCurrentChainId("");
+    }
+  };
+
+  const getWalletStatus = () => {
+    if (!account) {
+      setWalletStatus(false);
+    } else {
+      setWalletStatus(true);
+    }
+  };
+
+  const getAddress = () => {
+    if (account) {
+      setXdcAddress(`xdc${account.slice(2)}`);
+    } else {
+      setXdcAddress("");
+    }
+  };
+
+  useEffect(() => {
+    getBalance();
+    getChainId();
+    getWalletStatus();
+    getAddress();
+  }, [account, chainId, web3]);
 
   return (
     <section className={styles.content}>
@@ -24,7 +63,7 @@ const Content: React.FC = () => {
                   </div>
                   <input
                     type="text"
-                    value={inputData}
+                    value={xdcAddress}
                   />
                 </div>
 
@@ -34,7 +73,7 @@ const Content: React.FC = () => {
                   </div>
                   <input
                     type="text"
-                    value={inputData}
+                    value={currentChainId}
                   />
                 </div>
 
@@ -44,7 +83,7 @@ const Content: React.FC = () => {
                   </div>
                   <input
                     type="text"
-                    value={inputData}
+                    value={xdcBalance}
                   />
                 </div>
 
