@@ -95,7 +95,7 @@ If you get a compability error while installing these packages, try using the `-
 npm install web3modal web3 xdcpay-connect --force
 ```
 
-With everything is correctly installed, lets create a `Web3ModalProvider.tsx` file:
+With everything correctly installed, lets create a `Web3ModalProvider.tsx` file:
 
 ```sh
 touch ./src/contexts/Web3ModalProvider.tsx
