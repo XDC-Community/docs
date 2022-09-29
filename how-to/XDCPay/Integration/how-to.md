@@ -83,7 +83,7 @@ Lets start by creating a `contexts` folder on our project:
 mkdir ./src/contexts
 ```
 
-The touchpoint where our React App access data on the blockchain is through a `Web3Modal` Provider that we will access throughout our App. Lets start by installing the dependencies necessary to create our `Web3Modal`:
+The touchpoint where our React App access data on the blockchain is through a `Web3Modal` Provider that we will use throughout our App. Lets start by installing the dependencies necessary to create our `Web3Modal`:
 
 ```sh
 npm install web3modal web3 xdcpay-connect
