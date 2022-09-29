@@ -77,7 +77,7 @@ If you see it, we are ready to move on!
 
 ## ⚒ Creating a Web3Modal Provider
 
-Lets start by creating a `contexts` folder and a on our project:
+Lets start by creating a `contexts` folder on our project:
 
 ```sh
 mkdir ./src/contexts
