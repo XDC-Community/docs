@@ -98,6 +98,7 @@
   * [How to Send an XRC20 Transaction on the XDC Network Using ethers.js](learn/how-to-articles/how-to-send-an-xrc20-transaction-on-the-xdc-network-using-ethers.js.md)
   * [How to Create an XRC20 Token Using an XRC20 Factory Smart Contract](learn/how-to-articles/how-to-create-an-xrc20-token-using-an-xrc20-factory-smart-contract.md)
   * [How to Create and Deploy an XRC20 Token Using Hardhat and TypeScript](learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-hardhat-and-typescript.md)
+  * [How to Deploy Your First Smart Contract on the XDC Network Using Hardhat and TypeScript](learn/how-to-articles/how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-hardhat-and-typescript.md)
 * [Community Support](learn/community-support.md)
   * [How to Report an Issue](learn/community-support/how-to-report-an-issue.md)
   * [Contributing and Feedback Guide](gitbook.md)
