@@ -1,3 +1,17 @@
+# 🧭 Table of contents
+
+- [🧭 Table of contents](#-table-of-contents)
+- [📰 Overview](#-overview)
+- [🚀 Setting up the development environment](#-setting-up-the-development-environment)
+  - [⚒️ Starting a new Truffle Project](#-starting-a-new-truffle-project)
+- [📝 Writing our first Smart Contract](#-writing-our-first-smart-contract)
+  - [🍕 Compiling](#-compiling)
+- [🔀 Migrating from Ethereum to XDC network](#-migrating-from-ethereum-to-xdc-network)
+  - [🍕 Deploying](#-deploying)
+  - [🍕 Interacting with your contract using Truffle Console](#-interacting-with-your-contract-using-truffle-console)
+- [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
+
+
 # 📰 Overview
 
 [Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine.
@@ -69,10 +83,11 @@ http://trufflesuite.com/docs
 And your folder files will look like this:
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/189928139-f8448866-b691-486c-a300-2b7dd21f10c1.png" alt="Step 01"/>
+  <img width="229" alt="Screenshot 2022-09-29 at 1 01 13 PM" src="https://user-images.githubusercontent.com/35517007/192987763-26cd7979-0e21-4804-b3c3-75ba66a8e1b0.png" alt="Step 01">
+
 </p>
 
-# 🍕 Writing our first Smart Contract
+# 📝 Writing our first Smart Contract
 
 Lets create a simple `Pizza.sol` in the `contracts folder` , the Pizza contract should have:
 
@@ -130,8 +145,9 @@ Compiling your contracts...
 And your folder should look like this:
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/189987467-d1dc7cb8-623b-4e94-a4fa-f8732f46426d.png" alt="Step 03"/>
+  <img width="229" alt="Screenshot 2022-09-29 at 1 03 39 PM" src="https://user-images.githubusercontent.com/35517007/192988098-11f5f626-6623-421b-8e9d-255c2cd3b3f5.png">
 </p>
+
 
 > If you face an error while compiling in mac, you can use `sudo truffle compile`
 
@@ -162,7 +178,7 @@ MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe c
 
 🚨 **Do not use the mnemonic in the example above in production or you can risk losing your assets and/or the ownership of your smart contracts!** 🚨
 
-## 🍕 Migrating from Ethereum to XDC network
+## 🔀 Migrating from Ethereum to XDC network
 
 For this step we need to change the `truffle-config.js` file.
 
@@ -389,13 +405,15 @@ Network: apothem (id: 51)
   No contracts deployed.
 
 Network: xinfin (id: 50)
-  Pizza: 0xF899E5C79ccfa144fc76261Ad9A9F0300708FF24
+  Pizza: 0x4FA229354CdF9c49FD2752e3869150C24c6A80c7
 ```
 
 Here we have a `Pizza` contract deployed on XDC Mainnet at the `0x4FA229354CdF9c49FD2752e3869150C24c6A80c7`, we can search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190028078-ebc0f083-28a5-4772-88c1-ef49e91681fa.png" alt="Verify 01"/>
+
+  <img width="1673" alt="Screenshot 2022-09-29 at 1 23 00 PM" src="https://user-images.githubusercontent.com/35517007/192988503-29ea1b20-fd9d-4ca7-beb8-0f79d65b9678.png" alt="Verify 01" />
+
 </p>
 
 And click in the `Verify And Publish` Option.
@@ -409,19 +427,23 @@ We will be redirected to the Contract verification page where we need to fill ou
 Once everything is filled out, press Submit!
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190028508-003c942d-685a-4d14-9d93-264e7ff4a0b5.png" alt="Verify 02"/>
+  <img width="1647" alt="Screenshot 2022-09-29 at 1 23 14 PM" src="https://user-images.githubusercontent.com/35517007/192988653-f5987b54-df83-4464-a96a-2d71e2002905.png" alt="Verify 02"/>
+
 </p>
 
 If everything is correctly filled out, your contract page on the block explorer should display a new tab called `Contract`:
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190029029-2547af3f-d32c-48d6-a785-e47b1f7a91c5.png" alt="Verify 03"/>
+  <img width=70% alt="Screenshot 2022-09-29 at 1 23 24 PM" src="https://user-images.githubusercontent.com/35517007/192988808-72505e63-7810-402d-a61f-cf59defb15e3.png" alt="Verify 03"/>
+
 </p>
 
 In this page you can Read from, Write to, or simply read the information tied to your Smart Contract on the blockchain:
 
 <p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190030842-4ab30b85-f87b-43d1-a8b2-8d089abb1a34.png" alt="Verify 03"/>
+
+  <img width=70% alt="Screenshot 2022-09-29 at 1 23 40 PM" src="https://user-images.githubusercontent.com/35517007/192988899-eb41c2ae-c4b9-4bab-89e8-227d42bfe2b3.png" alt="Verify 03" />
+  
 </p>
 
 ---
