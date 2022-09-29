@@ -29,7 +29,7 @@ For contributing to the manual, the following is needed to get started:
 
 This repo has two branches:
 
-* `master`: reserved for production only.&#x20;
+* `master`: reserved for production only.
   * Any changes merged in to `master` will automatically be reflected on Gitbook.
 * `develop`: the default branch used for development and content changes.
 
@@ -41,7 +41,7 @@ Trying to edit or create a file in this repository will create your fork automat
 * When have finalized your changes, scroll to the bottom of the page and write a description of the changes you're proposing under the "Commit changes" section. Then select `Create a new branch for this commit and start a pull request` and click on `Propose file change`. This will direct you to the Pull request page
 * On the Pull request page, write a short comment explaining why are proposing those changes and publish your pull request clicking on Create pull request.
 
-Any pull request should be based on the `develop` branch. We will not consider pull requests made to `master`. For more information, please see see [Using Pull Request](https://help.github.com/articles/using-pull-requests/) and [Fork a Repo](https://help.github.com/articles/fork-a-repo/) if you're not familiar with Pull Requests.
+Any pull request should be based on the `develop` branch. We will not consider pull requests made to `master`. For more information, please see see [Using Pull Request](https://help.github.com/articles/using-pull-requests/) and [Fork a Repo](https://help.github.com/articles/fork-a-repo/) if you are not familiar with Pull Requests.
 
 ## Code review process <a href="#code-review-process" id="code-review-process"></a>
 
