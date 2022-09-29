@@ -37,6 +37,21 @@ mkdir xdc-hardhat && cd xdc-hardhat
 Initialize the project with hardhat.
 
 ```bash
+npm init --yes
+npm install --save-dev hardhat
+npm install --save-dev typescript
+npm install --save-dev ts-node
+```
+
+Note: If you are on windows, do install this
+
+```bash
+npm install --save-dev @nomicfoundation/hardhat-toolbox
+```
+
+In the same directory, run
+
+```bash
 npx hardhat
 ```
 <img width="484" alt="Hardhat init" src="https://user-images.githubusercontent.com/14329097/192101554-da367351-53d9-498f-a533-94766022eff2.png">
@@ -135,6 +150,13 @@ XINFIN_NETWORK_URL="enter-network-rpc-url-here"
 XINFIN_PRIVATE_KEY="enter-your-private-key-here"
 ```
 
+Depending on which network (Apothem or XinFin) you are deploying to you will need to use one of these Network URL's:
+
+```python
+XINFIN_NETWORK_URL=https://erpc.xinfin.network
+APOTHEM_NETWORK_URL=https://erpc.apothem.network
+```
+
 - Dont know how to get your private key? Open you XDC pay wallet extension and click on the three dots on the top-left. This will open a popup.
 <img width="360" alt="Screenshot 2022-09-18 at 12 27 44 AM" src="https://user-images.githubusercontent.com/35517007/190872826-b3437164-e6a8-487d-91c7-4a1d85d341d1.png">
 
@@ -170,7 +192,7 @@ const config: HardhatUserConfig = {
   networks: {
     xinfin: {
       url: process.env.XINFIN_NETWORK_URL,
-      accounts: [process.env.PRIVATE_KEY!]
+      accounts: [process.env.XINFIN_PRIVATE_KEY!]
     }
   }
 };
