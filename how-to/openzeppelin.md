@@ -62,7 +62,7 @@ ERC721 is a standard for **non-fungible tokens** and is defined in the [EIP-721 
 
 Joe has a Pizza shop and for the opening day, he wants to create a one-time free voucher for each client that show with her web3 wallet.
 
-Make a simple non-fungible token contract that can be paused and minted only by the owner, we gonna use OpenZeppelin's ERC721 contract for this. Open [Remix IDE](https://remix.ethereum.org/), and let's start creating a new Solidity file named `PizzaFreeVoucher.sol` in the contracts folder:
+Make a simple non-fungible token contract that can be paused and minted only by the owner, we gonna use OpenZeppelin's ERC721 contract for this. Open [Remix IDE](https://remix.xinfin.network/), and let's start creating a new Solidity file named `PizzaFreeVoucher.sol` in the contracts folder:
 
 <p align="center">
   <img width=30% src="../.gitbook/assets/openzeppelin-example-createfile01.png" alt="How to create a new file in Remix IDE"/> <img width=30% src="../.gitbook/assets/openzeppelin-example-createfile02.png" alt="How to create a new file in Remix IDE"/> <img width=30% src="../.gitbook/assets/openzeppelin-example-createfile03.png" alt="How to create a new file in Remix IDE"/>
@@ -89,7 +89,7 @@ contract PizzaFreeVoucher is ERC721, Pausable, Ownable, ERC721Burnable {
     constructor() ERC721("Pizza Free Voucher", "JOE_FVOUCH") {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "ipfs://QmUWy3zCsLLAu4jMpypUZkiEs9Nktnm3qNgKPzZVkrdpeo";
+        return "ipfs://QmUWy3zCsLLAu4jMpypUZkiEs9Nktnm3qNgKPzZVkrdpeo/#";
     }
 
     function pause() public onlyOwner {
