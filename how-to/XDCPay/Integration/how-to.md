@@ -24,7 +24,7 @@ keywords:
   - [⚒️ Fetching Blockchain Data using Web3Modal](#-fetching-blockchain-data-using-web3modal)
 
 # 📰 Overview
-[Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine.
+[Web3Modal](https://www.npmjs.com/package/web3modal) single Web3 / Ethereum provider solution for all Wallets, using it to develop new decentralized app is pretty straight forward and documentation on how to use it is widely available. We will be using [React](https://reactjs.org/) to bootstrap a new app and use Web3Modal and Web3.js to intereact with the blockchain.
 
 ### 📰 What you will learn
 In this tutorial, you will learn how to integrate XDCPay with a front end application so the application can interact with the XDC Network mainnet and XDC Apothem testnet.
