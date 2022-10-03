@@ -4,9 +4,9 @@ We are going to follow these steps to set up an XDC Masternode.&#x20;
 
 ## Setting up XDC Network Masternode Docker version
 
-The server or VPS used for the masternode should be facing the internet directly with a public IP and without NAT.&#x20;
+The server or VPS used for the masternode should be directly facing the internet with a public IP and without NAT.&#x20;
 
-There are written steps starting from step 1, or you can watch the video tutorials:
+Follow the written steps starting from step 1, or you can watch the video tutorials:
 
 ### Setting up an XDC Network Masternode via Docker
 
@@ -40,12 +40,20 @@ We need to install Docker and Docker-Compose by running the following command:
 
 ## Step 4
 
-We need to create a new .env file and copy the env.example file that exist in teh mainnet directory. We will ensure we are in the "mainnet" directory by &#x20;
+Create a new .env file and copy the env.example file that exist in the mainnet directory. We will ensure we are in the "mainnet" directory by typing these commands. Once in edit mode for the .env file, name your masternode and use an email address in the respective fields
 
 ```
 // cd mainnet
 cp env.example .env
-nano .env
+nano .env                                                            
+```
+
+### For Testnet
+
+```
+// // cd testnet
+cp env.example .env
+nano .env 
 ```
 
 ## Step 5
