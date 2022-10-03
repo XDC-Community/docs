@@ -16,7 +16,7 @@ keywords:
   - erc721
 ---
 
-![OpenZeppelin logo](../.gitbook/assets/openzeppelin-example-header.png)
+![OpenZeppelin logo](https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-header.png)
 
 # Overview
 
@@ -43,7 +43,7 @@ OpenZeppelin is a “battle-tested” open-source framework comprised of reusabl
 OpenZeppelin's [Contracts Wizard](https://wizard.openzeppelin.com/) as an interactive smart contract generator is the easiest way to get started building smart contracts based on OpenZeppelin's components.
 
 <p align="center">
-  <img width=70% src="../.gitbook/assets/openzeppelin-example-wizard.png" alt="OpenZeppelin Contracts Wizard"/>
+  <img width=70% src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-wizard.png" alt="OpenZeppelin Contracts Wizard"/>
 </p>
 
 Select the kind of contract that you want, set your parameters and desired features, and the Wizard will generate all of the code necessary. The resulting code is ready to be compiled and deployed, or it can serve as a starting point and be customized further.
@@ -57,7 +57,7 @@ ERC721 is a standard for **non-fungible tokens** and is defined in the [EIP-721 
 ## Create the contract
 
 <p align="center">
-  <img width=50% src="../.gitbook/assets/openzeppelin-example-nft-logo.png" alt="Joe's Free Voucher image"/>
+  <img width=50% src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-nft-logo.png" alt="Joe's Free Voucher image"/>
 </p>
 
 Joe has a Pizza shop and for the opening day, he wants to create a one-time free voucher for each client that show with her web3 wallet.
@@ -65,7 +65,7 @@ Joe has a Pizza shop and for the opening day, he wants to create a one-time free
 Make a simple non-fungible token contract that can be paused and minted only by the owner, we gonna use OpenZeppelin's ERC721 contract for this. Open [Remix IDE](https://remix.xinfin.network/), and let's start creating a new Solidity file named `PizzaFreeVoucher.sol` in the contracts folder:
 
 <p align="center">
-  <img width=30% src="../.gitbook/assets/openzeppelin-example-createfile01.png" alt="How to create a new file in Remix IDE"/> <img width=30% src="../.gitbook/assets/openzeppelin-example-createfile02.png" alt="How to create a new file in Remix IDE"/> <img width=30% src="../.gitbook/assets/openzeppelin-example-createfile03.png" alt="How to create a new file in Remix IDE"/>
+  <img width=30% src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-createfile01.png" alt="How to create a new file in Remix IDE"/> <img width=30% src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-createfile02.png" alt="How to create a new file in Remix IDE"/> <img width=30% src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-createfile03.png" alt="How to create a new file in Remix IDE"/>
 </p>
 
 Most of the OpenZeppelin contracts are expected to be used via inheritance: you will inherit from them when writing your contracts. Here is a possible code for the contract, copy this code below for your `PizzaFreeVoucher.sol`:
@@ -141,7 +141,7 @@ With `contract PizzaFreeVoucher is ERC721, Pausable, Ownable, ERC721Burnable` we
 We just need to compile the Solidity file, by changing the Remix tab to `Solidity Compiler` or just hitting `Ctrl + S` in the editor.
 
 <p align="center">
-  <img width=40% src="../.gitbook/assets/openzeppelin-example-compile.png" alt="Compile contract"/>
+  <img width=40% src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-compile.png" alt="Compile contract"/>
 </p>
 
 ## Deploy the contract
@@ -153,19 +153,19 @@ For this tutorial, we gonna deploy the contract using a web3 wallet compatible w
 Visit the [XDC Apothem network faucet](https://faucet.apothem.network/), enter the public address of your account, and `Request 1000 XDC`. After the success message from the faucet, you can confirm if you have 1000 XDC tokens transferred to your wallet.
 
 <p align="center">
-  <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-wallet-faucet01.png" alt="Apothem Network Faucet"/> <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-wallet-faucet02.png" alt="Apothem Network Faucet"/> <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-wallet-faucet03.png" alt="Apothem Network Faucet"/>
+  <img width=30% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-wallet-faucet01.png" alt="Apothem Network Faucet"/> <img width=30% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-wallet-faucet02.png" alt="Apothem Network Faucet"/> <img width=30% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-wallet-faucet03.png" alt="Apothem Network Faucet"/>
 </p>
 
 Now that we have gas, deploy the contract we previously create. Just change to deploy tab on your Remix IDE, set the environment to `Injected Provider`, and connect Remix with your *XDCPay* account. Select the `PizzaFreeVoucher` contract and click on `Deploy`.
 
 <p align="center">
-  <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-deploy01.png" alt="Deploy"/> <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-deploy02.png" alt="Deploy"/> <img width=35% valign="middle" src="../.gitbook/assets/openzeppelin-example-deploy03.png" alt="Deploy"/>
+  <img width=30% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-deploy01.png" alt="Deploy"/> <img width=30% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-deploy02.png" alt="Deploy"/> <img width=35% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-deploy03.png" alt="Deploy"/>
 </p>
 
 After that, you should see a pop-up notification to accept/deny the deployment transaction, accept by clicking on `Submit`.
 
 <p align="center">
-  <img width=35% valign="middle" src="../.gitbook/assets/openzeppelin-example-deploy04.png" alt="Verify"/> <img width=35% valign="middle" src="../.gitbook/assets/openzeppelin-example-verify01.png" alt="Verify"/>
+  <img width=35% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-deploy04.png" alt="Verify"/> <img width=35% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-verify01.png" alt="Verify"/>
 </p>
 
 Wait for the blockchain confirmation in the `Transactions` tab of your wallet. You can now copy the transaction hash `0xe487f01b027172ce171f5980e465307da5bdb66a0425904ff8f48f25f797b15d` :partying_face::partying_face:
@@ -175,13 +175,13 @@ Wait for the blockchain confirmation in the `Transactions` tab of your wallet. Y
 Open the [**XDC Apothem Network Explorer**](https://explorer.apothem.network/) and search for the previously copied hash. Here, at explorer, we can check all the transactions that occur on the network, including the deployment of our contract. Check the `To` address, should be your contract address (starting with `xdc...`).
 
 <p align="center">
-  <img width=70% valign="middle" src="../.gitbook/assets/openzeppelin-example-verify02.png" alt="Verify"/>
+  <img width=70% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-verify02.png" alt="Verify"/>
 </p>
 
 Search for the contract address on the explorer, we can see that the contract isn't verified. Click on `Verify and Publish` that will open the verification page.
 
 <p align="center">
-  <img width=70% valign="middle" src="../.gitbook/assets/openzeppelin-example-verify03.png" alt="Verify"/>
+  <img width=70% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-verify03.png" alt="Verify"/>
 </p>
 
 Now, we have to submit the source code, name, address, and compiler version of the contract. With this, the final user can confirm if the contract was been verified or not, but also interact with it directly on the explorer.
@@ -191,25 +191,25 @@ Now, we have to submit the source code, name, address, and compiler version of t
 On the bottom-left corner in Remix, open `Plugin Manager` and install the `Flattener` plugin. Change to `Flattener` tab on the left navigation bar and click on `contracts/Flattern PizzaFreeVoucher.sol` (this will copy the flat code to your clipboard).
 
 <p align="center">
-  <img width=40% valign="middle" src="../.gitbook/assets/openzeppelin-example-flat01.png" alt="Flat the source code"/> <img width=40% valign="middle" src="../.gitbook/assets/openzeppelin-example-flat02.png" alt="Flat the source code"/>
+  <img width=40% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-flat01.png" alt="Flat the source code"/> <img width=40% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-flat02.png" alt="Flat the source code"/>
 </p>
 
 Back to the verification page, paste this code, and fill in the rest of the information. Finally, click `Submit`.
 
 <p align="center">
-  <img width=60% valign="middle" src="../.gitbook/assets/openzeppelin-example-verify04.png" alt="Verify"/>
+  <img width=60% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-verify04.png" alt="Verify"/>
 </p>
 
 Once the contract is verified, just navigate to `Contract` > `Read Contract` tab, and here you can perform reading actions, such as getting the balance of an account, getting the contract owner, etc.
 
 <p align="center">
-  <img width=60% valign="middle" src="../.gitbook/assets/openzeppelin-example-interact01.png" alt="Interact"/>
+  <img width=60% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-interact01.png" alt="Interact"/>
 </p>
 
 Let's mint our first non-fungible token by changing to the `Write Contract` tab. First, connect your web3 wallet by clicking on the `Connect to Web3` button and then call the `SafeMint` method with the address that gonna receive the NFT.
 
 <p align="center">
-  <img width=50% valign="middle" src="../.gitbook/assets/openzeppelin-example-interact02.png" alt="Interact"/> <img width=25% valign="middle" src="../.gitbook/assets/openzeppelin-example-interact03.png" alt="Interact"/>
+  <img width=50% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-interact02.png" alt="Interact"/> <img width=25% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-interact03.png" alt="Interact"/>
 </p>
 
 Accept the action by submitting the transaction :rocket:
@@ -219,13 +219,13 @@ Accept the action by submitting the transaction :rocket:
 If the mint transaction was confirmed, congratulations! The target address now has one free pizza voucher.
 
 <p align="center">
-  <img width=70% valign="middle" src="../.gitbook/assets/openzeppelin-example-interact04.png" alt="Interact"/>
+  <img width=70% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-interact04.png" alt="Interact"/>
 </p>
 
 You can pick the voucher contract address (`xdcF26E1ac69D9e173C96848FbD1bBE8759f5C71106`) and add it to the list of *XDCPay*'s tokens.
 
 <p align="center">
-  <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-wallet-token01.png" alt="Confirm wallet"/> <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-wallet-token02.png" alt="Confirm wallet"/> <img width=30% valign="middle" src="../.gitbook/assets/openzeppelin-example-wallet-token03.png" alt="Confirm wallet"/>
+  <img width=30% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-wallet-token01.png" alt="Confirm wallet"/> <img width=30% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-wallet-token02.png" alt="Confirm wallet"/> <img width=30% valign="middle" src="https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-wallet-token03.png" alt="Confirm wallet"/>
 </p>
 
 Now you can see the voucher NFT in your wallet :rocket::rocket:
