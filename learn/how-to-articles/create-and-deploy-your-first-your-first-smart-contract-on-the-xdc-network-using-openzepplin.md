@@ -16,7 +16,7 @@ keywords:
   - erc721
 ---
 
-![OpenZeppelin logo](https://github.com/XDC-Community/docs/tree/main/.gitbook/assets/openzeppelin-example-header.png)
+![OpenZeppelin logo](https://github.com/XDC-Community/docs/blob/main/.gitbook/assets/openzeppelin-example-header.png)
 
 # Overview
 
