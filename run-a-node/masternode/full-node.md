@@ -10,11 +10,7 @@ There are written steps starting from step 1, or you can watch the video tutoria
 
 ### Setting up an XDC Network Masternode via Docker
 
-{% embed url="https://www.youtube.com/watch?v=1A20eVTJYvs" %}
-
-### Downloading an XDC Network Snapshot:&#x20;
-
-{% embed url="https://www.youtube.com/watch?v=ZQF3f0Zd6-k" %}
+{% embed url="https://youtu.be/1A20eVTJYvs" %}
 
 ## Step 1
 
@@ -87,6 +83,8 @@ For troubleshooting purposes, you can stop the node by using the following comma
 ## Downloading a Network Snapshot&#x20;
 
 The following steps are to expedite the syncing process of your node with the XDC Network.  If you followed the steps above, your node will take 3-4 days to sync up with the network fully.  You can reduce that time by downloading a network snapshot and bringing your node back up after the chain has been downloaded and unpacked.&#x20;
+
+{% embed url="https://youtu.be/ZQF3f0Zd6-k" %}
 
 ### First safely bring down your node:&#x20;
 
