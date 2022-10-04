@@ -4,17 +4,13 @@ We are going to follow these steps to set up an XDC Masternode.&#x20;
 
 ## Setting up XDC Network Masternode Docker version
 
-The server or VPS used for the masternode should be facing the internet directly with a public IP and without NAT.&#x20;
+The server or VPS used for the masternode should be directly facing the internet with a public IP and without NAT.&#x20;
 
-There are written steps starting from step 1, or you can watch the video tutorials:
+Follow the written steps starting from step 1, or you can watch the video tutorials:
 
 ### Setting up an XDC Network Masternode via Docker
 
-{% embed url="https://www.youtube.com/watch?v=1A20eVTJYvs" %}
-
-### Downloading an XDC Network Snapshot:&#x20;
-
-{% embed url="https://www.youtube.com/watch?v=ZQF3f0Zd6-k" %}
+{% embed url="https://youtu.be/1A20eVTJYvs" %}
 
 ## Step 1
 
@@ -44,12 +40,20 @@ We need to install Docker and Docker-Compose by running the following command:
 
 ## Step 4
 
-We need to create a new .env file and copy the env.example file that exist in teh mainnet directory. We will ensure we are in the "mainnet" directory by &#x20;
+Create a new .env file and copy the env.example file that exist in the mainnet directory. We will ensure we are in the "mainnet" directory by typing these commands. Once in edit mode for the .env file, name your masternode and use an email address in the respective fields
 
 ```
 // cd mainnet
 cp env.example .env
-nano .env
+nano .env                                                            
+```
+
+### For Testnet
+
+```
+// // cd testnet
+cp env.example .env
+nano .env 
 ```
 
 ## Step 5
@@ -87,6 +91,8 @@ For troubleshooting purposes, you can stop the node by using the following comma
 ## Downloading a Network Snapshot&#x20;
 
 The following steps are to expedite the syncing process of your node with the XDC Network.  If you followed the steps above, your node will take 3-4 days to sync up with the network fully.  You can reduce that time by downloading a network snapshot and bringing your node back up after the chain has been downloaded and unpacked.&#x20;
+
+{% embed url="https://youtu.be/ZQF3f0Zd6-k" %}
 
 ### First safely bring down your node:&#x20;
 
