@@ -743,6 +743,8 @@ If everything is correctly filled out, your contract page on the block explorer 
   <img width=70% src="https://user-images.githubusercontent.com/78161484/190875780-6223b4b0-fecc-4e79-83bc-c810c5b0351c.png" alt="Verify 03"/>
 </p>
 
+Repeat those steps if you want to verify `FarmToken.sol`, except this time `Contract Name` will be `FarmToken` and source code will be from `FarmToken_flat.sol`
+
 ---
 
 For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).<br>
