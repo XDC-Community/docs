@@ -220,15 +220,15 @@ With this account in hand, we can head to the [Apothem Faucet](https://faucet.ap
 
 # 💵 Creating our first DeFi App
 
-The source code for the DeFi App used in this tutorial is available here: [FarmToken Contract](./FarmToken/contracts/FarmToken.sol) and [MyToken Contract](./FarmToken/contracts/MyToken.sol).
+The source code for the DeFi App used in this tutorial is available here: [FarmToken Contract](https://github.com/XDC-Community/docs/blob/main/how-to/DeFi/Truffle/FarmToken/FarmToken/contracts/FarmToken.sol) and [MyToken Contract](https://github.com/XDC-Community/docs/blob/main/how-to/DeFi/Truffle/FarmToken/contracts/MyToken.sol).
 
 ## 💵 Create and Deploy XRC20 Token
 
 Before creating FarmToken contract, lets first create new XRC20 token. This is going to be a quick guide and if you want to go more in depth `XRC20` standard, please take a look at those tutorials:
 
-- [Create XRC20 token using Hardhat](https://github.com/XDC-Community/docs/blob/main/how-to/XRC20/Hardhat/how-to.md)
-- [Create XRC20 token using Remix](https://github.com/XDC-Community/docs/blob/main/how-to/XRC20/Remix/how-to.md)
-- [Create XRC20 token using Truffle](https://github.com/XDC-Community/docs/blob/main/how-to/XRC20/Truffle/how-to.md)
+- [Create XRC20 token using Hardhat](https://docs.xdc.community/learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-hardhat)
+- [Create XRC20 token using Remix](https://docs.xdc.community/learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-remix)
+- [Create XRC20 token using Truffle](https://docs.xdc.community/learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-truffle)
 
 We will need to install OpenZeppelin in order to not writing all code by ourself
 
