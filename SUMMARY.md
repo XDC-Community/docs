@@ -108,7 +108,7 @@
   * [Create and Deploy Your First Smart Contract on the XDC Network Using OpenZeppelin and Hardhat](learn/how-to-articles/create-and-deploy-your-first-smart-contract-on-the-xdc-network-using-openzeppelin-and-hardhat.md)
   * [How-To Create a React App to Interact with XRC20 and XRC721 Tokens](learn/how-to-articles/how-to-create-a-react-app-to-interact-with-xrc20-and-xrc721-tokens.md)
   * [How To Use xdcpay-connect to Create a dApp Connected to XDC network](learn/how-to-articles/how-to-use-xdcpay-connect-to-create-a-dapp-connected-to-xdc-network.md)
-  * [How To Use Truffle and Ganache to create DeFi App](learn/how-to-articles/how-to-use-truffle-and-ganache-to-create-defi-app.md)
+  * [How To Use Truffle and Ganache to Create DeFi App](learn/how-to-articles/how-to-use-truffle-and-ganache-to-create-defi-app.md)
 * [Community Support](learn/community-support.md)
   * [How to Report an Issue](learn/community-support/how-to-report-an-issue.md)
   * [Contributing and Feedback Guide](gitbook.md)
