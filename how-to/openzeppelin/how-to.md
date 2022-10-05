@@ -12,6 +12,7 @@
 - [Writing a script file to deploy the contract](#writing-a-script-file-to-deploy-the-contract)
 - [Setup .env file](#setup-env-file)
 - [Configuring XDC Mainnet and Apothem Testnet on Hardhat](#-configuring-xdc-mainnet-and-apothem-testnet-on-hardhat)
+- [Flattening the Smart Contract](#flattening-the-smart-contract)
 - [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
 
 # 📰 Overview
@@ -332,8 +333,8 @@ Change the prefix `0x` to `xdc` to look for your contract on [XinFin Block Explo
 Here we have a `MyToken` contract deployed on XDC Mainnet at the `0x802555081f6AAcE51559d0650Bf15f242aBe7fd7`, we can search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
 <p align="center">
-
-  <img width="1673" alt="Screenshot 2022-09-29 at 1 23 00 PM" src="https://user-images.githubusercontent.com/35517007/192988503-29ea1b20-fd9d-4ca7-beb8-0f79d65b9678.png" alt="Verify 01" />
+  
+<img width="1674" alt="Screenshot 2022-10-05 at 11 26 10 AM" src="https://user-images.githubusercontent.com/35517007/194009497-9deffaf8-dc30-482a-a143-f4cb972e1a53.png" alt="Verify 01" />
 
 </p>
 
@@ -348,23 +349,24 @@ We will be redirected to the Contract verification page where we need to fill ou
 Once everything is filled out, press Submit!
 
 <p align="center">
-  <img width="1647" alt="Screenshot 2022-09-29 at 1 23 14 PM" src="https://user-images.githubusercontent.com/35517007/192988653-f5987b54-df83-4464-a96a-2d71e2002905.png" alt="Verify 02"/>
+  <img width="1671" alt="Screenshot 2022-10-05 at 11 28 46 AM" src="https://user-images.githubusercontent.com/35517007/194009622-ea5966ba-aa15-4f81-ba94-bd2da2ca7dbf.png" alt="Verify 02"/>
+
 
 </p>
 
 If everything is correctly filled out, your contract page on the block explorer should display a new tab called `Contract`:
 
 <p align="center">
-  <img width=70% alt="Screenshot 2022-09-29 at 1 23 24 PM" src="https://user-images.githubusercontent.com/35517007/192988808-72505e63-7810-402d-a61f-cf59defb15e3.png" alt="Verify 03"/>
+  
+<img width="1676" alt="Screenshot 2022-10-05 at 11 35 12 AM" src="https://user-images.githubusercontent.com/35517007/194009732-96bdc2be-cb9a-4fff-895c-9bcb7a1feb10.png" alt="Verify 03"/>
 
 </p>
 
 In this page you can Read from, Write to, or simply read the information tied to your Smart Contract on the blockchain:
 
 <p align="center">
+  <img width="1675" alt="Screenshot 2022-10-05 at 1 28 22 PM" src="https://user-images.githubusercontent.com/35517007/194010105-908c60ed-1261-4eac-b752-6b1f6feb8cc9.png" alt="Verify 04" />
 
-  <img width=70% alt="Screenshot 2022-09-29 at 1 23 40 PM" src="https://user-images.githubusercontent.com/35517007/192988899-eb41c2ae-c4b9-4bab-89e8-227d42bfe2b3.png" alt="Verify 03" />
-  
 </p>
 
 ---
