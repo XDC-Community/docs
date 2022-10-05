@@ -220,7 +220,7 @@ With this account in hand, we can head to the [Apothem Faucet](https://faucet.ap
 
 # 💵 Creating our first DeFi App
 
-The source code for the DeFi App used in this tutorial is available here: [FarmToken Contract](https://github.com/XDC-Community/docs/blob/main/how-to/DeFi/Truffle/FarmToken/FarmToken/contracts/FarmToken.sol) and [MyToken Contract](https://github.com/XDC-Community/docs/blob/main/how-to/DeFi/Truffle/FarmToken/contracts/MyToken.sol).
+The source code for the DeFi App used in this tutorial is available here: [FarmToken Contract](https://github.com/XDC-Community/docs/blob/main/how-to/DeFi/Truffle/FarmToken/contracts/FarmToken.sol) and [MyToken Contract](https://github.com/XDC-Community/docs/blob/main/how-to/DeFi/Truffle/FarmToken/contracts/MyToken.sol).
 
 ## 💵 Create and Deploy XRC20 Token
 
@@ -750,6 +750,6 @@ Repeat those steps if you want to verify `FarmToken.sol`, except this time `Cont
 ---
 
 For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).<br>
-For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
-Resources used during the deployment of the DeFi App can be found at [FarmToken Contract Folder](./FarmToken).
+For more information about XDC Network, Please Visit [XDC Community Documentation on GitBook](https://docs.xdc.community/).<br>
+Resources used during the deployment of the DeFi App can be found at [FarmToken Contract Folder](https://github.com/XDC-Community/docs/tree/main/how-to/DeFi/Truffle/FarmToken/contracts).
 
