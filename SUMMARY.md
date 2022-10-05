@@ -109,6 +109,7 @@
   * [How-To Create a React App to Interact with XRC20 and XRC721 Tokens](learn/how-to-articles/how-to-create-a-react-app-to-interact-with-xrc20-and-xrc721-tokens.md)
   * [How To Use xdcpay-connect to Create a dApp Connected to XDC network](learn/how-to-articles/how-to-use-xdcpay-connect-to-create-a-dapp-connected-to-xdc-network.md)
   * [How To Use Truffle and Ganache to Create DeFi App](learn/how-to-articles/how-to-use-truffle-and-ganache-to-create-defi-app.md)
+  * [How to Migrate a dApp from Ethereum to the XDC Network Using Truffle](learn/how-to-articles/how-to-migrate-a-dapp-from-ethereum-to-the-xdc-network-using-truffle.md)
 * [Community Support](learn/community-support.md)
   * [How to Report an Issue](learn/community-support/how-to-report-an-issue.md)
   * [Contributing and Feedback Guide](gitbook.md)
