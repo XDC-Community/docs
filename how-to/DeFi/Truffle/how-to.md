@@ -25,6 +25,7 @@ keywords:
   - [💵 Compiling and Deploying](#-compiling-and-deploying)
   - [💵 Testing FarmToken contract](#-testing-farmtoken-contract)
   - [💵 Deploying on a live network](#-deploying-on-a-live-network)
+- [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
 
 # 📰 Overview
 [Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine. [Ganache](https://trufflesuite.com/ganache/) is a tool to create local blockchain for testing your smart contracts. It simulates all the features of real blockchain network but costs you nothing to deploy and test your code.
@@ -691,6 +692,56 @@ If you want to deploy it on XDC mainet, change network to `xinfin`.
 ```sh
 truffle migrate --network xinfin
 ```
+
+# 🔍 Veryfing Contracts on the Block Explorer
+
+Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
+
+Because our contract consists of multiple files, first we need to flatten our contract. For that, install `truffle-flattener`.
+
+```bash
+yarn add truffle-flattener -g
+```
+
+Or using `npm`
+
+```bash
+npm install truffle-flattener -g
+```
+
+Now lets flatten our contract:
+
+```bash
+truffle-flattener contracts/MyToken.sol > MyToken_flat.sol
+```
+
+Then open `MyToken_flat.sol` and remove every line which starts with `// SPDX-License-Identifier` except the first one. We do this because block explorer does not accepts contracts with mutliple license definition.
+
+Now, lets grab the `MyToken.sol` address from the deploying step: this address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
+
+<p align="center">
+  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875518-828c0061-71de-42c2-b222-0b8427852d01.png" alt="Verify 01"/>
+</p>
+
+And click in the `Verify And Publish` Option.
+
+We will be redirected to the Contract verification page where we need to fill out:
+
+- Contract Name: <em>XRC20Token</em>
+- Compiler: <em> Check your</em> `truffle-config.js` <em>file for Compiler Version</em>
+- Contract Code: <em> Just paste everything from your</em> `MyToken_flat.sol` <em>file</em>
+
+Once everything is filled out, press Submit!
+
+<p align="center">
+  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875635-f6d3aa36-47b2-4b09-ad6a-fe6df3fb11f1.png" alt="Verify 02"/>
+</p>
+
+If everything is correctly filled out, your contract page on the block explorer should display a new tab called `Contract`:
+
+<p align="center">
+  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875780-6223b4b0-fecc-4e79-83bc-c810c5b0351c.png" alt="Verify 03"/>
+</p>
 
 ---
 
