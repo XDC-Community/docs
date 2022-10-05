@@ -1,6 +1,6 @@
-# 🧭 Table of contents
+# Create and Deploy Your First Smart Contract on the XDC Network Using OpenZeppelin and Hardhat
 
-- [🧭 Table of contents](#-table-of-contents)
+- [Create and Deploy Your First Smart Contract on the XDC Network Using OpenZeppelin and Hardhat](#create-and-deploy-your-first-smart-contract-on-the-xdc-network-using-openzeppelin-and-hardhat)
 - [📰 Overview](#-overview)
     - [What you will learn](#what-you-will-learn)
     - [What you will do](#what-you-will-do)
