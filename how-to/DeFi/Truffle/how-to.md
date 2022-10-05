@@ -433,7 +433,27 @@ And this is what you will see from Ganache app.
 
 ## 💵 Testing FarmToken contract
 
-First, lets make sure that our `FarmToken` balance is 0 now: `truffle exec ./scripts/getMyTokenBalance.js`
+
+Create `scripts` folder where we will put our files for testing.
+```bash
+mkdir scripts
+```
+
+Now, lets create our first script to check balance of `FarmToken`. Create file `getMyTokenBalance.js` and paste:
+```javascript
+const MyToken = artifacts.require("XRC20Token")
+const FarmToken = artifacts.require("FarmToken")
+
+module.exports = async function (callback) {
+  myToken = await MyToken.deployed()
+  farmToken = await FarmToken.deployed()
+  balance = await myToken.balanceOf(farmToken.address)
+  console.log(web3.utils.fromWei(balance.toString()))
+  callback()
+}
+```
+
+After that we can run script to check our `FarmToken` balance: `truffle exec ./scripts/getMyTokenBalance.js`
 
 ```sh
 Using network 'ganache'.
@@ -441,7 +461,96 @@ Using network 'ganache'.
 0
 ```
 
-Ok, now lets deposit some tokens
+Now we need a script to deposit our tokens in `FarmToken` contract. Create a file `depositMyToken.js`
+```javascript
+const MyToken = artifacts.require("XRC20Token")
+const FarmToken = artifacts.require("FarmToken")
+
+module.exports = async function (callback) {
+  const accounts = await new web3.eth.getAccounts()
+  const myToken = await MyToken.deployed()
+  const farmToken = await FarmToken.deployed()
+
+  // Returns the remaining number of tokens that spender will be allowed to spend on behalf of owner through transferFrom.
+  // This is zero by default.
+  const allowanceBefore = await myToken.allowance(
+    accounts[0],
+    farmToken.address
+  )
+  console.log(
+    "Amount of MyToken FarmToken is allowed to transfer on our behalf Before: " +
+      allowanceBefore.toString()
+  )
+
+  // In order to allow the Smart Contract to transfer to MyToken (ERC-20) on the accounts[0] behalf,
+  // we must explicitly allow it.
+  // We allow farmToken to transfer x amount of MyToken on our behalf
+  await myToken.approve(farmToken.address, web3.utils.toWei("100", "ether"))
+
+  // Validate that the farmToken can now move x amount of MyToken on our behalf
+  const allowanceAfter = await myToken.allowance(accounts[0], farmToken.address)
+  console.log(
+    "Amount of MyToken FarmToken is allowed to transfer on our behalf After: " +
+      allowanceAfter.toString()
+  )
+
+  // Verify accounts[0] and farmToken balance of MyToken before and after the transfer
+  balanceMyTokenBeforeAccounts0 = await myToken.balanceOf(accounts[0])
+  balanceMyTokenBeforeFarmToken = await myToken.balanceOf(farmToken.address)
+  console.log("*** My Token ***")
+  console.log(
+    "Balance MyToken Before accounts[0] " +
+      web3.utils.fromWei(balanceMyTokenBeforeAccounts0.toString())
+  )
+  console.log(
+    "Balance MyToken Before TokenFarm " +
+      web3.utils.fromWei(balanceMyTokenBeforeFarmToken.toString())
+  )
+
+  console.log("*** Farm Token ***")
+  balanceFarmTokenBeforeAccounts0 = await farmToken.balanceOf(accounts[0])
+  balanceFarmTokenBeforeFarmToken = await farmToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance FarmToken Before accounts[0] " +
+      web3.utils.fromWei(balanceFarmTokenBeforeAccounts0.toString())
+  )
+  console.log(
+    "Balance FarmToken Before TokenFarm " +
+      web3.utils.fromWei(balanceFarmTokenBeforeFarmToken.toString())
+  )
+  // Call Deposit function from FarmToken
+  console.log("Call Deposit Function")
+  await farmToken.deposit(web3.utils.toWei("100", "ether"))
+  console.log("*** My Token ***")
+  balanceMyTokenAfterAccounts0 = await myToken.balanceOf(accounts[0])
+  balanceMyTokenAfterFarmToken = await myToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance MyToken After accounts[0] " +
+      web3.utils.fromWei(balanceMyTokenAfterAccounts0.toString())
+  )
+  console.log(
+    "Balance MyToken After TokenFarm " +
+      web3.utils.fromWei(balanceMyTokenAfterFarmToken.toString())
+  )
+
+  console.log("*** Farm Token ***")
+  balanceFarmTokenAfterAccounts0 = await farmToken.balanceOf(accounts[0])
+  balanceFarmTokenAfterFarmToken = await farmToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance FarmToken After accounts[0] " +
+      web3.utils.fromWei(balanceFarmTokenAfterAccounts0.toString())
+  )
+  console.log(
+    "Balance FarmToken After TokenFarm " +
+      web3.utils.fromWei(balanceFarmTokenAfterFarmToken.toString())
+  )
+
+  // End function
+  callback()
+}
+```
+
+Then lets deposit some tokens
 
 ```sh
 truffle exec ./scripts/depositMyToken.js
@@ -477,7 +586,75 @@ Using network 'ganache'.
 
 Ok, looks like everything is working as intended.
 
-Finally, we can check if we can withdraw it back:
+Finally, we can check if we can withdraw it back. For that, create file `withdrawMyToken.js`:
+```javascript
+const MyToken = artifacts.require("XRC20Token")
+const FarmToken = artifacts.require("FarmToken")
+
+module.exports = async function (callback) {
+  const accounts = await new web3.eth.getAccounts()
+  const myToken = await MyToken.deployed()
+  const farmToken = await FarmToken.deployed()
+
+  // Verify accounts[0] and farmToken balance of MyToken before and after the transfer
+  balanceMyTokenBeforeAccounts0 = await myToken.balanceOf(accounts[0])
+  balanceMyTokenBeforeFarmToken = await myToken.balanceOf(farmToken.address)
+  console.log("*** My Token ***")
+  console.log(
+    "Balance MyToken Before accounts[0] " +
+      web3.utils.fromWei(balanceMyTokenBeforeAccounts0.toString())
+  )
+  console.log(
+    "Balance MyToken Before TokenFarm " +
+      web3.utils.fromWei(balanceMyTokenBeforeFarmToken.toString())
+  )
+
+  console.log("*** Farm Token ***")
+  balanceFarmTokenBeforeAccounts0 = await farmToken.balanceOf(accounts[0])
+  balanceFarmTokenBeforeFarmToken = await farmToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance FarmToken Before accounts[0] " +
+      web3.utils.fromWei(balanceFarmTokenBeforeAccounts0.toString())
+  )
+  console.log(
+    "Balance FarmToken Before TokenFarm " +
+      web3.utils.fromWei(balanceFarmTokenBeforeFarmToken.toString())
+  )
+
+  // Call Deposit function from FarmToken
+  console.log("Call Withdraw Function")
+  await farmToken.withdraw(web3.utils.toWei("100", "ether"))
+
+  console.log("*** My Token ***")
+  balanceMyTokenAfterAccounts0 = await myToken.balanceOf(accounts[0])
+  balanceMyTokenAfterFarmToken = await myToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance MyToken After accounts[0] " +
+      web3.utils.fromWei(balanceMyTokenAfterAccounts0.toString())
+  )
+  console.log(
+    "Balance MyToken After TokenFarm " +
+      web3.utils.fromWei(balanceMyTokenAfterFarmToken.toString())
+  )
+
+  console.log("*** Farm Token ***")
+  balanceFarmTokenAfterAccounts0 = await farmToken.balanceOf(accounts[0])
+  balanceFarmTokenAfterFarmToken = await farmToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance FarmToken After accounts[0] " +
+      web3.utils.fromWei(balanceFarmTokenAfterAccounts0.toString())
+  )
+  console.log(
+    "Balance FarmToken After TokenFarm " +
+      web3.utils.fromWei(balanceFarmTokenAfterFarmToken.toString())
+  )
+
+  // End function
+  callback()
+}
+```
+
+And now run it:
 
 ```sh
 truffle exec ./scripts/withdrawMyToken.js
