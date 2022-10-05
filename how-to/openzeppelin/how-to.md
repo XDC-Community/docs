@@ -26,7 +26,7 @@ OpenZeppelin contracts are written in solidity and uses ERC standards for Ethere
 
 ### What you will learn
 
-In this tutorial, you will learn how to set up Hardhat and use it to build, test and deploy a smart contract build with openzeppelin on both the XDC Network mainnet and XDC Apothem testnet. 
+In this tutorial, you will learn how to set up Hardhat and use it to build, test and deploy a smart contract build with openzeppelin on both the XDC Network mainnet and XDC Apothem testnet.
 
 The complete tutorial code can be found [here](./xdc-openzeppelin).
 
@@ -88,7 +88,6 @@ npm install --save-dev @nomicfoundation/hardhat-toolbox
 
 Now, you will have a folder structure as below
 <img width="1680" alt="Screenshot 2022-09-25 at 12 12 40 AM" src="https://user-images.githubusercontent.com/35517007/192116380-698146f9-860f-4748-95f6-cba2cfa2edde.png">
-
 
 # 💵 Write Smart Contract Using OpenZeppelin
 
@@ -282,7 +281,6 @@ module.exports = {
 };
 ```
 
-
 ## 💵 Deploying the contract
 
 After writing code for the setup and contract, go back to the terminal. Make sure you are in your project directory and type:
@@ -307,11 +305,67 @@ If the deployment is sucessful, the console should log the following message aft
 My token contract address: 0xc8Ac88d77b9870D289806F54AfF9057f170bAb21
 ```
 
+## Flattening the Smart Contract
+
+When importing third-party libraries like openzeppelin, it becomes necessary to flatten you smart contract and then verify it on the blockscan, because blockscan doesn't have access to the openzeppelin's code. When we flatten the code, the openzeppelin's code get included in the same file as your samrt contract.
+
+To flatten the contract using hardhat, write the following in the terminal
+
+```bash
+npx hardhat flatten ./path-to-file/contractName.sol > flattenedContractName.sol
+```
+
+In this case, we will write
+
+```bash
+npx hardhat flatten ./contracts/MyToken.sol > flattenedMyToken.sol
+```
+
+This will create a new file `flattenedMyToken.sol` which would include flattened code for your smart contract.
+
 ## 🔍 Veryfing Contracts on the Block Explorer
 
 Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
 Change the prefix `0x` to `xdc` to look for your contract on [XinFin Block Explorer](https://explorer.xinfin.network/)
+
+Here we have a `MyToken` contract deployed on XDC Mainnet at the `0x802555081f6AAcE51559d0650Bf15f242aBe7fd7`, we can search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
+
+<p align="center">
+
+  <img width="1673" alt="Screenshot 2022-09-29 at 1 23 00 PM" src="https://user-images.githubusercontent.com/35517007/192988503-29ea1b20-fd9d-4ca7-beb8-0f79d65b9678.png" alt="Verify 01" />
+
+</p>
+
+And click in the `Verify And Publish` Option.
+
+We will be redirected to the Contract verification page where we need to fill out:
+
+- Contract Name: <em>MyToken</em>
+- Compiler: <em> Check your</em> `hardhat-config.js` <em>file for Compiler Version</em>
+- Contract Code: <em> Just paste everything from your</em> `flattenedMyToken.sol` <em>file</em>
+
+Once everything is filled out, press Submit!
+
+<p align="center">
+  <img width="1647" alt="Screenshot 2022-09-29 at 1 23 14 PM" src="https://user-images.githubusercontent.com/35517007/192988653-f5987b54-df83-4464-a96a-2d71e2002905.png" alt="Verify 02"/>
+
+</p>
+
+If everything is correctly filled out, your contract page on the block explorer should display a new tab called `Contract`:
+
+<p align="center">
+  <img width=70% alt="Screenshot 2022-09-29 at 1 23 24 PM" src="https://user-images.githubusercontent.com/35517007/192988808-72505e63-7810-402d-a61f-cf59defb15e3.png" alt="Verify 03"/>
+
+</p>
+
+In this page you can Read from, Write to, or simply read the information tied to your Smart Contract on the blockchain:
+
+<p align="center">
+
+  <img width=70% alt="Screenshot 2022-09-29 at 1 23 40 PM" src="https://user-images.githubusercontent.com/35517007/192988899-eb41c2ae-c4b9-4bab-89e8-227d42bfe2b3.png" alt="Verify 03" />
+  
+</p>
 
 ---
 

@@ -8,7 +8,7 @@ async function main() {
   await myToken.deployed();
 
   console.log("My token contract address:", myToken.address);
-  //My token contract address: 0xc8Ac88d77b9870D289806F54AfF9057f170bAb21
+  //My token contract address: 0x802555081f6AAcE51559d0650Bf15f242aBe7fd7
 }
 
 // Call the main function and catch if there is any error
