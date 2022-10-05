@@ -18,9 +18,6 @@
 
 # 📰 Overview
 
-<!-- <p align="center">
-  <img width=10% src="https://raw.githubusercontent.com/menezesphill/application_utils/main/hardhaticon.png" alt="hardhat"/>
-</p> -->
 
 [OpenZeppelin](https://www.openzeppelin.com/) is an open-source framework that helps to build secure smart contracts, to automate your decentralized applications.
 
