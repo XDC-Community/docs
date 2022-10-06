@@ -76,7 +76,7 @@
 * [Run a Node](run-a-node/README.md)
   * [Masternode](run-a-node/masternode/README.md)
     * [Full Node (Docker version)](run-a-node/masternode/full-node.md)
-    * [Standby Node](run-a-node/masternode/standby-node.md)
+    * [One-Click-Installer Masternode](run-a-node/masternode/standby-node.md)
     * [Archival Node (RPC)](run-a-node/masternode/archival-node-rpc.md)
   * [Private Permissioned Node](run-a-node/private-permissioned-node/README.md)
     * [Geth Puppeth](run-a-node/private-permissioned-node/geth-puppeth.md)
