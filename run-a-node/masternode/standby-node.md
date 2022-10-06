@@ -23,31 +23,31 @@ The XDC developer community has made it easy for new and existing users, even th
 
 <figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-Select the default destination folder or browse to select a new one
+3\. Select the default destination folder or browse to select a new one
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-Select the location where blockchain data is to be stored
+4\. Select the location where blockchain data is to be stored
 
 <figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
-Let the installation run, and it's complete when you see the following screen. Then you can click on the "Close" button in the bottom right corner.&#x20;
+5\. Let the installation run, and it's complete when you see the following screen. Then you can click on the "Close" button in the bottom right corner.&#x20;
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-When you click "Close" it will automatically open the folder where the XDC Network files were saved. Double-click the "XinFin Network" icon as shown.  You can also find the icon on your desktop.&#x20;
+6\. When you click "Close" it will automatically open the folder where the XDC Network files were saved. Double-click the "XinFin Network" icon as shown.  You can also find the icon on your desktop.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-Once clicked it will launch the software and it will start connecting to the blockchain and syncing your node to the latest block. &#x20;
+7\. Once clicked, it will launch the software to start connecting to the blockchain and syncing your node to the latest block. &#x20;
 
 <figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p>NOTE: If there are any pending updates, click on "DOWNLOAD NEW VERSION" and this will update your software.</p></figcaption></figure>
 
-Wait 10-15 minutes for your node to start syncing. You will notice that it will have some peers connected and the block counts will start to increase
+8\. Wait 10-15 minutes for your node to start syncing. You will notice that it will have some peers connected and the block counts will start to increase
 
 <figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
-Once we have peers and some blocks reflected on the software, we can verify our node shows up on the list of nodes online [here](https://www.apothem.network/#stats):&#x20;
+9\. Once we have peers and some blocks reflected on the software, we can verify our node shows up on the list of nodes online [here](https://www.apothem.network/#stats):&#x20;
 
 <figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Node Name: BrBlockchain22-Windows_NT...</p></figcaption></figure>
 
