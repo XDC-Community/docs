@@ -1,6 +1,19 @@
+# 🧭 Table of contents
+
+- [🧭 Table of contents](#-table-of-contents)
+- [📰 Overview](#-overview)
+  - [What you will learn](#what-you-will-learn)
+- [🛠 Prerequisites](#-prerequisites)
+- [📝 Smart contract code](#-smart-contract-code)
+- [💻 Flattening the Smart Contract](#-flattening-the-smart-contract)
+  - [Flatten your smart contract using Hardhat](#flatten-your-smart-contract-using-hardhat)
+  - [Flatten your smart contract using Truffle](#flatten-your-smart-contract-using-truffle)
+  - [Flatten your smart contract using Remix](#flatten-your-smart-contract-using-remix)
+- [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
+
 # 📰 Overview
 
-Smart Contracts are build for decentralized apps which are trustless, but, users should somehow have trust with the code that they are interacting with. To deal with that issue, the verification of smart contracts came into the picture.
+[Smart Contracts](https://ethereum.org/en/developers/docs/smart-contracts/) are build for decentralized apps which are trustless, but, users should somehow have trust with the code that they are interacting with. To deal with that issue, the verification of smart contracts came into the picture.
 
 Verifying a smart contract means the putting the code out there for other users and developers to verify it.
 
@@ -12,9 +25,37 @@ After verification of the smart contract, the blockscanner would have the follow
 
 ### What you will learn
 
-In this tutorial, you will learn how to verify it on XDC Network mainnet or XDC Apotherm testnet.
+In this tutorial, you will learn how to verify a smart contract deployed using [hardhat](https://hardhat.org/) / [truffle](https://trufflesuite.com/) / [remix](https://remix.ethereum.org/) on XDC Network mainnet or XDC Apotherm testnet.
 
-## Flattening the Smart Contract
+## 🛠 Prerequisites
+For this tutorial you will need a address of the smart contract deployed on XDC mainnet or apothem testnet using [hardhat](https://hardhat.org/) / [truffle](https://trufflesuite.com/) / [remix](https://remix.ethereum.org/)
+
+## 📝 Smart contract code
+The smart contract code used in this tutorial:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.4;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+// inherit ERC20 from openzeppelin by simply adding 'is ERC20'
+contract MyToken is ERC20 {
+    address public owner;
+     constructor() ERC20("MyToken", "MTK") {
+        owner = msg.sender;
+        // premint 1000 tokens to the owner of the contract.
+        _mint(msg.sender, 1000 * 10 ** decimals());
+     }
+
+    function mint(address to, uint256 amount) public {
+        require(owner == msg.sender, "Only owner can mint the token!");
+        _mint(to, amount);
+    }
+}
+```
+
+## 💻 Flattening the Smart Contract
 
 > NOTE: This step only needs to be done, if you are using any third-party libraries(like openzeppelin) in your code.
 
@@ -58,19 +99,23 @@ truffle-flattener contracts/MyToken.sol > flattenedMyToken.sol
 
 Right click on our smart contract file and here we would see an option to flatten our smart contracts on the bottom of menu pane.
 
-IMGGGGG
+<p align="center"><img width="365" alt="Screenshot 2022-10-07 at 1 04 41 AM" src="https://user-images.githubusercontent.com/35517007/194407723-0660b6e7-c9f3-4f8c-9a1d-a0289bd755b4.png"></p>
+
 
 Clicking on the flatten button will open a dialog box which we need to accept and a new icon for flatter is added to our left navigation pane.
 
-IMGGGGG
+<p align="center"><img width="501" alt="Screenshot 2022-10-07 at 1 04 57 AM" src="https://user-images.githubusercontent.com/35517007/194408126-8ca5646b-2a11-4060-a26a-31cf41bf214d.png"></p>
+
 
 After that we move to the flattener tab and will see the option to select our smart contract which we need to flatten. Here we will select our MyToken.sol smart contract and it will give an option to save the flattened smart contract.
 
-IMGGGGG
+<p align="center"><img width="368" alt="Screenshot 2022-10-07 at 1 05 41 AM" src="https://user-images.githubusercontent.com/35517007/194408452-379be29a-15c2-4ca9-9846-99ac3e776588.png"></p>
+
 
 After flattening, we will be having the flattened file `MyToken_flat.sol`.
 
-IMGGGG
+<p align="center"><img width="365" alt="Screenshot 2022-10-07 at 1 06 31 AM" src="https://user-images.githubusercontent.com/35517007/194408621-2071d0c7-ac81-49ab-af3e-f325eaafe1ea.png"></p>
+
 
 ## 🔍 Veryfing Contracts on the Block Explorer
 
@@ -97,7 +142,7 @@ We will be redirected to the Contract verification page where we need to fill ou
 
 - Contract Name: <em>MyToken</em>
 - Compiler: <em> Check your</em> `config file` <em>file for Compiler Version</em>
-- Contract Code: <em> Just paste everything from your</em> `flattenedMyToken.sol` <em>file</em>
+- Contract Code: <em> Just paste everything from your `flatten code file`. In my case </em> `flattenedMyToken.sol` <em>file</em>
 
 Once everything is filled out, press Submit!
 
@@ -118,5 +163,8 @@ In this page you can Read from, Write to, or simply read the information tied to
 
 <p align="center">
   <img width="1675" alt="Screenshot 2022-10-05 at 1 28 22 PM" src="https://user-images.githubusercontent.com/35517007/194010105-908c60ed-1261-4eac-b752-6b1f6feb8cc9.png" alt="Verify 04" />
-
 </p>
+
+---
+
+For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/)
