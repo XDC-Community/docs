@@ -1252,7 +1252,7 @@ truffle(apothem)> let faucet = await Faucet.deployed()
 We first need to approve `Faucet` to spend our EggTokens:
 
 ```sh
-truffle(apothem)> let amount = ethers.utils.parseUnits("40000", 18)
+truffle(apothem)> let amount = web3.utils.toWei("40000", "ether")
 truffle(apothem)> eggToken.approve(faucet.address, amount)
 ```
 
@@ -1295,7 +1295,7 @@ Now we attach our `Faucet` contract:
 We first need to approve `Faucet` to spend our EggTokens:
 
 ```sh
-> let amount = ethers.BigNumber.from(String(40 * 10 ** 18))
+> let amount = ethers.utils.parseUnits("40000", 18)
 > await eggTokenInstance.approve(faucetInstance.address, amount)
 ```
 
