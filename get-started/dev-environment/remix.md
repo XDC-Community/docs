@@ -33,4 +33,4 @@ You may notice that you are on the Aphothem Tesnet by checking the <code>chainid
 
 
 Deploying Custom Smart Contract and Verifying
-[![xinfindeploy_contract.gif](https://s4.gifyu.com/images/xinfindeploy_contract.gif)](https://gifyu.com/image/S9pQp)
+[![xinfindeploy_contract.gif](https://s4.gifyu.com/images/xinfindeploy_contract.gif)
