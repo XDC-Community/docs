@@ -24,9 +24,9 @@ We will be deploying and simple smart contract to the official XDC Tesnet (Apoth
 
 ![xdpay](https://user-images.githubusercontent.com/41552663/194467016-0a91316e-b9d8-4e01-895e-7c43152d4ea3.png)
 
-Make sure you have it installed, you may download it at [XDPay](Link)
+Make sure you have it installed, you may download it at [XDCPay](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo/related?hl=en)
 
-Also make sure you have enough testnet tokens to deploy to cover network fees, you may request at this [Faucet](faucet-link)
+Also make sure you have enough testnet tokens to deploy to cover network fees, you may request at this [Faucet](https://faucet.apothem.network/)
 
 You may notice that you are on the Aphothem Tesnet by checking the 
 
@@ -36,13 +36,17 @@ You may notice that you are on the Aphothem Tesnet by checking the
 
 #### Deploying Custom Smart Contract and Verifying
 
+In the video we are injecting web3 into Xinfin Remix, creating a custom contract an deploying into the testnet, verify it's source on the textnet explorer 
+
+the [contract](https://explorer.apothem.network/address/xdcb1dd29f0e84a8d4131ce4ed7d3d812e51804e34d#readContract) in fact
+
 ![xinfindeploy-contract](https://user-images.githubusercontent.com/41552663/194475798-2a974f25-66c5-436d-9c66-0a5526a52d52.gif)
 
 #### Contract creation call
 
 ![contract-deployment-tx](https://user-images.githubusercontent.com/41552663/194477523-99731456-aa0c-4427-8c36-7332ce34494f.png)
 
-###### Contract Deployment call and return state variable
+#### Contract Deployment call and return state variable
 ![contract-deployment-call](https://user-images.githubusercontent.com/41552663/194477381-df3a7455-57d8-4d71-8362-d8cb0a8ddcc9.png)
 
 
