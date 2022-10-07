@@ -28,9 +28,12 @@ Make sure you have it installed, you may download it at [XDPay](Link)
 
 Also make sure you have enough testnet tokens to deploy to cover network fees, you may request at this [Faucet](faucet-link)
 
-You may notice that you are on the Aphothem Tesnet by checking the <code>chainid: 51</code> below the custom network select panel
+You may notice that you are on the Aphothem Tesnet by checking the 
+
+<code>chainid: 51</code> below the custom network select panel
 ![xdpay1](https://user-images.githubusercontent.com/41552663/194467308-139230d5-2ae5-483e-ad97-ec3f0b2e909f.png)
 
 
-Deploying Custom Smart Contract and Verifying
+#### Deploying Custom Smart Contract and Verifying
+
 ![xinfindeploy-contract](https://user-images.githubusercontent.com/41552663/194475798-2a974f25-66c5-436d-9c66-0a5526a52d52.gif)
