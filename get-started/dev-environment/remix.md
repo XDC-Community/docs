@@ -28,7 +28,7 @@ Make sure you have it installed, you may download it at [XDCPay](https://chrome.
 
 Also make sure you have enough testnet tokens to deploy to cover network fees, you may request at this [Faucet](https://faucet.apothem.network/)
 
-You may notice that you are on the Aphothem Tesnet by checking the 
+You may notice that you are on the Apothem Tesnet by checking the 
 
 <code>chainid: 51</code> below the custom network select panel
 ![xdpay1](https://user-images.githubusercontent.com/41552663/194467308-139230d5-2ae5-483e-ad97-ec3f0b2e909f.png)
@@ -36,7 +36,7 @@ You may notice that you are on the Aphothem Tesnet by checking the
 
 #### Deploying Custom Smart Contract and Verifying
 
-In the video we are injecting web3 into Xinfin Remix, creating a custom contract an deploying into the testnet, verify it's source on the textnet explorer 
+In the video we are injecting web3 into Xinfin Remix, creating a custom contract an deploying into the testnet, verify it's source on the testnet explorer 
 
 the [contract](https://explorer.apothem.network/address/xdcb1dd29f0e84a8d4131ce4ed7d3d812e51804e34d#readContract) in fact
 
