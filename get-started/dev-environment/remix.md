@@ -31,3 +31,6 @@ Also make sure you have enough testnet tokens to deploy to cover network fees, y
 You may notice that you are on the Aphothem Tesnet by checking the <code>chainid: 51</code> below the custom network select panel
 ![xdpay1](https://user-images.githubusercontent.com/41552663/194467308-139230d5-2ae5-483e-ad97-ec3f0b2e909f.png)
 
+
+Deploying Custom Smart Contract and Verifying
+[![xinfindeploy_contract.gif](https://s4.gifyu.com/images/xinfindeploy_contract.gif)](https://gifyu.com/image/S9pQp)
