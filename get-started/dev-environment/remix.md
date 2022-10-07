@@ -12,3 +12,6 @@ If you have used Remix before chances are the you find it a-like and easy to get
 #### XinFin Remix Standard Interface
 
 ![xinfin-remix](https://user-images.githubusercontent.com/41552663/194455866-284ac945-a1b1-4b7b-be79-47fbe6e63a31.png)
+
+#### XinFin Remix Features Standard XinFin Accounts Addresses
+![xin-fin-remix-accounts](https://user-images.githubusercontent.com/41552663/194461894-8e2fc7ea-6340-4cf4-a011-6866add71015.png)
