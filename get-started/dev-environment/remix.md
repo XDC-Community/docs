@@ -20,7 +20,7 @@ You may use one of the standard-powered XinFin-Remix accounts to push forward sm
 
 ### Developing & Deploying Smart Contracts using XinFin Remix
 
-We will be deploying and simple smart contract to the XDC Tesnet (Aphothem testnet). We will inject web3 instance thru XDC Official Wallet XDPay
+We will be deploying and simple smart contract to the official XDC Tesnet (Apothem testnet). We will inject web3 instance thru XDC Official Wallet XDPay
 
 ![xdpay](https://user-images.githubusercontent.com/41552663/194467016-0a91316e-b9d8-4e01-895e-7c43152d4ea3.png)
 
