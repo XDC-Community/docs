@@ -37,3 +37,12 @@ You may notice that you are on the Aphothem Tesnet by checking the
 #### Deploying Custom Smart Contract and Verifying
 
 ![xinfindeploy-contract](https://user-images.githubusercontent.com/41552663/194475798-2a974f25-66c5-436d-9c66-0a5526a52d52.gif)
+
+#### Contract creation call
+
+![contract-deployment-tx](https://user-images.githubusercontent.com/41552663/194477523-99731456-aa0c-4427-8c36-7332ce34494f.png)
+
+###### Contract Deployment call and return state variable
+![contract-deployment-call](https://user-images.githubusercontent.com/41552663/194477381-df3a7455-57d8-4d71-8362-d8cb0a8ddcc9.png)
+
+
