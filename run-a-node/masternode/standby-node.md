@@ -11,6 +11,8 @@ description: >-
 
 The XDC developer community has made it easy for new and existing users, even those with little or no technical expertise, to quickly set up a masternode with a simple, one-click installer.&#x20;
 
+{% embed url="https://www.youtube.com/watch?v=PPJIKbwAXHQ" %}
+
 
 
 ## Setting Up XDC One-Click Installer
