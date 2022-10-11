@@ -37,6 +37,7 @@
       * [Flattening Smart Contracts with Remix](get-details/smart-contract-details/flattening-smart-contracts/flattening-smart-contracts-with-remix.md)
       * [Flattening Smart Contracts with Truffle](get-details/smart-contract-details/flattening-smart-contracts/flattening-smart-contracts-with-truffle.md)
       * [Flattening Smart Contracts with Hardhat](get-details/smart-contract-details/flattening-smart-contracts/flattening-smart-contracts-with-hardhat.md)
+    * [Verifying Smart Contracts](get-details/smart-contract-details/verifying-smart-contracts.md)
   * [Wallet Integration](get-details/wallet-integration/README.md)
     * [XDCPay](get-details/wallet-integration/xdcpay.md)
     * [XDCPay Changelist](get-details/wallet-integration/xdcpay-changelist.md)
