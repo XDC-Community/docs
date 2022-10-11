@@ -38,7 +38,7 @@ You may notice that you are on the Apothem Tesnet by checking the
 
 In the video we are injecting web3 into Xinfin Remix, creating a custom contract an deploying into the testnet, verify it's source on the testnet explorer 
 
-the [contract](https://explorer.apothem.network/address/xdcb1dd29f0e84a8d4131ce4ed7d3d812e51804e34d#readContract) in fact
+the [contract](https://explorer.apothem.network/address/xdcb1dd29f0e84a8d4131ce4ed7d3d812e51804e34d#readContract) deployed on the XDC Network
 
 ![xinfindeploy-contract](https://user-images.githubusercontent.com/41552663/194475798-2a974f25-66c5-436d-9c66-0a5526a52d52.gif)
 
@@ -49,4 +49,11 @@ the [contract](https://explorer.apothem.network/address/xdcb1dd29f0e84a8d4131ce4
 #### Contract Deployment call and return state variable
 ![contract-deployment-call](https://user-images.githubusercontent.com/41552663/194477381-df3a7455-57d8-4d71-8362-d8cb0a8ddcc9.png)
 
+### XinFin Remix Console
+
+XinFin Remix console allows you to debug transactions and events on the enviroment
+
+### Additional Envrioment Sections
+
+You are allowed to customize XinFin Remix as you desire with custom-plugins and integrations that is of your taste for your developing enviroment and workflow, by clicking on the "plug" icon at the left panel
 
