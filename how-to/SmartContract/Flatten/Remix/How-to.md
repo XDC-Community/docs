@@ -12,8 +12,8 @@ keywords:
 
 # 🧭 Table of contents
 
-- [🧭 Table of contents](#table-of-contents)
-- [📰 Overview](#overview)
+- [🧭 Table of contents](#-table-of-contents)
+- [📰 Overview](#-overview)
     - [What you will learn](#what-you-will-learn)
     - [What you will do](#what-you-will-do)
   - [📰 About Openzeppelin](#-about-openzeppelin)
@@ -376,5 +376,5 @@ And we can check our successful transaction on the [Block Explorer!](https://exp
 ---
 
 For more information about Remix IDE, Please Visit [Remix IDE Documentation](https://remix-ide.readthedocs.io/en/latest/).<br>
-For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
+For more information about XDC Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.community/).<br>
 
