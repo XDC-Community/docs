@@ -3,7 +3,7 @@
 
 Remix is an "easy-to-jump-in" All-in-One Developing enviroment browser-based interface intented for developers writing smart contracts to blockchain networks especifically EVM-Compatible, this allows developers to seamlessly deploy smart contracts without thinking free on-to much dependencies.
 
-XinFin Network has develop it's own Remix-Like system to aid integrate hassle-free smart contracts developing to the XDC Network named XinFin Remix it is an oncharge enviroment supporting instances of the network and preloaded with a customized testing suite and evm-machine based on the XinFin Blockchain
+XDC Network has develop it's own Remix-Like system to aid integrate hassle-free smart contracts developing to the XDC Network named XinFin Remix it is an oncharge enviroment supporting instances of the network and preloaded with a customized testing suite and evm-machine based on the XinFin Blockchain
 
 To access XinFin Remix we will fire up any modern browser and step to [XinFin Remix](https://remix.xinfin.network)
 
@@ -31,12 +31,13 @@ Also make sure you have enough testnet tokens to deploy to cover network fees, y
 You may notice that you are on the Apothem Tesnet by checking the 
 
 <code>chainid: 51</code> below the custom network select panel
+
 ![xdpay1](https://user-images.githubusercontent.com/41552663/194467308-139230d5-2ae5-483e-ad97-ec3f0b2e909f.png)
 
 
 #### Deploying Custom Smart Contract and Verifying
 
-In the video we are injecting web3 into XinFin Remix, creating a custom contract an deploying into the testnet, verify it's source on the testnet explorer 
+In the video we are injecting web3 into XinFin Remix, creating a custom contract an deploying into the testnet, verify it's source on the testnet blockchain explorer 
 
 the [contract](https://explorer.apothem.network/address/xdcb1dd29f0e84a8d4131ce4ed7d3d812e51804e34d#readContract) deployed on the XDC Network
 
