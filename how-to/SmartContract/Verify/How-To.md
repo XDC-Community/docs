@@ -14,7 +14,9 @@ keywords:
 
 - [🧭 Table of contents](#-table-of-contents)
 - [📰 Overview](#-overview)
-- [🔍 Viewing Deployed Contracts on the Block Explorer](#-viewing-deployed-contracts-on-the-block-explorer)
+    - [What you will learn](#what-you-will-learn)
+    - [What you will do](#what-you-will-do)
+  - [🔍 Viewing Deployed Contracts on the Block Explorer](#-viewing-deployed-contracts-on-the-block-explorer)
 - [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
 
 # 📰 Overview
@@ -94,10 +96,10 @@ In this page you can Read from, Write to, or simply read the information tied to
   <img src="https://user-images.githubusercontent.com/60708843/191074476-afe017e7-5529-40de-ab16-d8caaf61dae1.png" alt="Verify 03"/>
 </p>
 
-`In case, you are importing some external packages or libraries within your code, you would have to flatten out your smart contract first and then verify that flattened smart contract on the Block Explorer. You can check out our tutorials to flatten the smart contracts on Remix IDE, Truffle and Hardhat also. `
+In case, you are importing some external packages or libraries within your code, you would have to [flatten out your smart contract](https://docs.xdc.community/get-details/smart-contract-details/flattening-smart-contracts) first and then verify that flattened smart contract on the Block Explorer. You can check out our tutorials to flatten the smart contracts on Remix IDE, Truffle and Hardhat also.
 
 ---
 
 For more information about Remix IDE, Please Visit [Remix IDE Documentation](https://remix-ide.readthedocs.io/en/latest/).<br>
-For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
+For more information about XDC Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.community/).<br>
 
