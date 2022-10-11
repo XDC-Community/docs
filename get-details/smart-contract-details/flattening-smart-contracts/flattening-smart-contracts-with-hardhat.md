@@ -21,6 +21,7 @@ keywords:
   - [⚒ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
 - [💵 Writing Smart Contract](#-writing-smart-contract)
   - [💵 Compiling and Testing](#-compiling-and-testing)
+    - [Testing](#testing)
   - [💵 Deploying Contract](#-deploying-contract)
   - [💵 Flattening Contract](#-flattening-contract)
 - [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
@@ -381,5 +382,5 @@ If everything is correctly filled out, your contract page on the block explorer 
 ---
 
 For more information about Hardhat, Please Visit [Hardhat Documentation](https://hardhat.org/tutorial).<br>
-For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
-Resources used during the deployment of the MyCounter can be found at [MyCounter Contract Folder](./example-flatten-smart-contract).
+For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.community/).<br>
+Resources used during the deployment of the MyCounter can be found at [MyCounter Contract Folder](https://github.com/XDC-Community/docs/tree/main/how-to/SmartContract/Flatten/Hardhat/example-flatten-smart-contract).
