@@ -1,2 +1,0 @@
-# One-Click-Installer (MacOS)
-
