@@ -36,7 +36,7 @@ If the lock at the bottom left is locked <img src="https://help.apple.com/assets
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 12.54.06 PM.png" alt=""><figcaption></figcaption></figure>
 
-6\.  Click on "Open" and this will launch the application. Wait several minutes until the application syncs with the network.&#x20;
+6\.  Click on "Open" and this will launch the application. Wait several minutes until the application connects to the network.&#x20;
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 12.55.37 PM.png" alt=""><figcaption></figcaption></figure>
 
