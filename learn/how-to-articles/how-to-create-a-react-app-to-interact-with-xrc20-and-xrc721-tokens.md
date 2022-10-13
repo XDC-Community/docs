@@ -1337,3 +1337,4 @@ If everything is OK, you should be able to run the following demo:
 
 **OBS:.** _Depending on Network Conditions, Transaction approval can be slower than in the demo video... If thats the case, you just need to be a little bit patient_
 
+For more information on XDC Network Development please visit [the XDC Community Docs site](https://docs.xdc.community/)
