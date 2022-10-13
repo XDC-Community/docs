@@ -41,7 +41,7 @@
     * [Metamask](get-details/wallet-integration/metamask.md)
   * [Networks](get-details/networks/README.md)
     * [Mainnet (XDPos)](get-details/networks/mainnet.md)
-    * [Apothem](get-details/networks/apothem.md)
+    * [Apothem Testnet (XDPoS)](get-details/networks/apothem.md)
   * [EVM Compatibility](get-details/evm-compatibility/README.md)
     * [XDC Network Ethereum Fork Details](get-details/evm-compatibility/xdc-fork-details.md)
 * [Tools](tools/README.md)
