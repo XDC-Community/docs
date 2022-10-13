@@ -9,7 +9,6 @@
   * [XDC Design](get-started/xdc-design/README.md)
     * [Consensus Mechanism](get-started/xdc-design/consensus-mechanism.md)
     * [Masternodes](get-started/xdc-design/masternodes.md)
-    * [XDC](get-started/xdc-design/xdc.md)
     * [Tokenomics](get-started/xdc-design/tokenomics.md)
     * [XDPoS 2.0](get-started/xdc-design/xdpos-2.0.md)
     * [Blockchain Forensics](get-started/xdc-design/blockchain-forensics.md)
