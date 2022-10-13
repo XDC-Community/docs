@@ -60,7 +60,7 @@
     * [DART SDK](tools/sdks-and-programming/dart-sdk.md)
     * [Rust SDK](tools/sdks-and-programming/rust-sdk.md)
   * [APIs & Packages](tools/apis-and-packages/README.md)
-    * [npm i xdc-connect](tools/apis-and-packages/npm-i-xdc-connect.md)
+    * [XDC Connect](tools/apis-and-packages/npm-i-xdc-connect.md)
     * [Web3 Modal](tools/apis-and-packages/npm-i-xdc3.md)
     * [XDC RPCs](tools/apis-and-packages/xdc-rpcs.md)
     * [Tatum APIs](tools/apis-and-packages/tatum-apis.md)
