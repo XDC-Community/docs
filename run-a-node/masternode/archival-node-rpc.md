@@ -1,2 +1,0 @@
-# Archival Node (RPC)
-
