@@ -65,6 +65,7 @@
     * [npm i XDC3](tools/apis-and-packages/npm-i-xdc3.md)
     * [XDC RPCs](tools/apis-and-packages/xdc-rpcs.md)
     * [Tatum APIs](tools/apis-and-packages/tatum-apis.md)
+    * [Blocksscan APIs](tools/apis-and-packages/blocksscan-apis.md)
   * [Network Tools](tools/network-tools/README.md)
     * [Explorers](tools/network-tools/explorers.md)
     * [Testnet Faucets](tools/network-tools/testnet-faucets.md)
