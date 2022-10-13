@@ -65,6 +65,7 @@
     * [XDC RPCs](tools/apis-and-packages/xdc-rpcs.md)
     * [Tatum APIs](tools/apis-and-packages/tatum-apis.md)
     * [Blocksscan APIs](tools/apis-and-packages/blocksscan-apis.md)
+    * [ISO20022 Data Set APIs](tools/apis-and-packages/iso20022-data-set-apis.md)
   * [Network Tools](tools/network-tools/README.md)
     * [XDC Network Status](https://xinfin.network/#stats)
     * [XDC Network Explorer (XinFin)](https://explorer.xinfin.network/)
@@ -76,7 +77,8 @@
 * [Run a Node](run-a-node/README.md)
   * [Masternode](run-a-node/masternode/README.md)
     * [Full Node (Docker version)](run-a-node/masternode/full-node.md)
-    * [One-Click-Installer Masternode](run-a-node/masternode/standby-node.md)
+    * [One-Click-Installer Masternode (Windows OS)](run-a-node/masternode/standby-node.md)
+    * [One-Click-Installer (MacOS)](run-a-node/masternode/one-click-installer-macos.md)
 
 ## Learn
 
