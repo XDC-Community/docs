@@ -303,7 +303,7 @@ We can verify the deployment by copying and pasting the deployed contract’s ad
 
 
 <p align="centre">
-  <img src="https://user-images.githubusercontent.com/114388943/195771645-15b6f950-0728-4c97-b982-027ae54b8db0.png">            </p>
+  <img src="https://user-images.githubusercontent.com/114388943/195771645-15b6f950-0728-4c97-b982-027ae54b8db0.png">            
 </p>
 
 Here we saw how to work with hardhat. Using hardhat, you can write tests for your contracts and debug them without sweating too much. Refer to hardhat’s official documentation(https://hardhat.org/hardhat-runner/docs/getting-started#overview) for more information.
