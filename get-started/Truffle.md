@@ -27,6 +27,22 @@ In this tutorial, we will see how to build a DApp using Solidity and then deploy
    - Writing a smart contract.
    - Compiling and migrating the smart contract from Ethereum Network to XDC Network.
 
+###  What is Truffle?
+     Truffle is a world-class development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM), aiming to make life as a developer easier. Truffle is widely considered the most popular tool for blockchain application development with over 1.5 million lifetime downloads.
+     
+### Use of Truffle
+ 
+   - Built-in smart contract compilation, linking, deployment and binary management.
+   - Advanced debugging with breakpoints, variable analysis, and step functionality.
+   - Deployments and transactions through MetaMask to protect your mnemonic.
+   - External script runner that executes scripts within a Truffle environment.
+   - Interactive console for direct contract communication.
+   - Automated contract testing for rapid development.
+   - Scriptable, extensible deployment & migrations framework.
+   - Network management for deploying to any number of public & private networks.
+   - Package management with NPM, using the ERC190 standard.
+   - Configurable build pipeline with support for tight integration.
+
 #  What is XDC Network?
     
     XDC Network is an innovative solution to the scalability problem with the Ethereum blockchain and other blockchain platforms. XDC Network XDCPoS masternode architecture offers near-zero transaction fees and instant transaction confirmation. Security, stability, and chain finality are guaranteed via novel techniques such as double validation and uniform randomization.
@@ -128,12 +144,36 @@ To check the balance of a wallet address, you can use XinFin Explorer.
   <img src="https://user-images.githubusercontent.com/114388943/195659701-978001c8-ef01-4095-a28e-5d863fb62136.png">
 </p>
 
-### 4. Writing the smart contract
+### 4. How to use Truffle for smart contract
+Use the following steps to start using truffle for building a smart contract:
 
-We’ll start our DApp by writing the smart contract that acts as the back-end logic and storage.
+1. Install Visual Studio Code(https://code.visualstudio.com/).
+2. Create a folder by MasterTruffle or whatever you wish.
+3. Open your terminal in VS Code.
 
-1.We’ll start our DApp by writing the smart contract that acts as the back-end logic and storage.
-2. Copy the following code:
+<p align="centre">
+  <img src="https://user-images.githubusercontent.com/114388943/195832149-debdddb3-574e-4931-a751-1657e0a45e4d.png">
+</p>
+
+Run the following command in the terminal:
+  
+  `truffle init`
+
+This will create a folder structure as below:
+
+ 1. `Contract Folder` – In this, you will be creating your smart contracts.
+ 2. `Migrations Folder` – This will contain the migration script to migrate your contract on the Blockchain.
+ 3. `Test` – This will contain the test file for your smart contract.
+ 4. `truffle-config.js` – This is the configuration file for setting the various things like the solidity compiler version, the blockchain at which you want to deploy your smart contract, etc.
+
+<p align="centre">
+  <img src="https://user-images.githubusercontent.com/114388943/195832871-64b4f805-a1e6-45ea-9835-515679a2d32a.png">
+</p>
+Folders are created after the truffle init command.
+
+ 5.We’ll start our DApp by writing the smart contract that acts as the back-end logic and storage.
+ 
+ 6. Copy the following code:
 
 ```
 pragma solidity ^0.5.0;
@@ -166,7 +206,7 @@ In a terminal, make sure you are in the root of the directory that contains the 
    `truffle compile`
    
 <p align="centre">
-  <img src="https://user-images.githubusercontent.com/114388943/195665901-e7ff8175-9b98-47c1-94cd-98218b0d0be7.png">
+  <img src="https://user-images.githubusercontent.com/114388943/195833573-15fd8f47-d6d2-49e8-8f36-58e44a7b5555.png">
 </p>
 
 
@@ -185,6 +225,11 @@ Now we are ready to create our own migration script.
    1. Create a new file named 2_deploy_contracts.js in the migrations/ directory.
    
    2. Add the following content to the 2_deploy_contracts.js file
+
+<p align="centre">
+  <img src="https://user-images.githubusercontent.com/114388943/195835064-57900e23-f2c7-4b1e-a943-3265181837a9.png">
+</p>
+
 
 ```
 var Adoption = artifacts.require(“Adoption”);
