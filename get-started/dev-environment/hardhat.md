@@ -16,7 +16,7 @@ keywords:
     - [What you will learn](#what-you-will-learn)
     - [What you will do](#what-you-will-do)
   - [📰 About Hardhat](#-about-hardhat)
-    - [Why do you need development environment](#why-do-you-need-development environment)
+    - [Why do you need development environment](#why-do-you-need-development-environment)
 - [⚒ Create Hardhat project](#-create-hardhat-project)
   - [⚒ Hardhat folder structure](#-hardhat-folder-structure)
 - [⚒ Hardhat Config](#-hardhat-config)
