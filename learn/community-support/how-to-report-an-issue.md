@@ -73,4 +73,5 @@ Here is a list of the most common repositories that you can reference for issue 
 * **React Native SDK**: [https://github.com/XDCFoundation/XDC3ReactNative/issues](https://github.com/XDCFoundation/XDC3ReactNative/issues)
 * **Swift SDK**: [https://github.com/XDCFoundation/XDC3Swift/issues](https://github.com/XDCFoundation/XDC3Swift/issues)
 * **Rust SDK**: [https://github.com/XDCFoundation/XDC3\_RUST/issues](https://github.com/XDCFoundation/XDC3\_RUST/issues)
+* **XinFin Remix IDE**: [https://github.com/XinFinOrg/XDCremix](https://github.com/XinFinOrg/XDCremix)
 
