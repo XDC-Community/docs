@@ -35,7 +35,7 @@ This article will teach you what MetaMask is, what MetaMask is used for, and how
 
 - Learn about MetaMask
 - Connect MetaMask to XDC network
-- Interact with XDC smart contract using MetaMask
+- Send tokens over XDC apothem testnet using MetaMask
 
 ## 📰 About MetaMask
 
