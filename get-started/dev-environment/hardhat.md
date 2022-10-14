@@ -259,6 +259,7 @@ require("@nomiclabs/hardhat-ethers");
 ## ⚒ Using Hardhat to develop on XDC
 
 Hardhat development experience on XDC is mostly indistinguishable from any other Ethereum-like network, but there are still some things you need to learn before starting developing on XDC.
+
 ## ⚒ Configuring XDC Mainnet and Apothem Testnet on Hardhat
 
 In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to install a new dependency called `dotenv` that will be used in the `hardhat.config.js` file:
@@ -303,6 +304,16 @@ module.exports = {
 };
 ```
 
+And now you can deploy and interact with your contracts on XDC mainnet by running:
+```sh
+npx hardhat run scripts/myScript.js --network xinfin
+```
+
+or on testnet:
+
+```sh
+npx hardhat run scripts/myScript.js --network apothem
+```
 
 ---
 
