@@ -2,7 +2,8 @@
 
 ## Table of contents
 
-- [Overview](#-overview)
+- [What is Hardhat](#-what-is-hardhat)
+- [What is used for](#-what-is-used-for)
 - [Setting up the development environment](#-setting-up-the-development-environment)
   - [Starting a new hardhat Project](###-starting-a-new-hardhat-project)
 - [Smart Contract](##-smart-contract)
@@ -10,13 +11,21 @@
   - [Deploying](###-deploying)
 - [Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
 
-## Overview
+## What Is Hardhat
 [Hardhat](https://hardhat.org/) is a development environment for Ethereum software. 
 
 ### What is used for
 It consists of different components for editing, compiling, debugging and deploying your smart contracts and dApps, all of which work together to create a complete development environment.
 
-## Setting up the development environment
+Hardhat is designed around the concepts of tasks and plugins. The bulk of Hardhat's functionality comes from plugins, and you're free to choose the ones you want to use.
+
+Every time you're running Hardhat from the command-line, you're running a task. For example, npx hardhat compile is running the compile task. To see the currently available tasks in your project, run npx hardhat. Feel free to explore any task by running `npx hardhat help [task]`.
+
+Hardhat is unopinionated in terms of what tools you end up using, but it does come with some built-in defaults. All of which can be overriden. Most of the time the way to use a given tool is by consuming a plugin that integrates it into Hardhat.
+
+## How to use it
+
+### Setting up the development environment
  
  ### Instalation prerequisites
   - [Metamask wallet](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en) or [XDC Pay Wallet](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo)
