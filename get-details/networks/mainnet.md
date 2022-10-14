@@ -28,5 +28,5 @@ Users with an internet connection can easily access a public network. They can r
 **Useful Tools**
 
 * [XinFin Remix](https://remix.xinfin.network/)
-* [XinPay](https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en)\
+* [XDCPay](https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en)\
   \
