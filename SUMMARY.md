@@ -103,3 +103,10 @@
 * [Community Support](learn/community-support.md)
   * [How to Report an Issue](learn/community-support/how-to-report-an-issue.md)
   * [Contributing and Feedback Guide](gitbook.md)
+
+## GoPlugin
+
+* [About](goplugin/about.md)
+* [How-to Articles](goplugin/how-to-articles.md)
+* [Community Support](goplugin/community-support/README.md)
+  * [How to Log a Support Ticket](goplugin/community-support/how-to-log-a-support-ticket.md)
