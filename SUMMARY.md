@@ -108,5 +108,6 @@
 
 * [About](goplugin/about.md)
 * [How-to Articles](goplugin/how-to-articles.md)
-* [Community Support](goplugin/community-support/README.md)
+* [Frequently Asked Questions](goplugin/community-support/README.md)
   * [How to Log a Support Ticket](goplugin/community-support/how-to-log-a-support-ticket.md)
+  * [How do I check my plugin processes are ok](goplugin/community-support/how-do-i-check-my-plugin-processes-are-ok.md)
