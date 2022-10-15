@@ -21,7 +21,6 @@ keywords:
   - [⚒ Truffle project structure](#-truffle-project-structure)
 - [⚒ Truffle Config](#-truffle-config)
 - [⚒ Truffle Commands](#-truffle-commands)
-- [⚒ Truffle Testing](#-truffle-testing)
 - [⚒ Truffle Boxes](#-truffle-boxes)
 - [⚒ Using Truffle to develop on XDC](#-using-truffle-to-develop-on-xdc)
   - [⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle](#-configuring-xdc-mainnet-and-apothem-testnet-on-truffle)
