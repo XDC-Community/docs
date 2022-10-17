@@ -7,6 +7,14 @@ To get started with Tatum we need to create an account on their website, We will
 
 ![tatum-dashboard](https://user-images.githubusercontent.com/41552663/196106848-54c4e7c5-2eab-4324-bf5c-e701923a53ec.png)
 
+By Clicking on the API Keys Section we will select our API-Key to serves us in our integration
+
+![tatum-api-key](https://user-images.githubusercontent.com/41552663/196114242-132ab58d-7568-44a5-b851-da4df6b5ef6e.gif)
+
+Tatum offers different plan versions to their services, free & paid plans, they on-board developers with the free-plan version but keep in mind this plan is rate-limited when using the API, although enough good to use it. You may follow [here](https://docs.tatum.io/payments/plans-and-pricing) for the comparison between plan 
+
+![tatum-free](https://user-images.githubusercontent.com/41552663/196113607-bcb9cc2f-ff33-4236-bb5c-69242209f0f4.png)
+
 
 ### Hot Wallet Creation for XDC Network using Tatum API
 
