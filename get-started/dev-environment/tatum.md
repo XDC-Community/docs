@@ -22,6 +22,10 @@ We are using cURL & handling our API-Key previously gathered in our panel to cre
 
 ![Hotwallet](https://user-images.githubusercontent.com/41552663/196111444-5a027ca6-8a2e-4e5c-9270-5abefd4fc207.gif)
 
+### Using Tatum's API to broadcast XDC Transaction
+
+![broadcast](https://user-images.githubusercontent.com/41552663/196236451-d0cad5ed-62fc-420d-85f7-c3312367e8d9.gif)
+
 Tatum also provides ready-to-integrate blockchain libraries in different programming languages to aid developers access to their API to their like flavors and reduce developing time when using their platform on demanding applications
 
 We believe Tatum is an important part & solution and that it supports XDC Network ecosystem makes us confident on a truly enhaced developing experience to teams & builders looking to jump in their applications to XinFin.
