@@ -283,7 +283,7 @@ module.exports = {
   },
 };
 ```
-Now go to Migrations folder and create a file `1_incrementer.sol` and paste this code: 
+Now go to Migrations folder and create a file `1_incrementer.js` and paste this code: 
 
 ```jsx
 const incrementer = artifacts.require("incrementer");
