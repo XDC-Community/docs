@@ -1,5 +1,3 @@
-# How to Migrate from Solana to the XDC Network using Solang
-
 # Table of content
   - [Overview](#-overview)
   - [Install and setup Dev Environment](#-install-and-setup-dev-enviroment) 
