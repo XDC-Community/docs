@@ -283,6 +283,19 @@ module.exports = {
   },
 };
 ```
+Now go to Migrations folder and create a file `1_incrementer.sol` and paste this code: 
+
+```jsx
+const incrementer = artifacts.require("incrementer");
+
+const VALUE = 1
+
+module.exports = function(deployer) {
+  deployer.deploy(incrementer, [VALUE]);
+};
+```
+
+
 Once your have your truffle-config.js file ready it's time to migrate this contract to XDC network. Run this command: 
 
 ```bash
