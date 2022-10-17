@@ -307,7 +307,7 @@ this should be the output:
 
 ![Screenshot_14](https://user-images.githubusercontent.com/34518489/195974665-a6a4638f-5d06-4016-9fec-40fa97d80552.png)
 
-Copy the transaction hash to check it in the block explorer 
+Copy the transaction hash to check it in the [block explorer](https://explorer.apothem.network/) 
 
 ![Screenshot_15](https://user-images.githubusercontent.com/34518489/195974754-2c5a38aa-503b-47fd-87e1-100ea0d8aa0c.png)
 
