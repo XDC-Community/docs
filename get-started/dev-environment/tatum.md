@@ -8,7 +8,7 @@ To get started with Tatum we need to create an account on their website, We will
 ![tatum-dashboard](https://user-images.githubusercontent.com/41552663/196106848-54c4e7c5-2eab-4324-bf5c-e701923a53ec.png)
 
 
-##### Hot Wallet Creation for XDC Network using Tatum API
+#### Hot Wallet Creation for XDC Network using Tatum API
 
 We are using cURL to create a hot-wallet as if so desire to use on XDC Network
 
