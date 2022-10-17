@@ -20,6 +20,14 @@ With [Solang](https://solang.readthedocs.io/en/latest/) you can compile smart co
 
 The best way to install Solang is using the [VS Code extension](https://solang.readthedocs.io/en/latest/extension.html). It will automatically install the correct solang binary along with the dependencies. 
 
+Let's do some changes to our solang extension, we need to put the target in the settings of it: 
+
+![solang-target](https://user-images.githubusercontent.com/34518489/195971806-c043bd4e-ec6a-41fc-83ac-62c32a37178a.png)
+
+If you have solidity extension in VSCode Disable the workspace: 
+
+![disable-solidity](https://user-images.githubusercontent.com/34518489/195971874-c49e3a0e-0a41-4cd6-8cd1-ac76d13cba62.png)
+
 # Install and setup Dev Environment
 
 For this guide I will be usuing `Windows`
@@ -106,13 +114,6 @@ I recommend for windows to download the solang.exe. Sometimes the Vs Extension d
 
 ![Screenshot_4](https://user-images.githubusercontent.com/34518489/195971737-b3392d35-7758-4604-b8e2-167847cf70bd.png)
 
-Let's do some changes to our solang extension, we need to put the target in the settings of it: 
-
-![solang-target](https://user-images.githubusercontent.com/34518489/195971806-c043bd4e-ec6a-41fc-83ac-62c32a37178a.png)
-
-If you have solidity extension in VSCode Disable the workspace: 
-
-![disable-solidity](https://user-images.githubusercontent.com/34518489/195971874-c49e3a0e-0a41-4cd6-8cd1-ac76d13cba62.png)
 
 # Create an XDC Network Wallet
 
