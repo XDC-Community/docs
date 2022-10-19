@@ -98,7 +98,7 @@ File Explorer displays workspaces and their files. You can select workspace by c
 
 ![solidity_ico](https://user-images.githubusercontent.com/102393474/196577910-64f9d860-4962-4e5f-a9d8-b6d3df6b5023.png)
 
-In compiler window you can configure options for solidity compiler:
+In compiler panel you can configure options for solidity compiler:
 
  - `compiler`: version of solidity compiler
  - `language`: Solidity or Yul (for version >=0.5.7)
@@ -118,7 +118,7 @@ After compilation is finished, you can publish resulting contract on IPFS, see t
 
 ![deploy_ico](https://user-images.githubusercontent.com/102393474/196577874-c07aaeb6-1796-41bd-8717-8b293c0c83ee.png)
 
-Now lets take a look at `Deploy & run transactions` window. First is `Environment` menu. XinFin Remix provides for options for connecting to a blockchain:
+Now lets take a look at `Deploy & run transactions` panel. First is `Environment` menu. XinFin Remix provides for options for connecting to a blockchain:
 
 - `Javascript VM`: For connecting to a local browser-based blockchain node started by XinFin Remix. On each reload XinFin will create new blockchain instance and **the old one will be deleted**.
 - `Injected Web3`: For connecting XinFin Remix to an injected web3 provider. The most common injected provider is `Metamask` and `XDCPay`.
@@ -153,14 +153,14 @@ In Remix terminal you can do the following things:
  - Search for transactions
  - By checking `listen on network` you will get a log of all blocks mined to currently connected blockchain network. 
  - Run custom web3 scripts. To do that, type `remix.execute(pathToScript)` or elect script to be active in editor and type `remix.exeCurrent()` in command line at the bottom.
- - 
+
 ![terminal](https://user-images.githubusercontent.com/102393474/196579006-fb918b14-97b5-4806-9b9f-2da3a761c4ae.png)
 
 ## 🎧 Remix Plugin Manager
 
 ![plugin_ico](https://user-images.githubusercontent.com/102393474/196577855-129a8fc3-30f7-4bd2-a7b5-864e2f623f71.png)
 
-Remix has extensible plugin architecture and plenty of ready-to-use plugins avaiable in Plugin Manager window. With plugins you can add support for a specific blockchain network, enable testing and debugging capabalities to solidity and more. If you want some plugin that is not present in Plugin Manager, you can always add new plugins buy pressing `Connect to a Local Plugin`.
+Remix has extensible plugin architecture and plenty of ready-to-use plugins avaiable in Plugin Manager panel. With plugins you can add support for a specific blockchain network, enable testing and debugging capabalities to solidity and more. If you want some plugin that is not present in Plugin Manager, you can always add new plugins buy pressing `Connect to a Local Plugin`.
 
 Some of useful plugins for starting dApp development are:
  - `Debugger`: lets you debug transactions
@@ -174,7 +174,7 @@ XDC provides its own version of Remix here on [remix.xinfin.network](https://rem
 
 ## 🎧 Configuring XDC Mainnet and Apothem Testnet on XinFin Remix
 
-To deploy smart contract on XDC network, you need go to `Deploy & Run Transactions` window, then select `Injected Web3` in `Environment` dropdown menu. Then connect XinFin Remix IDE to your browser wallet with XinFin or Apothem network configured.
+To deploy smart contract on XDC network, you need go to `Deploy & Run Transactions` panel, then select `Injected Web3` in `Environment` dropdown menu. Then connect XinFin Remix IDE to your browser wallet with XinFin or Apothem network configured.
 
 ![injected_env](https://user-images.githubusercontent.com/102393474/196579665-cfc55bd4-b49e-4f7a-a8e1-136c999e85ba.png)
 
