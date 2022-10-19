@@ -7,7 +7,7 @@ keywords:
   - apothem
   - token
   - XRC20
-  - truffle
+  - blocksscan
 ---
 
 # 🧭 Table of contents
