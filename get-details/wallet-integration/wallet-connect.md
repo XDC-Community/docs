@@ -79,22 +79,18 @@ The connection is initiated by one peer displaying a QR Code or deep link with a
 
 ### Example Demo
 
-You can easly test this with a already prepared demo project (full code [here](https://github.com/XDC-Community/docs/tree/main/how-to/walletconnect/walletconnect-dapp-example)). Just download and and install dependencies by running this command on your shell terminal:
+You can easly test this with a prepared demo project (full code [here](https://github.com/XDC-Community/docs/tree/main/how-to/walletconnect/walletconnect-example-dapp)). Just download and and install dependencies by running this commands on terminal:
 
 ```shell
 git clone git@github.com:XDC-Community/docs.git
-cd docs/how-to/walletconnect/walletconnect-dapp-example
+cd docs/how-to/walletconnect/walletconnect-example-dapp
 npm install
 ```
 
-Start and test the example:
-
-```shell
-npm run start
-```
+Now we just need to start the web app by running ```npm run start```. With your browser opened, visit the [`http://localhost:3000/`](http://localhost:3000/) url address :rocket:
 
 ## Know more
 
-In this guide we cover the Standalone Client, but there are two common ways to integrate WalletConnect: Standalone Client and Web3Model :mag:
+In this guide we cover the standalone client, but there are two common ways to integrate WalletConnect: standalone client and Web3Modal :mag:
 
-If you want to know more about Web3Model or other wallet integrations check [this page](https://docs.xdc.community/get-details/wallet-integration).
+If you want to know more about Web3Modal or other wallet integrations check [this page](https://docs.xdc.community/get-details/wallet-integration).
