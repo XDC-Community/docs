@@ -68,7 +68,7 @@ After approving the action on your wallet you will see a success message on Dapp
 **How does it work**? It's based on a websocket JSON-RPC channel, WalletConnect is a simple infrastructure that can be setup by any developer. Using a Bridge server to relay the messages without having access to any of its contents.
 
 <p align="center">
-  <img width=85% src="../../.gitbook/assets/example-walletconnect-diagram.svg" alt="How to connect your Dapp to WalletConnect"/>
+  <img width=85% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-diagram.svg" alt="How to connect your Dapp to WalletConnect"/>
 </p>
 
 WalletConnect is an protocol for connecting Dapps to Wallets by scanning a QR code, the protocol establishes a remote connection between two apps and/or devices using a Bridge server to relay payloads. These payloads are symmetrically encrypted through a shared key between the two peers.
