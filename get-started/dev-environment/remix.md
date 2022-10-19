@@ -17,8 +17,8 @@ keywords:
     - [What you will do](#what-you-will-do)
   - [📰 About Remix](#-about-remix)
     - [Why do you need development environment](#why-do-you-need-development-environment)
-- [🎧 Create Remix project](#-create-remix-project)
-  - [Remix project structure](#-remix-project-structure)
+- [🎧 Start New Project](#-start-new-project)
+  - [Remix project structure](#remix-project-structure)
 - [🎧 Remix Solidity Editor](#-remix-solidity-editor)
 - [🎧 Remix File Explorer](#-remix-file-explorer)
 - [🎧 Remix Compiler](#-remix-compiler)
@@ -54,6 +54,8 @@ Remix comes with all tools you need out of box, including built-in Solidity Edit
 
 ## 🎧 Remix Overview
 
+![homepage](https://user-images.githubusercontent.com/102393474/196577072-81e185a3-b2ad-4972-9c89-dc524dc2d771.png)
+
 Remix consists of four key parts:
  - Solidity Editor
  - File Explorer
@@ -62,10 +64,13 @@ Remix consists of four key parts:
  - Terminal
 
 ## 🎧 Start New Project
+![workspace_create](https://user-images.githubusercontent.com/102393474/196576591-00c3a0c5-ef5e-4e16-bbea-1d9ad7c02f11.png)
 
 To create new project, simply press `+` near `Workspaces` in File Explorer and then provide a name for your project.
 
 ### Remix project structure
+
+![project](https://user-images.githubusercontent.com/102393474/196577260-4f226175-cbd8-4cad-be75-a1cc813a8dca.png)
 
 Remix project has the following folders:
 
@@ -76,13 +81,22 @@ Remix project has the following folders:
 
 ## 🎧 Remix Solidity Editor
 
+
 In Solidity Editor, you can edit our smart contract and it will recompile it each time it is editor. It also provides word completion and syntax highlighting for solidity language. You can open and edit multiple files in different.
+
+![solidity_editor](https://user-images.githubusercontent.com/102393474/196578424-6519cd6e-e8d7-4249-accf-2ee2c4a4b73e.png)
 
 ## 🎧 Remix File Explorer
 
+![file_explorer_ico](https://user-images.githubusercontent.com/102393474/196577922-2f71a0fb-a739-458e-a65a-7d2ddbc42f97.png)
+
 File Explorer displays workspaces and their files. You can select workspace by clicking workspace dropdown or add new workspaces. Each workspace represents separate Remix project, with folder structure described above. File Explorer lets you create, move, rename, delete, copy files. You can run custom scripts by right-clicking and pressing `Run` on them.
 
+![file_explorer_pane](https://user-images.githubusercontent.com/102393474/196578378-82ae1e95-54b1-492e-a551-48f5d3a9bd08.png)
+
 ## 🎧 Remix Compiler
+
+![solidity_ico](https://user-images.githubusercontent.com/102393474/196577910-64f9d860-4962-4e5f-a9d8-b6d3df6b5023.png)
 
 In compiler window you can configure options for solidity compiler:
 
@@ -94,9 +108,15 @@ In compiler window you can configure options for solidity compiler:
 
 Once configured, you can compile contract currently selected in File Explorer by hitting `Compile` button. Compiler will compile contract and all its dependencies.
 
+![compiler_1](https://user-images.githubusercontent.com/102393474/196578850-243c96bb-8266-417b-9c24-e7cbe4045c16.png)
+
 After compilation is finished, you can publish resulting contract on IPFS, see the compilation details or copy its ABI.
 
+![compiler_contract](https://user-images.githubusercontent.com/102393474/196578947-53244da8-c51f-4d1c-9af9-e38eee293c68.png)
+
 ## 🎧 Remix Deployer
+
+![deploy_ico](https://user-images.githubusercontent.com/102393474/196577874-c07aaeb6-1796-41bd-8717-8b293c0c83ee.png)
 
 Now lets take a look at `Deploy & run transactions` window. First is `Environment` menu. XinFin Remix provides for options for connecting to a blockchain:
 
@@ -108,7 +128,11 @@ Now lets take a look at `Deploy & run transactions` window. First is `Environmen
 In `Gas Limit` field you can select maximum amount of gas used to deploy your contract and in `Value` you can set amounts of XDC tokens sent on creation. 
 Then you select previously compiled contract in `Contract` field and hit `Deploy` to deploy it on selected environment. 
 
+![deploy_window2](https://user-images.githubusercontent.com/102393474/196579380-41358965-ab65-4284-9382-3e270a8774b8.png)
+
 Once contract is deployed, you can interact with its methods by expanding it in `Deployed Contracts` list. If you already deployed your contract and just want to interact with it through Remix IDE, you can paste its address in `At Address` field.
+
+![deployed_list](https://user-images.githubusercontent.com/102393474/196579104-ca5e9d02-4a1d-4324-987b-11143fa631e7.png)
 
 ### Recording & Replaying transactions.
 
@@ -119,6 +143,7 @@ Recording and replaying use cases are:
 
 To record transactions, simply press `save` icon under `Transactions recorded` block. Transactions will be save in `JSON` format under provided name or `scenario.json` by default. To replay transactions, select one of scenarios you recorded in File Explorer and hit `run` icon in under `Transactions recorded` block.
 
+![tx_record](https://user-images.githubusercontent.com/102393474/196579078-ad355afe-a726-48c1-961f-bb55e46c3084.png)
 
 ## 🎧 Remix Terminal
 
@@ -128,8 +153,12 @@ In Remix terminal you can do the following things:
  - Search for transactions
  - By checking `listen on network` you will get a log of all blocks mined to currently connected blockchain network. 
  - Run custom web3 scripts. To do that, type `remix.execute(pathToScript)` or elect script to be active in editor and type `remix.exeCurrent()` in command line at the bottom.
+ - 
+![terminal](https://user-images.githubusercontent.com/102393474/196579006-fb918b14-97b5-4806-9b9f-2da3a761c4ae.png)
 
 ## 🎧 Remix Plugin Manager
+
+![plugin_ico](https://user-images.githubusercontent.com/102393474/196577855-129a8fc3-30f7-4bd2-a7b5-864e2f623f71.png)
 
 Remix has extensible plugin architecture and plenty of ready-to-use plugins avaiable in Plugin Manager window. With plugins you can add support for a specific blockchain network, enable testing and debugging capabalities to solidity and more. If you want some plugin that is not present in Plugin Manager, you can always add new plugins buy pressing `Connect to a Local Plugin`.
 
@@ -145,7 +174,13 @@ XDC provides its own version of Remix here on [remix.xinfin.network](https://rem
 
 ## 🎧 Configuring XDC Mainnet and Apothem Testnet on XinFin Remix
 
-To deploy smart contract on XDC network, you need to select `Injected Web3` in `Environment` dropdown menu. Then connect XinFin Remix IDE to your browser wallet with XinFin or Apothem network configured.
+To deploy smart contract on XDC network, you need go to `Deploy & Run Transactions` window, then select `Injected Web3` in `Environment` dropdown menu. Then connect XinFin Remix IDE to your browser wallet with XinFin or Apothem network configured.
+
+![injected_env](https://user-images.githubusercontent.com/102393474/196579665-cfc55bd4-b49e-4f7a-a8e1-136c999e85ba.png)
+
+Then hit `Deploy` button and you will be asked to confirm transaction.
+
+![deploy_contract](https://user-images.githubusercontent.com/102393474/196579097-7ab4e2cf-e1f8-45c7-9b03-e46de89be744.png)
 
 ---
 
