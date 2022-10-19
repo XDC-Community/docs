@@ -67,13 +67,9 @@ After approving the action on your wallet you will see a success message on Dapp
 
 **How does it work**? It's based on a websocket JSON-RPC channel, WalletConnect is a simple infrastructure that can be setup by any developer. Using a Bridge server to relay the messages without having access to any of its contents.
 
-```mermaid
-flowchart LR
-  WalletConnect -- QR Code --> Alice[Alice Wallet]
-  Alice -- Scan QR & Approve --> WalletConnect
-  Dapp[Dapp <br><br>XDC Network] -- WalletConnect Bridge <br>JSON-RPC Websocket --- WalletConnect
-  style WalletConnect fill:#6419e5,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
-```
+<p align="center">
+  <img width=85% src="../../.gitbook/assets/example-walletconnect-diagram.svg" alt="How to connect your Dapp to WalletConnect"/>
+</p>
 
 WalletConnect is an protocol for connecting Dapps to Wallets by scanning a QR code, the protocol establishes a remote connection between two apps and/or devices using a Bridge server to relay payloads. These payloads are symmetrically encrypted through a shared key between the two peers.
 
@@ -99,6 +95,6 @@ npm run start
 
 ## Know more
 
-In this guide we cover the Standalone Client, but there are two common ways to integrate Web3 Wallets to your Dapp: Standalone Client and Web3Model :mag:
+In this guide we cover the Standalone Client, but there are two common ways to integrate WalletConnect: Standalone Client and Web3Model :mag:
 
 If you want to know more about Web3Model or other wallet integrations check [this page](https://docs.xdc.community/get-details/wallet-integration).
