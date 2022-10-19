@@ -27,15 +27,15 @@ description: Using xdcpay-connect to create a dApp connected to XDC network.
 
 ## 📰 Overview
 
-[Web3Modal](https://www.npmjs.com/package/web3modal) single Web3 / Ethereum provider solution for all Wallets, using it to develop new decentralized app is pretty straight forward and documentation on how to use it is widely available. We will be using [React](https://reactjs.org/) to bootstrap a new app and use Web3Modal and Web3.js to intereact with the blockchain.
+[Web3Modal](https://www.npmjs.com/package/web3modal) is a single Web3 / Ethereum provider solution for all wallets. The Web3Modal process for developing a new decentralized app is relatively straight-forward and documentation on how to use it is widely available. You will be using [React](https://reactjs.org/) to bootstrap a new app and use Web3Modal and Web3.js to intereact with the blockchain.
 
 #### 📰 What you will learn
 
-In this tutorial, you will learn how to integrate XDCPay with a front end application so the application can interact with the XDC Network mainnet and XDC Apothem testnet.
+In this tutorial, you will learn how to integrate XDCPay with a front-end application so that the application can interact with the XDC Network Mainnet and XDC Apothem testnet.
 
 #### 📰 What you will do
 
-* Install and setup XDCPay
+* Install and set up XDCPay
 * Create a simple web front end
 * Integrate XDCPay with the front end using web3.js
 * Integrate XDCPay with the front end using web3 modal
@@ -47,26 +47,26 @@ There are a few technical requirements before we start. Please install the follo
 * [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 * [Git](https://git-scm.com/)
 
-Plus, we will be using XDCPay to interact with our first dApp on XDC Network. You can download XDCPay at:
+As you will use XDCPay to interact with our first dApp on XDC Network, you can download XDCPay at:
 
 * [XDCPay on Chrome Store](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo)
 
 ## 🚀 Setting up the development environment
 
-We will be using a XDC-dApp-Scaffold prepared to start integrating, lets start by cloning the dApp to our working directory:
+You will be using XDC-dApp-Scaffold to start integrating. Start by cloning the dApp to our working directory:
 
 ```
 git clone https://github.com/menezesphill/xdc-dapp-scaffold.git
 cd xdc-dapp-scaffold
 ```
 
-Once we have cloned our dApp Scaffold, lets install all dependencies. You can either use `yarn` or `npm` as a package manager, in this example we will use `npm`:
+Once you have cloned the dApp Scaffold, you can install all dependencies. You can either use `yarn` or `npm` as a package manager, in this example we used `npm`:
 
 ```
 npm install
 ```
 
-When npm finishes installing our dependencies, we can run the `start` script to see if everything is working:
+When npm finishes installing our dependencies, you can run the `start` script to see if everything is working:
 
 ```
 npm run start
@@ -76,7 +76,7 @@ You should see the following React App be served at `http://localhost:3000/`:
 
 ![Step 01](https://user-images.githubusercontent.com/78161484/193106064-639e0425-e743-4849-90e5-b869b1b4a290.png)
 
-If you see it, we are ready to move on!
+If you see it, you are ready to move on!
 
 ### ⚒ Creating a Web3Modal Provider
 
@@ -86,7 +86,7 @@ Lets start by creating a `contexts` folder on our project:
 mkdir ./src/contexts
 ```
 
-The touchpoint where our React App access data on the blockchain is through a `Web3Modal` Provider that we will use throughout our App. Lets start by installing the dependencies necessary to create our `Web3Modal`:
+The touchpoint where your React App access data on the blockchain is through a `Web3Modal` Provider that you will use throughout your App. Start by installing the dependencies necessary to create our `Web3Modal`:
 
 ```
 npm install web3modal web3 xdcpay-connect
@@ -98,7 +98,7 @@ If you get a compability error while installing these packages, try using the `-
 npm install web3modal web3 xdcpay-connect --force
 ```
 
-With everything correctly installed, lets create a `Web3ModalProvider.tsx` file:
+With everything correctly installed, you can create a `Web3ModalProvider.tsx` file:
 
 ```
 touch ./src/contexts/Web3ModalProvider.tsx
@@ -259,7 +259,7 @@ const Web3ModalProvider = ({ children }) => {
 export default Web3ModalProvider;
 ```
 
-This Provider will provide the following list of features to our React App:
+This Provider will provide the following list of features to your React App:
 
 * A `web3` object;
 * A `connect` method;
@@ -269,13 +269,13 @@ This Provider will provide the following list of features to our React App:
 * A `chainId` variable;
 * A `connected` boolean variable;
 
-Our folder should look like this:
+Your folder should look like this:
 
 ![Folder 01](https://user-images.githubusercontent.com/78161484/193114982-4cc2f444-79ea-466d-967c-1d576ce01f3a.png)
 
 ### ⚒ Importing Web3Modal Provider to our React App
 
-We will now edit our `App.tsx` file located at `./src/global/`, this file should look like this:
+You will now edit your `App.tsx` file located at `./src/global/`. The file should look like this:
 
 ```jsx
 import React from "react";
@@ -295,7 +295,7 @@ const App: React.FC = () => {
 export default App;
 ```
 
-We will import our Provider and add that provider to our React Components provider list:
+You will now import your provider and add that provider to our React Components provider list:
 
 ```jsx
 import React from "react";
@@ -320,9 +320,9 @@ export default App;
 
 ### ⚒ Using Web3Modal Functions
 
-The first thing we will import from our Web3Modal provider are the `connect` and `disconnect` methods, and our `account` variable, in this way, we can connect to our XDCPay wallet, and show the user what address we are connected to.
+The first thing you will import from your Web3Modal provider are the `connect` and `disconnect` methods, and your `account` variable. By doing this, you can connect to your XDCPay wallet, and show the user what address we are connected to.
 
-Lets move to our `./src/components/Header` folder and open the `index.tsx` file:
+Lets move to your `./src/components/Header` folder and open the `index.tsx` file:
 
 ```jsx
 import React from "react";
@@ -353,7 +353,7 @@ const Header: React.FC = () => {
 export default Header;
 ```
 
-Here we will create a `Web3ModalContext` and use React's `useContext` to have access to our web3 methods. We also need to implement the `connect/disconnect` logic on our component and to show whether we are connected or not. Lets write the following changes to our `index.tsx` file:
+Here you will create a `Web3ModalContext` and use React's `useContext` to have access to your web3 methods. We also need to implement the `connect/disconnect` logic on our component and to show whether we are connected or not. Please write the following changes to your `index.tsx` file:
 
 ```jsx
 import React, { useContext, useCallback } from "react";
@@ -411,7 +411,7 @@ If everything is ok, you should be able to connect your XDCPay wallet to the dAp
 
 ### ⚒ Fetching Blockchain Data using Web3Modal
 
-Now lets get some blockchain data and show it on our dApp. Lets move to the `./src/components/Content` folder and open the `index.tsx` file. It should look as follow:
+Now you can show some blockchain data in your dApp. Move to the `./src/components/Content` folder and open the `index.tsx` file. It should look as shown here:
 
 ```jsx
 import React, { useState } from "react";
@@ -486,14 +486,14 @@ const Content: React.FC = () => {
 export default Content;
 ```
 
-In this file we want to create the logic to:
+In this file, you will create the logic to:
 
 * Get my XDC Address;
 * Get the chain ID I am connected to;
 * Get my XDC Balance;
 * Check if my wallet is currently connected to the dApp or not;
 
-In order to do that, we will make the following changes to the code:
+In order to do that, you will have to make the following changes to the code:
 
 ```jsx
 import React, { useState, useContext, useEffect } from "react";
@@ -607,14 +607,14 @@ const Content: React.FC = () => {
 export default Content;
 ```
 
-If there are no erros, the next time you would connect to XDCPay on the Dapp you should see the following:
+If there are no erros, the next time you connect to XDCPay on the dApp you should see the following:
 
 [Screencast from 29-09-2022 17:07:45.webm](https://user-images.githubusercontent.com/78161484/193131773-cfbf0baa-b92d-40b4-965e-826c48fba26a.webm)
 
-With that you have created your first DApp on XDC Network using XDCPay! 🎉🥳
+Now you have created your first dApp on XDC Network using XDCPay! 🎉🥳
 
 ***
 
-This Dapp Scaffold is available in the [xdc-dapp-scaffold folder](https://github.com/menezesphill/docs/tree/main/how-to/XDCPay/Integration/xdc-dapp-scaffold).\
+This dApp Scaffold is available in the [xdc-dapp-scaffold folder](https://github.com/menezesphill/docs/tree/main/how-to/XDCPay/Integration/xdc-dapp-scaffold).\
 This Dapp completed version (fully functional) is also available in the [xdc-dapp-scaffold-completed folder](https://github.com/menezesphill/docs/tree/main/how-to/XDCPay/Integration/xdc-dapp-scaffold-completed).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\
