@@ -63,11 +63,19 @@ To open XDC BlockScan API Swagger UI go to [xdc.blocksscan.io/docs](https://xdc.
 
 Click on one of the dropdowns, in this example `/api/tokens`. Scroll to bottom of page to find it.
 
+![api_get_token_select](https://user-images.githubusercontent.com/102393474/196593582-dbbfa7d3-5ac4-40c9-a0b7-c14b51961465.png)
+
 You will see input fields and description of parameters for this request. To unlock requests, click `Try it out`. 
+
+![api_get_token](https://user-images.githubusercontent.com/102393474/196593022-f2ae3513-ae22-4492-ad74-a147a56c6566.png)
 
 Now fill `type` field with `xrc721`, because we are going to search for NFT tokens. In `page` field type 1 for the first page and set limit to `10`. Once it is done, hit `Execute`.
 
+![api_parameters](https://user-images.githubusercontent.com/102393474/196593081-41d2c8e2-8f84-4752-b1e1-8d154c1698d0.png)
+
 After waiting a bit, you will receive a response with NFT data from XinFin blockchain.
+
+![api_response](https://user-images.githubusercontent.com/102393474/196593079-ccf537cf-26db-47b6-bd30-61d46ae0e8b6.png)
 
 ### Node.js
 
