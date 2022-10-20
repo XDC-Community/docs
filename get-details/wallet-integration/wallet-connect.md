@@ -29,13 +29,13 @@ The user can interact with any Dapp without comprising their private keys and wi
 
 ## How to Use it
 
-After having our Dapp ready for XDC Network and our wallet prepared, let's try to connect both together with WalletConnect. Open your app and click on WalletConnect link button:
+To connect a Dapp on XDC Network and a Web3 wallet with WalletConnect, just open the app, and prepare your wallet. Click on WalletConnect link:
 
 <p align="center">
   <img width=40% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-connect.png" alt="How to connect your Dapp to WalletConnect"/>
 </p>
 
-A WalletConnect modal should pop-up, here you can connect your wallet by scanner the `QR Code` or just go to `Desktop` tab to choose other connection method:
+A WalletConnect modal should pop-up, here you can connect your wallet by scanning the `QR Code` or going to `Desktop` tab, and choose another connection method:
 
 <p align="center">
   <img width=45% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-modal-qrcode.png" alt="How to connect your Dapp to WalletConnect"/> <img width=45% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-modal-desktop.png" alt="How to connect your Dapp to WalletConnect"/>
