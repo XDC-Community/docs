@@ -8,7 +8,6 @@ Things we need:
   
  ```code
   python -m pip install eth-brownie
-  python -m pip install -r requirements.txt
   ```
   ![powershell_j6ZGJ6csen](https://user-images.githubusercontent.com/41552663/197033638-5698520b-0c45-46e4-99c7-c40bd584f23b.gif)
 
@@ -78,6 +77,8 @@ Using ```brownie init``` will output us a project structure containing folder to
 
 #### Transfering XDC between Accounts using Brownie
 
+below we are transfering some XDC main token between accounts using browning
+
 ![Code_XJR9qIggCn](https://user-images.githubusercontent.com/41552663/197057983-92494e80-e1a1-413f-8332-e9e92c5e9d26.gif)
 
 ![chrome_elStq0tBGn](https://user-images.githubusercontent.com/41552663/197058096-ea984de5-dec7-4fe8-896d-b0458988001d.gif)
@@ -86,12 +87,9 @@ Using ```brownie init``` will output us a project structure containing folder to
 
   We will be deploying the following XRC20
   ```solidity
-  pragma solidity ^0.8.0;
+  pragma solidity >=0.8.0 <0.9.0;
 import "./XRC20.sol";
-contract BlastToken is XRC20 {
-  constructor() ERC20("Blast", "Blaster") public {
-    _mint(msg.sender,
-      10000000000 * (10**uint256(decimals())));
-  }
+address constant owner = 0x4D0928Df315D816d9a6540CF79D7c547C5294eA8;contract Token is XRC20Token {
+    constructor() XRC20Token('Blaster Token', 'Blast', 18, 1000*10**18) {}
 }
  ``` 
