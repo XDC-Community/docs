@@ -10,21 +10,30 @@ Things we need:
   python -m pip install eth-brownie
   python -m pip install -r requirements.txt
   ```
-  Will get you the latest eth-brownie version from pypi packages
-  
-  After installation eth-brownie should be in your enviroment as *brownie*
-
-  Fire up a terminal and type *brownie --help* to make sure everything is good
-
   ![powershell_j6ZGJ6csen](https://user-images.githubusercontent.com/41552663/197033638-5698520b-0c45-46e4-99c7-c40bd584f23b.gif)
 
   ![powershell_2yD7EobabD](https://user-images.githubusercontent.com/41552663/197037734-13540079-1cbb-4a99-8485-a51e05d72d40.gif)
+  
+  Will get you the latest eth-brownie version from pypi packages
+  
+  After installation eth-brownie should be in your terminal enviroment as *brownie*
+
+  Fire up a terminal and type *brownie --help* to make sure everything is good
+
+  ![powershell_i3TJBhkko9](https://user-images.githubusercontent.com/41552663/197038983-2df3513b-6015-47be-b0c9-a7ee2db9aea3.gif)
 
 #### Connecting to XDC Network Using Brownie
 
 Using a suitable RPC address we will be connecting to a node on XDC Network to be use on brownie
 
 We will connect to Testnet using RPC https://apothemxdcpayrpc.blocksscan.io/
+
+```brownie network list``` will print a list of network that we have available and ready to use yet we need to add XDC since it does not come by default in brownie 
+
+To easily connect to XDC Network when using brownie we will be adding it as default in our Brownie Networks enviroment type the following:
+
+```brownie networks add xdc testnet host=https://apothemxdcpayrpc.blocksscan.io/ chainid=51```
+
 
 
   
@@ -34,7 +43,6 @@ We will connect to Testnet using RPC https://apothemxdcpayrpc.blocksscan.io/
 brownie init
 ```
 
-  
   We will be deploying the following XRC20
   ```solidity
   contract XRC is ERC20 {
