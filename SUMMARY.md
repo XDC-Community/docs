@@ -35,7 +35,7 @@
   * [Wallet Integration](get-details/wallet-integration/README.md)
     * [XDCPay](get-details/wallet-integration/xdcpay.md)
     * [XDCPay Changelist](get-details/wallet-integration/xdcpay-changelist.md)
-    * [Wallet Connect](get-details/wallet-integration/wallet-connect.md)
+    * [Wallet Connect](get-details/wallet-integration/walletconnect.md)
     * [Metamask](get-details/wallet-integration/metamask.md)
   * [Networks](get-details/networks/README.md)
     * [Mainnet (XDPos)](get-details/networks/mainnet.md)
