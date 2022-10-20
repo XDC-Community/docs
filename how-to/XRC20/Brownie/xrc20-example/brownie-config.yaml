@@ -1,0 +1,9 @@
+compiler:
+    solc:
+        version: "0.8.16"
+        optimizer:
+            enabled: true
+            runs: 200
+        remappings: null
+
+dotenv: .env
