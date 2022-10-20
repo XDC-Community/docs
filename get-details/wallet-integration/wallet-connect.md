@@ -161,13 +161,35 @@ connector
   })
 ```
 
-Optionally you can add a Web3 provider on top of WalletConnect, to do so install the dependencies with npm:
+Optionally you can add a [Web3 provider](https://docs.walletconnect.com/quick-start/dapps/web3-provider) on top of WalletConnect, to do so install the dependencies with npm:
 
 ```shell
 npm install --save web3 @walletconnect/web3-provider
 ```
 
 First, instantiate your WalletConnect web3-provider using the following options: Infura or Custom RPC mapping
+
+<p>
+<details><summary>Infura</summary>
+<p>
+
+```javascript
+import WalletConnectProvider from "@walletconnect/web3-provider";
+
+//  Create WalletConnect Provider
+const provider = new WalletConnectProvider({
+  infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+});
+
+//  Enable session (triggers QR Code modal)
+await provider.enable();
+```
+
+</p>
+</details>
+
+<details><summary>Custom RPC</summary>
+<p>
 
 ```javascript
 import WalletConnectProvider from "@walletconnect/web3-provider";
@@ -187,7 +209,28 @@ const provider = new WalletConnectProvider({
 await provider.enable();
 ```
 
+</p>
+</details>
+</p>
+
 Then you can integrate your dapp using your favorite Ethereum library: ethers.js or web3.js
+
+<p>
+<details><summary>ethers.js</summary>
+<p>
+
+```javascript
+import { providers } from "ethers";
+
+//  Wrap with Web3Provider from ethers.js
+const web3Provider = new providers.Web3Provider(provider);
+```
+
+</p>
+</details>
+
+<details><summary>web3.js</summary>
+<p>
 
 ```javascript
 import Web3 from "web3";
@@ -195,6 +238,10 @@ import Web3 from "web3";
 //  Create Web3 instance
 const web3 = new Web3(provider);
 ```
+
+</p>
+</details>
+</p>
 
 After setting up your provider you should listen to EIP-1193 events to detect accounts and chain change and also disconnection.
 
