@@ -34,6 +34,7 @@ To easily connect to XDC Network when using brownie we will be adding it as defa
 
 ```brownie networks add xdc testnet host=https://apothemxdcpayrpc.blocksscan.io/ chainid=51```
 
+![powershell_sCPO8SxO9k](https://user-images.githubusercontent.com/41552663/197041710-8f88be4c-9271-4404-aa64-f7f4126284b7.gif)
 
 
   
