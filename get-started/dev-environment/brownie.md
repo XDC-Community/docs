@@ -76,6 +76,12 @@ Using ```brownie init``` will output us a project structure containing folder to
 
 ![Code_jgK7UqBOBb](https://user-images.githubusercontent.com/41552663/197054279-45eb9155-7582-4619-956c-f956b56aae3c.gif)
 
+#### Transfering XDC between Accounts using Brownie
+
+![Code_XJR9qIggCn](https://user-images.githubusercontent.com/41552663/197057983-92494e80-e1a1-413f-8332-e9e92c5e9d26.gif)
+
+![chrome_elStq0tBGn](https://user-images.githubusercontent.com/41552663/197058096-ea984de5-dec7-4fe8-896d-b0458988001d.gif)
+
 ### Compiling a XRC20 & deploying to the network
 
   We will be deploying the following XRC20
