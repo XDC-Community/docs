@@ -89,7 +89,8 @@ below we are transfering some XDC main token between accounts using browning
   ```solidity
   pragma solidity >=0.8.0 <0.9.0;
 import "./XRC20.sol";
-address constant owner = 0x4D0928Df315D816d9a6540CF79D7c547C5294eA8;contract Token is XRC20Token {
+address constant owner = 0x4D0928Df315D816d9a6540CF79D7c547C5294eA8;
+contract BlastToken is XRC20Token {
     constructor() XRC20Token('Blaster Token', 'Blast', 18, 1000*10**18) {}
 }
  ``` 
