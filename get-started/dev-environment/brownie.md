@@ -72,9 +72,9 @@ Our balance in fact:
   
 ## Initializing a new Brownie Project
 
-```
-brownie init
-```
+Using ```brownie init``` will output us a project structure containing folder to initialize our new project (tokens, etc)
+
+![Code_jgK7UqBOBb](https://user-images.githubusercontent.com/41552663/197054279-45eb9155-7582-4619-956c-f956b56aae3c.gif)
 
 ### Compiling a XRC20 & deploying to the network
 
