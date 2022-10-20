@@ -62,6 +62,10 @@ We will add an account to query the balance we have available on XDC
 
 ![Code_HfFpNWKCbB](https://user-images.githubusercontent.com/41552663/197049220-d3af6794-59df-4000-97aa-cf01b84c16a4.gif)
 
+Our balance in fact:
+
+![chrome_mT1p7EHfaU](https://user-images.githubusercontent.com/41552663/197049576-0e41dd28-d5be-4635-84e7-a2d1c63f27c0.gif)
+
 
 
 
