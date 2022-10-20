@@ -81,6 +81,7 @@ There are a few technical requirements before we start. Please install the follo
 
 - [Python 3.7 or greater](https://www.python.org/downloads/release/python-3910/)
 - [Git](https://git-scm.com/)
+- [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 
 ### Installing Brownie
 
@@ -97,6 +98,12 @@ Now install `eth-brownie` using `pipx`:
 
 ```sh
 pipx install eth-brownie
+```
+
+Also, install `ganache-cli` for Brownie:
+
+```sh
+npm install ganache --global
 ```
 
 Lets start by setting up our folder, we are creating a project called `XRC20`, create a new `XRC20` folder by running on terminal
@@ -122,7 +129,7 @@ SUCCESS: A new Brownie project has been initialized at /your/project/path
 And your folder files will look like this:
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/191263408-af21bd08-98a8-440c-9270-7f9960bb531d.png" alt="brownie folder"/>
+  <img src="https://user-images.githubusercontent.com/102393474/197048486-9ab59b84-3e79-41e1-813c-5c908659ea0b.png" alt="brownie folder"/>
 </p>
 
 By default Brownie is not creating `brownie-config.yaml`, so create it by yourself and paste this:
@@ -410,7 +417,7 @@ Project has been compiled. Build artifacts saved at /your/brownie/project/build/
 And your folder should look like this:
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/191273560-8f666f6c-c7b9-4bad-8369-46337f6243b2.png" alt="Folder 02"/>
+  <img src="https://user-images.githubusercontent.com/102393474/197048954-9627b9fe-ff72-436e-8279-bf3f72ac0649.png" alt="Folder 02"/>
 </p>
 
 In order to deploy our newly compiled contract artifacts to the blockchain, we need to create a deployment script into the script folder:
