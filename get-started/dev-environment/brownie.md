@@ -41,8 +41,10 @@ To easily connect to XDC Network when using brownie we will be adding it as defa
 We our network already added on our brownie list we will proceed to interact with it
 
 Lighting up a terminal type ```brownie console --network tesnet```
+
 ![Code_0emPCIYoOP](https://user-images.githubusercontent.com/41552663/197043395-d71887d1-fac6-4cfe-95b5-11a1bef7acbf.gif)
 
+```chain.id``` print us ```51``` letting us know that are already connected to XDC
 
 
   
