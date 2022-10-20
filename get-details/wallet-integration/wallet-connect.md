@@ -81,6 +81,8 @@ The connection is initiated by one peer displaying a QR Code or deep link with a
 
 You can easly test this with a prepared demo project (full code [here](https://github.com/XDC-Community/docs/tree/main/how-to/walletconnect/walletconnect-example-dapp)). Just download and and install dependencies by running this commands on terminal:
 
+> :information_source: The demo was made base on `Node.js v16.X` version.
+
 ```shell
 git clone git@github.com:XDC-Community/docs.git
 cd docs/how-to/walletconnect/walletconnect-example-dapp
