@@ -5,5 +5,3 @@ compiler:
             enabled: true
             runs: 200
         remappings: null
-
-dotenv: .env
