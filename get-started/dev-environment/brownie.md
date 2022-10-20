@@ -46,6 +46,19 @@ Lighting up a terminal type ```brownie console --network tesnet```
 
 ```chain.id``` print us ```51``` letting us know that are already connected to XDC
 
+### Querying Account balances
+
+We will add an account to query the balance we have available on XDC
+
+```
+>>> from web3 import Account
+>>> account = accounts.add(Account.create().key)
+>>> account.address
+'0x4D0928Df315D816d9a6540CF79D7c547C5294eA8'
+>>>
+```
+
+
 
   
  Initializing a new Brownie Project
