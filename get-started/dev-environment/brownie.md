@@ -70,11 +70,13 @@ Our balance in fact:
 
 
   
- Initializing a new Brownie Project
+## Initializing a new Brownie Project
 
 ```
 brownie init
 ```
+
+### Compiling a XRC20 & deploying to the network
 
   We will be deploying the following XRC20
   ```solidity
