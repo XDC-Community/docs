@@ -94,3 +94,7 @@ contract BlastToken is XRC20Token {
     constructor() XRC20Token('Blaster Token', 'Blast', 18, 1000*10**18) {}
 }
  ``` 
+
+![Code_2zkYkM5fdW](https://user-images.githubusercontent.com/41552663/197070060-13cd5b75-3159-42dc-8088-3dc3c49c828d.png)
+
+![Code_tZNY8mdGRn](https://user-images.githubusercontent.com/41552663/197070549-10b2103e-c70e-42dc-b452-c279623accba.gif)
