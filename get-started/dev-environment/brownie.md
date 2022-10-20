@@ -36,6 +36,14 @@ To easily connect to XDC Network when using brownie we will be adding it as defa
 
 ![powershell_sCPO8SxO9k](https://user-images.githubusercontent.com/41552663/197041710-8f88be4c-9271-4404-aa64-f7f4126284b7.gif)
 
+### Interacting with XDC Network using Brownie
+
+We our network already added on our brownie list we will proceed to interact with it
+
+Lighting up a terminal type ```brownie console --network tesnet```
+![Code_0emPCIYoOP](https://user-images.githubusercontent.com/41552663/197043395-d71887d1-fac6-4cfe-95b5-11a1bef7acbf.gif)
+
+
 
   
  Initializing a new Brownie Project
