@@ -75,9 +75,7 @@ WalletConnect is an protocol for connecting Dapps to Wallets by scanning a QR co
 
 The connection is initiated by one peer displaying a QR Code or deep link with a standard WalletConnect URI and is established when the counter-party approves this connection request. It also includes an optional Push server to allow Native applications to notify the user of incoming payloads for established connections.
 
-## How to connect a Dapp with WalletConnect
-
-### Example Demo
+## Example Demo
 
 You can easly test this with a prepared demo project (full code [here](https://github.com/XDC-Community/docs/tree/main/how-to/walletconnect/walletconnect-example-dapp)). Just download and and install dependencies by running this commands on terminal:
 
@@ -89,10 +87,156 @@ cd docs/how-to/walletconnect/walletconnect-example-dapp
 npm install
 ```
 
-Now we just need to start the web app by running ```npm run start```. With your browser opened, visit the [`http://localhost:3000/`](http://localhost:3000/) url address :rocket:
+Now we just need to start the web app by running ```npm run start```. With your browser opened, visit the [`http://localhost:3000/`](http://localhost:3000/) url :rocket:
+
+## How to connect a web Dapp with WalletConnect
+
+If you already have a project and want to integrate with users's wallets, add WalletConnect integration by firstly install the necessary dependencies:
+
+```shell
+npm install --save @walletconnect/client @walletconnect/qrcode-modal
+```
+
+This code will initiate a WalletConnect session and integrate user's wallet, copy and paste this in your Javascript/Typescript project:
+
+> :information_source: Syntax shown below is Javascript ES6 which requires bundling and transpiling to run in web browsers. If unfamiliar we recommend setting up an environment using [Webpack Starter](https://github.com/wbkd/webpack-starter) or [Create React App](https://github.com/facebook/create-react-app)
+
+```javascript
+import WalletConnect from "@walletconnect/client";
+import QRCodeModal from "@walletconnect/qrcode-modal";
+
+// Create a connector
+const connector = new WalletConnect({
+  bridge: "https://bridge.walletconnect.org",
+  qrcodeModal: QRCodeModal,
+});
+
+// Check if connection is already established
+if (!connector.connected) {
+  // create new session
+  connector.createSession();
+}
+
+// Subscribe to connection events
+connector.on("connect", (error, payload) => {
+  if (error) {
+    throw error;
+  }
+
+  // Get provided accounts and chainId
+  const { accounts, chainId } = payload.params[0];
+});
+
+connector.on("session_update", (error, payload) => {
+  if (error) {
+    throw error;
+  }
+
+  // Get updated accounts and chainId
+  const { accounts, chainId } = payload.params[0];
+});
+```
+
+Somewhere in your project, you will request some actions to user wallet, try this to sign a simply `Hello World` message:
+
+```javascript
+// Message Parameters
+const message = "Hello World";
+
+const msgParams = [
+  "0xbc28ea04101f03ea7a94c1379bc3ab32e65e62d3",
+  keccak256("\x19Ethereum Signed Message:\n" + len(message) + message))
+];
+
+// Sign message
+connector
+  .signMessage(msgParams)
+  .then((result) => {
+    // Returns signature.
+    console.log(result)
+  })
+  .catch(error => {
+    // Error returned when rejected
+    console.error(error);
+  })
+```
+
+Optionally you can add a Web3 provider on top of WalletConnect, to do so install the dependencies with npm:
+
+```shell
+npm install --save web3 @walletconnect/web3-provider
+```
+
+First, instantiate your WalletConnect web3-provider using the following options: Infura or Custom RPC mapping
+
+```javascript
+import WalletConnectProvider from "@walletconnect/web3-provider";
+
+//  Create WalletConnect Provider
+const provider = new WalletConnectProvider({
+  rpc: {
+    1: "https://rpc.ankr.com/eth",
+    3: "https://rpc.ankr.com/eth_ropsten",
+    50: "https://rpc.xinfin.network",
+    51: "https://rpc.apothem.network",
+    // ...
+  },
+});
+
+//  Enable session (triggers QR Code modal)
+await provider.enable();
+```
+
+Then you can integrate your dapp using your favorite Ethereum library: ethers.js or web3.js
+
+```javascript
+import Web3 from "web3";
+
+//  Create Web3 instance
+const web3 = new Web3(provider);
+```
+
+After setting up your provider you should listen to EIP-1193 events to detect accounts and chain change and also disconnection.
+
+```javascript
+// Subscribe to accounts change
+provider.on("accountsChanged", (accounts: string[]) => {
+  console.log(accounts);
+});
+
+// Subscribe to chainId change
+provider.on("chainChanged", (chainId: number) => {
+  console.log(chainId);
+});
+
+// Subscribe to session disconnection
+provider.on("disconnect", (code: number, reason: string) => {
+  console.log(code, reason);
+});
+```
+
+Now you can use the provider for whatever you want:
+
+> Note that are some options could be more advanced and you should check the official documentation [here](https://docs.walletconnect.com/quick-start/dapps/web3-provider#provider-options).
+
+```javascript
+interface RequestArguments {
+  method: string;
+  params?: unknown[] | object;
+}
+
+// Send JSON RPC requests
+const result = await provider.request(payload: RequestArguments);
+
+// Close provider session
+await provider.disconnect()
+
+//  Get Accounts
+const accounts = await web3.eth.getAccounts();
+```
 
 ## Know more
 
-In this guide we cover the standalone client, but there are two common ways to integrate WalletConnect: standalone client and Web3Modal :mag:
+In this guide we cover the **standalone client**, but there are two common ways to integrate WalletConnect: standalone client and Web3Modal :mag:
 
 If you want to know more about Web3Modal or other wallet integrations check [this page](https://docs.xdc.community/get-details/wallet-integration).
