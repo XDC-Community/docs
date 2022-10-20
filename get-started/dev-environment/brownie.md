@@ -98,3 +98,8 @@ contract BlastToken is XRC20Token {
 ![Code_2zkYkM5fdW](https://user-images.githubusercontent.com/41552663/197070060-13cd5b75-3159-42dc-8088-3dc3c49c828d.png)
 
 ![Code_tZNY8mdGRn](https://user-images.githubusercontent.com/41552663/197070549-10b2103e-c70e-42dc-b452-c279623accba.gif)
+
+### Adding the token to XDC Pay
+
+
+![chrome_pZKaMfMkQ0](https://user-images.githubusercontent.com/41552663/197070978-70267fc6-ed58-4118-bacd-4264eea7abc1.gif)
