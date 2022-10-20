@@ -55,8 +55,13 @@ We will add an account to query the balance we have available on XDC
 >>> account = accounts.add(Account.create().key)
 >>> account.address
 '0x4D0928Df315D816d9a6540CF79D7c547C5294eA8'
+>>> account.balance()
+100000000000000000000
 >>>
 ```
+
+![Code_HfFpNWKCbB](https://user-images.githubusercontent.com/41552663/197049220-d3af6794-59df-4000-97aa-cf01b84c16a4.gif)
+
 
 
 
