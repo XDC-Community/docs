@@ -99,9 +99,22 @@ contract BlastToken is XRC20Token {
 
 ![Code_tZNY8mdGRn](https://user-images.githubusercontent.com/41552663/197070549-10b2103e-c70e-42dc-b452-c279623accba.gif)
 
+Deployed Token
+
+![chrome_hHyRarZ9m5](https://user-images.githubusercontent.com/41552663/197072906-23aa7bc4-e090-4b1c-8c82-74e906920e3c.png)
+
 After deployment the we can see "Blast Token" on-chain https://explorer.apothem.network/tokens/xdcaccf490aea9a2c17d60a62672ee519e61b5a1ec5
 
 ### Adding the token to XDC Pay & transfering
 
 
 ![chrome_pZKaMfMkQ0](https://user-images.githubusercontent.com/41552663/197070978-70267fc6-ed58-4118-bacd-4264eea7abc1.gif)
+
+
+![chrome_5QXMaeYvoG](https://user-images.githubusercontent.com/41552663/197072620-fb1c9fa0-1055-4048-b298-175ad079ca3e.gif)
+
+## Some transactions done
+
+https://explorer.apothem.network/txs/0x23bbf8d8f84bbfdc85cce7493cb388e968f0aed3715b95fa81d3ac7c1614d004#overview
+
+https://explorer.apothem.network/txs/0x2acf5757d236580c98b0c7e4ec864f700964ffa0cf3fcf7fe6130fe2a77a8d0c#overview
