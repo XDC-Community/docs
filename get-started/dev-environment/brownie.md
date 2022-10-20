@@ -80,11 +80,12 @@ brownie init
 
   We will be deploying the following XRC20
   ```solidity
-  contract XRC is ERC20 {
-      address owner;
-	  
-	  constructor() {
-	    _mint() XRC20
-	  }
+  pragma solidity ^0.8.0;
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+contract BlastToken is XRC20 {
+  constructor() ERC20("Blast", "Blaster") public {
+    _mint(msg.sender,
+      10000000000 * (10**uint256(decimals())));
   }
+}
  ``` 
