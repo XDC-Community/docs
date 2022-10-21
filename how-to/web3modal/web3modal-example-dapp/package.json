@@ -1,0 +1,41 @@
+{
+  "name": "web3modal-example-dapp-react",
+  "version": "2.0.0-alpha.7",
+  "private": true,
+  "keywords": [
+    "web3modal",
+    "xdc",
+    "ethereum",
+    "web3",
+    "crypto",
+    "xdc network",
+    "xdcnetwork"
+  ],
+  "author": "XDC Community",
+  "homepage": "https://www.xdc.community/",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build; next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XDC-Community/docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XDC-Community/docs/issues"
+  },
+  "dependencies": {
+    "@web3modal/ethereum": "2.0.0-alpha.7",
+    "@web3modal/react": "2.0.0-alpha.7",
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.8.2",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "typescript": "4.8.4"
+  }
+}
