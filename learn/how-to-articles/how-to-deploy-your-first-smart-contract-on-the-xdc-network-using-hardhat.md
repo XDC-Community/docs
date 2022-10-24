@@ -2,16 +2,16 @@
 
 ## Overview
 
-[Hardhat](https://hardhat.org/) is and ethereum development environment which can be used for editing, compiling, debugging and deploying your smart contracts and dApps.
+[Hardhat](https://hardhat.org/) is and Ethereum development environment which can be used for editing, compiling, debugging and deploying your smart contracts and dApps.
 
 ### What you will learn
 
-This guide aims at teaching how to create a smart contract using Hardhat and deploying it on XDC Network.
+This guide aims at teaching how to create a smart contract using Hardhat and deploying it on the XDC Network.
 
 ### Steps
 
 - Install and set up Hardhat
-- Write and Deploy contract on XDC Network
+- Write and Deploy contract on the XDC Network
 - Check the deployment status on Xinfin scan.
 
 ## Installation Prerequisites
@@ -24,7 +24,7 @@ Node.js. ([Download link](https://nodejs.org/en/download/))
 
 ## Setup
 
-First we need to setup our hardhat project. Open the terminal and follow these commands.
+First, we need to set up our Hardhat project. Open terminal and follow these commands.
 
 Make a folder with you project name and go to the project directory.
 
@@ -33,14 +33,14 @@ mkdir xdc-hardhat
 cd xdc-hardhat
 ```
 
-Initialize the project and install hardhat.
+Initialize the project and install Hardhat.
 
 ```bash
 npm init --yes
 npm install --save-dev hardhat
 ```
 
-In the same directory, run
+In the same directory, run:
 
 ```bash
 npx hardhat
@@ -50,10 +50,10 @@ npx hardhat
 
 - Select `Create a Javascript project` or `Create a Typescript project` according to your requirement.
 - Specify Hardhat Project root or press enter for already specified path.
-- please specify `y` for yes and `n` for no for adding a .gitignore
+- Specify `y` for yes and `n` for no for adding a .gitignore
 - Press enter for `Do you want to install this sample project's dependencies with npm (@nomicfoundation/hardhat-toolbox)?`
 
-Note: If you are on windows, do install this
+Note: If you are on windows, you should install this:
 
 ```bash
 npm install --save-dev @nomicfoundation/hardhat-toolbox
@@ -61,10 +61,10 @@ npm install --save-dev @nomicfoundation/hardhat-toolbox
 
 ## Write Smart Contract
 
-Now, you will have a folder structure as below
+You will have a folder structure as shown below:
 <img width="1159" alt="Screenshot 2022-09-13 at 11 59 40 AM" src="https://user-images.githubusercontent.com/35517007/189841745-2c5cd395-ce05-4124-9a44-e4aea01e124f.png">
 
-- In the contract folder, create a new file and write your contract inside it. (creating `Pizza.sol` for reference. The code for Pizza.sol is given below).
+- In the contract folder, create a new file and write your contract inside it. For reference,  see the code for `Pizza.sol` below.
 
 ```python
   // SPDX-License-Identifier: MIT
@@ -92,17 +92,17 @@ Now, you will have a folder structure as below
   }
 ```
 
-- To compile the contract, write the following in the terminal
+- To compile the contract, write the following in terminal:
 
 ```bash
 npx hardhat compile
 ```
 
-If this returns errors, check your contract and rectify them.
+If this returns errors, double-check your contract and rectify any issues.
 
 ## Deployment
 
-For writing the script to deploy the contract, create `deploy.js` in `scripts` folder, if it is already not there. Copy the following code in the `deploy.js`.
+To write the script to deploy the contract, create `deploy.js` in `scripts` folder, if it is already not there. Copy the following code in the `deploy.js`.
 
 ```python
 const hre = require("hardhat");
@@ -127,13 +127,13 @@ main()
   });
 ```
 
-- To add XDC testnet network to metamask.(If you are using XDC Pay you don't have to follow this step)
+- To add the XDC testnet network to metamask, do the following (you can skip this step if using XDCPay):
 
 
 <img width="1047" alt="Screenshot 2022-09-13 at 12 31 31 PM" src="https://user-images.githubusercontent.com/35517007/189842148-a3d20b76-e14a-44fa-9c94-445825acd42b.png">
 
 
-- To add XDC mainnet network to metamask.(If you are using XDC Pay you don't have to follow this step)
+- To add the XDC mainnet network to metamask, do the following (you can skip this step if using XDCPay):
 
 <img width="1047" alt="Screenshot 2022-09-13 at 12 35 05 PM" src="https://user-images.githubusercontent.com/35517007/189842216-01c87935-4b4e-49bc-89ea-11026250dbf8.png">
 
@@ -146,7 +146,7 @@ XINFIN_NETWORK_URL="enter-network-rpc-url-here"
 XINFIN_PRIVATE_KEY="enter-your-private-key-here"
 ```
 
-- Dont know how to get your private key? Open you XDC pay wallet extension and click on the three dots on the top-left. This will open a popup.
+- Dont know how to get your private key? Open your XDCPay wallet extension and click on the three dots on the top-left. This will open a popup.
 <img width="360" alt="Screenshot 2022-09-18 at 12 27 44 AM" src="https://user-images.githubusercontent.com/35517007/190872826-b3437164-e6a8-487d-91c7-4a1d85d341d1.png">
 
 Click on the `Export Private key` inside the popup.
@@ -161,13 +161,13 @@ Copy your private key. This key will be used to sign transactions when deploying
 
 <img width="360" alt="Screenshot 2022-09-18 at 12 31 35 AM" src="https://user-images.githubusercontent.com/35517007/190872961-7ffb8329-2601-4346-bbb0-7a4ff38fd5f8.png">
 
-- To be able to import env file variables, please install `dotenv` from your terminal.
+- To be able to import env file variables, please install `dotenv` from terminal.
 
 ```bash
 npm install dotenv
 ```
 
-- Open the `hardhat.config.js` file. Now we will add the network url and private key of our wallet to this file, so that we can deploy our contract. Your `harhat.config.js` should look like this.
+- Open the `hardhat.config.js` file. Now we will add the network url and private key of your wallet to this file, so that you can deploy your contract. Your `harhat.config.js` should look like this:
 
 ```python
 require("@nomicfoundation/hardhat-toolbox");
@@ -189,7 +189,7 @@ module.exports = {
 
 ## Final Step
 
-After writing code for the setup and contract, go back to the terminal. Make sure you are in your project directory and type:
+After writing code for the setup and contract, go back to terminal. Make sure you are in your project directory and type:
 
 ```bash
 npx hardhat run scripts/deploy.js --network xinfin

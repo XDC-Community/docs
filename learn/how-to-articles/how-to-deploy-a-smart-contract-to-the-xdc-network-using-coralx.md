@@ -17,7 +17,7 @@ npm -v
 
 If you see version numbers printed after both commands, your Node.js environment is ready.
 
-Now that you have Node.js installed, let's install CoralX.
+Now that you have Node.js installed, let's install CoralX:
 
 ```bash
 npm install -g coral-x-fe
@@ -33,7 +33,7 @@ If both npm install complete without errors, you are almost ready for smart cont
 
 ![Ganache](https://user-images.githubusercontent.com/14329097/190913376-fe481736-74b1-46c6-a0d1-463259243657.png)
 
-Install it from [here](https://trufflesuite.com/ganache/), open it and choose Ethereum Quickstart to start a local blockchain server, then click the keys icon on the right of the first address to reveal its private key.
+Install it from [here](https://trufflesuite.com/ganache/). Open it and choose Ethereum Quickstart to start a local blockchain server then click the keys icon on the right of the first address to reveal its private key.
 
 ![Ganache Quickstart](https://user-images.githubusercontent.com/14329097/191022408-b44a5134-8e56-4977-8d7c-2493335b0c25.png)
 
@@ -41,7 +41,7 @@ Finally, keep Ganache running in the background and save the private key for lat
 
 ## Setting up a smart contract project
 
-Now follow these steps to create your first smart contract project!
+Follow these steps to create your first smart contract project!
 
 First, create a new folder and open a terminal there. This folder will be your project folder.
 
@@ -111,7 +111,7 @@ module.exports = {
 }
 ```
 
-Last, paste the private key from Ganache to `privateKey` in the project folder and change `http://127.0.0.1:7545` to the RPC server URL in Ganache. Make sure there is NO newline characters in the file. We also need to create `privateKey.apothem` because it's referenced in `coralX-config.js`.
+Last, paste the private key from Ganache to `privateKey` in the project folder and change `http://127.0.0.1:7545` to the RPC server URL in Ganache. Make sure there are no newline characters in the file. We also need to create `privateKey.apothem` because it's referenced in `coralX-config.js`.
 
 ```bash
 touch privateKey.apothem
@@ -119,13 +119,13 @@ touch privateKey.apothem
 
 ## Writing the smart contract
 
-For this tutorial, we will use the test-driven development (TDD) method, which means to write failing tests first, and then implement the functionality described by the tests.
+In this tutorial, we will use the test-driven development (TDD) method, which means to write failing tests first, and then implement the functionality described by the tests.
 
-Let's open the project folder in your favorite code editor. I'm using [Visual Studio Code](https://code.visualstudio.com) for this demo.
+Open the project folder in your favorite code editor. I'm using [Visual Studio Code](https://code.visualstudio.com) for this demo.
 
 ![Project in code editor](https://user-images.githubusercontent.com/14329097/190913447-5d80328f-d2e3-4484-96a1-71ae4d877d0d.png)
 
-Now create a `greeting.test.js` file in the `test` folder.
+Now create a `greeting.test.js` file in the `test` folder:
 
 ```js
 const GreetingContract = artifacts.require("Greeting");
@@ -138,7 +138,7 @@ describe("Greeting", function (/* accounts */) {
 });
 ```
 
-Let's try to run this test, which only tests if Greeting is properly deployed to the `development` network. In your project folder, run the following command:
+Try to run this test, which only tests if Greeting is properly deployed to the `development` network. In your project folder, run the following command:
 
 ```bash
 coralX test
@@ -154,7 +154,7 @@ Error: Error: c version list from solc-bin. Attempt #1
                     Directory '/Users/crypto/my-smart-contract/migrations' is empty.
 ```
 
-Let's create the migration script required in the `migrations` folder:
+Now create the migration script required in the `migrations` folder:
 
 ```js
 // 1_deploy_greeting.js
@@ -171,7 +171,7 @@ Try `coralX test` again.
   1 passing (4ms)
 ```
 
-Great! We now have a working smart contract, even though it does nothing yet. We do expect it to do something, so let's write a test case to describe the expected behavior.
+Almost there! You now have a working smart contract - though, as of right now, it does nothing. We do expect it to do something once you write a test case to describe the expected behavior:
 
 ```js
   it("should say hello", async function () {
@@ -199,7 +199,7 @@ Add this test in the `describe("Greeting")` block and run `coralX test` again.
       at Context.<anonymous> (test/greeting.test.js:12:29)
 ```
 
-OK, a function is missing, so let's add it in the contract. Open `contracts/Greeting.sol` and implement the function `greet()`:
+A function is missing, so you should add it in the contract. Open `contracts/Greeting.sol` and implement the function `greet()`:
 
 ```
 // SPDX-License-Identifier: MIT
@@ -215,7 +215,7 @@ contract Greeting {
 }
 ```
 
-Let's run the tests again:
+Run the tests again:
 
 ```
   Greeting
@@ -226,7 +226,7 @@ Let's run the tests again:
   2 passing (32ms)
 ```
 
-We now have a working contract ready to be deployed. But before we attempt to deploy, we need to create a wallet on chain.
+You now have a working contract ready to be deployed. But before you attempt to deploy, you must create a wallet on chain.
 
 ## Creating an XDC wallet on Apothem Network (TestNet)
 
@@ -262,18 +262,18 @@ coralX scenario --run deployApothem
 
 ![deploy to Apothem](https://user-images.githubusercontent.com/14329097/191020000-d872b421-0f7a-460b-856c-b6c998227bea.png)
 
-If you see no errors, open https://explorer.apothem.network/ and search for your wallet address.
+If you see no errors, open https://explorer.apothem.network/ and search for your wallet address:
 
 ![Transaction created](https://user-images.githubusercontent.com/14329097/191020023-9ecca3e9-9f39-4fe2-badf-675660a87154.png)
 
-Click the transaction you've just created and navigate to the contract address.
+Click the transaction you've just created and navigate to the contract address?
 
 ![Contract details](https://user-images.githubusercontent.com/14329097/191020030-cc79f9d9-092b-41aa-b0a8-d77918d57c96.png)
 
-Next, let's verify the contract source code to enable interactions on the explorer. Choose the compiler version that was printed in your terminal. If you are not sure which version it is, just remove the `build` folder in your project and run `coralX compile` to get it.
+Next, verify the contract source code to enable interactions on the explorer. Choose the compiler version that was printed in your terminal. If you are not sure which version it is, just remove the `build` folder in your project and run `coralX compile` to get it.
 
 After verification, the contract tab should show up and we can see the string `hello` in the return value of the function `greet()`.
 
 ![Read Contract](https://user-images.githubusercontent.com/14329097/191020035-96dbdb42-418b-46eb-9490-936fafe0a471.png)
 
-Congratulations! Now that you have successfully deployed a smart contract on the Apothem Network with CoralX, you can start programming and deploying more complex contracts to any XinFin network.
+Congratulations! Now that you have successfully deployed a smart contract on the Apothem Network with CoralX, you can start programming and deploying more complex contracts to the XDC Network.

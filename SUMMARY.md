@@ -16,6 +16,7 @@
     * [Remix](get-started/dev-environment/remix.md)
     * [Hardhat](get-started/dev-environment/hardhat.md)
     * [Truffle](get-started/dev-environment/xdc-truffle-and-ganache-integrations.md)
+    * [Brownie](get-started/dev-environment/brownie.md)
   * [Smart Contracts](get-started/smart-contracts.md)
   * [Tokenization](get-started/tokenization.md)
   * [XIPs](get-started/xips.md)

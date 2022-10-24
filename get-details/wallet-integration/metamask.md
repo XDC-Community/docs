@@ -6,7 +6,7 @@ keywords:
   - apothem
   - token
   - metamask
-description: What MetaMask is, what it is used for, and how to add XDC network in MetaMask
+description: What MetaMask is, what it is used for, and how to add XDC Network in MetaMask
 ---
 
 # Metamask
