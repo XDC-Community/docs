@@ -20,7 +20,7 @@ keywords:
 - [⚒ Starting a new Hardhat Project](#-starting-a-new-hardhat-project)
   - [⚒ Configuring XDC Mainnet and Apothem Testnet on Hardhat](#-configuring-xdc-mainnet-and-apothem-testnet-on-hardhat)
   - [⚒ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
-- [💵 Writing our first XRC721 Token](#-writing-our-first-xrc721-token)
+- [💵 Writing your first XRC721 Token](#-writing-our-first-xrc721-token)
   - [💵 Events](#-events)
   - [💵 Methods](#-methods)
   - [💵 XRC165](#-xrc165)
@@ -37,7 +37,7 @@ keywords:
 [Hardhat](https://hardhat.org/) is a development environment to compile, deploy, test, and debug your Ethereum software. Get Solidity stack traces & console.log.
 
 ### What you will learn
-In this tutorial, you will learn how to set up Hardhat and use it to build, test and deploy a XRC721 Token on both the XDC Network mainnet and XDC Apothem testnet.
+In this tutorial, you will learn how to set up Hardhat and use it to build, test, and deploy a XRC721 token on both the XDC Network mainnet and XDC Apothem testnet.
 
 ### What you will do
 - Install and setup Hardhat
@@ -49,7 +49,7 @@ In this tutorial, you will learn how to set up Hardhat and use it to build, test
 
 ## 📰 About XRC721 Tokens
 
-XRC721 is an open standard that defines an interface for non-fungible tokens on XDC blockchain. :
+XRC721 is an open standard that defines an interface for non-fungible tokens on XDC blockchain:
 
 - `balanceOf(address _owner) external view returns (uint256)`
 - `ownerOf(uint256 _tokenId) external view returns (address)`
@@ -61,20 +61,20 @@ XRC721 is an open standard that defines an interface for non-fungible tokens on 
 - `getApproved(uint256 _tokenId) external view returns (address)`
 - `isApprovedForAll(address _owner, address _operator) external view returns (bool)`
 
-These are the minimum required methods that allow an asset on the XinFin network to be called an XRC721 token. Also, a XRC721 token must be able to emit the following `Events` on the blockchain:
+These are the minimum required methods that allow an asset on the XDC network to be called an XRC721 token. Also, a XRC721 token must be able to emit the following `Events` on the blockchain:
 
 - `Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId)`
 - `Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId)`
 - `ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved)`
 
-Events are helpers that come in handy in the exhaustive labor of indexing state changes, and they are essential to off-chain applications to find relevant data on the blockchain. By mapping all `Transfer` events, for example, we can fetch all the historic data on token transfers more easily.
+Events are helpers that come in handy in the exhaustive process of indexing state changes, and they are essential for off-chain applications to find relevant data on the blockchain. By mapping all `Transfer` events, for example, we can fetch all the historic data on token transfers more easily.
 
-XRC721 also includes **optional** metadata parameters. 
+XRC721 also includes **optional** metadata parameters: 
 
 - `name`
 - `symbol`
 
-This allows your smart contract to be interrogated for its name and for details about the assets which your NFTs represent.
+This allows your smart contract to be interrogated for its name and for details about the assets that your NFTs represent.
 
 # ⚒ Starting a new Hardhat Project
 
@@ -83,19 +83,19 @@ There are a few technical requirements before we start. Please install the follo
 - [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 - [Git](https://git-scm.com/)
 
-Lets start by setting up our folder, we are creating a project called `XRC721`, create a new `XRC721` folder by running on terminal
+Start by setting up tour folder. As we are creating a project called `XRC721`, create a new `XRC721` folder by running the following on terminal:
 
 ```bash
 mkdir XRC721 && cd XRC721
 ```
 
-We can get started with Hardhat by running:
+You can get started with Hardhat by running:
 
 ```bash
 npx hardhat
 ```
 
-And the following message will show on your console. Hit `y` to continue or just press `ENTER`:
+The following message will show on your console. Hit `y` to continue or just press `ENTER`:
 
 ```bash
 Need to install the following packages:
@@ -123,13 +123,13 @@ Press `ENTER` to get started with a new JavaScript Hardhat Project. Then you wil
 // Press ENTER or y
 ```
 
-The standard Hardhat project comes with a pre-created `Lock.sol` contract and `deploy.js` script. Lets clean up our working environment before moving forward:
+The standard Hardhat project comes with a pre-created `Lock.sol` contract and `deploy.js` script. It's best to clean up your working environment before moving forward:
 
 ```sh
 rm -rf ./contracts/Lock.sol ./scripts/deploy.js ./test/Lock.js
 ```
 
-And your folder files will look like this:
+Your folder files will look like this:
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78161484/191263408-af21bd08-98a8-440c-9270-7f9960bb531d.png" alt="hardhat folder"/>
@@ -137,28 +137,28 @@ And your folder files will look like this:
 
 ## ⚒ Configuring XDC Mainnet and Apothem Testnet on Hardhat
 
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to install a new dependency called `dotenv` that will be used in the `hardhat.config.js` file:
+In order to get started deploying new contracts on XDC Mainnet and/or Apothem, you'll need to install a new dependency called `dotenv` that will be used in the `hardhat.config.js` file:
 
 ```bash
 npm install dotenv
 ```
 
-We will need to configure a `.env` file with XDC Mainnet and Apothem Testnet RPC endpoints, plus the _Private Key_ of the wallet we are using for deployment. Lets start by running:
+You will need to configure a `.env` file with XDC Mainnet and Apothem Testnet RPC endpoints, plus the _Private Key_ of the wallet you are using for deployment. Start by running:
 
 ```bash
 touch .env
 ```
 
-And writting the following info in our .env file:
+Next, write the following info in our .env file:
 
 ```bash
 XINFIN_NETWORK_URL=https://erpc.xinfin.network
 APOTHEM_NETWORK_URL=https://erpc.apothem.network
 PRIVATE_KEY=202e3c9d30bbeca38d6578659919d4c3dc989ae18c16756690877fdc4dfa607f
 ```
-🚨 **Do not use the Private Key in the example above in production or you can risk losing your assets!** 🚨
+🚨 **Do not use the Private Key in the example above or you can risk losing your assets!** 🚨
 
-And finally, we can configure the `hardhat.config.js` file for both Apothem and XinFin Networks by writting:
+Finally, you can configure the `hardhat.config.js` file for both Apothem and XinFin Networks by writing:
 
 ```jsx
 require("@nomicfoundation/hardhat-toolbox");
@@ -181,12 +181,12 @@ module.exports = {
 
 ## ⚒ Adding Testnet XDC to Development Wallet
 
-Let's check our Signer's Address on Hardhat by accessing the hardhat console:
+You should check your Signer's Address on Hardhat by accessing the Hardhat console:
 
 ```sh
 npx hardhat console --network xinfin
 ```
-If you get an error that hardhat is not installed locally and are running on a Windows OS you will need to execute:
+If you get an error that Hardhat is not installed locally, and you are using a Windows OS, you will need to execute:
 
 ```sh
 npm install --save-dev @nomicfoundation/hardhat-toolbox
@@ -203,9 +203,9 @@ Once the hardhat console CLI opens, you can run:
 // Should log: '0xA4e66f4Cc17752f331eaC6A20C00756156719519' or your wallet address if you are using a different Private Key
 ```
 
-This account is on the Ethereum standard format starting with `0x`, but we can simply switch `0x` for `xdc`. In this case, our signer wallet address is: `xdcA4e66f4Cc17752f331eaC6A20C00756156719519`.
+This account is on the Ethereum standard format starting with `0x`, but we can simply switch `0x` for `xdc`. In our example, the signer wallet address is: `xdcA4e66f4Cc17752f331eaC6A20C00756156719519`.
 
-With this account in hand, we can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
+With this account in hand, you can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png" alt="Step 02"/>
@@ -215,18 +215,18 @@ With this account in hand, we can head to the [Apothem Faucet](https://faucet.ap
 
 The source code for the XRC721 Token used in this tutorial is available here: [XRC721 Contract Folder](./XRC721/contracts/XRC721.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC721 Tokens](#-about-xrc721-tokens).
 
-Lets start by creating the `XRC721.sol` file:
+Start by creating the `XRC721.sol` file:
 
 ```sh
 touch ./contracts/XRC721.sol
 ```
 
-We are going to use OpenZeppelin contracts so lets make sure it is installed:
+You will have to use OpenZeppelin contracts, so please make sure it is installed using the following command:
 ```sh
 npm install @openzeppelin/contracts
 ```
 
-And now paste this code in our XRC721 file:
+Next, paste this code in your XRC721 file:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -244,11 +244,11 @@ contract XRC721 is ERC721 {
 }
 ```
 
-Thanks to OpenZeppelin we don't have to implement all the code ourself but lets still go through basic parts of XRC721 contract.
+Thanks to OpenZeppelin, we don't have to implement all the code ourself. It's still a good excerize to go through the basic parts of XRC721 contract as explained below
 
 ## 💵 Events
 
-As mentioned in [📰 About XRC721 Tokens](#-about-xrc721-tokens). Events are very important part of a Smart Contract logic. Events have `indexed` variables that are variables that can be filtered by off-chain interfaces. We might be tempted to index all the variables that are tied to an on-chain event, however we can't go crazy about it since Solidity has a _maximum of 3 indexed variable_ limitation for Events. XRC721 has three basic events: `Transfer`, `Approval` and `ApprovalForAll`.
+As mentioned in [📰 About XRC721 Tokens](#-about-xrc721-tokens), events are an important part of a smart contract logic. Events have `indexed` variables that can be filtered by off-chain interfaces. We might be tempted to index all the variables that are tied to an on-chain event, however Solidity has a _maximum of 3 indexed variable_ limitation for events. XRC721 has three basic events: `Transfer`, `Approval` and `ApprovalForAll`.
 
 ```solidity
 interface XRC721 {
@@ -271,7 +271,7 @@ interface XRC721 {
 
 ## 💵 Methods
 
-We need to create the six methods mentioned in [📰 About XRC721 Tokens](#-about-xrc721-tokens) (`ownerOf`, `balanceOf`, `safeTransferFrom`, `transferFrom`, `approve`, `setApprovalForAll`, `isApprovedForAll`  and `getApproved`) and a `constructor` that is a function called only once when the contract is deployed, where we can parse as arguments information such as the token name, decimals and/or initial token supply:
+You must create the six methods mentioned in [📰 About XRC721 Tokens](#-about-xrc721-tokens) (`ownerOf`, `balanceOf`, `safeTransferFrom`, `transferFrom`, `approve`, `setApprovalForAll`, `isApprovedForAll`  and `getApproved`) and a `constructor`. This function is only called once, when the contract is deployed, where it contains information such as the token name, decimals and/or initial token supply:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -397,7 +397,7 @@ interface XRC721 {
 
 ## 💵 XRC165
 
-We didn't mention it before, but XRC721 also requires to implement XRC165 standard. Don't worry, thanks to OpenZeppelin we don't have to implement it, but it is really simple. It describes only one method `supportsInterface`.
+We didn't mention it before, but XRC721 also requires implimentation of a XRC165 standard. Thanks to OpenZeppelin we don't have to implement it, but it is really simple. There is only one method, `supportsInterface`, and it goes as follows:
 
 ```solidity
 /**
@@ -422,7 +422,7 @@ interface IXRC165 {
 
 ## 💵 Enabling minting
 
-Ok, we have XRC721 contract, but how can we mint NFT with it? To do that, lets add `mintToken` method. Each time `mintToken` is called, it will create new unique token assign to `tokenOwner`.
+Now that you have a XRC721 contract, how can you mint an NFT with it? With the `mintToken` method, that's how! Each time `mintToken` is called, it will create new unique token assign to `tokenOwner`.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -454,13 +454,13 @@ contract XRC721 is ERC721 {
 
 ## 💵 Compiling and Deploying
 
-We can now compile our `XRC721.sol` by running:
+You can now compile your `XRC721.sol` by running:
 
 ```sh
 npx hardhat compile
 ```
 
-If everything is correctly configured and there is no errors, you should see the following message on your console:
+If everything is correctly configured and there are no errors, you should see the following message on your console:
 
 ```sh
 Downloading compiler 0.8.16
@@ -473,7 +473,7 @@ In order to deploy our newly compiled contract artifacts to the blockchain, we n
 touch ./scripts/deploy.js
 ```
 
-And write the following script to the `deploy.js` file:
+Write the following script to the `deploy.js` file:
 
 ```jsx
 async function main() {
@@ -501,28 +501,28 @@ main()
   });
 ```
 
-If the deployment script have no errors, we can go ahead and run the command:
+If the deployment script have no errors, you can run the following command for deployment on the XDC mainnet:
 
 ```sh
 npx hardhat run scripts/deploy.js --network xinfin
 ```
 
-For deployment on XDC mainet, or:
+Or this command, for deployment on the XDC Apothem Testnet:
 
 ```sh
 npx hardhat run scripts/deploy.js --network apothem
 ```
 
-For deployment on the XDC Apothem Testnet. In either case, you need to have enough funds to pay for gas fees on the address that is being used for development.
+In either case, you need to have enough funds to pay for gas fees on the address that is being used for development.
 
-If the deployment is sucessful, the console should log the following message after migrations complete processing:
+If the deployment is successful, the console will log the following message after migrations complete processing:
 
 ```sh
 Token Successfully Deployed!
 Token address: 0xbC5bA2B6e2f74EC1e8e5A310a42F65D185691Af2
 ```
 
-And this is how our freshly minted NFT looks on [Apothem Block Explorer](https://explorer.apothem.network/)
+Find out how your freshly minted NFT looks on [Apothem Block Explorer](https://explorer.apothem.network/)
 
 ![XRC721_0](https://user-images.githubusercontent.com/102393474/192279556-98d2fcb1-06aa-4b5b-8462-05a84489026b.png)
 ![xrc721_1](https://user-images.githubusercontent.com/102393474/192279202-f9204bec-48a8-4a0a-8d7f-cd2c93218a42.png)
@@ -532,15 +532,15 @@ And this is how our freshly minted NFT looks on [Apothem Block Explorer](https:/
 
 Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
-Lets grab the `XRC721.sol` address from the previous step: this address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
+Simply grab the `XRC721.sol` address from the previous step: this address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
 <p align="center">
   <img width=70% src="https://user-images.githubusercontent.com/78161484/190875518-828c0061-71de-42c2-b222-0b8427852d01.png" alt="Verify 01"/>
 </p>
 
-And click in the `Verify And Publish` Option.
+Click in the `Verify And Publish` Option.
 
-We will be redirected to the Contract verification page where we need to fill out:
+You will be redirected to the contract verification page where you will need to fill out:
 
 - Contract Name: <em>XRC721</em>
 - Compiler: <em> Check your</em> `hardhat-config.js` <em>file for Compiler Version</em>
@@ -552,13 +552,13 @@ Once everything is filled out, press Submit!
   <img width=70% src="https://user-images.githubusercontent.com/78161484/190875635-f6d3aa36-47b2-4b09-ad6a-fe6df3fb11f1.png" alt="Verify 02"/>
 </p>
 
-If everything is correctly filled out, your contract page on the block explorer should display a new tab called `Contract`:
+If everything is correctly filled out, your contract page on the block explorer will display a new tab called `Contract`:
 
 <p align="center">
   <img width=70% src="https://user-images.githubusercontent.com/78161484/190875780-6223b4b0-fecc-4e79-83bc-c810c5b0351c.png" alt="Verify 03"/>
 </p>
 
 For more information about Hardhat, Please Visit [Hardhat Documentation](https://hardhat.org/tutorial).<br>
-For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
+For more information about the XDC Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
 Resources used during the deployment of the XRC721 Token can be found at [XRC721 Contract Folder](./XRC721).
 
