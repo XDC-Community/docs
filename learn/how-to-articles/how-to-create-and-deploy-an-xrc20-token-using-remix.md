@@ -22,7 +22,7 @@ description: Use Remix IDE to deploy an XRC20 Token.
 * [🚀 Setting up the development environment](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-setting-up-the-development-environment)
   * [⚒️ Creating XDCPay Wallet for signing transactions](how-to-create-and-deploy-an-xrc20-token-using-remix.md#️-creating-xdcpay-wallet-for-signing-transactions)
   * [⚒ Adding Testnet XDC to Development Wallet](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-adding-testnet-xdc-to-development-wallet)
-* [💵 Writing our first XRC20 Token](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-writing-our-first-xrc20-token)
+* [💵 Writing your first XRC20 Token](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-writing-our-first-xrc20-token)
   * [💵 Constants](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-constants)
   * [💵 Events](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-events)
   * [💵 Methods](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-methods)
@@ -32,11 +32,11 @@ description: Use Remix IDE to deploy an XRC20 Token.
 
 ## 📰 Overview
 
-[Remix IDE](https://remix.xinfin.network/#optimize=false\&runs=200\&evmVersion=null\&version=soljson-v0.8.7+commit.e28d00a7.js) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine.
+[Remix IDE](https://remix.xinfin.network/#optimize=false\&runs=200\&evmVersion=null\&version=soljson-v0.8.7+commit.e28d00a7.js) is a blockchain development environment, which you can use to create and test smart contracts by leveraging an Ethereum Virtual Machine.
 
 #### What you will learn
 
-In this tutorial, you will learn how to set up Remix IDE and use it to build, test and deploy a XRC20 Token on both the XDC Network mainnet and XDC Apothem testnet.
+In this tutorial, you will learn how to set up Remix IDE and use it to build, test, and deploy a XRC20 Token on both the XDC Network mainnet and XDC Apothem testnet.
 
 #### What you will do
 
@@ -58,12 +58,12 @@ XRC20 is a set of rules to standardize assets on the XinFin network. Every XRC20
 * `approve(address spender, uint amount)`
 * `transferFrom(address sender, address recipient, uint amount)`
 
-These are the minimum required methods that allow an asset on the XinFin network to be called an XRC20 token. Also, a XRC20 token must be able to emit the following `Events` on the blockchain:
+These are the minimum required methods that allow an asset on the XDC network to be called an XRC20 token. Also, an XRC20 token must be able to emit the following `Events` on the blockchain:
 
 * `Approval(address indexed tokenOwner, address indexed spender, uint tokens)`
 * `Transfer(address indexed from, address indexed to, uint tokens)`
 
-Events are helpers that come in handy in the exhaustive labor of indexing state changes, and they are essential to off-chain applications to find relevant data on the blockchain. By mapping all `Transfer` events, for example, we can fetch all the historic data on token transfers more easily.
+Events come in handy in the exhaustive labor of indexing state changes, and they are essential to off-chain applications to find relevant data on the blockchain. By mapping all `Transfer` events, for example, we can fetch all the historic data on token transfers more easily.
 
 Last but not least, a few contract constants that are public that are also very important to have are:
 
@@ -71,17 +71,17 @@ Last but not least, a few contract constants that are public that are also very 
 * `symbol`
 * `decimals`
 
-Without these public constants, it would be impossible to label tokens on block explorers, for example. In this tutorial we will deploy a XRC20 token that have all the `Methods`, `Events` and `Constants` mentioned above.
+Without these public constants, it would be impossible to label tokens on block explorers, for example. In this tutorial, we will deploy a XRC20 token that have all the `Methods`, `Events` and `Constants` mentioned above.
 
 ## 🚀 Setting up the development environment
 
-Remix is an online solidity IDE for compiling and deploying solidity code to EVM compatible blockchains. To begin working on a new smart contract, we must first create a new file in the contracts folder on the left side of the view pane.
+Remix is an online Solidity IDE for compiling and deploying Solidity code to EVM compatible blockchains. To begin working on a new smart contract, you must first create a new file in the contracts folder on the left side of the view pane.
 
 ![](https://user-images.githubusercontent.com/60708843/190065372-1e43e443-f13b-463a-abb6-7497ae7c8b8c.png)
 
 ### ⚒️ Creating XDCPay Wallet for signing transactions
 
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to have XDCPay wallet to sign our transactions and store XDC tokens.
+In order to get started deploying new contracts on the XDC Mainnet and/or Apothem, you need to have and XDCPay wallet to sign your transactions and store XDC tokens.
 
 * First we have to install the chrome extension of [XDCPay](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo).
 
@@ -105,13 +105,13 @@ In order to get started deploying new contracts on XDC Mainnet and/or Apothem, w
 
 ### ⚒ Adding Testnet XDC to Development Wallet
 
-Initially, our account would be empty, and we would require some XDC tokens to initiate blockchain transactions. We would use a faucet to fill our wallet with test XDC tokens for this. These tokens are worthless in and of themselves. They are simply used to test your contracts on the testnet in order to avoid losing your real money.
+Initially, your account will be empty, and you'll need some XDC tokens to initiate blockchain transactions. You will use a faucet to fill our wallet with test XDC tokens for this. These tokens are worthless in and of themselves. They are simply used to test your contracts on the testnet in order to avoid losing your real assets.
 
 * First, make a copy of your wallet address. Your wallet address would look like **`xdc057ac7de8ad6f21c7bb0dcc6a389ff9161b3b943`**. These account address are interchangeable with Ethereum network. We can access these accounts on Ethereum network by simply changing the initial `xdc` with `0x`.
 
 ![](https://user-images.githubusercontent.com/60708843/190072656-cf4a819b-92e1-4eb3-948b-7c6dbc8bafc1.png)
 
-* After that, navigate to the [XDC faucet](https://faucet.apothem.network/).
+* Next, navigate to the [XDC faucet](https://faucet.apothem.network/).
 * Enter your XDC account address and request for Test XDC here.
 
 ![](https://user-images.githubusercontent.com/60708843/190073022-1d893bce-5f21-494d-8e28-20cdb9b91299.png)
@@ -125,7 +125,7 @@ Initially, our account would be empty, and we would require some XDC tokens to i
 
 ## 💵 Writing our first XRC20 Token
 
-The source code for the XRC20 Token used in this tutorial is available here: [XRC20 Contract Folder](XRC20/contracts/MyToken.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-about-xrc20-tokens).
+The source code for the XRC20 token used in this tutorial is available here: [XRC20 Contract Folder](XRC20/contracts/MyToken.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-about-xrc20-tokens).
 
 Lets start by creating the `XRC20.sol` file.
 
@@ -149,7 +149,7 @@ contract XRC20Token {
 
 ### 💵 Constants
 
-Inside our `contract XRC20Token` We will instantiate `name`, `symbol` and `decimals` as public variables, a private `_totalSupply` that will be used on our `totalSupply()` method later on and two mapping variables `balances` and `allowances`, that are key/value variables that maps user balances and approved spending allowances to other users:
+Inside your `contract XRC20Token`, you will instantiate `name`, `symbol` and `decimals` as public variables, and a private `_totalSupply` that will be used on our `totalSupply()` method later on. You'll also instantiate two mapping variables, `balances` and `allowances`, that are key/value variables for mapping user balances and approved spending allowances to other users:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -178,7 +178,7 @@ contract XRC20Token {
 
 ### 💵 Events
 
-As mentioned in [📰 About XRC20 Tokens](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-about-xrc20-tokens). Events are very important part of a Smart Contract logic. Events have `indexed` variables that are variables that can be filtered by off-chain interfaces. We might be tempted to index all the variables that are tied to an on-chain event, however we can't go crazy about it since Solidity has a _maximum of 3 indexed variable_ limitation for Events. Lets write both `Approval` and `Transfer` events:
+As mentioned in [📰 About XRC20 Tokens](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-about-xrc20-tokens), events are very important part of a smart contract logic. Events have `indexed` variables that can be filtered by off-chain interfaces. You might be tempted to index all the variables that are tied to an on-chain event, but since Solidity has a _maximum of 3 indexed variable_ limitation for events. You will write both `Approval` and `Transfer` events:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -213,7 +213,7 @@ contract XRC20Token {
 
 ### 💵 Methods
 
-We need to create the six methods mentioned in [📰 About XRC20 Tokens](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-about-xrc20-tokens) (`totalSupply`, `balanceOf`, `allowance`, `transfer`, `approve` and `transferFrom`) and a `constructor` that is a function called only once when the contract is deployed, where we can parse as arguments information such as the token name, decimals and/or initial token supply:
+We need to create the six methods mentioned in [📰 About XRC20 Tokens](how-to-create-and-deploy-an-xrc20-token-using-remix.md#-about-xrc20-tokens) (`totalSupply`, `balanceOf`, `allowance`, `transfer`, `approve` and `transferFrom`) and a `constructor`, which is a function called only once when the contract is deployed. It can attach information such as the token name, decimals and/or initial token supply:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -288,11 +288,11 @@ contract XRC20Token {
 }
 ```
 
-And here we have implemented everything we needed to make our token compliant with the XRC20 Standard. Of course there are more features we can implement to this contract, such as the [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) library that replace naive mathematical operations for methods that will avoid `underflows` and `overflows`, and supply management methods such as `mint` and `burn`.
+Now you have implemented everything needed to make your token compliant with the XRC20 standard. Of course, there are more features we can implement to this contract, such as the [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) library that replace naive mathematical operations for methods that will avoid `underflows` and `overflows`, and supply management methods such as `mint` and `burn`.
 
 ### 💵 Compiling and Deploying
 
-Lets try compiling the `XRC20.sol` contract:
+Next, try compiling the `XRC20.sol` contract:
 
 * Open the Solidity Compiler in the left side navigation pane ![](https://user-images.githubusercontent.com/60708843/190066438-b1816a19-3051-4d04-87d2-a2b1ade198f4.png).
 * From the compiler option, select the compiler version **`v0.8.16`**.
@@ -303,7 +303,7 @@ Lets try compiling the `XRC20.sol` contract:
 ![](https://user-images.githubusercontent.com/60708843/191024993-0df10c25-db29-4ecc-95e4-e09f9085811a.png)
 
 * After Successful Compilation, it will show ![alt](https://user-images.githubusercontent.com/60708843/190067983-4451282c-348c-4872-a57d-b2e698b59cad.png)
-* Once our contract has been compiled, we can deploy it to the Apothem Test Network.
+* Once your contract has been compiled, you can deploy it to the Apothem Test Network.
 
 For deployment on the XDC Apothem Testnet. In either case, you need to have enough funds to pay for gas fees on the address that is being used for development.
 
@@ -345,13 +345,13 @@ From there, we need to get the transaction details as well as the **`To Address`
 
 ![](https://user-images.githubusercontent.com/60708843/191083637-324e1863-6753-47f1-8c2e-1a8c25c22f21.png)
 
-Here we have a `XRC20` contract deployed on XDC Apothem Testnet, we can search for our newly deployed contract on [Apothem Block Explorer](https://explorer.apothem.network/):
+Once you have a `XRC20` contract deployed on XDC Apothem Testnet, you can search for our newly deployed contract on [Apothem Block Explorer](https://explorer.apothem.network/):
 
 ![Verify 01](https://user-images.githubusercontent.com/60708843/191084100-6c61a512-65f0-486a-87ec-8209a17a17f8.png)
 
-And click in the `Verify And Publish` Option.
+Next, click in the `Verify And Publish` option.
 
-We will be redirected to the Contract verification page where we need to fill out:
+You will be redirected to the Contract verification page where we need to fill out:
 
 * Contract Name: _XRC20Token_
 * Compiler: _Check your Solidity file for Compiler Version_
@@ -365,27 +365,27 @@ If everything is correctly filled out, your contract page on the block explorer 
 
 ![Verify 03](https://user-images.githubusercontent.com/60708843/191087001-72eb36c7-19f2-4623-b021-b1afc560327d.png)
 
-In this page you can Read from, Write to, or simply read the information tied to your XRC-20 token on the blockchain:
+In this page you can read from, write to, or simply read the information tied to your XRC-20 token on the blockchain:
 
 ![Verify 03](https://user-images.githubusercontent.com/60708843/191027977-0325666f-fcff-4222-8f69-9eb7817b4de2.png)
 
 ### 🔍 Interacting with your contract on the Block Explorer
 
-With your XDCPay wallet, it is possible to interact with verified Smart Contracts on the [XinFin Network Block Explorer](https://explorer.xinfin.network/). You can read from, write to, or simply read the information tied to your Smart Contract on the blockchain.
+With your XDCPay wallet, it is possible to interact with verified smart contracts on the [XinFin Network Block Explorer](https://explorer.xinfin.network/). You can read from, write to, or simply read the information tied to your Smart Contract on the blockchain.
 
-Lets head to the `Contract` tab on the explorer, choose `Write Contract` and click in `Connect to Web3` to connect your XDCPay wallet.
+Now head to the `Contract` tab on the explorer, choose `Write Contract`, and click in `Connect to Web3` to connect your XDCPay wallet.
 
 ![Verify 04](https://user-images.githubusercontent.com/60708843/191087973-a2982bf6-abef-4163-9eff-7cbfe55c37d0.png)
 
-Lets try transfering `500 MTK` tokens that we have just created to a new wallet `xdc0431d52fe37f3839895018272dfa3ba189fce07e`. Lets fill out the `recipient` field with the new wallet address, and fill out the `amout` field with `500 * 10^18`. Remember that our token have 18 decimals, and when we write numbers with decimals to the blockchain we have to account for the decimals because the Virtual Machine do not understand floating numbers like we humans do:
+Try transfering `500 MTK` tokens that we have just created to a new wallet `xdc0431d52fe37f3839895018272dfa3ba189fce07e`. Lets fill out the `recipient` field with the new wallet address, and fill out the `amout` field with `500 * 10^18`. Remember that our token has 18 decimals, and when we write numbers with decimals to the blockchain we have to account for the decimals as the Virtual Machine do not understand floating numbers like we humans do:
 
 ![Verify 05](https://user-images.githubusercontent.com/60708843/191092620-25f7c9ff-c631-45ad-ae8e-df680c9c9ed2.png)
 
-After clicking in `Write`, we need to confirm the transaction on the XDCPay wallet: (note the Amount is 500000000000000000000.0000)
+After clicking on `Write`, you must confirm the transaction on the XDCPay wallet: (note the Amount is 500000000000000000000.0000)
 
 ![Verify 05](https://user-images.githubusercontent.com/60708843/191092847-5a9288a5-6e47-4be8-ad34-f8e8abfd1448.png)
 
-And we can check our successful transaction on the [Block Explorer!](https://explorer.apothem.network/txs/0xf9e57c65e3415d661caf09f1bf01ed2b48ab1daf7c45b3eae42cd429804dfe71#overview)
+You can check your successful transaction on the [Block Explorer!](https://explorer.apothem.network/txs/0xf9e57c65e3415d661caf09f1bf01ed2b48ab1daf7c45b3eae42cd429804dfe71#overview)
 
 ***
 
