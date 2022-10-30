@@ -20,7 +20,7 @@ The best resources to aid with setting up your node are as follows;
 
 ### How to.. Select a VPS to host your node
 
-This is a commonly asked question on the official community [discord server](discord.gg/PtSFYtMkCu). The following are the current list of providers that current operators use. Best sure to factor in the above system requirements.
+This is a commonly asked question on the official community [discord server](discord.gg/PtSFYtMkCu). The following are the current list of providers that node operators use. Best sure to factor in the above system requirements.
 
   - [Racknerd](https://tinyurl.com/BlackFridayPLI)
   - [Liteserver](https://liteserver.nl/nvme-ssd-vps/)
