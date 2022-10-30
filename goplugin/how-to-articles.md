@@ -31,9 +31,26 @@ This is a commonly asked question on the official community [discord server](dis
   - [Contabo](https://contabo.com/)
   - [Servarica](https://servarica.com/)
 
+
 Do NOT use the following provider(s) as previous nodes have experienced issues simply due to being associated with crypto;
-EthernetServers
+  - EthernetServers
+
 
 **NOTE ::** _This is simply a list of current known providers and is not exhaustive. None of the providers listed here are in anyway officially endorsed by GoPlugin._
 
+---
 
+
+## How to.. Monitor your node
+
+While there are many platforms available that will provide various levels of monitoring, we have made every effort to eliminate costs and so the following solutions are proposed;
+
+  - [UptimeRobot](https://uptimerobot.com/)
+     This is a free service and provides basic ping and port checking monitor with email & app push notifications
+
+  - [Netdata](https://www.netdata.cloud/)
+     This is a free service which provides detailed system & process monitoring with all historic data stored locally on the host system. So from a security perspective your node data stays on your node.
+
+    You can install netdata with configuration for monitoring the plugin node processes using the following script should you wish;
+    https://github.com/inv4fee2020/pli_netdata
+    
