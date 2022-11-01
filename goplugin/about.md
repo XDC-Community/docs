@@ -1,5 +1,14 @@
 # About
 
+<br/>
+<p align="center">
+<a href="https://goplugin.co" target="_blank">
+<img src="https://github.com/GoPlugin/Plugin/blob/main/docs/plugin.png" width="225" alt="Plugin logo">
+</a>
+</p>
+<br/>
+
+
 Decentralized Oracle Platform, provides cost effective solutions to any smart contract which runs on the XDC Network Eco System.
 
 Plugin enables the smart contract to connect with the real-time world and the data that it receives from the data feed provider is trustable by maintaining high degree of security. Off-chain computation it does takes care of receiving feed from multiple provider and aggregates the same.
