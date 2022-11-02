@@ -58,13 +58,13 @@ ERC721 is a standard for **non-fungible tokens** and is defined in the [EIP-721 
 
 ![Joe's Free Voucher image](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-nft-logo.png)
 
-Joe has a Pizza shop and for the opening day, he wants to create a one-time free voucher for each client that show with her web3 wallet.
+Joe has a Pizza shop and for the opening day, he wants to create a one-time free voucher for each client that show with her Web3 wallet.
 
-Make a simple non-fungible token contract that can be paused and minted only by the owner, we gonna use OpenZeppelin's ERC721 contract for this. Open [Remix IDE](https://remix.xinfin.network/), and let's start creating a new Solidity file named `PizzaFreeVoucher.sol` in the contracts folder:
+To make a simple non-fungible token contract that can be paused and minted only by the owner, you'll use OpenZeppelin's ERC721 contract. Open [Remix IDE](https://remix.xinfin.network/), and create a new Solidity file named `PizzaFreeVoucher.sol` in the contracts folder:
 
 ![How to create a new file in Remix IDE](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-remix-createfile01.png) ![How to create a new file in Remix IDE](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-remix-createfile02.png) ![How to create a new file in Remix IDE](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-createfile.png)
 
-Most of the OpenZeppelin contracts are expected to be used via inheritance: you will inherit from them when writing your contracts. Here is a possible code for the contract, copy this code below for your `PizzaFreeVoucher.sol`:
+Most of the OpenZeppelin contracts are expected to be used via inheritance, meaning you will inherit from them when writing your contracts. Here is a possible code for the contract. Copy the code below for your `PizzaFreeVoucher.sol`:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -134,13 +134,13 @@ With `contract PizzaFreeVoucher is ERC721, Pausable, Ownable, ERC721Burnable` we
 
 ### Compiling
 
-We just need to compile the Solidity file, by changing the Remix tab to `Solidity Compiler` or just hitting `Ctrl + S` in the editor.
+You only need to compile the Solidity file by changing the Remix tab to `Solidity Compiler` or by just hitting `Ctrl + S` in the editor.
 
 ![Compile contract](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-compile01.png)
 
 ### Deploy the contract
 
-For this tutorial, we gonna deploy the contract using a web3 wallet compatible with XDC Network, the [_XDCPay_](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo). Install the wallet and create a new account, after that we need to have network gas for interacting with the blockchain.
+Using this tutorial, you'll deploy the contract using a Web3 wallet compatible with XDC Network, the [_XDCPay_](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo). Install the wallet and create a new account. Next, you'll need to make sure you have network gas for interacting with the blockchain.
 
 > :warning: Because we are just testing, check if you are connected to the **XDC Apothem** testnet network.
 
@@ -148,11 +148,11 @@ Visit the [XDC Apothem network faucet](https://faucet.apothem.network/), enter t
 
 ![Apothem Network Faucet](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-faucet01.png) ![Apothem Network Faucet](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-faucet02.png) ![Apothem Network Faucet](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-faucet03.png)
 
-Now that we have gas, deploy the contract we previously create. Just change to deploy tab on your Remix IDE, set the environment to `Injected Provider`, and connect Remix with your _XDCPay_ account. Select the `PizzaFreeVoucher` contract and click on `Deploy`.
+Now that you have gas, deploy the contract you previously created. Go to the deploy tab on your Remix IDE, set the environment to `Injected Provider`, and connect Remix with your _XDCPay_ account. Select the `PizzaFreeVoucher` contract and click on `Deploy`.
 
 ![Deploy](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-remix-connect01.png) ![Deploy](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-deploy01.png) ![Deploy](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-deploy02.png)
 
-After that, you should see a pop-up notification to accept/deny the deployment transaction, accept by clicking on `Submit`.
+Next, you should see a pop-up notification to accept/deny the deployment transaction. Accept by clicking on `Submit`.
 
 ![Verify](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-deploy03.png) ![Verify](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-verify01.png)
 
@@ -164,11 +164,11 @@ Open the [**XDC Apothem Network Explorer**](https://explorer.apothem.network/) a
 
 ![Verify](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-verify02.png)
 
-Search for the contract address on the explorer, we can see that the contract isn't verified. Click on `Verify and Publish` that will open the verification page.
+In searching for the contract address on the explorer, you will see that the contract isn't verified. Click on `Verify and Publish` that will open the verification page.
 
 ![Verify](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-verify03.png)
 
-Now, we have to submit the source code, name, address, and compiler version of the contract. With this, the final user can confirm if the contract was been verified or not, but also interact with it directly on the explorer.
+You'll now have to submit the source code, name, address, and compiler version of the contract. With this, the final user can confirm if the contract was been verified or not, but also interact with it directly on the explorer.
 
 > :information\_source: When using external dependencies in your code (for example OpenZeppelin imports or other imports), we need to flat all the code before verifying.
 
@@ -180,11 +180,11 @@ Back to the verification page, paste this code, and fill in the rest of the info
 
 ![Verify](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-verify04.png)
 
-Once the contract is verified, just navigate to `Contract` > `Read Contract` tab, and here you can perform reading actions, such as getting the balance of an account, getting the contract owner, etc.
+Once the contract is verified, simply navigate to `Contract` > `Read Contract` tab, and here you can perform reading actions, such as getting the balance of an account, getting the contract owner, etc.
 
 ![Interact](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-interact01.png)
 
-Let's mint our first non-fungible token by changing to the `Write Contract` tab. First, connect your web3 wallet by clicking on the `Connect to Web3` button and then call the `SafeMint` method with the address that gonna receive the NFT.
+Mint your first non-fungible token by going to the `Write Contract` tab. First, connect your web3 wallet by clicking on the `Connect to Web3` button and then call the `SafeMint` method with the address that will receive the NFT.
 
 ![Interact](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-interact02.png) ![Interact](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-openzeppelin-interact03.png)
 
