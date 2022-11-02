@@ -1,7 +1,7 @@
 ---
 id: xdc-frontend-integration
-title: Creating a front-end for a XDC dApp.
-description:  "Creating a front-end for a XDC decentralized app and connecting it to XDC Smart Contracts."
+title: Creating a front-end for an XDC dApp.
+description:  "Creating a front-end for an XDC decentralized app and connecting it to XDC smart contracts."
 keywords:
   - docs
   - apothem
@@ -52,7 +52,7 @@ keywords:
 
  # 📰 Overview
  
-In this tutorial, we will work with a few different tools to create a working decentralized App front-end from start to finish, leveraging [React](https://reactjs.org/) to bootstrap our front end. [Web3Modal](https://www.npmjs.com/package/web3modal) and [web3.js](https://www.npmjs.com/package/web3) to create a touchpoint between our front-end and the XDC network. And the smart contract development environment of our choice: [Truffle](https://trufflesuite.com/), [Hardhat](https://hardhat.org/) or [Remix](https://remix.xinfin.network/)!
+In this tutorial, you will work with a few different tools to create a working decentralized App front-end from start to finish, leveraging [React](https://reactjs.org/) to bootstrap our front end. [Web3Modal](https://www.npmjs.com/package/web3modal) and [web3.js](https://www.npmjs.com/package/web3) will be used to create a touchpoint between our front-end and the XDC Network. You'll use the smart contract development environment of your choice: [Truffle](https://trufflesuite.com/), [Hardhat](https://hardhat.org/) or [Remix](https://remix.xinfin.network/)!
 
 ### What you will learn
 In this tutorial, you will learn how to interact with XDC Network smart contracts and tokens through a simple web front-end on the XDC Network mainnet and XDC Apothem testnet.
@@ -71,7 +71,7 @@ There are a few technical requirements before we start. Please install the follo
 - [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 - [Git](https://git-scm.com/)
 
-Plus, we will be using XDCPay to interact with our first dApp on XDC Network. You can download XDCPay at:
+As you will be using XDCPay to interact with our first dApp on XDC Network, you can download XDCPay at:
 
 - [XDCPay on Chrome Store](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo)
 
@@ -90,14 +90,14 @@ This tutorial is full of important concepts and we wanted to make something both
 
 Gacha is a Japanese term for a small toy sold in a plastic capsule in a vending machine. And this is what we will make: A NFT vending machine where you can trade in an XRC20 token for a new XRC721 non-fungible token. We will create in the course of this tutorial:
 
-  1. A XRC20 Token called `EGT` (Egg Tokens);
-  2. A XRC721 Token called `EGGS`;
-  3. A `EGT Faucet` smart contract, so people can get more `EGT` and buy new `EGGS`;
+  1. An XRC20 Token called `EGT` (Egg Tokens);
+  2. An XRC721 Token called `EGGS`;
+  3. An `EGT Faucet` smart contract, so people can get more `EGT` and buy new `EGGS`;
   4. An interface where users can interact with `EGT`, `EGGS` and the `EGT Faucet` Smart Contract;
   
   ## Smart Contracts
   
-It is not uncommon seeing several smart contracts interacting in a real-world application to create a complete user experience. And in this tutorial, it wouldn't be different. We will deploy three smart contracts that depend on one another to create our decentralized app experience.
+It is not uncommon to see several smart contracts interacting in a real-world application to create a complete user experience - and that's what you'll be doing here. You will deploy three smart contracts that depend on one another to create our decentralized app experience.
 
 **If you have never deployed a Smart Contract on XDC Mainnet or Apothem Tesnet, please check the following tutorials before continuing** (You can chose between using **Truffle**, **Hardhat** or **Remix**):
 
@@ -117,13 +117,13 @@ It is not uncommon seeing several smart contracts interacting in a real-world ap
 
 ## XRC20 Egg Token
 
-We will abstract some of the code for the EGT tokens using Open Zeppelin's [Smart Contract Wizard](https://docs.openzeppelin.com/contracts/4.x/wizard). If you followed one of the tutorials listed in the [Smart Contracts](#smart-contracts) section, you might need to install `@openzeppelin/contracts` to your working directory first:
+First, you will abstract some of the code for the EGT tokens using Open Zeppelin's [Smart Contract Wizard](https://docs.openzeppelin.com/contracts/4.x/wizard). If you followed one of the tutorials listed in the [Smart Contracts](#smart-contracts) section, you might need to install `@openzeppelin/contracts` to your working directory first:
 
 ```sh
 npm install @openzeppelin/contracts
 ```
 
-Lets create our EGT tokens by creating an `EggToken.sol` file with the following content:
+Create your EGT tokens by creating an `EggToken.sol` file with the following content:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -143,7 +143,7 @@ contract EggToken is ERC20, Ownable {
 
 ## XRC721 Egg NFT
 
-Following the same reasoning as above, we will ceate a `Eggs.sol` file using a Open Zeppelin's smart contracts with a few small changes:
+Following the same logic as above, you will ceate an `Eggs.sol` file using a Open Zeppelin's smart contracts with a few small changes:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -232,7 +232,7 @@ contract EggNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
 ## About XRC721 Egg NFT Metadata
 
-In the section above, we define our NFT metadata inside the `buyEgg()` method:
+In the section above, we define the NFT metadata inside the `buyEgg()` method:
 
 ```solidity
 
@@ -253,7 +253,7 @@ Publishing files to IPFS is not within the scope of this tutorial, but if you wa
 
 ## EGT Faucet
 
-We also need to provide users a way to claim a few `EGT` tokens! The best way to do so is creating a FAUCET smart contract. Our faucet will have a `claimTokens()` method that users can call to get `50 EGT tokens` for free every 24-hours. Lets create a `Faucet.sol` contract with the following code:
+You also need to provide users a way to claim a few `EGT` tokens! The best way to do so is creating a FAUCET smart contract. Our faucet will have a `claimTokens()` method that users can call to get `50 EGT tokens` for free every 24-hours. Create a `Faucet.sol` contract with the following code:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -307,7 +307,7 @@ contract Faucet is Ownable {
 
 ## Migration script using Truffle
 
-If you followed the [Use Truffle to deploy a Smart Contract](https://github.com/XDC-Community/docs/blob/main/how-to/truffle.md) tutorial, you might need to adjust your migration script accordingly so all three smart contracts are correctly deployed to the blockchain, for Truffle we will create a `1_project_migration.js` file with the following code:
+If you followed the [Use Truffle to deploy a Smart Contract](https://github.com/XDC-Community/docs/blob/main/how-to/truffle.md) tutorial, you might need to adjust your migration script accordingly so all three smart contracts are correctly deployed to the blockchain. For Truffle, you'll need to create a `1_project_migration.js` file with the following code:
 
 ```jsx
 const EGT = artifacts.require("EggToken");
@@ -330,7 +330,7 @@ And your folder should look like this:
 
 ## Migration script using Hardhat
 
-Instead, If you followed the [Use Hardhat to deploy a Smart Contract](https://github.com/XDC-Community/docs/blob/main/how-to/contract-hardhat.md) tutorial, you need to adjust your `deploy.js` script to deploy all three contracts:
+Conversely, if you followed the [Use Hardhat to deploy a Smart Contract](https://github.com/XDC-Community/docs/blob/main/how-to/contract-hardhat.md) tutorial, you need to adjust your `deploy.js` script to deploy all three contracts:
 
 ```jsx
 async function main() {
@@ -371,7 +371,7 @@ And your folder should look like this:
 
 # 📀 Flattening Solidity files
 
-To **Verify and Publish** our smart contracts that inherit from `@openzeppelin/contracts`, we need to flatten our solidity smart contract into one file. In this section we will learn how to use the [Solidity Visual Developer](https://marketplace.visualstudio.com/items?itemName=tintinweb.solidity-visual-auditor) plugin on **VSCode** to flatten our smart contracts.
+To **Verify and Publish** your smart contracts inherited from `@openzeppelin/contracts`, you'll need to flatten your solidity smart contract into one file. In this section, you will learn how to use the [Solidity Visual Developer](https://marketplace.visualstudio.com/items?itemName=tintinweb.solidity-visual-auditor) plugin on **VSCode** to flatten your smart contracts.
 
 ### Step 01
 
@@ -387,7 +387,7 @@ To **Verify and Publish** our smart contracts that inherit from `@openzeppelin/c
 
  - Go to `Explorer` on the left-side panel (or press `CTRL`+`SHIFT`+`E`);
  - Select the `.sol` file you want to flatten;
- - On the top of your visual code Editor window you will see a list of new commands, find `flatten` and click on it;
+ - On the top of your visual code Editor window, you will see a list of new commands. Find `flatten` and click on it:
  
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78161484/193695078-ee199266-0103-405d-bf58-a62ee666dd87.png" alt="Solidity Flattening 02"/>
@@ -403,7 +403,7 @@ To **Verify and Publish** our smart contracts that inherit from `@openzeppelin/c
   <img src="https://user-images.githubusercontent.com/78161484/193696014-c496f3b6-7d8d-4011-bc2e-2a93fbffcc2a.png" alt="Solidity Flattening 03"/>
 </p>
 
-By the end of this process, you folder should look like this:
+By the end of this process, your folder should look like this:
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78161484/193696481-44aad18b-0384-4895-91ec-3299751fb53f.png" alt="Solidity Flattening 04"/>
@@ -413,20 +413,20 @@ By the end of this process, you folder should look like this:
 
 # 🏗 Building a Front-End Application
 
-We prepared a project scaffold for the Egg Gacha. You can find the project folder [Here](https://github.com/menezesphill/egg-gacha-scaffold). Lets get started by cloning this dApp to our working directory:
+We prepared a project scaffold for the Egg Gacha. You can find the project folder [Here](https://github.com/menezesphill/egg-gacha-scaffold). Get started by cloning this dApp to your working directory:
 
 ```sh
 git clone https://github.com/menezesphill/egg-gacha-scaffold.git
 cd egg-gacha-scaffold
 ```
 
-Once we have cloned our dApp scaffold, we can install all the necessary dependencies. You can either use `yarn` or `npm`, is this example we are using `npm`:
+Once you have cloned your dApp scaffold, you can install all the necessary dependencies. You can either use `yarn` or `npm`, but in this example we use `npm`:
 
 ```sh
 npm install
 ```
 
-When npm finishes installing our dependencies, we can run the `start` script to see if everything is working:
+When npm finishes installing your dependencies, you can run the `start` script to see if everything is working:
 
 ```sh
 npm run start
@@ -444,13 +444,13 @@ We are ready to move to the next steps if you see the page above!
 
 ## Creating Smart Contract Instances in React
 
-We will start by creating our Smart Contract instances in React, Let create a `blockchain` folder locally, and a sub-folder called `contracts`:
+You will start by creating your smart contract instances in React. Create a `blockchain` folder locally, and a sub-folder called `contracts`:
 
 ```sh
 mkdir -p ./src/blockchain/contracts
 ```
 
-The only files we need to import from `Truffle` and `Hardhat` (whichever you decided to use for development), are the compiled artifacts of our Smart Contracts. These artifacts can be found at:
+The only files you need to import from `Truffle` and `Hardhat` (whichever you decided to use for development), are the compiled artifacts of our Smart Contracts. These artifacts can be found at:
 
 ```jsx
 // On your Truffle project folder:
@@ -466,19 +466,19 @@ The only files we need to import from `Truffle` and `Hardhat` (whichever you dec
 './artifacts/contracts/TokenFaucet.sol/Faucet.json'
 ```
 
-Move or copy these three `.json` files to our recently created `./src/blockchain/contracts` folder. Our working directory now should look like this:
+Move or copy these three `.json` files to our recently created `./src/blockchain/contracts` folder. Our working directory should now look like this:
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78161484/193709413-8a2f95ed-64cf-4bbf-b28e-0f2ad9246ccc.png" alt="Egg Gacha Folder 01"/>
 </p>
 
-We need to install two new dependencies to our project, `web3-utils` and `web3-eth-contract`:
+You'll need to install two new dependencies to your project, `web3-utils` and `web3-eth-contract`:
 
 ```sh
 npm install web3-utils web3-eth-contract
 ```
 
-Lets create a generic Contract handler in the `./src/blockchain/contracts` folder: 
+Create a generic contract handler in the `./src/blockchain/contracts` folder: 
 
 ```sh
 touch ./src/blockchain/contracts/Contract.ts
@@ -546,7 +546,7 @@ class Contract {
 export default Contract;
 ```
 
-This way, we can make so our `EggToken`, `EggNFT` and `Faucet` contracts inherit from `Contract.ts`. We will create three new files in the `./src/blockchain/contracts` folder:
+This way, you can your `EggToken`, `EggNFT` and `Faucet` contracts inherit from `Contract.ts`. You'll create three new files in the `./src/blockchain/contracts` folder:
 
 ```sh
 touch ./src/blockchain/contracts/EggToken.ts
@@ -615,13 +615,13 @@ At this point, your project folder should look like this:
 
 ## Creating Smart Contract Constants File
 
-At this point, if you still haven't deployed the contracts, remember to check the scripts provided in [Migration script using Truffle](#migration-script-using-truffle) or [Migration script using Hardhat](#migration-script-using-hardhat). Here, we will deploy them using `Truffle`:
+At this point, if you still haven't deployed the contracts, remember to check the scripts provided in [Migration script using Truffle](#migration-script-using-truffle) or [Migration script using Hardhat](#migration-script-using-hardhat). In this instance, we will show you how to deploy them using `Truffle`:
 
 ```sh
 truffle migrate --network apothem
 ```
 
-If migrations complete sucessfully, we can run `truffle networks` to get your contract addresses:
+If migrations complete sucessfully, you can run `truffle networks` to get your contract addresses:
 
 ```sh
 Network: apothem (id: 51)
@@ -633,7 +633,7 @@ Network: xinfin (id: 50)
   No contracts deployed.
 ```
 
-To keep our React dApp folder organized, we will create a `constants.ts` file with our deployment information:
+To keep your React dApp folder organized, you will create a `constants.ts` file with your deployment information:
 
 ```sh
 touch ./src/blockchain/constants.ts
@@ -664,7 +664,7 @@ export const FaucetAddress = {
 ## Creating Smart Contract Wrappers in React
 
 
-The next step is to create Wrappers, where we define what kind of methods we want to access on the blockchain. We will create one for each contract:
+The next step is to create Wrappers, where you'll define what kind of methods you want to access on the blockchain. You will create one for each contract:
 
 ```sh
 touch ./src/blockchain/EggTokenWrapper.ts
@@ -674,7 +674,7 @@ touch ./src/blockchain/FaucetWrapper.ts
 
 ### EggTokenWrapper.ts
 
-We won't need to use all methods nor access all variables available in `EggToken.sol`, so we will only create the `balanceOf()`, `approve()`, and `allowance()` methods in our `EggTokenWrapper.ts` file:
+You won't need to use all methods nor access all variables available in `EggToken.sol`, so you will only create the `balanceOf()`, `approve()`, and `allowance()` methods in your `EggTokenWrapper.ts` file:
 
 ```jsx
 // EggTokenWrapper.ts
@@ -735,7 +735,7 @@ export default class EggTokenWrapper {
 
 ### EggNFTWrapper.ts
 
-In the `EggNFTWrapper.ts` we will declare our `buyEgg()` method which is probably the most important method, and a few other methods to help us display our collection in the front-end application like:`balanceOf()`, `tokenOfOwnerByIndex()`, and `tokenURI()`:
+In `EggNFTWrapper.ts`, you will declare your `buyEgg()` method, which is probably the most important method, and a few other methods to help you display your collection in the front-end application like:`balanceOf()`, `tokenOfOwnerByIndex()`, and `tokenURI()`:
 
 ```jsx
 import Web3 from 'web3';
@@ -802,7 +802,7 @@ export default class EggNFTWrapper {
 
 ### FaucetWrapper.ts
 
-Our `FaucetWrapper.ts` is the simpliest of the three contracts, we just care about the `claimTokens()` method in our dApp:
+Our `FaucetWrapper.ts` is the simpliest of the three contracts. You should only care about the `claimTokens()` method in your dApp:
 
 ```jsx
 import Web3 from 'web3';
@@ -842,9 +842,9 @@ export default class Faucetrapper {
 
 ## Creating a Blockchain Context Provider in React
 
-We are almost there! Now, we want to create a `Blockchain Context` so we can access our blockchain methods throughout our React app. Right now, it might sound a bit exhausting to go through all these files, but trust me, in a real-world application, you will be glad you have created such a nice-looking and well-sectioned React project. 
+You are almost there! Next, you'll want to create a `Blockchain Context` so that you can access our blockchain methods throughout our React app. Right now, it might sound a bit exhausting to go through all these files, but trust us, in a real-world application, you will be glad you have created such a nice-looking and well-sectioned React project. 
 
-If you feel like grabbing a coffee, go ahead, I will be here waiting for you...
+If you feel like grabbing a coffee, go ahead, I'll be here waiting for you...
 
 :coffee:
 
@@ -854,7 +854,7 @@ If you feel like grabbing a coffee, go ahead, I will be here waiting for you...
 touch ./src/contexts/BlockchainProvider.tsx
 ```
 
-Where we will create our `BlockchainContext` by writting:
+There, we will create our `BlockchainContext` by writting:
 
 ```jsx
 import EggNFTWrapper from "../blockchain/EggNFTWrapper";
@@ -935,11 +935,11 @@ export const BlockchainProvider = ({ children }) => {
 export default BlockchainProvider;
 ```
 
-This way, whenever our `account` address, `chainId`, or `web3` provider changes, all contracts are updated accordingly throughout our React App, and we are also capable of tracking our EGGS NFTs images to show on the front-end.
+This way, whenever your `account` address, `chainId`, or `web3` provider changes, all contracts are updated accordingly throughout your React App, and you are also capable of tracking your EGGS NFTs images to show on the front-end.
 
 ## Integrating Blockchain Methods to DOM elements
 
-Now we need to update our `index.tsx` file in the `src` with our newly created provider. Our `index.tsx` should look like this:
+Now you'll need to update our `index.tsx` file in the `src` with your newly created provider. Your `index.tsx` should look like this:
 
 ```jsx
 import ReactDOM from "react-dom/client";
@@ -957,7 +957,7 @@ root.render(
 );
 ```
 
-We will update it with our `BlockchainProvider`:
+You will update it with your `BlockchainProvider`:
 
 ```jsx
 import ReactDOM from "react-dom/client";
@@ -980,22 +980,22 @@ root.render(
 
 ### Updating `app.tsx` elements
 
-Now lets move to our main App file at `./src/app.tsx` and do some changes:
+Next, move to your main App file at `./src/app.tsx` and make some changes:
 
 ```jsx
 import React, { useState, useCallback, useEffect } from "react";
 import "./app.css";
 import { Web3ModalContext } from "./contexts/Web3ModalProvider";
 
-// We will start by importing our newly created BlockchainContext to app.tsx:
+// You will start by importing your newly created BlockchainContext to app.tsx:
 import { BlockchainContext } from "./contexts/BlockchainProvider";
 
 
 
 const App: React.FC = () => {
 
-// We are not using this state anymore, so we can remove it
-// Instead we will use the EGGS state from our BlockchainContext
+// You are not using this state anymore, so you can remove it.
+// Instead we will use the EGGS state from our BlockchainContext.
 
 /*   const EGTS = [
     { image: "blueEgg" },
@@ -1011,12 +1011,12 @@ const App: React.FC = () => {
 
   const [slide, setSlide] = useState(0);
 
-  // Here, we want to import from Web3ModalContext 'web3' and 'chainId'
+  // Here, you'll want to import from Web3ModalContext 'web3' and 'chainId'
   // besides 'account', 'connect' and 'disconnect'
   const { web3, account, connect, disconnect, chainId } =
     React.useContext(Web3ModalContext);
 
-  // And we will import from BlockchainContext the 'EGGS' state and our 
+  // And you will import from BlockchainContext the 'EGGS' state and your 
   // contract wrappers:
   const {
     eggNFT: eggNFTWrapper,
@@ -1026,7 +1026,7 @@ const App: React.FC = () => {
   } = React.useContext(BlockchainContext);
 
 
-  // We need to create our balance states and gachaAllowance state:
+  // You'll need to create your balance states and gachaAllowance state:
   const [egtTokenBalance, setEgtTokenBalance] = useState("");
   const [egtNftBalance, setEgtNftBalance] = useState("");
   const [gachaAllowance, setGachaAllowance] = useState("");
@@ -1043,7 +1043,7 @@ const App: React.FC = () => {
   };
 
   // And a getGachaAllowance function to check whether
-  // the EggNFT contract is allowed to spend our EGT tokens
+  // the EggNFT contract is allowed to spend your EGT tokens
   const getGachaAllowance = async () => {
     if (web3 && account && chainId) {
       const _gachaAllowance = await eggTokenWrapper?.allowance();
@@ -1051,14 +1051,14 @@ const App: React.FC = () => {
     }
   };
 
-  // This useEffect will update our balances and allowance
-  // so we can update our UI
+  // This useEffect will update your balances and allowance
+  // so you can update our UI
   useEffect(() => {
     getBalances();
     getGachaAllowance();
   });
 
-  // This function handle the DROP ME MORE EGT! button clicks
+  // This function handles the DROP ME MORE EGT! button clicks
   const handleDrop = () => {
     if (web3 && account && chainId) {
       faucetWrapper
@@ -1075,7 +1075,7 @@ const App: React.FC = () => {
     }
   };
 
-  // This function handle the MINT NEW EGG! button clicks
+  // This function handles the MINT NEW EGG! button clicks
   const handleBuyEgg = () => {
     if (web3 && account && chainId) {
       eggNFTWrapper
@@ -1092,7 +1092,7 @@ const App: React.FC = () => {
     }
   };
 
-  // This function handle the APPROVE GACHA! button clicks
+  // This function handles the APPROVE GACHA! button clicks
   const handleApprove = () => {
     if (web3 && account && chainId) {
       eggTokenWrapper
@@ -1174,7 +1174,7 @@ const App: React.FC = () => {
 
             <div className="center">
               <div className="count">
-                {/* Here we change from EGGS.length to EGGS?.length to avoid getting undefined 'EGGS' values*/}
+                {/* Here you change from EGGS.length to EGGS?.length to avoid getting undefined 'EGGS' values*/}
                 {slide}/{EGGS?.length} 
               </div>
               <div className="nft">
@@ -1194,7 +1194,7 @@ const App: React.FC = () => {
                 )}
               </div>
               {/* The MINT NEW EGG! button now needs to check a condition "gachaAllowance" 
-                  to check if the gacha contract can spend EGT tokens on our behalf...
+                  to check if the gacha contract can spend EGT tokens on your behalf...
                   
                   This section of the code means:
 
@@ -1211,7 +1211,7 @@ const App: React.FC = () => {
                 </div>
               )}
             </div>
-            {/* And by now, we have already changed everything we needed to have a fully functional Front-End*/}
+            {/* And by now, you've already changed everything you needed to have a fully functional Front-End*/}
             <div className="right">
               {slide === 0 ? (
                 <img src="/images/rightArrowUncolored.svg" alt="Right Arrow" />
@@ -1233,39 +1233,39 @@ const App: React.FC = () => {
 export default App;
 ```
 
-🎉 Contrats! If you got this far, you have create your first fully functional decentralized app on XDC! 
+🎉 Contrats! If you got this far, you have created your first fully functional decentralized app on XDC! 
 
 If you are not sure if your code is correct or if you feel you missed something, you can check the [Egg Gacha Scaffold Completed repo](https://github.com/menezesphill/egg-gacha-scaffold-completed)
 
 # 💧 Setting up Faucet Contract
 
-We are almost ready to run our dApp demo, but first lets fund our `Faucet` contract with some `EGT tokens`:
+You are almost ready to run your dApp demo, but first you'll need to fund your `Faucet` contract with some `EGT tokens`:
 
-Move to your Smart Contract development environment.
+Move to your smart contract development environment.
 
 ### On Truffle
 
-We will start by starting our development tool console:
+You will begin by starting your development tool console:
 
 ```sh
 truffle console --network apothem
 ```
 
-Once the console opens, lets instantiate our `EggToken` contract:
+Once the console opens, please instantiate your `EggToken` contract:
 
 ```sh
 truffle(apothem)> let eggToken = await EggToken.deployed()
 // Should log: undefined
 ```
 
-Now we instantiate our `Faucet` contract:
+Next, instantiate your `Faucet` contract:
 
 ```sh
 truffle(apothem)> let faucet = await Faucet.deployed()
 // Should log: undefined
 ```
 
-We first need to approve `Faucet` to spend our EggTokens:
+You first need to approve `Faucet` to spend your EggTokens:
 
 ```sh
 truffle(apothem)> let amount = web3.utils.toWei("40000", "ether")
@@ -1282,15 +1282,15 @@ It should log a Transaction Receipt (or a rejection in case it fails). If it fai
 
 ### On Hardhat
 
-Using hardhat we need to remember our smart contract addresses, fornately, we can find the addresses in our dApp folder at `./src/blockchain/constants.ts`.
+Using hardhat, you'll need to remember tour smart contract addresses. Fortunately, you can find the addresses in your dApp folder at `./src/blockchain/constants.ts`.
 
-We will start by starting our development tool console:
+You can begin by starting your development tool console:
 
 ```sh
 npx hardhat console --network apothem
 ```
 
-Once the console opens, lets attach our `EggToken` contract:
+Once the console opens, attach your `EggToken` contract:
 
 ```sh
 > const EggToken = await ethers.getContractFactory("EggToken");
@@ -1299,7 +1299,7 @@ Once the console opens, lets attach our `EggToken` contract:
 // Should log: undefined
 ```
 
-Now we attach our `Faucet` contract:
+Next, attach your `Faucet` contract:
 
 ```sh
 > const Faucet = await ethers.getContractFactory("Faucet");
@@ -1308,24 +1308,24 @@ Now we attach our `Faucet` contract:
 // Should log: undefined
 ```
 
-We first need to approve `Faucet` to spend our EggTokens:
+You'll need to approve `Faucet` to spend tour EggTokens:
 
 ```sh
 > let amount = ethers.utils.parseUnits("40000", 18)
 > await eggTokenInstance.approve(faucetInstance.address, amount)
 ```
 
-And then we call the `depositToken()`
+Then, call the `depositToken()`
 
 ```sh
 > await faucetInstance.depositToken(amount)
 ```
 
-Now we are ready for our first dApp demo!
+You are now ready for your first dApp demo!
 
 # 🔥 DApp Demo
 
-Lets head to our front-end folder and run:
+Head to our front-end folder and run:
 
 ```sh
 npm run start
