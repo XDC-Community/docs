@@ -8,38 +8,38 @@
 
 # Overview
 
-Solana is a new blockchain focusing on performance. It supports smart contracts like Ethereum which they call Programs. You can develop those in Rust, but there's also a new project now to compile Solidity to Solana. In other words you can deploy your contracts written in Solidity now to Solana!.
+Solana is a new blockchain focusing on performance. It supports smart contracts like Ethereum which they call programs. You can develop these programs in Rust, but there's another way. You can now deploy your contracts written in Solidity to Solana!
 
 ### What you will learn
 
-This guide aims at teaching on how a smart contract with solidity for solana using solang. 
+This guise will teach you how to write a smart contract with Solidity to deploy on Solana using Solang.
 
 ### Solang
 
-With [Solang](https://solang.readthedocs.io/en/latest/) you can compile smart contracts written in Solidity for Solana and Parity Substrate. It uses the llvm compiler framework to produce WebAssembly (wasm) or BPF contract code. As result, the output is highly optimized, which saves you in gas costs.
+With [Solang](https://solang.readthedocs.io/en/latest/), you can compile smart contracts written in Solidity for Solana and Parity Substrate. It uses the llvm compiler framework to produce WebAssembly (wasm) or BPF contract code. As result, the output is highly optimized, which saves you in gas fees.
 
-The best way to install Solang is using the [VS Code extension](https://solang.readthedocs.io/en/latest/extension.html). It will automatically install the correct solang binary along with the dependencies. 
+The best way to install Solang is using the [VS Code extension](https://solang.readthedocs.io/en/latest/extension.html). It will automatically install the correct Solang binary along with the dependencies. 
 
-Let's do some changes to our solang extension, we need to put the target in the settings of it: 
+First, you'll make some changes to our Solang extension, settings: 
 
 ![solang-target](https://user-images.githubusercontent.com/34518489/195971806-c043bd4e-ec6a-41fc-83ac-62c32a37178a.png)
 
-If you have solidity extension in VSCode Disable the workspace: 
+If you have Solidity extension in VSCode, disable the workspace: 
 
 ![disable-solidity](https://user-images.githubusercontent.com/34518489/195971874-c49e3a0e-0a41-4cd6-8cd1-ac76d13cba62.png)
 
 # Install and setup Dev Environment
 
-For this guide I will be usuing `Windows`
+For this guide, we are be usuing `Windows`
 
-There are a few technical requirements before we start. Please install the following:
+There are a few technical requirements before you start. Please install the following:
 
 - [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 - [Git](https://git-scm.com/)
 - [Yarn](https://yarnpkg.com/) (optional but I will use this one)
 - [Solang](https://solang.readthedocs.io/en/latest/)
 
-Once we have those installed, we only need one command to install Truffle:
+Once you have those installed, you only need one command to install Truffle:
 
 ```bash
 npm install -g truffle
@@ -75,7 +75,7 @@ cd solana-release/
 set PATH=%cd%/bin;%PATH%
 ```
 
-If you run this command and all it's ok, you sucessfully installed solana: 
+If you run this command and all is well, you have sucessfully installed solana: 
 
 ```bash
 solana --version
@@ -86,13 +86,13 @@ solana --version
 
 # Create a project
 
-Lets start by setting up our folder, we are creating a project called `solana-migration-xdc`, create a new folder by running on terminal
+Start by setting up your folder. As we are creating a project called `solana-migration-xdc`, create a new folder by running the following on terminal:
 
 ```bash
 mkdir solana-migration-xdc && cd solana-migration-xdc
 ```
 
-And running `truffle init`. If truffle is correctly installed on your local environment, you should see the following message:
+Next, run `truffle init`. If Truffle is correctly installed on your local environment, you should see the following message:
 
 ```bash
 Starting init...
@@ -104,13 +104,13 @@ Try our scaffold commands to get started:
   $ truffle create test YourTestName         # scaffold a test
 http://trufflesuite.com/docs
 ```
-Now we going to install some dependencies for solana: 
+Now, you are going to install some dependencies for Solana: 
 
 ```bash
 yarn add @solana/solidity @solana/web3.js dotenv @truffle/hdwallet-provider
 ```
 
-I recommend for windows to download the solang.exe. Sometimes the Vs Extension doesn't work properly. Navigate to [hyperledger-solang-releases](https://github.com/hyperledger/solang/releases/) and search for the solang.exe, you can download it directly to your root project: 
+I recommend (for Windows users) downloading solang.exe, as sometimes the Vs Extension doesn't work properly. Navigate to [hyperledger-solang-releases](https://github.com/hyperledger/solang/releases/) and search for the solang.exe, you can download it directly to your root project: 
 
 ![Screenshot_4](https://user-images.githubusercontent.com/34518489/195971737-b3392d35-7758-4604-b8e2-167847cf70bd.png)
 
@@ -122,7 +122,7 @@ I recommend for windows to download the solang.exe. Sometimes the Vs Extension d
 
 # Write a smart contract
 
-Lets create a simple incrementer.sol in the contracts folder , the incrementer contract should have:
+Now, create a simple incrementer.sol in the contracts folder. The incrementer contract should have:
 
 - a constructor that initializes the `int32` value to the given `init_value`,
 - a `inc` method to increment the state value,
@@ -165,11 +165,11 @@ If the extension doesn't work and you cannot see a build folder, try running thi
 solang.exe compile contracts/incrementer.sol --target solana --output build
 ```
 
-If this works properly you will see the folder with the 2 described files.  
+If this works properly, you will see the folder with the 2 described files.  
 
 ![Screenshot_5](https://user-images.githubusercontent.com/34518489/195973424-997ac17e-7463-4fbe-a09b-9cccb8dcf2b0.png)
 
-Now its compiled with `Solang` we going to deploy it to solana devnet, first lets create a `deployContract.js` file in the project root: 
+Now that it's compiled with `Solang`, you are going to deploy it to Solana devnet. The first step is to create a `deployContract.js` file in the project root: 
 
 ```jsx
 const { Connection, LAMPORTS_PER_SOL, Keypair } = require('@solana/web3.js');
@@ -216,7 +216,7 @@ Run this command to config the devnet url for solana:
 ```bash
 solana config set --url devnet
 ```
-Now the RPC and WSS are pointing to the devnet
+Now the RPC and WSS are pointing to the devnet.
 
 ![Screenshot_7](https://user-images.githubusercontent.com/34518489/195974147-464d6afb-6b01-437b-ab32-51e45be01ac1.png)
 
@@ -226,13 +226,13 @@ Run the command:
 node deployContract.js
 ```
 
-If everything is fine and your deployContract script is right you should see this: 
+If everything is fine and your deployContract script is right, you should see this: 
 
 ![Screenshot_8](https://user-images.githubusercontent.com/34518489/195974211-dd984a17-33c7-4843-8081-64e53cd75f53.png)
 
 ### Migrate to XDC
 
-Here we must first to copy our MNEMONIC phrase from our wallet already installed, so go to the extension and log in with your password and click here: 
+First, you have to copy your MNEMONIC phrase from your wallet that you've already installed. Go to the extension and log in with your password before clicking here: 
 
 ![Screenshot_9](https://user-images.githubusercontent.com/34518489/195974467-ecaf5727-b6a4-49fa-8518-00751cee4217.png)
 
@@ -244,7 +244,7 @@ Here we must first to copy our MNEMONIC phrase from our wallet already installed
 
 ![Screenshot_13](https://user-images.githubusercontent.com/34518489/195974484-c2cb33c9-008c-4e88-a57a-dc1acee8d572.png)
 
-Once you have your phrase create an .env file and paste it into a variable called MNEMONIC.
+Once you have your phrase, create an .env file and paste it into a variable called MNEMONIC.
 
 Go to your truffle-config.js and paste this code: 
 
@@ -283,7 +283,7 @@ module.exports = {
   },
 };
 ```
-Now go to Migrations folder and create a file `1_incrementer.js` and paste this code: 
+Next, go to the migrations folder and create a file `1_incrementer.js` and paste this code: 
 
 ```jsx
 const incrementer = artifacts.require("incrementer");
@@ -296,14 +296,14 @@ module.exports = function(deployer) {
 ```
 
 
-Once your have your truffle-config.js file ready it's time to migrate this contract to XDC network. Run this command: 
+Once your have your truffle-config.js file ready, it's time to migrate this contract to the XDC network. Run this command: 
 
 ```bash
 truffle migrate --network apothem
 or 
 truffle migrate --network xinfin
 ```
-this should be the output: 
+This should be the output: 
 
 ![Screenshot_14](https://user-images.githubusercontent.com/34518489/195974665-a6a4638f-5d06-4016-9fec-40fa97d80552.png)
 
