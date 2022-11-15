@@ -1,18 +1,20 @@
-# One-Click-Installer Masternode (MacOS)
+# One-Click-Installer Masternode (macOS)
 
-## XDC One-Click Installer Set-Up (MacOS)
+## XDC One-Click Installer Set-Up (macOS)
 
 The XDC developer community has made it easy for new and existing users, even those with little or no technical expertise, to quickly set up a masternode with a simple, one-click installer.&#x20;
 
+{% embed url="https://www.youtube.com/watch?v=_tQeje9rdxQ" %}
 
 
-## Setting Up XDC One-Click Installer (MacOS)
 
-1. Download the One-Click Installer: [https://xinfin.org/setup-masternode.php](https://xinfin.org/setup-masternode.php) (This option is available for Windows, Linux, and MacOS)
+## Setting Up XDC One-Click Installer (macOS)
+
+1. Download the One-Click Installer: [https://xinfin.org/setup-masternode.php](https://xinfin.org/setup-masternode.php) (This option is available for Windows, Linux, and macOS)
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 12.10.25 PM.png" alt=""><figcaption></figcaption></figure>
 
-A pop up window will come up for you to save the file in the default folder (wherever you have designated the download to be saved)
+A pop-up window will come up for you to save the file in the default folder (wherever you have designated the download to be saved)
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 12.15.00 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -20,7 +22,7 @@ A pop up window will come up for you to save the file in the default folder (whe
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 12.22.27 PM.png" alt=""><figcaption></figcaption></figure>
 
-3\. Go to the "Applications" folder to find the downloaded file, and click on it. When you do, MacOS has a security feature that will warn you about installing software that cannot be verified as shown below
+3\. Go to the "Applications" folder to find the downloaded file, and click on it. When you do, macOS has a security feature that will warn you about installing software because the developer cannot be verified as shown below
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 12.34.06 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -36,11 +38,11 @@ If the lock at the bottom left is locked <img src="https://help.apple.com/assets
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 12.54.06 PM.png" alt=""><figcaption></figcaption></figure>
 
-6\.  Click on "Open" and this will launch the application. Wait several minutes until the application connects to the network.&#x20;
+6\.  Click on "Open", and this will launch the application. Wait several minutes until the application connects to the network.&#x20;
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 12.55.37 PM.png" alt=""><figcaption></figcaption></figure>
 
-7\.  Once it starts syncing, you will notice "Peers" number going up and "Blocks" going up as well.  If prompted by your MacOS to "allow incoming connections to XinFin Network" click "Allow".  You will see the application generate your account. &#x20;
+7\.  Once it starts syncing, you will notice the "Peers" number going up and "Blocks" going up.  If prompted by your MacOS to "allow incoming connections to XinFin Network" click "Allow."  You will see the application generate your account. &#x20;
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 2.10.20 PM.png" alt=""><figcaption><p>Please note that if it takes too long to connect, close the application, and reopen it. This will prompt the application to reconnect. </p></figcaption></figure>
 
@@ -48,7 +50,7 @@ If the lock at the bottom left is locked <img src="https://help.apple.com/assets
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 2.43.35 PM.png" alt=""><figcaption></figcaption></figure>
 
-You can now verify that your masternode shows up in the Network Stat [page](https://www.xinfin.network/#stats).
+You can now verify that your masternode shows up on the Network Stat [page](https://www.xinfin.network/#stats).
 
 <figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 3.00.00 PM.png" alt=""><figcaption></figcaption></figure>
 

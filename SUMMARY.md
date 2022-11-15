@@ -74,7 +74,7 @@
   * [Masternode](run-a-node/masternode/README.md)
     * [Full Node (Docker version)](run-a-node/masternode/full-node.md)
     * [One-Click-Installer Masternode (Windows OS)](run-a-node/masternode/standby-node.md)
-    * [One-Click-Installer Masternode (MacOS)](run-a-node/masternode/one-click-installer-masternode-macos.md)
+    * [One-Click-Installer Masternode (macOS)](run-a-node/masternode/one-click-installer-masternode-macos.md)
 
 ## Learn
 
@@ -100,6 +100,7 @@
   * [How To Use xdcpay-connect to Create a dApp Connected to XDC network](learn/how-to-articles/how-to-use-xdcpay-connect-to-create-a-dapp-connected-to-xdc-network.md)
   * [How To Use Truffle and Ganache to Create DeFi App](learn/how-to-articles/how-to-use-truffle-and-ganache-to-create-defi-app.md)
   * [How to Migrate a dApp from Ethereum to the XDC Network Using Truffle](learn/how-to-articles/how-to-migrate-a-dapp-from-ethereum-to-the-xdc-network-using-truffle.md)
+  * [How to Migrate from Solana to the XDC Network using Solang](learn/how-to-articles/how-to-migrate-from-solana-to-the-xdc-network-using-solang.md)
 * [Community Support](learn/community-support.md)
   * [How to Report an Issue](learn/community-support/how-to-report-an-issue.md)
   * [Contributing and Feedback Guide](gitbook.md)
@@ -108,5 +109,6 @@
 
 * [About](goplugin/about.md)
 * [How-to Articles](goplugin/how-to-articles.md)
-* [Community Support](goplugin/community-support/README.md)
+* [Frequently Asked Questions](goplugin/community-support/README.md)
   * [How to Log a Support Ticket](goplugin/community-support/how-to-log-a-support-ticket.md)
+  * [How do I check my plugin processes are ok](goplugin/community-support/how-do-i-check-my-plugin-processes-are-ok.md)
