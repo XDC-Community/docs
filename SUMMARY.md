@@ -102,7 +102,6 @@
   * [How To Use Truffle and Ganache to Create DeFi App](learn/how-to-articles/how-to-use-truffle-and-ganache-to-create-defi-app.md)
   * [How to Migrate a dApp from Ethereum to the XDC Network Using Truffle](learn/how-to-articles/how-to-migrate-a-dapp-from-ethereum-to-the-xdc-network-using-truffle.md)
   * [How to Migrate from Solana to the XDC Network using Solang](learn/how-to-articles/how-to-migrate-from-solana-to-the-xdc-network-using-solang.md)
-  * [How to Create and Deploy an XRC20 Token Using Brownie](learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-brownie.md)
 * [Community Support](learn/community-support.md)
   * [How to Report an Issue](learn/community-support/how-to-report-an-issue.md)
   * [Contributing and Feedback Guide](gitbook.md)
