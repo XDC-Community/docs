@@ -23,7 +23,7 @@ description: Use Truffle to deploy an XRC721 Token.
   * [⚒ Starting a new Truffle Project](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-starting-a-new-truffle-project)
   * [⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-configuring-xdc-mainnet-and-apothem-testnet-on-truffle)
   * [⚒ Adding Testnet XDC to Development Wallet](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-adding-testnet-xdc-to-development-wallet)
-* [💵 Writing our first XRC721 Token](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-writing-our-first-xrc721-token)
+* [💵 Writing your first XRC721 Token](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-writing-our-first-xrc721-token)
   * [💵 OpenZeppelin](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-openzeppelin)
   * [💵 Events and Functions](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-events-and-functions)
   * [💵 Methods](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-methods)
@@ -33,11 +33,11 @@ description: Use Truffle to deploy an XRC721 Token.
 
 ## 📰 Overview
 
-[Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine.
+[Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by leveraging an Ethereum Virtual Machine.
 
 #### What you will learn
 
-In this tutorial, you will learn how to set up Truffle and use it to build, test and deploy a XRC721 Token on both the XDC Network mainnet and XDC Apothem testnet.
+In this tutorial, you will learn how to set up Truffle and use it to build, test, and deploy a XRC721 Token on both the XDC Network mainnet and XDC Apothem testnet.
 
 #### What you will do
 
@@ -50,7 +50,7 @@ In this tutorial, you will learn how to set up Truffle and use it to build, test
 
 ### 📰 About XRC721 Tokens
 
-XRC721 is a set of rules to standardize assets on the XinFin network. Every XRC721 Token must be able to execute the following methods:
+XRC721 is a set of rules to standardize assets on the XDC network. Every XRC721 Token must be able to execute the following methods:
 
 * `safeTransferFrom(address from, address to, uint256 tokenId)`
 * `transferFrom(address from, address to, uint256 tokenId)`
@@ -59,15 +59,15 @@ XRC721 is a set of rules to standardize assets on the XinFin network. Every XRC7
 * `setApprovalForAll(address operator, bool _approved)`
 * `isApprovedForAll(address owner, address operator)`
 
-These are the minimum required methods that allow an asset on the XinFin network to be called an XRC721 token. Also, a XRC721 token must be able to emit the following `Events` on the blockchain:
+These are the minimum required methods that allow an asset on the XDC network to be called an XRC721 token. Also, a XRC721 token must be able to emit the following `Events` on the blockchain:
 
 * `Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)`
 * `Transfer(address indexed from, address indexed to, uint256 indexed tokenId)`
 * `ApprovalForAll(address indexed owner, address indexed operator, bool approved)`
 
-Events are helpers that come in handy in the exhaustive labor of indexing state changes, and they are essential to off-chain applications to find relevant data on the blockchain. By mapping all `Transfer` events, for example, we can fetch all the historic data on token transfers more easily.
+Events are helpers that come in handy in the exhaustive labor of indexing state changes, and they are essential for off-chain applications to find relevant data on the blockchain. By mapping all `Transfer` events, for example, we can fetch all the historic data on token transfers more easily.
 
-Last but not least, a few contract constants that are public that are also very important to have are:
+Last but not least, a couple contract constants that are public that are also very important to have are:
 
 * `name`
 * `symbol`
@@ -76,18 +76,18 @@ Without these public constants, it would be impossible to label tokens on block 
 
 ## 🚀 Setting up the development environment
 
-There are a few technical requirements before we start. Please install the following:
+There are a few technical requirements before you start. Please install the following:
 
 * [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 * [Git](https://git-scm.com/)
 
-Once we have those installed, we only need one command to install Truffle:
+Once you have those installed, you only need one command to install Truffle:
 
 ```bash
 npm install -g truffle
 ```
 
-To verify that Truffle is installed properly, type **`truffle version`** on a terminal. You should see something like:
+To verify that Truffle is installed properly, type **`truffle version`** in terminal. You should see something like:
 
 ```bash
 Truffle v5.5.27 (core: 5.5.27)
@@ -101,13 +101,13 @@ If you see an error instead, make sure that your npm modules are added to your p
 
 ### ⚒ Starting a new Truffle Project
 
-Lets start by setting up our folder, we are creating a project called `XRC721`, create a new `XRC721` folder by running on terminal
+Start by setting up your folder. The project will be called `XRC721`, and you can create a new `XRC721` folder by running the following on terminal:
 
 ```bash
 mkdir XRC721 && cd XRC721
 ```
 
-And running `truffle init`. If truffle is correctly installed on your local environment, you should see the following message:
+Next, run `truffle init`. If truffle is correctly installed on your local environment, you should see the following message:
 
 ```bash
 Starting init...
@@ -115,7 +115,7 @@ Starting init...
 
 > Copying project files to /home/your/path/to/XRC721
 
-Init successful, sweet!
+Init successful. Sweet!
 
 Try our scaffold commands to get started:
   $ truffle create contract YourContractName # scaffold a contract
@@ -124,13 +124,13 @@ Try our scaffold commands to get started:
 http://trufflesuite.com/docs
 ```
 
-And your folder files will look like this:
+Your folder files will look like this:
 
 ![Step 01](https://user-images.githubusercontent.com/60708843/192272825-5bc78ea3-49c5-4743-ac4d-68e519c9732e.png)
 
-### ⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle
+### ⚒ Configuring the XDC Mainnet and the Apothem Testnet on Truffle
 
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to install two new dependencies that will be used in the `truffle-config.js` file. These dependencies are `@truffle/hdwallet-provider` and `dotenv`. First choose your preferred package manager. In this example we are using `yarn` but you can also use `npm`.
+In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to install two new dependencies that will be used in the `truffle-config.js` file. These dependencies are `@truffle/hdwallet-provider` and `dotenv`. First, choose your preferred package manager. In this example, we are using `yarn` but you can also use `npm`.
 
 If you never used `yarn` before, you might need to install it first.\
 ‼️You can skip this step if you already have yarn installed‼️
@@ -139,7 +139,7 @@ If you never used `yarn` before, you might need to install it first.\
 npm install --global yarn
 ```
 
-Initialize your package manager on your folder and install the required dependencies:
+Initialize your package manager in your folder and install the required dependencies:
 
 ```
 yarn init -y
@@ -159,9 +159,9 @@ Remember to change the **24-Word Mnemonic** above for your own mnemonic. The con
 MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe curve obey
 ```
 
-🚨 **Do not use the mnemonic in the example above in production or you can risk losing your assets and/or the ownership of your smart contracts!** 🚨
+🚨 **Do not use the mnemonic in the example above in production or you may risk losing your assets and/or the ownership of your smart contracts!** 🚨
 
-And finally, we can configure the `truffle-config.js` file for both Apothem and XinFin Networks by writting:
+Finally, you can configure the `truffle-config.js` file for both Apothem and XinFin Networks by writting:
 
 ```jsx
 require('dotenv').config();
@@ -204,13 +204,13 @@ module.exports = {
 
 ### ⚒ Adding Testnet XDC to Development Wallet
 
-It is possible to list all XDC addresses bound to your mnemonic on truffle by accessing the truffle console:
+It is possible to list all XDC addresses bound to your mnemonic on Truffle by accessing the Truffle console:
 
 ```
 truffle console --network xinfin
 ```
 
-Once the truffle console CLI opens, you can run:
+Once the Truffle console CLI opens, you can run:
 
 ```
 truffle(xinfin)> accounts
@@ -235,21 +235,21 @@ And the console should log all accounts bound to your mnemonic phrase as follow:
 
 These accounts are on the Ethereum standard format starting with `0x`, but we can simply switch `0x` for `xdc`. By default, the deployment account is the first account from the list above: `xdcA4e66f4Cc17752f331eaC6A20C00756156719519`.
 
-With this account in hand, we can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
+With this account in hand, you can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
 
 ![Step 02](https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png)
 
 ## 💵 Writing our first XRC721 Token
 
-The source code for the XRC721 Token used in this tutorial is available here: [XRC721 Contract Folder](XRC721/contracts/MyToken.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC721 Tokens](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-about-xrc721-tokens).
+The source code for the XRC721 Token used in this tutorial is available here: [XRC721 Contract Folder](XRC721/contracts/MyToken.sol). But we have addressed all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC721 Tokens](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-about-xrc721-tokens).
 
-Lets start by creating the `XRC721.sol` file:
+You can start by creating the `XRC721.sol` file:
 
 ```
 touch ./contracts/XRC721.sol
 ```
 
-And write the shell of our smart contract by writing:
+Write the shell of our smart contract by writing:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -262,15 +262,15 @@ contract XRC721 {
 
 ### 💵 OpenZeppelin
 
-Inside our contract, we would be importing the scripts from **`OpenZeppelin`** Github repository. These form the foundation for our contract which is having all the code of different functions which needs to be implemented in our contract. We are also importing the **`Counters`** from **`OpenZeppelin`** Github repository which is used to keep account of the counter of the current tokenId.
+Inside our contract, we will be importing the scripts from **`OpenZeppelin`** Github repository. These form the foundation for our contract which is having all the code of different functions which needs to be implemented in our contract. We are also importing the **`Counters`** from **`OpenZeppelin`** Github repository which is used to keep account of the counter of the current tokenId.
 
-First we have to import `OpenZeppelin` using this command:
+First, you must import `OpenZeppelin` using this command:
 
 ```
 npm i @openzeppelin/contracts
 ```
 
-Then we have to import both `ERC721` and `Counters` contract to our code:
+Next, you have to import both `ERC721` and `Counters` contract to our code:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -288,7 +288,7 @@ contract XRC721 is ERC721 {
 
 ### 💵 Events and Functions
 
-As mentioned in [📰 About XRC721 Tokens](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-about-xrc721-tokens). Events are very important part of a Smart Contract logic. Events have `indexed` variables that are variables that can be filtered by off-chain interfaces. We might be tempted to index all the variables that are tied to an on-chain event, however we can't go crazy about it since Solidity has a _maximum of 3 indexed variable_ limitation for Events. Lets see how `Transfer`, `Approval` and `ApprovalForAll` are written in OpenZeppelin in a simpler form.
+As mentioned in [📰 About XRC721 Tokens](how-to-create-and-deploy-an-xrc721-nft-using-truffle.md#-about-xrc721-tokens), events are very important part of a smart contract logic. Events have `indexed` variables that can be filtered by off-chain interfaces. We might be tempted to index all the variables that are tied to an on-chain event, however Solidity has a _maximum of 3 indexed variable_ limitation for Events. This is how `Transfer`, `Approval` and `ApprovalForAll` are written in OpenZeppelin in a simpler form:
 
 ```solidity
 contract IXRC721 {
@@ -360,11 +360,11 @@ contract IXRC721 {
 }
 ```
 
-We do not need to write this code in our contract. It is already implemented with the OpenZeppelin github repository.
+You don't need to write this code in tour contract. It is already implemented with the OpenZeppelin github repository.
 
 ### 💵 Methods
 
-We need to create the `constructor` that is a function called only once when the contract is deployed, where we can parse as arguments information such as the token name and symbol. We would also create another function `createToken` which will take an address and `mint` our created `XRC721 NFT Token` to that address:
+Next, you will create the `constructor`. This function is called only once, when the contract is deployed, and you can attach information such as the token name and symbol. You can also create another function `createToken` which will take an address and `mint` our created `XRC721 NFT Token` to that address:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -389,7 +389,7 @@ contract XRC721 is ERC721 {
 }
 ```
 
-And here we have implemented everything we needed to make our token compliant with the XRC721 Standard. Of course there are more features we can implement to this contract, such as the [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) library that replace naive mathematical operations for methods that will avoid `underflows` and `overflows`, and supply management methods such as `mint` and `burn`.
+Now you have implemented everything you need to make your token compliant with the XRC721 standard. Of course, there are more features we can implement to this contract, such as the [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) library that replaces naive mathematical operations for methods that will avoid `underflows` and `overflows`, and supply management methods such as `mint` and `burn`.
 
 ### 💵 Compiling and Deploying
 
@@ -420,17 +420,17 @@ Compiling your contracts...
    - solc: 0.8.16+commit.07a7930e.Emscripten.clang
 ```
 
-And your folder should look like this:
+Your folder should look like this:
 
 ![Step 03](https://user-images.githubusercontent.com/60708843/192272825-5bc78ea3-49c5-4743-ac4d-68e519c9732e.png)
 
-In order to deploy our newly compiled contract artifacts to the blockchain, we need to create a deployment script into the migrations folder:
+In order to deploy your newly compiled contract artifacts to the blockchain, you'll need to create a deployment script into the migrations folder:
 
 ```
 touch ./migrations/1_token_migration.js
 ```
 
-And write the following migration script to the `1_token_migration.js` file:
+Write the following migration script to the `1_token_migration.js` file:
 
 ```jsx
 const XRC721Token = artifacts.require("XRC721");
@@ -443,21 +443,21 @@ module.exports = function (deployer) {
 }
 ```
 
-If the migration script have no errors, we can go ahead and run the command:
+If the migration script has no errors, we can go ahead and run the command (for the deployment on the XDC Mainnet:
 
 ```
 truffle migrate --network xinfin
 ```
 
-For deployment on XDC mainet, or:
+Or, for deplloyment on the XDC Apothem Testnet:
 
 ```
 truffle migrate --network apothem
 ```
 
-For deployment on the XDC Apothem Testnet. In either case, you need to have enough funds to pay for gas fees on the address that is being used for development.
+In either case, you must have enough funds to pay for gas fees on the address that is being used for development.
 
-If the deployment is sucessful, the console should log the following message after migrations complete processing:
+If the deployment is successful, the console should log the following message after migrations complete processing:
 
 ```
 1_token_migration.js
@@ -491,7 +491,7 @@ Summary
 
 Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
-First lets check the address our contract is deployed to by running:
+First, check the address your contract is deployed to by running:
 
 ```
 truffle networks
@@ -507,13 +507,13 @@ Network: xinfin (id: 50)
   XRC721Token: 0x53bA8Cb12EaF09E6B0b671F39ac4798A6DA7d660
 ```
 
-Here we have a `XRC721` contract deployed on XDC Mainnet at the `0x53bA8Cb12EaF09E6B0b671F39ac4798A6DA7d660`. This address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
+In this example, you'd have a `XRC721` contract deployed on XDC Mainnet at the `0x53bA8Cb12EaF09E6B0b671F39ac4798A6DA7d660`. This address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
 ![Verify 01](https://user-images.githubusercontent.com/78161484/190875518-828c0061-71de-42c2-b222-0b8427852d01.png)
 
-And click in the `Verify And Publish` Option.
+Next, click the `Verify And Publish` Option.
 
-We will be redirected to the Contract verification page where we need to fill out:
+You'll be redirected to the contract verification page where you will need to fill out:
 
 * Contract Name: _XRC721Token_
 * Compiler: _Check your_ `truffle-config.js` _file for Compiler Version_
@@ -529,19 +529,19 @@ If everything is correctly filled out, your contract page on the block explorer 
 
 ### 🔍 Interacting with your contract on the Block Explorer
 
-We can check for the minted token by going to our XDCPay Wallet and clicking on the `Tokens` tab and click on the `Add Token` button.
+You can check for the minted token by going to our XDCPay Wallet and clicking on the `Tokens` tab and click on the `Add Token` button.
 
 ![Verify 05](https://user-images.githubusercontent.com/60708843/192256810-4ee5dad6-f4f5-4067-ba76-a5bb9b589c81.png)
 
-Then we have to add the deployed contract address on the `Token Address` text field. This will automatically fetch the token symbol. Then click on the `Add Token` button.
+Next, you have to add the deployed contract address on the `Token Address` text field. This will automatically fetch the token symbol. Click on the `Add Token` button.
 
 ![Verify 05](https://user-images.githubusercontent.com/60708843/192257221-be4f834f-ab55-471d-857e-d0e11836623f.png)
 
-Add our newly minted token is available in our wallet.
+Your newly minted token is available in your wallet.
 
 ![Verify 05](https://user-images.githubusercontent.com/60708843/192257728-188f6ec3-bf3a-40ce-bcf7-a57bef1482a9.png)
 
-And we can check our successful transaction on the [Block Explorer!](https://explorer.apothem.network/txs/0xa95719657bee4d87068d3407e2c53acd9e955ad6eebe6f81d6cfcc59a42d7bb5#overview)
+You can also check our successful transaction on the [Block Explorer!](https://explorer.apothem.network/txs/0xa95719657bee4d87068d3407e2c53acd9e955ad6eebe6f81d6cfcc59a42d7bb5#overview)
 
 ***
 

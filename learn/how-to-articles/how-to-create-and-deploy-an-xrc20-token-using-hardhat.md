@@ -20,7 +20,7 @@ keywords:
 - [⚒ Starting a new Hardhat Project](#-starting-a-new-hardhat-project)
   - [⚒ Configuring XDC Mainnet and Apothem Testnet on Hardhat](#-configuring-xdc-mainnet-and-apothem-testnet-on-hardhat)
   - [⚒ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
-- [💵 Writing our first XRC20 Token](#-writing-our-first-xrc20-token)
+- [💵 Writing your first XRC20 Token](#-writing-our-first-xrc20-token)
   - [💵 Constants](#-constants)
   - [💵 Events](#-events)
   - [💵 Methods](#-methods)
@@ -37,7 +37,7 @@ keywords:
 [Hardhat](https://hardhat.org/) is a development environment to compile, deploy, test, and debug your Ethereum software. Get Solidity stack traces & console.log.
 
 ### What you will learn
-In this tutorial, you will learn how to set up Hardhat and use it to build, test and deploy a XRC20 Token on both the XDC Network mainnet and XDC Apothem testnet.
+In this tutorial, you will learn how to set up Hardhat and use it to build, test, and deploy a XRC20 token on both the XDC Network mainnet and XDC Apothem testnet.
 
 ### What you will do
 - Install and setup Hardhat
@@ -49,7 +49,7 @@ In this tutorial, you will learn how to set up Hardhat and use it to build, test
 
 ## 📰 About XRC20 Tokens
 
-XRC20 is a set of rules to standardize assets on the XinFin network. Every XRC20 Token must be able to execute the following methods:
+XRC20 is a set of rules to standardize assets on the XDC network. Every XRC20 token must be able to execute the following methods:
 
 - `totalSupply()`
 - `balanceOf(address account)` 
@@ -58,22 +58,22 @@ XRC20 is a set of rules to standardize assets on the XinFin network. Every XRC20
 - `approve(address spender, uint amount)`
 - `transferFrom(address sender, address recipient, uint amount)`
 
-These are the minimum required methods that allow an asset on the XinFin network to be called an XRC20 token. Also, a XRC20 token must be able to emit the following `Events` on the blockchain:
+These are the minimum required methods that allow an asset on the XDC Network to be called an XRC20 token. Also, a XRC20 token must be able to emit the following `Events` on the blockchain:
 
 - `Approval(address indexed tokenOwner, address indexed spender,
  uint tokens)`
  - `Transfer(address indexed from, address indexed to,
  uint tokens)`
  
-Events are helpers that come in handy in the exhaustive labor of indexing state changes, and they are essential to off-chain applications to find relevant data on the blockchain. By mapping all `Transfer` events, for example, we can fetch all the historic data on token transfers more easily.
+Events come in handy in the exhaustive process of indexing state changes, and they are essential to off-chain applications to find relevant data on the blockchain. By mapping all `Transfer` events, for example, we can fetch all the historic data on token transfers more easily.
 
-Last but not least, a few contract constants that are public that are also very important to have are:
+Several contract constants that are public that are also very important to have are:
 
 - `name`
 - `symbol`
 - `decimals`
 
-Without these public constants, it would be impossible to label tokens on block explorers, for example. In this tutorial we will deploy a XRC20 token that have all the `Methods`, `Events` and `Constants` mentioned above.
+Without these public constants, it would be impossible to label tokens on block explorers, for example. In this tutorial, you will deploy a XRC20 token that have all the `Methods`, `Events` and `Constants` mentioned above.
 
 # ⚒ Starting a new Hardhat Project
 
@@ -82,19 +82,19 @@ There are a few technical requirements before we start. Please install the follo
 - [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 - [Git](https://git-scm.com/)
 
-Lets start by setting up our folder, we are creating a project called `XRC20`, create a new `XRC20` folder by running on terminal
+You can start by setting up your folder. As we are creating a project called `XRC20`, you should create a new `XRC20` folder by running the following on terminal:
 
 ```bash
 mkdir XRC20 && cd XRC20
 ```
 
-We can get started with Hardhat by running:
+You can get started with Hardhat by running:
 
 ```bash
 npx hardhat
 ```
 
-And the following message will show on your console. Hit `y` to continue or just press `ENTER`:
+The following message will show on your console. Hit `y` to continue or just press `ENTER`:
 
 ```bash
 Need to install the following packages:
@@ -122,13 +122,13 @@ Press `ENTER` to get started with a new JavaScript Hardhat Project. Then you wil
 // Press ENTER or y
 ```
 
-The standard Hardhat project comes with a pre-created `Lock.sol` contract and `deploy.js` script. Lets clean up our working environment before moving forward:
+The standard Hardhat project comes with a pre-created `Lock.sol` contract and `deploy.js` script. YOu should clean up your working environment before moving forward:
 
 ```sh
 rm -rf ./contracts/Lock.sol ./scripts/deploy.js ./test/Lock.js
 ```
 
-And your folder files will look like this:
+Your folder files will look like this:
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78161484/191263408-af21bd08-98a8-440c-9270-7f9960bb531d.png" alt="hardhat folder"/>
@@ -136,19 +136,19 @@ And your folder files will look like this:
 
 ## ⚒ Configuring XDC Mainnet and Apothem Testnet on Hardhat
 
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to install a new dependency called `dotenv` that will be used in the `hardhat.config.js` file:
+In order to get started deploying new contracts on XDC Mainnet and/or Apothem, you'll need to install a new dependency called `dotenv` that will be used in the `hardhat.config.js` file:
 
 ```bash
 npm install dotenv
 ```
 
-We will need to configure a `.env` file with XDC Mainnet and Apothem Testnet RPC endpoints, plus the _Private Key_ of the wallet we are using for deployment. Lets start by running:
+You will need to configure a `.env` file with the XDC Mainnet and Apothem Testnet RPC endpoints, as well as the _Private Key_ of the wallet you are using for deployment. Start by running:
 
 ```bash
 touch .env
 ```
 
-And writting the following info in our .env file:
+Write the following info in our .env file:
 
 ```bash
 XINFIN_NETWORK_URL=https://erpc.xinfin.network
@@ -157,7 +157,7 @@ PRIVATE_KEY=202e3c9d30bbeca38d6578659919d4c3dc989ae18c16756690877fdc4dfa607f
 ```
 🚨 **Do not use the Private Key in the example above in production or you can risk losing your assets!** 🚨
 
-And finally, we can configure the `hardhat.config.js` file for both Apothem and XinFin Networks by writting:
+Finally, you can configure the `hardhat.config.js` file for both Apothem and XDC Networks by writting:
 
 ```jsx
 require("@nomicfoundation/hardhat-toolbox");
@@ -180,12 +180,12 @@ module.exports = {
 
 ## ⚒ Adding Testnet XDC to Development Wallet
 
-Let's check our Signer's Address on Hardhat by accessing the hardhat console:
+Check your Signer's Address on Hardhat by accessing the Hardhat console:
 
 ```sh
 npx hardhat console --network xinfin
 ```
-If you get an error that hardhat is not installed locally and are running on a Windows OS you will need to execute:
+If you get an error that hardhat is not installed locally and are running on a Windows OS, you will need to execute:
 
 ```sh
 npm install --save-dev @nomicfoundation/hardhat-toolbox
@@ -202,7 +202,7 @@ Once the hardhat console CLI opens, you can run:
 // Should log: '0xA4e66f4Cc17752f331eaC6A20C00756156719519' or your wallet address if you are using a different Private Key
 ```
 
-This account is on the Ethereum standard format starting with `0x`, but we can simply switch `0x` for `xdc`. In this case, our signer wallet address is: `xdcA4e66f4Cc17752f331eaC6A20C00756156719519`.
+This account is on the Ethereum standard format starting with `0x`, but you can simply switch `0x` for `xdc`. In this example, our signer wallet address is: `xdcA4e66f4Cc17752f331eaC6A20C00756156719519`.
 
 With this account in hand, we can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
 
@@ -212,16 +212,16 @@ With this account in hand, we can head to the [Apothem Faucet](https://faucet.ap
 
 # 💵 Writing our first XRC20 Token
 
-The source code for the XRC20 Token used in this tutorial is available here: [XRC20 Contract Folder](./../../how-to/XRC20/Hardhat/XRC20/contracts/XRC20.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](#-about-xrc20-tokens).
+The source code for the XRC20 token used in this tutorial is available here: [XRC20 Contract Folder](./../../how-to/XRC20/Hardhat/XRC20/contracts/XRC20.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC20 Tokens](#-about-xrc20-tokens).
 
-Lets start by creating the `XRC20.sol` file:
+Start by creating the `XRC20.sol` file:
 
 ```sh
 touch ./contracts/XRC20.sol
 ```
 
 
-And write the shell of our smart contract by writing:
+Next, write the shell of our smart contract by writing:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -239,7 +239,7 @@ contract XRC20Token {
 
 ## 💵 Constants
 
-Inside our `contract XRC20Token` We will instantiate `name`, `symbol` and `decimals` as public variables, a private `_totalSupply` that will be used on our `totalSupply()` method later on and two mapping variables `balances` and `allowances`, that are key/value variables that maps user balances and approved spending allowances to other users:
+Inside our `contract XRC20Token`, you will instantiate `name`, `symbol` and `decimals` as public variables, a private `_totalSupply` that will be used on our `totalSupply()` method later on. You'll also instantiate two mapping variables, `balances` and `allowances`, that are key/value variables that maps user balances and approved spending allowances to other users:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -268,7 +268,7 @@ contract XRC20Token {
 
 ## 💵 Events
 
-As mentioned in [📰 About XRC20 Tokens](#-about-xrc20-tokens). Events are very important part of a Smart Contract logic. Events have `indexed` variables that are variables that can be filtered by off-chain interfaces. We might be tempted to index all the variables that are tied to an on-chain event, however we can't go crazy about it since Solidity has a _maximum of 3 indexed variable_ limitation for Events. Lets write both `Approval` and `Transfer` events:
+As mentioned in [📰 About XRC20 Tokens](#-about-xrc20-tokens). Events are very important part of a Smart Contract logic. Events have `indexed` variables that are variables that can be filtered by off-chain interfaces. You might be tempted to index all the variables that are tied to an on-chain event, but Solidity has a _maximum of 3 indexed variable_ limitation for events. You can write both `Approval` and `Transfer` events:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -303,7 +303,7 @@ contract XRC20Token {
 
 ## 💵 Methods
 
-We need to create the six methods mentioned in [📰 About XRC20 Tokens](#-about-xrc20-tokens) (`totalSupply`, `balanceOf`, `allowance`, `transfer`, `approve` and `transferFrom`) and a `constructor` that is a function called only once when the contract is deployed, where we can parse as arguments information such as the token name, decimals and/or initial token supply:
+You'll need to create the six methods mentioned in [📰 About XRC20 Tokens](#-about-xrc20-tokens) (`totalSupply`, `balanceOf`, `allowance`, `transfer`, `approve` and `transferFrom`) as well as a `constructor`. This is a function called only once when the contract is deployed, where you can attach information such as the token name, decimals and/or initial token supply:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -378,11 +378,11 @@ contract XRC20Token {
 }
 ```
 
-And here we have implemented everything we needed to make our token compliant with the XRC20 Standard. Of course there are more features we can implement to this contract, such as the [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) library that replace naive mathematical operations for methods that will avoid `underflows` and `overflows`, and supply management methods such as `mint` and `burn`.
+Now you have implemented everything we needed to make our token compliant with the XRC20 Standard. Of course, there are more features we can implement to this contract, such as the [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) library that replace naive mathematical operations for methods that will avoid `underflows` and `overflows`, and supply management methods such as `mint` and `burn`.
 
 ## 💵 Compiling and Deploying
 
-We can now compile our `XRC20.sol` by running:
+You can now compile your `XRC20.sol` by running:
 
 ```sh
 npx hardhat compile
@@ -401,13 +401,13 @@ And your folder should look like this:
   <img src="https://user-images.githubusercontent.com/78161484/191273560-8f666f6c-c7b9-4bad-8369-46337f6243b2.png" alt="Folder 02"/>
 </p>
 
-In order to deploy our newly compiled contract artifacts to the blockchain, we need to create a deployment script into the script folder:
+In order to deploy our newly compiled contract artifacts to the blockchain, you'll need to create a deployment script into the script folder:
 
 ```sh
 touch ./scripts/deploy.js
 ```
 
-And write the following script to the `deploy.js` file:
+Next, write the following script to the `deploy.js` file:
 
 ```jsx
 async function main() {
@@ -429,19 +429,18 @@ main()
   });
 ```
 
-If the deployment script have no errors, we can go ahead and run the command:
+If the deployment script have no errors, you can go ahead and run the command for deployment of the XDC Mainnet:
 
 ```sh
 npx hardhat run scripts/deploy.js --network xinfin
 ```
 
-For deployment on XDC mainet, or:
+Or this command for deployment on the XDC Apothem Testnet:
 
 ```sh
 npx hardhat run scripts/deploy.js --network apothem
 ```
-
-For deployment on the XDC Apothem Testnet. In either case, you need to have enough funds to pay for gas fees on the address that is being used for development.
+In either case, you need to have enough funds to pay for gas fees on the address that is being used for development.
 
 If the deployment is sucessful, the console should log the following message after migrations complete processing:
 
@@ -454,15 +453,15 @@ Token address: 0xbC5bA2B6e2f74EC1e8e5A310a42F65D185691Af2
 
 Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
-Lets grab the `XRC20.sol` address from the previous step: this address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
+Simply grab the `XRC20.sol` address from the previous step: this address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
 <p align="center">
   <img width=70% src="https://user-images.githubusercontent.com/78161484/190875518-828c0061-71de-42c2-b222-0b8427852d01.png" alt="Verify 01"/>
 </p>
 
-And click in the `Verify And Publish` Option.
+Click on the `Verify And Publish` option.
 
-We will be redirected to the Contract verification page where we need to fill out:
+You will be redirected to the contract verification page where we need to fill out:
 
 - Contract Name: <em>XRC20Token</em>
 - Compiler: <em> Check your</em> `hardhat-config.js` <em>file for Compiler Version</em>
@@ -484,25 +483,25 @@ If everything is correctly filled out, your contract page on the block explorer 
 
 With your XDCPay wallet, it is possible to interact with verified Smart Contracts on the [XinFin Network Block Explorer](https://explorer.xinfin.network/). You can read from, write to, or simply read the information tied to your Smart Contract on the blockchain.
 
-Lets head to the `Contract` tab on the explorer, choose `Write Contract` and click in `Connect to Web3` to connect your XDCPay wallet.
+Go to the `Contract` tab on the explorer, choose `Write Contract` and click in `Connect to Web3` to connect your XDCPay wallet.
 
 <p align="center">
   <img width=70% src="https://user-images.githubusercontent.com/78161484/190876289-57de5994-809a-4307-b68d-6bb37e3601af.png" alt="Verify 04"/>
 </p>
 
-Lets try transfering `500 MTK` tokens that we have just created to a new wallet `xdc0431d52fe37f3839895018272dfa3ba189fce07e`. Lets fill out the `recipient` field with the new wallet address, and fill out the `amout` field with `500 * 10 ^ 18`. Remember that our token have 18 decimals, and when we write numbers with decimals to the blockchain we have to account for the decimals because the Virtual Machine do not understand floating numbers like we humans do:
+Next, try transfering `500 MTK` tokens that we have just created to a new wallet `xdc0431d52fe37f3839895018272dfa3ba189fce07e`. Fill out the `recipient` field with the new wallet address, and fill out the `amout` field with `500 * 10 ^ 18`. Remember that your token have 18 decimals, and we have to account for the decimals because the Virtual Machine does not understand floating numbers like we humans do:
 
 <p align="center">
   <img width=70% src="https://user-images.githubusercontent.com/78161484/190876402-32e800d4-b456-499d-8255-ba10aa35c0af.png" alt="Verify 05"/>
 </p>
 
-After clicking in `Write`, we need to confirm the transaction on the XDCPay wallet:
+After clicking in `Write`, you'll need to confirm the transaction on the XDCPay wallet:
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/78161484/190876653-eb8e558b-2b09-4c0f-ad5f-a3d17a54bf30.png" alt="Verify 05"/>
 </p>
 
-And we can check our successful transaction on the [Block Explorer!](https://explorer.xinfin.network/txs/0xa365a7edea3af9ed22c6dffb2f24987f1941f21dbd4d9bbb13b11022439de96a#overview)
+You can check our successful transaction on the [Block Explorer!](https://explorer.xinfin.network/txs/0xa365a7edea3af9ed22c6dffb2f24987f1941f21dbd4d9bbb13b11022439de96a#overview)
 
 ---
 

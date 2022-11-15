@@ -2,7 +2,7 @@
 
 ## OVERVIEW
 
-In this article, we will guide you through the procedure of creating your first XRC-721 (NFT) contract on Remix IDE with Open Zeppelin, deploying NFTs image/metadata on IPFS, deploying smart contract XDC Network.
+In this article, we will guide you through the procedure of creating your first XRC-721 (NFT) contract on Remix IDE with Open Zeppelin, deploying NFTs image/metadata on IPFS, and deploying smart contracts on the XDC Network.
 
 ### XDC Network
 
@@ -10,15 +10,15 @@ The XDC Network ($XDC) is an enterprise-ready, open-source, hybrid blockchain pr
 
 ### XDCPay
 
-XDCPay is a bridge that allows you to visit the distributed web of tomorrow in your browser today. It allows you to run XDC dApps right in your browser without running a full XDC node. While doing transactions on the blockchain network, it uses computing power known as gas cost. To pay the gas cost, you will need a wallet that handles your money and that's where XDCPay comes in.
+XDCPay is a bridge that allows you to visit the distributed web of tomorrow in your browser today. It allows you to run XDC dApps right in your browser without running an XDC node. While doing transactions on the blockchain network, it uses computing power in the form of gas fees. To pay the gas fees, you will need a wallet that handles your assets and that's where XDCPay comes in.
 
 ### NFTs
 
-NFTs and digital collectibles are growing popular as the web3 space continues to make significant advancements in the blockchain arena. The enormous popularity of NFTs like Cryptokitties and Bored APE pushed investors to purchase ERC721-compatible digital collectibles.
+NFTs and digital collectibles are growing in popularity as the Web3 space continues to make significant advancements in the blockchain arena. The enormous popularity of NFTs like Cryptokitties and Bored APE pushed investors to purchase ERC721-compatible digital collectibles.
 
 ### OpenZeppelin
 
-Tools like the OpenZeppelin Wizard that offers developers click and write functionalities to create composable and secure smart contracts in no time
+Tools like the OpenZeppelin Wizard offer developers click-and-write functionality to create composable and secure smart contracts in no time.
 
 ### XDC Remix
 
@@ -26,22 +26,22 @@ XDC Remix is a web browser-based integrated development environment that allows 
 
 ### IPFS
 
-The InterPlanetary File System is a protocol, hypermedia and file sharing peer-to-peer network for storing and sharing data in a distributed file system. IPFS uses content-addressing to uniquely identify each file in a global namespace connecting IPFS hosts.
+The InterPlanetary File System is a protocol, hypermedia, and file sharing peer-to-peer network for storing and sharing data in a distributed file system. IPFS uses content-addressing to uniquely identify each file in a global namespace connecting IPFS hosts.
 
 ## 1. Open Zeppelin
 
-* First of all, let’s go to [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/wizard), then on the Wizard tab, click on ERC721. All NFTs are ERC721 tokens.
-* We want our tokens to be Mintable, have Enumerable and URI Storage as the features. Name your token as per your wish and also enter the desired symbol.(You can also add more features as your requirements)
+* First, go to [OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/wizard). In the Wizard tab, click on ERC721. All NFTs are ERC721 tokens.
+* You'll want your tokens to be Mintable and have Enumerable and URI Storage as the features. Name your token as you'd like and enter the desired symbol. You can add more features as you need them.
 
 ![nft 2](https://user-images.githubusercontent.com/114102465/192764939-b20b4a75-b716-4c64-8902-97131769f123.png)
 
-Select all code and copy the code.
+Select all code and copy it.
 
 ![nft 3](https://user-images.githubusercontent.com/114102465/192766691-fb7b8e4b-9caf-474b-a2bd-22d49017a580.png)
 
 ## 2. [XDC REMIX](https://remix.xinfin.network/)
 
-Now, Open [XDC Remix](https://remix.xinfin.network/) . It will open the Remix IDE.
+Next, open [XDC Remix](https://remix.xinfin.network/), which will open the Remix IDE.
 
 ![nft 4](https://user-images.githubusercontent.com/114102465/192769363-5253fc9e-e515-4448-9cf6-3fa1daad0cee.png)
 
@@ -55,7 +55,7 @@ Now, Open [XDC Remix](https://remix.xinfin.network/) . It will open the Remix ID
 
 ## 3. [XDCPay](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo)
 
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to have XDCPay wallet to sign our transactions and store XDC tokens.
+In order to get started deploying new contracts on XDC Mainnet and/or Apothem, you'll need to have an XDCPay wallet to sign your transactions, and to you your store XDC tokens.
 
 * First we have to install the chrome extension of [XDCPay](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo).
 
@@ -75,17 +75,17 @@ In order to get started deploying new contracts on XDC Mainnet and/or Apothem, w
 ![](https://user-images.githubusercontent.com/60708843/190071788-c134a5bc-599a-4a6d-a481-e7cf62e75a51.png)
 
 * Verify recovery phrase
-* Your XDCPay wallet has been successfully created.
+* Your XDCPay wallet has been successfully created
 
 ### ⚒ Adding Testnet XDC to Development Wallet
 
-Initially, our account would be empty, and we would require some XDC tokens to initiate blockchain transactions. We would use a faucet to fill our wallet with test XDC tokens for this. These tokens are worthless in and of themselves. They are simply used to test your contracts on the testnet in order to avoid losing your real money.
+Initially, your account will be empty, and you'll need XDC tokens to initiate blockchain transactions. You'll use a faucet to fill our wallet with test XDC tokens for this. These tokens hold no value. They are simply used to test your contracts on the testnet in order to avoid losing your real money.
 
-* First, make a copy of your wallet address. Your wallet address would look like **`xdc057ac7de8ad6f21c7bb0dcc6a389ff9161b3b943`**. These account address are interchangeable with Ethereum network. We can access these accounts on Ethereum network by simply changing the initial `xdc` with `0x`.
+* First, make a copy of your wallet address. Your wallet address would look something like **`xdc057ac7de8ad6f21c7bb0dcc6a389ff9161b3b943`**. These account address are interchangeable with the Ethereum network. You can access these accounts on the Ethereum network by simply changing the initial `xdc` with `0x`.
 
 ![](https://user-images.githubusercontent.com/60708843/190072656-cf4a819b-92e1-4eb3-948b-7c6dbc8bafc1.png)
 
-* After that, navigate to the [XDC faucet](https://faucet.apothem.network/).
+* Next, navigate to the [XDC faucet](https://faucet.apothem.network/).
 * Enter your XDC account address and request for Test XDC here.
 
 ![](https://user-images.githubusercontent.com/60708843/190073022-1d893bce-5f21-494d-8e28-20cdb9b91299.png)
@@ -99,13 +99,13 @@ Initially, our account would be empty, and we would require some XDC tokens to i
 
 ## 4.Deploy the NFT Smart Contract
 
-On Remix, go to Deploy and select Injected Web3 as the Environment. It will get connected to you network automatically. You will get the address of your XDCPay wallet along with the balance. Select your smart contract in the Contract Tab and click on Deploy.
+In Remix, go to deploy and select Injected Web3 as the Environment. It will connect to your network automatically, and you will receive the address of your XDCPay wallet along with the balance. Select your smart contract in the Contract tab and click on Deploy.
 
 ![nft9](https://user-images.githubusercontent.com/114102465/192793477-d0404e24-21f4-4cb1-84d8-77fabb2c5c6b.png)
 
 ![nft 10](https://user-images.githubusercontent.com/114102465/192794120-762b632a-d112-40d5-88a2-8f69dffe713d.png)
 
-It will show a XDCPay popup asking you to pay the fees. Click on Confirm and wait for 10 seconds. It will add the deployed contract in the Remix!
+You will see an XDCPay popup asking you to pay the fees. Click Confirm and wait 10 seconds as it adds the deployed contract in Remix!
 
 ![](https://user-images.githubusercontent.com/114102465/192795973-a36c4388-30ac-464a-8373-8bdb654ba67f.png)
 
@@ -130,22 +130,22 @@ To pull in off-chain metadata for XRC721 tokens, the contract will need to retur
 }
 ```
 
-Copy the metadata structure. Paste it in [json online editor](https://jsoneditoronline.org) and edit the description according to your wish. According to the Block Explorer APIs, the NFT Metadata should be stored in a .json file and structured as above.
+Copy the metadata structure before pasting it in [json online editor](https://jsoneditoronline.org) and editing the description as you'd like it to read. According to the Block Explorer APIs, the NFT Metadata should be stored in a .json file and structured as shown above.
 
 ## 6. Creating and Uploading the Metadata on IPFS
 
-* Now that we have a brief understanding of what will be contained in your NFT metadata, let’s learn how to create it and store it on IPFS- Inter Planetary File System.
-* Go to [Pinata](https://www.pinata.cloud/), and make an account there. Verify your email and login. Now, we need to click on upload , upload your NFT image, copy cid and paste it in metadata file image section.
+* Now that you have a brief understanding of what will be contained in your NFT metadata, you'll learn how to create it and store it on the Inter Planetary File System (IPFS).
+* Go to [Pinata](https://www.pinata.cloud/) and make an account there, which included verifying your email. Then click upload to upload your NFT image, copy cid, and paste it in metadata file image section.
 
 ![nft pinata 13](https://user-images.githubusercontent.com/114102465/192812760-d90af1df-feba-475b-bc73-dcfa2cec2389.png)
 
-Save the JSON file in the name of metadata.json and upload it on Pinata. Copy the cid of metadata.json and a prefix of `https://ipfs.io/ipfs/<your_metadata.json_cid>`
+Save the JSON file as metadata.json and upload it to Pinata. Copy the cid of metadata.json and a prefix of `https://ipfs.io/ipfs/<your_metadata.json_cid>`
 
 ![nft pinata 14](https://user-images.githubusercontent.com/114102465/192814911-57acd67e-bc4d-469b-8462-9970e71edcf6.png)
 
 ## 7. Mint Your NFT
 
-Then head on over to Remix. Orange methods are methods that actually write on the blockchain whereas Blue methods are methods learning from the blockchain.
+Next, head on over to Remix. It's important to know that orange methods are methods that actually write on the blockchain while blue methods are methods learning from the blockchain.
 
 Click on the safeMint method dropdown icon and paste your address and the following string into the uri field:
 
@@ -183,7 +183,7 @@ Paste code in big box.
 
 ## 9. View the NFT on Block Explorer
 
-Now we are viewing our minted NFT on Block Explorer.
+Now we are viewing our minted NFT in Block Explorer.
 
 ![nft 21](https://user-images.githubusercontent.com/114102465/192827811-d2a8315e-660e-4a64-841b-4e39e484ab3b.png)
 
@@ -193,7 +193,7 @@ Now we are viewing our minted NFT on Block Explorer.
 
 ![nft 24](https://user-images.githubusercontent.com/114102465/192828391-154066d5-d509-443e-9ea3-45dfa6076723.png)
 
-Congratulations, you have successfully created, modified, and deployed your first NFT smart contract. Minted your first NFT, and published your image on IPFS!
+Congratulations! You have successfully created, modified, and deployed your first NFT smart contract, minted your first NFT, and published your image on IPFS!
 
 Thanks for reading.
 

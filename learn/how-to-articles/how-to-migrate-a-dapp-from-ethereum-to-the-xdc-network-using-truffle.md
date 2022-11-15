@@ -6,7 +6,7 @@
     - [What you will do](#what-you-will-do)
 - [🚀 Setting up the development environment](#-setting-up-the-development-environment)
   - [⚒ Starting a new Truffle Project](#-starting-a-new-truffle-project)
-- [📝 Writing our first Smart Contract](#-writing-our-first-smart-contract)
+- [📝 Writing your first Smart Contract](#-writing-our-first-smart-contract)
   - [🍕 Compiling](#-compiling)
   - [Creating a .env file](#creating-a-env-file)
   - [🔀 Migrating from Ethereum to XDC network](#-migrating-from-ethereum-to-xdc-network)
@@ -17,9 +17,9 @@
 
 # 📰 Overview
 
-[Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine.
+[Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by leveraging an Ethereum Virtual Machine.
 
-dApps use truffle and hardhat to work with decentralized networks like ethereum and XDC.
+dApps use truffle and hardhat to work with decentralized networks like Ethereum and XDC.
 
 ### What you will learn
 
@@ -35,12 +35,12 @@ This guide aims at teaching on how to migrate a dApp from ethereum to the XDC ne
 
 # 🚀 Setting up the development environment
 
-There are a few technical requirements before we start. Please install the following:
+There are a few technical requirements before you start. Please install the following:
 
 - [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 - [Git](https://git-scm.com/)
 
-Once we have those installed, we only need one command to install Truffle:
+Once you have those installed, you only need one command to install Truffle:
 
 ```bash
 npm install -g truffle
@@ -60,13 +60,13 @@ If you see an error instead, make sure that your npm modules are added to your p
 
 ## ⚒ Starting a new Truffle Project
 
-Lets start by setting up our folder, we are creating a project called `Pizza`, create a new `Pizza` folder by running on terminal
+Start by setting up your folder. As we are creating a project called `Pizza`, create a new `Pizza` folder by running this on terminal:
 
 ```bash
 mkdir Pizza && cd Pizza
 ```
 
-And running `truffle init`. If truffle is correctly installed on your local environment, you should see the following message:
+Next, you have to run `truffle init`. If truffle is correctly installed on your local environment, you should see the following message:
 
 ```bash
 Starting init...
@@ -74,7 +74,7 @@ Starting init...
 
 > Copying project files to /home/your/path/to/Pizza
 
-Init successful, sweet!
+Init successful. Sweet!
 
 Try our scaffold commands to get started:
   $ truffle create contract YourContractName # scaffold a contract
@@ -92,7 +92,7 @@ And your folder files will look like this:
 
 # 📝 Writing our first Smart Contract
 
-Lets create a simple `Pizza.sol` in the `contracts folder` , the Pizza contract should have:
+Lets create a simple `Pizza.sol` in the `contracts folder`. The Pizza contract should have:
 
 - a `constructor` where the deployer can define the pizza size,
 - a `eatSlice` method to consume slices available,
@@ -128,13 +128,13 @@ contract Pizza {
 
 ## 🍕 Compiling
 
-Lets try compiling the `Pizza.sol` contract by running:
+Now try compiling the `Pizza.sol` contract by running:
 
 ```sh
 truffle compile
 ```
 
-If everything is correctly configured and there is no errors, you should see the following message on your console:
+If everything is correctly configured and there are no errors, you should see the following message on your console:
 
 ```sh
 Compiling your contracts...
@@ -145,16 +145,16 @@ Compiling your contracts...
    - solc: 0.8.16+commit.07a7930e.Emscripten.clang
 ```
 
-And your folder should look like this:
+Your folder should look like this:
 
 <p align="center">
   <img width="229" alt="Screenshot 2022-09-29 at 1 03 39 PM" src="https://user-images.githubusercontent.com/35517007/192988098-11f5f626-6623-421b-8e9d-255c2cd3b3f5.png">
 </p>
 
 
-> If you face an error while compiling in mac, you can use `sudo truffle compile`
+> If you see an error while compiling on a Mac, you can use `sudo truffle compile`
 
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem(testnet), we need to install two new dependencies that will be used in the `truffle-config.js` file. These dependencies are `@truffle/hdwallet-provider` and `dotenv`. First choose your preferred package manager. In this example we are using `npm` but you can also use `yarn`.
+In order to get started deploying new contracts on XDC Mainnet and/or Apothem(testnet), you need to install two new dependencies that will be used in the `truffle-config.js` file. These dependencies are `@truffle/hdwallet-provider` and `dotenv`. First choose your preferred package manager. In this example, you can use either `npm` or `yarn`.
 
 If you never used `yarn` before, you might need to install it first. ‼️You can skip this step if you already have yarn installed‼️.
 
@@ -173,7 +173,7 @@ npm add @truffle/hdwallet-provider dotenv
 
 You will also need a **24-Word Mnemonic Phrase**. To configure your wallet, create a new `.env` file in the 'root' of your project and write your mnemonic in there:
 
-Remember to change the **24-Word Mnemonic** above for your own mnemonic. The contents of your `.env` file should read as follow:
+Remember to change the **24-Word Mnemonic** above to your own mnemonic. The contents of your `.env` file should read as follow:
 
 ```jsx
 MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe curve obey
@@ -185,7 +185,7 @@ MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe c
 
 For this step we need to change the `truffle-config.js` file.
 
-Your file for ethereum would look like this.
+Your file for ethereum would look like this:
 
 ```jsx
 require("dotenv").config();
@@ -218,7 +218,7 @@ module.exports = {
 };
 ```
 
-To migrate it to XDC network, we need to add a network for XDC mainnet and XDC testnet(apothem)
+To migrate it to XDC network, you'll need to add a network for XDC Network Mainnet and XDC testnet(apothem)
 
 ```jsx
 require("dotenv").config();
@@ -272,7 +272,7 @@ module.exports = {
 
 ## 🍕 Deploying
 
-In order to deploy our newly compiled contract artifacts to the blockchain, we need to create a deployment script into the migrations folder.
+In order to deploy our newly compiled contract artifacts to the blockchain, you'll have to create a deployment script in the migrations folder.
 
 Create a file `1_pizza_migration.js` in the migrations folder and write the following migration script:
 
@@ -337,7 +337,7 @@ Summary
 
 ## 🍕 Interacting with your contract using Truffle Console
 
-Another amazing tool that allow us to try out our contracts straight from our development environment is the `truffle console` CLI.
+The `truffle console` CLI  is another amazing tool that allows us to try out our contracts straight from our development environment.
 
 To start interacting with you smart contracts you can start running:
 
@@ -393,7 +393,7 @@ This transaction is immediately reflected in the corresponding block explorer, [
 
 # 🔍 Veryfing Contracts on the Block Explorer
 
-Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
+Once you have successfully deployed your smart contract to the blockchain, may find it interesting to verify your contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
 First lets check the address our contract is deployed to by running:
 
@@ -411,7 +411,7 @@ Network: xinfin (id: 50)
   Pizza: 0x4FA229354CdF9c49FD2752e3869150C24c6A80c7
 ```
 
-Here we have a `Pizza` contract deployed on XDC Mainnet at the `0x4FA229354CdF9c49FD2752e3869150C24c6A80c7`, we can search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
+There is a `Pizza` contract deployed on XDC Mainnet at the `0x4FA229354CdF9c49FD2752e3869150C24c6A80c7`. You can search for this newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
 <p align="center">
 
@@ -419,7 +419,7 @@ Here we have a `Pizza` contract deployed on XDC Mainnet at the `0x4FA229354CdF9c
 
 </p>
 
-And click in the `Verify And Publish` Option.
+Click in the `Verify And Publish` Option.
 
 We will be redirected to the Contract verification page where we need to fill out:
 
@@ -441,7 +441,7 @@ If everything is correctly filled out, your contract page on the block explorer 
 
 </p>
 
-In this page you can Read from, Write to, or simply read the information tied to your Smart Contract on the blockchain:
+In this page you can read from, write to, or simply read the information tied to your smart contract on the blockchain:
 
 <p align="center">
 

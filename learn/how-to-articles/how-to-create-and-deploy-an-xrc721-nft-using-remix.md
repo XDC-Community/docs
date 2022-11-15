@@ -22,7 +22,7 @@ description: Use Remix IDE to deploy an XRC721 Token.
 * [🚀 Setting up the development environment](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-setting-up-the-development-environment)
   * [⚒️ Creating XDCPay Wallet for signing transactions](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#️-creating-xdcpay-wallet-for-signing-transactions)
   * [⚒ Adding Testnet XDC to Development Wallet](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-adding-testnet-xdc-to-development-wallet)
-* [💵 Writing our first XRC721 Token](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-writing-our-first-xrc721-token)
+* [💵 Writing your first XRC721 Token](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-writing-our-first-xrc721-token)
   * [💵 OpenZeppelin](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-openzeppelin)
   * [💵 Events and Functions](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-events-and-functions)
   * [💵 Methods](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-methods)
@@ -49,7 +49,7 @@ In this tutorial, you will learn how to set up Remix IDE and use it to build, te
 
 ### 📰 About XRC721 Tokens
 
-XRC721 is a set of rules to standardize assets on the XinFin network. Every XRC721 Token must be able to execute the following methods:
+XRC721 is a set of rules to standardize assets on the XDC network. Every XRC721 Token must be able to execute the following methods:
 
 * `safeTransferFrom(address from, address to, uint256 tokenId)`
 * `transferFrom(address from, address to, uint256 tokenId)`
@@ -58,30 +58,30 @@ XRC721 is a set of rules to standardize assets on the XinFin network. Every XRC7
 * `setApprovalForAll(address operator, bool _approved)`
 * `isApprovedForAll(address owner, address operator)`
 
-These are the minimum required methods that allow an asset on the XinFin network to be called an XRC721 token. Also, a XRC721 token must be able to emit the following `Events` on the blockchain:
+These are the minimum required methods that allow an asset on the XDC Network to be called an XRC721 token. Also, an XRC721 token must be able to emit the following `Events` on the blockchain:
 
 * `Approval(address indexed owner, address indexed approved, uint256 indexed tokenId)`
 * `Transfer(address indexed from, address indexed to, uint256 indexed tokenId)`
 * `ApprovalForAll(address indexed owner, address indexed operator, bool approved)`
 
-Events are helpers that come in handy in the exhaustive labor of indexing state changes, and they are essential to off-chain applications to find relevant data on the blockchain. By mapping all `Transfer` events, for example, we can fetch all the historic data on token transfers more easily.
+Events are helpers that come in handy in the exhaustive labor of indexing state changes, and they are essential for off-chain applications to find relevant data on the blockchain. By mapping all `Transfer` events, for example, you can fetch all the historic data on token transfers more easily.
 
-Last but not least, a few contract constants that are public that are also very important to have are:
+A couple of important contract constants that are public are:
 
 * `name`
 * `symbol`
 
-Without these public constants, it would be impossible to label tokens on block explorers, for example. In this tutorial we will deploy a XRC721 token that have all the `Methods`, `Events` and `Constants` mentioned above.
+Without these public constants, it would be impossible to label tokens on block explorers, for example. Using this tutorial, you will deploy a XRC721 token that have all the `Methods`, `Events` and `Constants` mentioned above.
 
 ## 🚀 Setting up the development environment
 
-[Remix](https://remix.xinfin.network/#optimize=false\&runs=200\&evmVersion=null\&version=soljson-v0.8.7+commit.e28d00a7) is an online solidity IDE for compiling and deploying solidity code to EVM compatible blockchains. To begin working on a new smart contract, we must first create a new file in the contracts folder on the left side of the view pane.
+[Remix](https://remix.xinfin.network/#optimize=false\&runs=200\&evmVersion=null\&version=soljson-v0.8.7+commit.e28d00a7) is an online solidity IDE for compiling and deploying solidity code to EVM compatible blockchains. To begin working on a new smart contract, you must first create a new file in the contracts folder on the left side of the view pane.
 
 ![](https://user-images.githubusercontent.com/60708843/190065372-1e43e443-f13b-463a-abb6-7497ae7c8b8c.png)
 
 ### ⚒️ Creating XDCPay Wallet for signing transactions
 
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to have XDCPay wallet to sign our transactions and store XDC tokens.
+In order to get started deploying new contracts on XDC Mainnet and/or Apothem, you need to have XDCPay wallet to sign our transactions and store XDC tokens.
 
 * First we have to install the chrome extension of [XDCPay](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo).
 
@@ -105,13 +105,13 @@ In order to get started deploying new contracts on XDC Mainnet and/or Apothem, w
 
 ### ⚒ Adding Testnet XDC to Development Wallet
 
-Initially, our account would be empty, and we would require some XDC tokens to initiate blockchain transactions. We would use a faucet to fill our wallet with test XDC tokens for this. These tokens are worthless in and of themselves. They are simply used to test your contracts on the testnet in order to avoid losing your real money.
+Initially, your account will be empty, and XDC tokens would be required to initiate blockchain transactions. You'll use a faucet to fill our wallet with test XDC tokens for this purpose. These tokens are essentially worthless, but they are used to test your contracts on the testnet to avoid losing anything of value.
 
-* First, make a copy of your wallet address. Your wallet address would look like **`xdc057ac7de8ad6f21c7bb0dcc6a389ff9161b3b943`**. These account address are interchangeable with Ethereum network. We can access these accounts on Ethereum network by simply changing the initial `xdc` with `0x`.
+* First, make a copy of your wallet address. Your wallet address would look like **`xdc057ac7de8ad6f21c7bb0dcc6a389ff9161b3b943`**. These account addresses are interchangeable with the Ethereum network. We can access these accounts on the Ethereum network by simply replacing the initial `xdc` with `0x`.
 
 ![](https://user-images.githubusercontent.com/60708843/190072656-cf4a819b-92e1-4eb3-948b-7c6dbc8bafc1.png)
 
-* After that, navigate to the [XDC faucet](https://faucet.apothem.network/).
+* Next, navigate to the [XDC faucet](https://faucet.apothem.network/).
 * Enter your XDC account address and request for Test XDC here.
 
 ![](https://user-images.githubusercontent.com/60708843/190073022-1d893bce-5f21-494d-8e28-20cdb9b91299.png)
@@ -125,13 +125,13 @@ Initially, our account would be empty, and we would require some XDC tokens to i
 
 ## 💵 Writing our first XRC721 Token
 
-The source code for the XRC721 Token used in this tutorial is available here: [XRC721 Contract Folder](XRC721/contracts/XRC721.sol). But we will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC721 Tokens](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-about-xrc721-tokens).
+The source code for the XRC721 token used in this tutorial is available here: [XRC721 Contract Folder](XRC721/contracts/XRC721.sol). You will address all `Events`, `Methods` and `Constants` mentioned in the section [📰 About XRC721 Tokens](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-about-xrc721-tokens).
 
-Lets start by creating the `XRC721.sol` file.
+You can start by creating the `XRC721.sol` file.
 
 ![](https://user-images.githubusercontent.com/60708843/192205208-9d4cba9b-0bd8-4313-94ee-fabe376362c6.png)
 
-And write the shell of our smart contract by writing:
+Next, write the shell of your smart contract as follows:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -144,7 +144,7 @@ contract XRC721 {
 
 ### 💵 OpenZeppelin
 
-Inside our contract, we would be importing the scripts from **`OpenZeppelin`** Github repository. These form the foundation for our contract which is having all the code of different functions which needs to be implemented in our contract. We are also importing the **`Counters`** from **`OpenZeppelin`** Github repository which is used to keep account of the counter of the current tokenId.
+Inside your contract, you will be importing the scripts from **`OpenZeppelin`** Github repository. These form the foundation for your contract which has code for all of the different functions that need to be implemented in our contract. We are also importing the **`Counters`** from **`OpenZeppelin`** Github repository, which are used to keep account of the counter of the current tokenId.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -162,7 +162,7 @@ contract XRC721 is ERC721 {
 
 ### 💵 Events and Functions
 
-As mentioned in [📰 About XRC721 Tokens](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-about-xrc721-tokens). Events are very important part of a Smart Contract logic. Events have `indexed` variables that are variables that can be filtered by off-chain interfaces. We might be tempted to index all the variables that are tied to an on-chain event, however we can't go crazy about it since Solidity has a _maximum of 3 indexed variable_ limitation for Events. Lets see how `Transfer`, `Approval` and `ApprovalForAll` are written in OpenZeppelin in a simpler form.
+As mentioned in [📰 About XRC721 Tokens](how-to-create-and-deploy-an-xrc721-nft-using-remix.md#-about-xrc721-tokens), events are very important part of a Smart Contract logic. Events have `indexed` variables that can be filtered by off-chain interfaces. You might want to index all the variables that are tied to an on-chain event, however Solidity has a _maximum of 3 indexed variable_ limitation for events. Lets see how `Transfer`, `Approval` and `ApprovalForAll` are written in OpenZeppelin in a simpler form.
 
 ```solidity
 contract IXRC721 {
@@ -234,11 +234,11 @@ contract IXRC721 {
 }
 ```
 
-We do not need to write this code in our contract. It is already implemented with the OpenZeppelin github repository.
+You do not need to write this code in your contract. It is already implemented with the OpenZeppelin github repository.
 
 ### 💵 Methods
 
-We need to create the `constructor` that is a function called only once when the contract is deployed, where we can parse as arguments information such as the token name and symbol. We would also create another function `createToken` which will take an address and `mint` our created `XRC721 NFT Token` to that address:
+You'll need to create the `constructor`, which is a function called only once, when the contract is deployed. You can attach information such as the token name and symbol. You'll create another function, `createToken`, which will take an address and `mint` our created `XRC721 NFT Token` to that address:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -266,11 +266,11 @@ contract XRC721 is ERC721 {
 }
 ```
 
-And here we have implemented everything we needed to make our token compliant with the XRC721 Standard. Of course there are more features we can implement to this contract, such as the [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) library that replace naive mathematical operations for methods that will avoid `underflows` and `overflows`, and supply management methods such as `mint` and `burn`.
+You have implemented everything needed to make your token compliant with the XRC721 standard. Of course, there are more features that you can implement to this contract, such as the [SafeMath](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) library that replaces naive mathematical operations for methods that will avoid `underflows` and `overflows`, and supply management methods such as `mint` and `burn`.
 
 ### 💵 Compiling and Deploying
 
-Lets try compiling the `XRC721.sol` contract:
+Next, try to compile the `XRC721.sol` contract:
 
 * Open the Solidity Compiler in the left side navigation pane ![](https://user-images.githubusercontent.com/60708843/190066438-b1816a19-3051-4d04-87d2-a2b1ade198f4.png).
 * From the compiler option, select the compiler version **`v0.8.16`**.
@@ -280,7 +280,7 @@ Lets try compiling the `XRC721.sol` contract:
 
 ![](https://user-images.githubusercontent.com/60708843/192210162-5894a8df-e00b-4eaa-b095-5fe91d284eab.png)
 
-* After Successful Compilation, it will show ![alt](https://user-images.githubusercontent.com/60708843/190067983-4451282c-348c-4872-a57d-b2e698b59cad.png)
+* After a successful compilation, it will show ![alt](https://user-images.githubusercontent.com/60708843/190067983-4451282c-348c-4872-a57d-b2e698b59cad.png)
 * Once our contract has been compiled, we can deploy it to the Apothem Test Network.
 
 For deployment on the XDC Apothem Testnet. In either case, you need to have enough funds to pay for gas fees on the address that is being used for development.
@@ -306,32 +306,32 @@ For deployment on the XDC Apothem Testnet. In either case, you need to have enou
 
 ![](https://user-images.githubusercontent.com/60708843/192211053-2daa9e0b-0e05-4752-8405-b33904cdadf1.png)
 
-* Press the "transact" button and a popup will appear, which we must confirm in order to create the transaction for contract deployment.
+* Press the "transact" button and a popup will appear. Confirm in order to create the transaction for contract deployment.
 
 ![](https://user-images.githubusercontent.com/60708843/190075747-c7d1f7a6-2737-49ac-bd72-681a84bd95b0.png)
 
-* After that we need to `flatten` out our smart contract so that it can be easily verified on our Block Explorer.
-* For that we would right click on our smart contract file and here we would see an option to `flatten` our smart contracts on the bottom of menu pane.
+* After that you'll need to `flatten` out your smart contract so that it can be easily verified on the block explorer.
+* To do this, right click on our smart contract file and here we would see an option to `flatten` our smart contracts on the bottom of menu pane.
 
 ![](https://user-images.githubusercontent.com/60708843/192693257-87ad3508-e0e1-4bd9-b32c-0ca06faacdea.jpg)
 
-* Clicking on the flatten button will open a dialog box which we need to accept and a new icon for flatter is added to our left navigation pane.
+* Clicking on the flatten button will open a dialog box. Click accept and, a new icon for flatter will be added to your left navigation pane.
 
 ![](https://user-images.githubusercontent.com/60708843/192693831-673d676a-fddc-4da6-b39d-e4f7cfe91f6d.jpg)
 
-* After that we move to the flattener tab and will see the option to select our smart contract which we need to flatten. Here we will select our XRC721.sol smart contract and it will give an option to save the flattened smart contract.
+* Next, move to the flattener tab where you will see the option to select the smart contract that you need to flatten. Select the XRC721.sol smart contract and it will give an option to save the flattened smart contract.
 
 ![](https://user-images.githubusercontent.com/60708843/192696049-cb6ced5e-3f9e-415a-8ed1-09b8d0a25a91.jpg)
 
-* After flattening, we will be having the flattened file.
+* After flattening, we will be using the flattened file.
 
 This flattened code would be used further when we are verifying our token.
 
 ## 🔍 Verifying Contracts on the Block Explorer
 
-Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
+Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify your contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
-First lets check the address our contract is deployed. Go to your wallet and get the most recent transaction details, then copy the transaction address.
+First, check the address to which your contract is deployed. Go to your wallet and get the most recent transaction details, then copy the transaction address.
 
 ![](https://user-images.githubusercontent.com/60708843/190076901-179e4fac-d4e8-43c7-a657-ea525a4e3883.png)
 
@@ -339,17 +339,17 @@ Next, navigate to the [XDC Block explorer](https://explorer.apothem.network/) an
 
 ![](https://user-images.githubusercontent.com/60708843/190076901-179e4fac-d4e8-43c7-a657-ea525a4e3883.png)
 
-From there, we need to get the transaction details as well as the **`To Address`** where the contract is deployed.
+From there, you'll need to get the transaction details as well as the **`To Address`** where the contract is deployed.
 
 ![](https://user-images.githubusercontent.com/60708843/192211779-45553699-312f-4e62-8ddf-c2e211943e39.png)
 
-Here we have a `XRC721` contract deployed on XDC Mainnet at the `0x53bA8Cb12EaF09E6B0b671F39ac4798A6DA7d660`. This address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
+In our example, we have a `XRC721` contract deployed on XDC Mainnet at the `0x53bA8Cb12EaF09E6B0b671F39ac4798A6DA7d660`. This address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
 ![Verify 01](https://user-images.githubusercontent.com/78161484/190875518-828c0061-71de-42c2-b222-0b8427852d01.png)
 
-And click in the `Verify And Publish` Option.
+Next, click the `Verify And Publish` Option.
 
-We will be redirected to the Contract verification page where we need to fill out:
+You will be redirected to the Contract verification page where you will have to fill out:
 
 * Contract Name: _XRC721_
 * Compiler: _Check your_ `Remix IDE` _for Compiler Version_
@@ -367,39 +367,39 @@ If everything is correctly filled out, your contract page on the block explorer 
 
 With your XDCPay wallet, it is possible to interact with verified Smart Contracts on the [XinFin Network Block Explorer](https://explorer.xinfin.network/). You can read from, write to, or simply read the information tied to your Smart Contract on the blockchain.
 
-For that, we would first copy the address where our contract is deployed on the network.
+First, copy the address where our contract is deployed on the network.
 
-After that we would need to go back to the Remix IDE and paste that deployed contract address in the `At Address` button text box and click on that button.
+Next, go back to the Remix IDE and paste that deployed contract address in the `At Address` button text box and click on that button.
 
 ![](https://user-images.githubusercontent.com/60708843/192214035-726e991c-785c-4c72-bbeb-02cae0be0faa.png)
 
-This would fetch the contract and all the functions related to our deployed contract and we can easily play around with those functions.
+This will fetch the contract and all the functions related to tour deployed contract and we can easily play around with those functions.
 
 ![](https://user-images.githubusercontent.com/60708843/192214710-f4f49983-e315-472a-be7c-5d91f7c71011.png)
 
-Now here we would be minting a new NFT token to our wallet.
+Here, you'd be minting a new NFT token to our wallet.
 
-Here we would be passing on our `wallet address` and then we click on the `createToken` button.
+Then you'd be passing on your `wallet address` before clicking on the `createToken` button.
 
 ![](https://user-images.githubusercontent.com/60708843/192254561-f6de5540-8801-4f10-87fa-fbda5a525918.png)
 
-After clicking in `createToken`, we need to confirm the transaction on the XDCPay wallet:
+After clicking on `createToken`, you'll need to confirm the transaction on the XDCPay wallet:
 
 ![Verify 05](https://user-images.githubusercontent.com/78161484/190876653-eb8e558b-2b09-4c0f-ad5f-a3d17a54bf30.png)
 
-We can check for the minted token by going to our XDCPay Wallet and clicking on the `Tokens` tab and click on the `Add Token` button.
+You can check for the minted token by going to tour XDCPay Wallet and clicking on the `Tokens` tab and click on the `Add Token` button.
 
 ![Verify 05](https://user-images.githubusercontent.com/60708843/192256810-4ee5dad6-f4f5-4067-ba76-a5bb9b589c81.png)
 
-Then we have to add the deployed contract address on the `Token Address` text field. This will automatically fetch the token symbol. Then click on the `Add Token` button.
+Now you have to add the deployed contract address on the `Token Address` text field. This will automatically fetch the token symbol. Then click on the `Add Token` button.
 
 ![Verify 05](https://user-images.githubusercontent.com/60708843/192257221-be4f834f-ab55-471d-857e-d0e11836623f.png)
 
-Add our newly minted token is available in our wallet.
+Add your newly-minted token to your wallet!
 
 ![Verify 05](https://user-images.githubusercontent.com/60708843/192257728-188f6ec3-bf3a-40ce-bcf7-a57bef1482a9.png)
 
-And we can check our successful transaction on the [Block Explorer!](https://explorer.apothem.network/txs/0xa95719657bee4d87068d3407e2c53acd9e955ad6eebe6f81d6cfcc59a42d7bb5#overview)
+You can check your successful transaction on the [Block Explorer!](https://explorer.apothem.network/txs/0xa95719657bee4d87068d3407e2c53acd9e955ad6eebe6f81d6cfcc59a42d7bb5#overview)
 
 ***
 
