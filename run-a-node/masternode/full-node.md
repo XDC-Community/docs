@@ -17,7 +17,7 @@ Follow the written steps starting from step 1, or you can watch the video tutori
 Clone repository
 
 ```
-// git clone https://github.com/XinFinOrg/XinFin-Node.git
+git clone https://github.com/XinFinOrg/XinFin-Node.git
 ```
 
 ## Step 2&#x20;
@@ -25,7 +25,7 @@ Clone repository
 Then we change the directory to XinFin-Node
 
 ```
-// cd XinFin-Node
+cd XinFin-Node
 ```
 
 
@@ -35,7 +35,7 @@ Then we change the directory to XinFin-Node
 We need to install Docker and Docker-Compose by running the following command:
 
 ```
-// sudo ./setup/install_docker.sh
+sudo ./setup/install_docker.sh
 ```
 
 ## Step 4
@@ -43,7 +43,7 @@ We need to install Docker and Docker-Compose by running the following command:
 Create a new .env file and copy the env.example file that exist in the mainnet directory. We will ensure we are in the "mainnet" directory by typing these commands. Once in edit mode for the .env file, name your masternode and use an email address in the respective fields
 
 ```
-// cd mainnet
+cd mainnet
 cp env.example .env
 nano .env                                                            
 ```
@@ -51,7 +51,7 @@ nano .env
 ### For Testnet
 
 ```
-// // cd testnet
+cd testnet
 cp env.example .env
 nano .env 
 ```
@@ -63,7 +63,7 @@ nano .env
 #### For Mainnet run the following commands:
 
 ```
-// cd mainnet
+cd mainnet
 sudo docker-compose -f docker-compose.yml up -d
 ```
 
@@ -74,7 +74,7 @@ At this point you should be able to see your masternode on the list of nodes [he
 For Testnet run the following commands:&#x20;
 
 ```
-// cd testnet
+cd testnet
 sudo docker-compose -f apothem-network.yml up -d
 ```
 
@@ -85,7 +85,7 @@ Your coinbase address can be found in xdcchain/coinbase.txt file.
 For troubleshooting purposes, you can stop the node by using the following command on either Mainnet or Testnet:
 
 ```
-// sudo docker-compose -f apothem-network.yml down
+sudo docker-compose -f apothem-network.yml down
 ```
 
 ## Downloading a Network Snapshot&#x20;
@@ -97,25 +97,25 @@ The following steps are to expedite the syncing process of your node with the XD
 ### First safely bring down your node:&#x20;
 
 ```
-// sudo docker-compose -f docker-compose.yml down
+sudo docker-compose -f docker-compose.yml down
 ```
 
 ### Then remove the old xdchain file from the server
 
 ```
-// rm -rf xdcchain.tar
+rm -rf xdcchain.tar
 ```
 
 ### Download the snapshot&#x20;
 
 ```
-// wget https://download.xinfin.network/xdcchain.tar
+wget https://download.xinfin.network/xdcchain.tar
 ```
 
 ### Unpack the xdcchain.tar  file
 
 ```
-// tar -xvzf xdcchain.tar
+tar -xvzf xdcchain.tar
 ```
 
 ### The unpacking will take some time, and it will look like this:&#x20;
@@ -125,23 +125,23 @@ The following steps are to expedite the syncing process of your node with the XD
 ### The following command will move the xdcchain/XDC to xdcchain/XDC\_backup
 
 ```
-// mv  xdcchain/XDC xdcchain/XDC_backup
+mv  xdcchain/XDC xdcchain/XDC_backup
 ```
 
 ```
-// mv XDC xdcchain
+mv XDC xdcchain
 ```
 
 ### Then we are going to remove the old "nodekey" file
 
 ```
-// rm -rf xdcchain/XDC/nodekey
+rm -rf xdcchain/XDC/nodekey
 ```
 
 ### The last step is to run the bash upgrade.sh command
 
 ```
-// bash upgrade.sh
+bash upgrade.sh
 ```
 
 This command will bring your node up and it will start syncing to the network. Once up and running, your node will be synced to the network in just a few minutes.&#x20;

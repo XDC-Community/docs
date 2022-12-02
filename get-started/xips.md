@@ -189,6 +189,7 @@ The current XIP editors are
 
 * Jon McBee (@walterblueu)
 * Fisher Yu (@fishermanymc)
+* Phillipe Menezes&#x20;
 
 Emeritus XIP editors are
 
