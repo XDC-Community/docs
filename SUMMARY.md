@@ -76,6 +76,9 @@
     * [Full Node (Docker version)](run-a-node/masternode/full-node.md)
     * [One-Click-Installer Masternode (Windows OS)](run-a-node/masternode/standby-node.md)
     * [One-Click-Installer Masternode (macOS)](run-a-node/masternode/one-click-installer-masternode-macos.md)
+* [Subnets](subnets/README.md)
+  * [Requirements](subnets/requirements.md)
+  * [Deploy a subnet](subnets/deploy-a-subnet.md)
 
 ## Learn
 

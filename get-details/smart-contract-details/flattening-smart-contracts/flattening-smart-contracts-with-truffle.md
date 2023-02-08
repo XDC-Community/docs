@@ -1,53 +1,58 @@
 ---
 id: flatten-contract-truffle
 title: Flatten a Smart Contract Using Truffle
-description:  "Use Truffle to deploy and verify smart contract"
 keywords:
   - docs
   - apothem
   - token
   - flatten
   - truffle
+description: Use Truffle to deploy and verify smart contract
 ---
 
-# 🧭 Table of contents
+# Flattening Smart Contracts with Truffle
 
-- [🧭 Table of contents](#-table-of-contents)
-- [📰 Overview](#-overview)
-    - [What you will learn](#what-you-will-learn)
-    - [What you will do](#what-you-will-do)
-- [🚀 Setting up the development environment](#-setting-up-the-development-environment)
-  - [⚒ Starting a new Truffle Project](#-starting-a-new-truffle-project)
-  - [⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle](#-configuring-xdc-mainnet-and-apothem-testnet-on-truffle)
-  - [⚒ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
-- [💵 Writing Smart Contract](#-writing-smart-contract)
-  - [💵 Compiling and Testing](#-compiling-and-testing)
-    - [Testing](#testing)
-  - [💵 Deploying Contract](#-deploying-contract)
-  - [💵 Flattening Contract](#-flattening-contract)
-- [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
+## 🧭 Table of contents
 
-# 📰 Overview
+* [🧭 Table of contents](flattening-smart-contracts-with-truffle.md#-table-of-contents)
+* [📰 Overview](flattening-smart-contracts-with-truffle.md#-overview)
+  * [What you will learn](flattening-smart-contracts-with-truffle.md#what-you-will-learn)
+  * [What you will do](flattening-smart-contracts-with-truffle.md#what-you-will-do)
+* [🚀 Setting up the development environment](flattening-smart-contracts-with-truffle.md#-setting-up-the-development-environment)
+  * [⚒ Starting a new Truffle Project](flattening-smart-contracts-with-truffle.md#-starting-a-new-truffle-project)
+  * [⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle](flattening-smart-contracts-with-truffle.md#-configuring-xdc-mainnet-and-apothem-testnet-on-truffle)
+  * [⚒ Adding Testnet XDC to Development Wallet](flattening-smart-contracts-with-truffle.md#-adding-testnet-xdc-to-development-wallet)
+* [💵 Writing Smart Contract](flattening-smart-contracts-with-truffle.md#-writing-smart-contract)
+  * [💵 Compiling and Testing](flattening-smart-contracts-with-truffle.md#-compiling-and-testing)
+    * [Testing](flattening-smart-contracts-with-truffle.md#testing)
+  * [💵 Deploying Contract](flattening-smart-contracts-with-truffle.md#-deploying-contract)
+  * [💵 Flattening Contract](flattening-smart-contracts-with-truffle.md#-flattening-contract)
+* [🔍 Veryfing Contracts on the Block Explorer](flattening-smart-contracts-with-truffle.md#-veryfing-contracts-on-the-block-explorer)
+
+## 📰 Overview
+
 [Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine.
 
-### What you will learn
+#### What you will learn
+
 In this tutorial, you will learn how to set up Truffle and use it to build, test and deploy smart contract on both the XDC Network mainnet and XDC Apothem testnet and verify it on Block Explorer.
 
-### What you will do
-- Install and set up Truffle
-- Create a complex smart contract with dependencies (like OpenZeppelin)
-- Compile the smart contract
-- Test the smart contract
-- Deploy the smart contract
-- Flatten the smart contract
-- Verify the smart contract
+#### What you will do
 
-# 🚀 Setting up the development environment
+* Install and set up Truffle
+* Create a complex smart contract with dependencies (like OpenZeppelin)
+* Compile the smart contract
+* Test the smart contract
+* Deploy the smart contract
+* Flatten the smart contract
+* Verify the smart contract
+
+## 🚀 Setting up the development environment
 
 There are a few technical requirements before we start. Please install the following:
 
-- [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
-- [Git](https://git-scm.com/)
+* [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
+* [Git](https://git-scm.com/)
 
 Once we have those installed, we only need one command to install Truffle:
 
@@ -55,7 +60,7 @@ Once we have those installed, we only need one command to install Truffle:
 npm install -g truffle
 ```
 
-To verify that Truffle is installed properly, type **`truffle version`** on a terminal. You should see something like:
+To verify that Truffle is installed properly, type **`truffle version`** on a terminal. You should see something like:
 
 ```bash
 Truffle v5.5.27 (core: 5.5.27)
@@ -67,7 +72,7 @@ Web3.js v1.7.4
 
 If you see an error instead, make sure that your npm modules are added to your path.
 
-## ⚒ Starting a new Truffle Project
+### ⚒ Starting a new Truffle Project
 
 Lets start by setting up our folder, we are creating a project called `MyCounter`, create a new `MyCounter` folder by running on terminal
 
@@ -94,31 +99,29 @@ http://trufflesuite.com/docs
 
 And your folder files will look like this:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/190839624-495ef863-e177-4c62-81ca-680e5e6a4cab.png" alt="Step 01"/>
-</p>
+![Step 01](https://user-images.githubusercontent.com/78161484/190839624-495ef863-e177-4c62-81ca-680e5e6a4cab.png)
 
-
-## ⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle
+### ⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle
 
 In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to install two new dependencies that will be used in the `truffle-config.js` file. These dependencies are `@truffle/hdwallet-provider` and `dotenv`. First choose your preferred package manager. In this example we are using `yarn` but you can also use `npm`.
 
- If you never used `yarn` before, you might need to install it first. <br>‼️You can skip this step if you already have yarn installed‼️
+If you never used `yarn` before, you might need to install it first.\
+‼️You can skip this step if you already have yarn installed‼️
 
-```sh
+```
 npm install --global yarn
 ```
 
 Initialize your package manager on your folder and install the required dependencies:
 
-```sh
+```
 yarn init -y
 yarn add @truffle/hdwallet-provider dotenv
 ```
 
 You will also need a **24-Word Mnemonic Phrase**. To configure your wallet, create a new `.env` file and write your mnemonic by running:
 
-```sh
+```
 touch .env
 echo MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe curve obey >> .env
 ```
@@ -128,7 +131,6 @@ Remember to change the **24-Word Mnemonic** above for your own mnemonic. The con
 ```jsx
 MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe curve obey
 ```
-
 
 🚨 **Do not use the mnemonic in the example above in production or you can risk losing your assets and/or the ownership of your smart contracts!** 🚨
 
@@ -173,17 +175,17 @@ module.exports = {
 };
 ```
 
-## ⚒ Adding Testnet XDC to Development Wallet
+### ⚒ Adding Testnet XDC to Development Wallet
 
 It is possible to list all XDC addresses bound to your mnemonic on truffle by accessing the truffle console:
 
-```sh
+```
 truffle console --network xinfin
 ```
 
 Once the truffle console CLI opens, you can run:
 
-```sh
+```
 truffle(xinfin)> accounts
 ```
 
@@ -208,21 +210,19 @@ These accounts are on the Ethereum standard format starting with `0x`, but we ca
 
 With this account in hand, we can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png" alt="Step 02"/>
-</p>
+![Step 02](https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png)
 
-# 💵 Writing Smart Contract
+## 💵 Writing Smart Contract
 
 We will be using OpenZeppelin for this guide so lets install it first:
 
-```sh
+```
 yarn add @openzeppelin/contracts
 ```
 
 or using `npm`
 
-```sh
+```
 npm install @openzeppelin/contracts
 ```
 
@@ -254,17 +254,17 @@ contract MyCounter {
 }
 ```
 
-## 💵 Compiling and Testing
+### 💵 Compiling and Testing
 
 We can compile our `MyCounter.sol` by running:
 
-```sh
+```
 truffle compile
 ```
 
 If everything is correctly configured and there is no errors, you should see the following message on your console:
 
-```sh
+```
 Compiling your contracts...
 ===========================
 > Compiling ./contracts/MyCounter.sol
@@ -276,15 +276,14 @@ Compiling your contracts...
 
 And your folder should look like this:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/190875030-27137576-84b6-45a1-be1d-f52f55d6488f.png" alt="Step 03"/>
-</p>
+![Step 03](https://user-images.githubusercontent.com/78161484/190875030-27137576-84b6-45a1-be1d-f52f55d6488f.png)
 
-### Testing
+#### Testing
 
 Now lets create a simple test to see everything works as intended before we deploy our contract to live network. This will save us time and gas fees, so it is recommended you do as much as possible tests for your smart contracts before deploying.
 
 Create file `MyCounter.js` under `test` directory:
+
 ```javascript
 const MyCounter = artifacts.require("MyCounter");
 
@@ -315,13 +314,13 @@ contract("MyCounter", (accounts) => {
 
 Then run
 
-```sh
+```
 truffle test
 ```
 
 Your output should look like this:
 
-```sh
+```
 Contract: MyCounter
   ✔ should deploy MyCounter
   ✔ should increment and decrement MyCounter and show current count (131ms)
@@ -329,11 +328,11 @@ Contract: MyCounter
 2 passing (197ms)
 ```
 
-## 💵 Deploying Contract
+### 💵 Deploying Contract
 
 In order to deploy our newly compiled contract artifacts to the blockchain, we need to create a deployment script into the migrations folder:
 
-```sh
+```
 touch ./migrations/1_token_migration.js
 ```
 
@@ -349,13 +348,13 @@ module.exports = function (deployer) {
 
 If the migration script have no errors, we can go ahead and run the command:
 
-```sh
+```
 truffle migrate --network xinfin
 ```
 
 For deployment on XDC mainet, or:
 
-```sh
+```
 truffle migrate --network apothem
 ```
 
@@ -363,7 +362,7 @@ For deployment on the XDC Apothem Testnet. In either case, you need to have enou
 
 If the deployment is sucessful, the console should log the following message after migrations complete processing:
 
-```sh
+```
 1_counter_migration.js
 ======================
 
@@ -391,7 +390,7 @@ Summary
 > Final cost:          0.0032993 ETH
 ```
 
-## 💵 Flattening Contract
+### 💵 Flattening Contract
 
 If smart contract imports external files like our, we need to flatten it before verifying on Block Explorer.
 
@@ -415,19 +414,19 @@ truffle-flattener contracts/MyCounter.sol > MyCounterFlatten.sol
 
 Then open `MyCounterFlatten.sol` and remove every line which starts with `// SPDX-License-Identifier` except the first one. We do this because Block Explorer does not accepts contracts with mutliple license definition.
 
-# 🔍 Veryfing Contracts on the Block Explorer
+## 🔍 Veryfing Contracts on the Block Explorer
 
 Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
 First lets check the address our contract is deployed to by running:
 
-```sh
+```
 truffle networks
 ```
 
 If you have a contract already deployed, the console should log something like this:
 
-```sh
+```
 Network: apothem (id: 51)
   No contracts deployed.
 
@@ -437,34 +436,28 @@ Network: xinfin (id: 50)
 
 Here we have a `MyCounter` contract deployed on XDC Mainnet at the `0x53bA8Cb12EaF09E6B0b671F39ac4798A6DA7d660`. This address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
-<p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875518-828c0061-71de-42c2-b222-0b8427852d01.png" alt="Verify 01"/>
-</p>
+![Verify 01](https://user-images.githubusercontent.com/78161484/190875518-828c0061-71de-42c2-b222-0b8427852d01.png)
 
 And click in the `Verify And Publish` Option.
 
 We will be redirected to the Contract verification page where we need to fill out:
 
-- Contract Name: <em>MyCounter</em>
-- Compiler: <em> Check your</em> `truffle-config.js` <em>file for Compiler Version</em>
-- Contract Code: <em> Just paste everything from your</em> `MyCounterFlatten.sol` <em>file</em>
+* Contract Name: _MyCounter_
+* Compiler: _Check your_ `truffle-config.js` _file for Compiler Version_
+* Contract Code: _Just paste everything from your_ `MyCounterFlatten.sol` _file_
 
 ❕ Keep in mind that `Contract Code` should be `MyCounterFlatten.sol`, not `MyCounter.sol`. ❕
 
 Once everything is filled out, press Submit!
 
-<p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875635-f6d3aa36-47b2-4b09-ad6a-fe6df3fb11f1.png" alt="Verify 02"/>
-</p>
+![Verify 02](https://user-images.githubusercontent.com/78161484/190875635-f6d3aa36-47b2-4b09-ad6a-fe6df3fb11f1.png)
 
 If everything is correctly filled out, your contract page on the block explorer should display a new tab called `Contract`:
 
-<p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875780-6223b4b0-fecc-4e79-83bc-c810c5b0351c.png" alt="Verify 03"/>
-</p>
+![Verify 03](https://user-images.githubusercontent.com/78161484/190875780-6223b4b0-fecc-4e79-83bc-c810c5b0351c.png)
 
----
+***
 
-For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).<br>
-For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.community/).<br>
+For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).\
+For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.community/).\
 Resources used during the deployment of the MyCounter can be found at [MyCounter Contract Folder](https://github.com/XDC-Community/docs/tree/main/how-to/SmartContract/Flatten/Truffle/example-flatten-smart-contract).

@@ -1,59 +1,63 @@
 ---
 id: defi-app-truffle
 title: DeFi App using Truffle and Ganache
-description:  "Use Truffle and Ganache to create DeFi App"
 keywords:
   - docs
   - apothem
   - token
   - DeFi
   - truffle
+description: Use Truffle and Ganache to create DeFi App
 ---
 
-# 🧭 Table of contents
+# How To Use Truffle and Ganache to Create DeFi App
 
-- [🧭 Table of contents](#-table-of-contents)
-- [📰 Overview](#-overview)
-    - [What you will learn](#what-you-will-learn)
-    - [What you will do](#what-you-will-do)
-  - [📰 About DeFi](#-about-defi)
-- [🚀 Setting up the development environment](#-setting-up-the-development-environment)
-  - [⚒ Starting a new Truffle Project](#-starting-a-new-truffle-project)
-  - [⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle](#-configuring-xdc-mainnet-and-apothem-testnet-on-truffle)
-  - [⚒ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
-- [💵 Creating your first DeFi App](#-creating-our-first-defi-app)
-  - [💵 Create and Deploy XRC20 Token](#-create-and-deploy-xrc20-token)
-  - [💵 Create FarmToken contract](#-create-farmtoken-contract)
-  - [💵 Compiling and Deploying](#-compiling-and-deploying)
-  - [💵 Testing FarmToken contract](#-testing-farmtoken-contract)
-  - [💵 Deploying on a live network](#-deploying-on-a-live-network)
-- [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
+## 🧭 Table of contents
 
-# 📰 Overview
+* [🧭 Table of contents](how-to-use-truffle-and-ganache-to-create-defi-app.md#-table-of-contents)
+* [📰 Overview](how-to-use-truffle-and-ganache-to-create-defi-app.md#-overview)
+  * [What you will learn](how-to-use-truffle-and-ganache-to-create-defi-app.md#what-you-will-learn)
+  * [What you will do](how-to-use-truffle-and-ganache-to-create-defi-app.md#what-you-will-do)
+  * [📰 About DeFi](how-to-use-truffle-and-ganache-to-create-defi-app.md#-about-defi)
+* [🚀 Setting up the development environment](how-to-use-truffle-and-ganache-to-create-defi-app.md#-setting-up-the-development-environment)
+  * [⚒ Starting a new Truffle Project](how-to-use-truffle-and-ganache-to-create-defi-app.md#-starting-a-new-truffle-project)
+  * [⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle](how-to-use-truffle-and-ganache-to-create-defi-app.md#-configuring-xdc-mainnet-and-apothem-testnet-on-truffle)
+  * [⚒ Adding Testnet XDC to Development Wallet](how-to-use-truffle-and-ganache-to-create-defi-app.md#-adding-testnet-xdc-to-development-wallet)
+* [💵 Creating your first DeFi App](how-to-use-truffle-and-ganache-to-create-defi-app.md#-creating-our-first-defi-app)
+  * [💵 Create and Deploy XRC20 Token](how-to-use-truffle-and-ganache-to-create-defi-app.md#-create-and-deploy-xrc20-token)
+  * [💵 Create FarmToken contract](how-to-use-truffle-and-ganache-to-create-defi-app.md#-create-farmtoken-contract)
+  * [💵 Compiling and Deploying](how-to-use-truffle-and-ganache-to-create-defi-app.md#-compiling-and-deploying)
+  * [💵 Testing FarmToken contract](how-to-use-truffle-and-ganache-to-create-defi-app.md#-testing-farmtoken-contract)
+  * [💵 Deploying on a live network](how-to-use-truffle-and-ganache-to-create-defi-app.md#-deploying-on-a-live-network)
+* [🔍 Veryfing Contracts on the Block Explorer](how-to-use-truffle-and-ganache-to-create-defi-app.md#-veryfing-contracts-on-the-block-explorer)
+
+## 📰 Overview
+
 [Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by leveraging an Ethereum Virtual Machine. [Ganache](https://trufflesuite.com/ganache/) is a tool to create a local blockchain for testing your smart contracts. It simulates all the features of a real blockchain network but costs you nothing to deploy and test your code.
 
-### What you will learn
+#### What you will learn
+
 In this tutorial, we will build a DeFi Application with Solidity where users can deposit an XRC20 token to the smart contract and it will mint and transfer Farm Tokens to them. The users can later withdraw their XRC20 tokens by burning their Farm Token with a smart contract, and the XRC20 tokens will be transferred back to them.
 
-### What you will do
+#### What you will do
 
-- Install and setup Truffle and Ganache
-- Create a Truffle project
-- Create an XRC20 Token
-- Compile an XRC20 Token
-- Deploy an XRC20 Token
-- Create FarmToken Smart Contract
+* Install and setup Truffle and Ganache
+* Create a Truffle project
+* Create an XRC20 Token
+* Compile an XRC20 Token
+* Deploy an XRC20 Token
+* Create FarmToken Smart Contract
 
-## 📰 About DeFi
+### 📰 About DeFi
 
 Decentralized finance, or **DeFi**, is a term which describes blockchain-based financial services. DeFi provides virtually any financial service on a blockchain in a permissionless way. You can borrow, lend, stake, trade, and more using DeFi services.
 
-# 🚀 Setting up the development environment
+## 🚀 Setting up the development environment
 
 There are a few technical requirements before we start. Please install the following:
 
-- [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
-- [Git](https://git-scm.com/)
+* [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
+* [Git](https://git-scm.com/)
 
 Once we have those installed, we only need one command to install Truffle:
 
@@ -61,7 +65,7 @@ Once we have those installed, we only need one command to install Truffle:
 npm install -g truffle
 ```
 
-To verify that Truffle is installed properly, type **`truffle version`** on a terminal. You should see something like:
+To verify that Truffle is installed properly, type **`truffle version`** on a terminal. You should see something like:
 
 ```bash
 Truffle v5.5.27 (core: 5.5.27)
@@ -73,7 +77,7 @@ Web3.js v1.7.4
 
 If you see an error instead, make sure that your npm modules are added to your path.
 
-## ⚒ Starting a new Truffle Project
+### ⚒ Starting a new Truffle Project
 
 You will start by setting up tour folder. In this example, we are creating a project called `FarmToken`. You can create a new `FarmToken` folder by running on the following on terminal:
 
@@ -100,31 +104,29 @@ http://trufflesuite.com/docs
 
 Your folder files will look like this:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/190839624-495ef863-e177-4c62-81ca-680e5e6a4cab.png" alt="Step 01"/>
-</p>
+![Step 01](https://user-images.githubusercontent.com/78161484/190839624-495ef863-e177-4c62-81ca-680e5e6a4cab.png)
 
-
-## ⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle
+### ⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle
 
 In order to get started deploying new contracts on XDC Mainnet and/or Apothem, you'll need to install two new dependencies that will be used in the `truffle-config.js` file. These dependencies are `@truffle/hdwallet-provider` and `dotenv`. First, choose your preferred package manager. In this example we are using `yarn` but you can also use `npm`.
 
- If you never used `yarn` before, you might need to install it first. <br>‼️You can skip this step if you already have yarn installed‼️
+If you never used `yarn` before, you might need to install it first.\
+‼️You can skip this step if you already have yarn installed‼️
 
-```sh
+```
 npm install --global yarn
 ```
 
 Initialize your package manager on your folder and install the required dependencies:
 
-```sh
+```
 yarn init -y
 yarn add @truffle/hdwallet-provider dotenv
 ```
 
 You will also need a **24-Word Mnemonic Phrase**. To configure your wallet, create a new `.env` file and write your mnemonic by running:
 
-```sh
+```
 touch .env
 echo MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe curve obey >> .env
 ```
@@ -134,7 +136,6 @@ Remember to change the **24-Word Mnemonic** above for your own mnemonic. The con
 ```jsx
 MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe curve obey
 ```
-
 
 🚨 **Do not use the mnemonic in the example above in production or you can risk losing your assets and/or the ownership of your smart contracts!** 🚨
 
@@ -179,17 +180,17 @@ module.exports = {
 };
 ```
 
-## ⚒ Adding Testnet XDC to Development Wallet
+### ⚒ Adding Testnet XDC to Development Wallet
 
 It is possible to list all XDC addresses bound to your mnemonic on truffle by accessing the truffle console:
 
-```sh
+```
 truffle console --network xinfin
 ```
 
 Once the truffle console CLI opens, you can run:
 
-```sh
+```
 truffle(xinfin)> accounts
 ```
 
@@ -214,31 +215,29 @@ These accounts use the Ethereum standard format starting with `0x`, but we can s
 
 With this account in hand, you can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png" alt="Step 02"/>
-</p>
+![Step 02](https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png)
 
-# 💵 Creating our first DeFi App
+## 💵 Creating our first DeFi App
 
-The source code for the DeFi App used in this tutorial is available here: [FarmToken Contract](https://github.com/XDC-Community/docs/blob/main/how-to/DeFi/Truffle/FarmToken/contracts/FarmToken.sol) and [MyToken Contract](https://github.com/XDC-Community/docs/blob/main/how-to/DeFi/Truffle/FarmToken/contracts/MyToken.sol).
+The source code for the DeFi App used in this tutorial is available here: [FarmToken Contract](../../how-to/DeFi/Truffle/FarmToken/contracts/FarmToken.sol) and [MyToken Contract](../../how-to/DeFi/Truffle/FarmToken/contracts/MyToken.sol).
 
-## 💵 Create and Deploy XRC20 Token
+### 💵 Create and Deploy XRC20 Token
 
 Before creating FarmToken contract, you should first create a new XRC20 token. This is going to be a quick guide, but if you want an in-depth understanding of the `XRC20` standard, please visit the following tutorials:
 
-- [Create XRC20 token using Hardhat](https://docs.xdc.community/learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-hardhat)
-- [Create XRC20 token using Remix](https://docs.xdc.community/learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-remix)
-- [Create XRC20 token using Truffle](https://docs.xdc.community/learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-truffle)
+* [Create XRC20 token using Hardhat](https://docs.xdc.community/learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-hardhat)
+* [Create XRC20 token using Remix](https://docs.xdc.community/learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-remix)
+* [Create XRC20 token using Truffle](https://docs.xdc.community/learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-truffle)
 
 We will need to install OpenZeppelin in order to not writing all code by ourself
 
-```sh
+```
 yarn add @openzeppelin/contracts
 ```
 
 or using `npm`
 
-```sh
+```
 npm install @openzeppelin/contracts
 ```
 
@@ -256,7 +255,7 @@ contract XRC20Token is ERC20 {
 }
 ```
 
-## 💵 Create FarmToken contract
+### 💵 Create FarmToken contract
 
 Create another smart contract called `FarmToken.sol`.
 
@@ -307,17 +306,17 @@ contract FarmToken is ERC20 {
 
 `FarmToken` is a XRC20 token, but with 3 custom commands. `balance` shows how much of `MyToken` our `FarmToken` holds. `deposit` transfers `MyToken` from our account to `FarmToken` and gives us respective amount of `FarmToken`. `withdraw` burns our `FarmToken` and returns back `MyToken` to us. The latter prevents you from having both same amounts of `FarmToken` and `MyToken`, as you can hold only one of them.
 
-## 💵 Compiling and Deploying
+### 💵 Compiling and Deploying
 
 We can compile our smart contracts (`FarmToken.sol` and `MyToken.sol`) by running:
 
-```sh
+```
 truffle compile
 ```
 
 If everything is correctly configured and there are no errors, you should see the following message on your console:
 
-```sh
+```
 Compiling your contracts...
 ===========================
 > Compiling ./contracts/FarmToken.sol
@@ -335,11 +334,11 @@ Compiling your contracts...
 
 And your folder should look like this:
 
-![folder_struct](https://user-images.githubusercontent.com/102393474/192887344-772b3e7a-a43a-47b1-a255-3a6f04f11ba5.png)
+![folder\_struct](https://user-images.githubusercontent.com/102393474/192887344-772b3e7a-a43a-47b1-a255-3a6f04f11ba5.png)
 
 In order to deploy our newly-compiled contract artifacts to the blockchain, you'll need to create a deployment script into the migrations folder:
 
-```sh
+```
 touch ./migrations/1_defi_migration.js
 ```
 
@@ -365,19 +364,19 @@ module.exports = async function (deployer) {
 }
 ```
 
-Now, you can run it on a ganache local network. First, open the Ganache app and choose the `Quickstart` option to start your local blockchain network. 
+Now, you can run it on a ganache local network. First, open the Ganache app and choose the `Quickstart` option to start your local blockchain network.
 
-![ganache_home](https://user-images.githubusercontent.com/102393474/192887131-53f9bcec-9843-4027-8ec1-8b442c2d2bb7.png)
+![ganache\_home](https://user-images.githubusercontent.com/102393474/192887131-53f9bcec-9843-4027-8ec1-8b442c2d2bb7.png)
 
 Next, deploy contracts by running:
 
-```sh
+```
 truffle migrate
 ```
 
 If everything is fine, you'll have an output like this:
 
-```sh
+```
 Starting migrations...
 ======================
 > Network name:    'ganache'
@@ -428,21 +427,20 @@ Summary
 > Final cost:          0.06297366 ETH
 ```
 
-This is what you will see from Ganache app.
-![ganache_0](https://user-images.githubusercontent.com/102393474/192887165-4e766c71-5167-4ef7-9e00-2568ece97580.png)
+This is what you will see from Ganache app. ![ganache\_0](https://user-images.githubusercontent.com/102393474/192887165-4e766c71-5167-4ef7-9e00-2568ece97580.png)
 
-![ganache_1](https://user-images.githubusercontent.com/102393474/192887171-6ba7b46d-80d4-4d0b-96a5-092cca193a30.png)
+![ganache\_1](https://user-images.githubusercontent.com/102393474/192887171-6ba7b46d-80d4-4d0b-96a5-092cca193a30.png)
 
-
-## 💵 Testing FarmToken contract
-
+### 💵 Testing FarmToken contract
 
 Create a `scripts` folder where we will put our files for testing.
+
 ```bash
 mkdir scripts
 ```
 
 Next, you can create your first script to check balance of `FarmToken`. Create file `getMyTokenBalance.js` and paste:
+
 ```javascript
 const MyToken = artifacts.require("XRC20Token")
 const FarmToken = artifacts.require("FarmToken")
@@ -458,13 +456,14 @@ module.exports = async function (callback) {
 
 After that, you can run a script to check our `FarmToken` balance: `truffle exec ./scripts/getMyTokenBalance.js`
 
-```sh
+```
 Using network 'ganache'.
 
 0
 ```
 
 We now need a script to deposit our tokens in the `FarmToken` contract. Create a file `depositMyToken.js`
+
 ```javascript
 const MyToken = artifacts.require("XRC20Token")
 const FarmToken = artifacts.require("FarmToken")
@@ -555,11 +554,11 @@ module.exports = async function (callback) {
 
 It's time to deposit some tokens.
 
-```sh
+```
 truffle exec ./scripts/depositMyToken.js
 ```
 
-```sh
+```
 Using network 'ganache'.
 
 Amount of MyToken FarmToken is allowed to transfer on our behalf Before: 0
@@ -581,7 +580,7 @@ Balance FarmToken After TokenFarm 0
 
 Check your balance again using `truffle exec ./scripts/getMyTokenBalance.js`
 
-```sh
+```
 Using network 'ganache'.
 
 100
@@ -590,6 +589,7 @@ Using network 'ganache'.
 Everything should be working as intended.
 
 Finally, you can check if we can withdraw your tokens by creating a file called `withdrawMyToken.js`:
+
 ```javascript
 const MyToken = artifacts.require("XRC20Token")
 const FarmToken = artifacts.require("FarmToken")
@@ -659,11 +659,11 @@ module.exports = async function (callback) {
 
 Now, you can run it:
 
-```sh
+```
 truffle exec ./scripts/withdrawMyToken.js
 ```
 
-```sh
+```
 Using network 'ganache'.
 
 *** My Token ***
@@ -681,21 +681,21 @@ Balance FarmToken After accounts[0] 0
 Balance FarmToken After TokenFarm 0
 ```
 
-## 💵 Deploying on a live network
+### 💵 Deploying on a live network
 
 Finally, you can deploy everything on a XDC Apothem Testnet.
 
-```sh
+```
 truffle migrate --network apothem
 ```
 
 If you want to deploy it on XDC mainet, change network to `xinfin`.
 
-```sh
+```
 truffle migrate --network xinfin
 ```
 
-# 🔍 Veryfing Contracts on the Block Explorer
+## 🔍 Veryfing Contracts on the Block Explorer
 
 Once you have successfully deployed your smart contract to the blockchain, you might want to verify your contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
@@ -721,35 +721,28 @@ Next, open `MyToken_flat.sol` and remove every line which starts with `// SPDX-L
 
 Now, lets grab the `MyToken.sol` address from the deploying step: this address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
-<p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875518-828c0061-71de-42c2-b222-0b8427852d01.png" alt="Verify 01"/>
-</p>
+![Verify 01](https://user-images.githubusercontent.com/78161484/190875518-828c0061-71de-42c2-b222-0b8427852d01.png)
 
 Click on the `Verify And Publish` Option.
 
 You will be redirected to the contract verification page where we need to fill out:
 
-- Contract Name: <em>XRC20Token</em>
-- Compiler: <em> Check your</em> `truffle-config.js` <em>file for Compiler Version</em>
-- Contract Code: <em> Just paste everything from your</em> `MyToken_flat.sol` <em>file</em>
+* Contract Name: _XRC20Token_
+* Compiler: _Check your_ `truffle-config.js` _file for Compiler Version_
+* Contract Code: _Just paste everything from your_ `MyToken_flat.sol` _file_
 
 Once everything is filled out, press Submit!
 
-<p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875635-f6d3aa36-47b2-4b09-ad6a-fe6df3fb11f1.png" alt="Verify 02"/>
-</p>
+![Verify 02](https://user-images.githubusercontent.com/78161484/190875635-f6d3aa36-47b2-4b09-ad6a-fe6df3fb11f1.png)
 
 If everything was filled out correctly, your contract page on the block explorer should display a new tab called `Contract`:
 
-<p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190875780-6223b4b0-fecc-4e79-83bc-c810c5b0351c.png" alt="Verify 03"/>
-</p>
+![Verify 03](https://user-images.githubusercontent.com/78161484/190875780-6223b4b0-fecc-4e79-83bc-c810c5b0351c.png)
 
 Repeat those steps if you want to verify `FarmToken.sol`, except this time `Contract Name` will be `FarmToken` and source code will be from `FarmToken_flat.sol`
 
----
+***
 
-For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).<br>
-For more information about XDC Network, Please Visit [XDC Community Documentation on GitBook](https://docs.xdc.community/).<br>
+For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).\
+For more information about XDC Network, Please Visit [XDC Community Documentation on GitBook](https://docs.xdc.community/).\
 Resources used during the deployment of the DeFi App can be found at [FarmToken Contract Folder](https://github.com/XDC-Community/docs/tree/main/how-to/DeFi/Truffle/FarmToken/contracts).
-
