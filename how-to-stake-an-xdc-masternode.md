@@ -28,11 +28,22 @@ Follow these steps to stake your node.
 
 <figure><img src=".gitbook/assets/node3.JPG" alt=""><figcaption><p>If you dont have your KYC document ready. You can download a copy via the highlighted links on this image. </p></figcaption></figure>
 
-5. Once the file has been uploaded, you will see that KYC shows "True." At this point, your node is now staked with 10,000,000 XDC.  &#x20;
+5. Once the file has been uploaded, you will see that KYC shows "True."&#x20;
 
 <figure><img src=".gitbook/assets/node4.JPG" alt=""><figcaption></figcaption></figure>
 
-6. You can also verify the transaction if you open your wallet, click on "Transactions" and click on the "Propose" event. &#x20;
+6. Click on "Become a candidate" and input your coinbase address from your node and hit apply.
 7.
 
-    <figure><img src=".gitbook/assets/node5.JPG" alt=""><figcaption></figcaption></figure>
+    <figure><img src=".gitbook/assets/node6.JPG" alt=""><figcaption></figcaption></figure>
+8. Once you click apply, your wallet will prompt you to sign the transaction. Click "Confirm" on your wallet.
+9.
+
+    <figure><img src=".gitbook/assets/node7.JPG" alt=""><figcaption></figcaption></figure>
+10. Once the transaction executes successfully, you will get a notification at the bottom right side of the screen as shown below.&#x20;
+11.
+
+    <figure><img src=".gitbook/assets/node8.JPG" alt=""><figcaption></figcaption></figure>
+12. You can also verify the transaction if you open your wallet, click on "Transactions" and click on the "Propose" event. &#x20;
+
+<figure><img src=".gitbook/assets/node5.JPG" alt=""><figcaption></figcaption></figure>
