@@ -15,7 +15,9 @@ Here’s how you built a XDC01 blockchain network, in this repository you will g
 
 ## Description
 
-XDC subnets allowf for applications to run local along side the public main network&#x20;
+XDC subnets allow for private applications to run locally along side the public main network
+
+This allows for Developers to store data privately off chain on thier own local networks to manage user data privately
 
 
 
