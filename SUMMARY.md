@@ -77,8 +77,6 @@
     * [One-Click-Installer Masternode (Windows OS)](run-a-node/masternode/standby-node.md)
     * [One-Click-Installer Masternode (macOS)](run-a-node/masternode/one-click-installer-masternode-macos.md)
 * [How to Stake an XDC Masternode](how-to-stake-an-xdc-masternode.md)
-* [Subnets](subnets/README.md)
-  * [XDC Relayer](subnets/requirements.md)
 
 ## Learn
 
