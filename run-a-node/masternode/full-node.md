@@ -75,7 +75,7 @@ For Testnet run the following commands:&#x20;
 
 ```
 cd testnet
-sudo docker-compose -f apothem-network.yml up -d
+sudo docker-compose -f docker-compose.yml up -d
 ```
 
 You should be able to see your node listed on the \[Apothem Network] page. Select **"Switch to LiveNet"** to check **LiveNetwork** Stats and Select **"Switch to TestNet"** for **TestNetwork.**
@@ -85,7 +85,7 @@ Your coinbase address can be found in xdcchain/coinbase.txt file.
 For troubleshooting purposes, you can stop the node by using the following command on either Mainnet or Testnet:
 
 ```
-sudo docker-compose -f apothem-network.yml down
+sudo docker-compose -f docker-compose.yml down
 ```
 
 ## Downloading a Network Snapshot&#x20;
