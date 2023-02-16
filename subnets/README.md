@@ -11,7 +11,9 @@ description: >-
 
 ## Description
 
+XDC subnets allow for applications to run local along side the public main network&#x20;
 
+These applications can run private data and private functionality which can ive more versitality to the functionality of blockchain reasources as well as allow for internal redundancy of network resorces in the event of a local outage&#x20;
 
 ## XDPoSChain
 
