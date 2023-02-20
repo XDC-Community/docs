@@ -19,31 +19,31 @@ Follow these steps to stake your node.
 1. Go to [https://www.xinfin.network/#masternode](https://www.xinfin.network/#masternode) and switch to either mainnet or Apothem:&#x20;
 2.  Click on login
 
-    <figure><img src=".gitbook/assets/node1.JPG" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/node1.JPG" alt=""><figcaption></figcaption></figure>
 3. You will be presented with the following options to log in. We will be using XDCPay for this tutorial:&#x20;
 
-<figure><img src=".gitbook/assets/node2.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/node2.JPG" alt=""><figcaption></figcaption></figure>
 
 4. Once logged in, click on "Become a candidate" and you will see the following screen:
 
-<figure><img src=".gitbook/assets/node3.JPG" alt=""><figcaption><p>If you dont have your KYC document ready. You can download a copy via the highlighted links on this image. </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/node3.JPG" alt=""><figcaption><p>If you dont have your KYC document ready. You can download a copy via the highlighted links on this image. </p></figcaption></figure>
 
 5. Once the file has been uploaded, you will see that KYC shows "True."&#x20;
 
-<figure><img src=".gitbook/assets/node4.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/node4.JPG" alt=""><figcaption></figcaption></figure>
 
 6. Click on "Become a candidate" and input your coinbase address from your node and hit apply.
 
-<figure><img src=".gitbook/assets/node6.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/node6.JPG" alt=""><figcaption></figcaption></figure>
 
 7. Once you click apply, your wallet will prompt you to sign the transaction. Click "Confirm" on your wallet.
 
-<figure><img src=".gitbook/assets/node7.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/node7.JPG" alt=""><figcaption></figcaption></figure>
 
 8. Once the transaction executes successfully, you will get a notification at the bottom right side of the screen as shown below.&#x20;
 
-<figure><img src=".gitbook/assets/node8.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/node8.JPG" alt=""><figcaption></figcaption></figure>
 
 9. You can also verify the transaction if you open your wallet, click on "Transactions" and click on the "Propose" event. &#x20;
 
-<figure><img src=".gitbook/assets/node5.JPG" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/node5.JPG" alt=""><figcaption></figcaption></figure>

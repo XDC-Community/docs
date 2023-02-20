@@ -73,10 +73,12 @@
     * [Business White Paper](https://github.com/XinFinOrg/Developer-Resource/blob/master/Docs/wp-and-research/whitepaper-tech.pdf)
 * [Run a Node](run-a-node/README.md)
   * [Masternode](run-a-node/masternode/README.md)
+    * [How to Stake an XDC Masternode](run-a-node/masternode/how-to-stake-an-xdc-masternode.md)
     * [Full Node (Docker version)](run-a-node/masternode/full-node.md)
     * [One-Click-Installer Masternode (Windows OS)](run-a-node/masternode/standby-node.md)
     * [One-Click-Installer Masternode (macOS)](run-a-node/masternode/one-click-installer-masternode-macos.md)
-* [How to Stake an XDC Masternode](how-to-stake-an-xdc-masternode.md)
+* [Subnets](subnets/README.md)
+  * [XDC Relayer](subnets/xdc-relayer.md)
 
 ## Learn
 
