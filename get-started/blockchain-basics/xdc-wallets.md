@@ -5,7 +5,7 @@ description: >-
   are digital and can be accessed from anywhere.
 ---
 
-# What is an XDC Wallet
+# XDC Wallets
 
 
 
