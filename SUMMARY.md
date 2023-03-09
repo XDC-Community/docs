@@ -6,6 +6,7 @@
     * [What is a Blockchain](get-started/blockchain-basics/what-is-a-blockchain.md)
     * [What is a dApp](get-started/blockchain-basics/what-is-a-dapp.md)
     * [Why XDC Network](get-started/blockchain-basics/why-xdc-network.md)
+    * [What is an XDC Wallet](get-started/blockchain-basics/what-is-an-xdc-wallet.md)
   * [XDC Design](get-started/xdc-design/README.md)
     * [Consensus Mechanism](get-started/xdc-design/consensus-mechanism.md)
     * [Masternodes](get-started/xdc-design/masternodes.md)
