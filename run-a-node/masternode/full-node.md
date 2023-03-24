@@ -88,19 +88,21 @@ For troubleshooting purposes, you can stop the node by using the following comma
 sudo docker-compose -f docker-compose.yml down
 ```
 
-## Downloading a Network Snapshot&#x20;
+## Downloading a Network Snapshot (Mainnet or Apothem)
 
 The following steps are to expedite the syncing process of your node with the XDC Network.  If you followed the steps above, your node will take 3-4 days to sync up with the network fully.  You can reduce that time by downloading a network snapshot and bringing your node back up after the chain has been downloaded and unpacked.&#x20;
 
 {% embed url="https://youtu.be/ZQF3f0Zd6-k" %}
 
-### First safely bring down your node:&#x20;
+## Mainnet Snapshot
+
+### Bring down your node:&#x20;
 
 ```
 sudo docker-compose -f docker-compose.yml down
 ```
 
-### Then remove the old xdchain file from the server
+### Remove the old xdchain file from the server
 
 ```
 rm -rf xdcchain.tar
@@ -148,4 +150,41 @@ This command will bring your node up and it will start syncing to the network. O
 
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-###
+## Apothem Snapshot
+
+### Bring down your node:&#x20;
+
+```
+sudo docker-compose -f docker-compose.yml down
+```
+
+### Remove the old xdchain file from the server
+
+```
+rm -rf apothem.tar
+```
+
+### Download the snapshot&#x20;
+
+```
+wget https://download.apothem.network/apothem.tar
+```
+
+### Unpack the xdcchain.tar  file
+
+```
+tar -xvzf apothem.tar
+```
+
+## Move the xdcchain-testnet &#x20;
+
+```
+mv XDC xdcchain-testnet
+```
+
+## Bring up the node
+
+```
+sudo docker-compose -f docker-compose.yml up -d
+```
+
