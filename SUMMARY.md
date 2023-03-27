@@ -44,6 +44,7 @@
     * [Apothem Testnet (XDPoS)](get-details/networks/apothem.md)
   * [EVM Compatibility](get-details/evm-compatibility/README.md)
     * [XDC Network Ethereum Fork Details](get-details/evm-compatibility/xdc-fork-details.md)
+    * [Migrating from EVM to XDC](get-details/evm-compatibility/migrating-from-evm-to-xdc.md)
   * [XIP Proposals](get-details/xip-proposals.md)
 * [Tools](tools/README.md)
   * [SDKs & Programming](tools/sdks-and-programming/README.md)
