@@ -170,7 +170,7 @@ rm -rf apothem.tar
 wget https://download.apothem.network/apothem.tar
 ```
 
-### Unpack the xdcchain.tar  file
+### Unpack the apothem.tar  file
 
 ```
 tar -xvzf apothem.tar
