@@ -48,7 +48,7 @@
   * [XIP Proposals](get-details/xip-proposals.md)
 * [Tools](tools/README.md)
   * [SDKs & Programming](tools/sdks-and-programming/README.md)
-    * [Soliditiy](tools/sdks-and-programming/soliditiy.md)
+    * [Solidity](tools/sdks-and-programming/soliditiy.md)
     * [Python SDK](tools/sdks-and-programming/python.md)
     * [iOS Swift SDK](tools/sdks-and-programming/switft.md)
     * [Java SDK](tools/sdks-and-programming/java.md)
