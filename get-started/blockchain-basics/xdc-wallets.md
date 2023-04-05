@@ -17,7 +17,7 @@ When a user wants to send XDC tokens to another user, they create a transaction 
 
 The XDC network is EVM compatible> The Ethereum Virtual Machine (EVM) is a decentralized virtual machine that was originally built on top of the Ethereum blockchain but has since been adopted by other chains and technology to leverage its functionality. The EVM is a critical component of the XDC ecosystem because it allows developers to write and deploy smart contracts on the XDC blockchain with traditionally Ethereum tool sets.
 
-Smart contracts are self-executing contracts that are written in code they are what make up Dapps, Tokens, and automated agreements on the network. They can be used to automate the execution of contracts, agreements, and other types of applications. Smart contracts are executed by the EVM, which runs on top of the XDC  blockchain.
+Smart contracts are  code that run on the blockchain, they are what make up Dapps, Tokens, and automated agreements on the network. They can be used to automate the execution of contracts, agreements, and other types of applications. Smart contracts are executed by the EVM, which runs on top of the XDC  blockchain.
 
 The XDC network is fully compatible with the EVM, which means that developers can write and deploy smart contracts on the XDC network using the same tools and programming languages that they use on the Ethereum network. This is made possible by XDC's use of the Ethereum client, which provides full EVM compatibility.
 
