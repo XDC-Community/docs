@@ -206,7 +206,7 @@ Returns the symbol of the token, usually a shorter version of the name.
 Gets the total amount of tokens stored by the contract.
 
 `balanceOf(address account) → uint256`\
-Returns the number of NFTs in the owner's **** account.
+Returns the number of NFTs in the owner's account.
 
 `ownerOf(tokenId) → address`\
 Returns the owner of the NFT specified by `tokenId`.
@@ -255,7 +255,7 @@ Approves another address to transfer the given token ID. The zero address indica
 
 /// @param \_owner An address for whom to query the balance
 
-/// @return The number of NFTs owned by `_owner`, possibly zero function **** balanceOf(address \_owner) external view returns (uint256);
+/// @return The number of NFTs owned by `_owner`, possibly zero function balanceOf(address \_owner) external view returns (uint256);
 
 /// @notice Find the owner of an NFT
 
@@ -433,7 +433,7 @@ interface XRC165 {
     self.xrc721Enumerable = XRC721Enumerable(client: client)
 ```
 
-* To call **** the `name` of the token
+* To call the `name` of the token
 
 ```
 xrc721Metadata.name(contract: address) { (error, name) in print(name) }

@@ -18,6 +18,5 @@ Fungible means these assets are divisible into smaller units of value. Let's say
 
 Non-Fungible means the asset can not be broken down into smaller units of value. This can be used to tokenize assets that are not meant to be shared or divisible. These tokens are usually used to represent a piece of art or any other single asset.
 
-****
 
-****
+

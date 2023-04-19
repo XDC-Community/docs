@@ -70,7 +70,7 @@
 <script crossorigin="anonymous" defer="defer" type="application/javascript" src="https://github.githubassets.com/assets/diffs-41305753144f.js"></script>
   
 
-  <title>XDC_Python_SDK_V1/.gitignore at 66fa7e5dea1afa40be77f29200876e9ab0088403 · XDCFoundation/XDC_Python_SDK_V1 · GitHub</title>
+  <title>XDC_Python_SDK_V1/LICENSE.txt at 66fa7e5dea1afa40be77f29200876e9ab0088403 · XDCFoundation/XDC_Python_SDK_V1 · GitHub</title>
 
 
 
@@ -80,7 +80,7 @@
   <meta name="current-catalog-service-hash" content="581425c0eaaa5e5e53c5b736f58a14dbe5d38b0be425901738ad0670bd1d5a33">
 
 
-  <meta name="request-id" content="8DCB:829D:2BD6467:4286709:644002E6" data-pjax-transient="true"/><meta name="html-safe-nonce" content="5528bbd9ef65bd5595a87d02b30de0222f8e5d3d2d49ba24f0a57810a229692b" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiI4RENCOjgyOUQ6MkJENjQ2Nzo0Mjg2NzA5OjY0NDAwMkU2IiwidmlzaXRvcl9pZCI6IjU2MDcxNTQ3MjM3MjQ0NjA3NzQiLCJyZWdpb25fZWRnZSI6ImlhZCIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-pjax-transient="true"/><meta name="visitor-hmac" content="065f3b271b8e643be85c8a96665a9deff591579af26ee11115268d3df6750447" data-pjax-transient="true"/>
+  <meta name="request-id" content="F176:0BAC:2C889EA:4369CC9:644002E5" data-pjax-transient="true"/><meta name="html-safe-nonce" content="c50309a8c2eda05b64aaf966b0cc708972dad2bfda18feaa960a8812dfe8f841" data-pjax-transient="true"/><meta name="visitor-payload" content="eyJyZWZlcnJlciI6IiIsInJlcXVlc3RfaWQiOiJGMTc2OjBCQUM6MkM4ODlFQTo0MzY5Q0M5OjY0NDAwMkU1IiwidmlzaXRvcl9pZCI6IjU1NDYyMDgzNDMyMjUyNzEwMTMiLCJyZWdpb25fZWRnZSI6ImlhZCIsInJlZ2lvbl9yZW5kZXIiOiJpYWQifQ==" data-pjax-transient="true"/><meta name="visitor-hmac" content="eab8617e258163baf823b7cfc00de6181a2b86c302f505eff0c64566d80807d6" data-pjax-transient="true"/>
 
 
     <meta name="hovercard-subject-tag" content="repository:481252407" data-turbo-transient>
@@ -119,8 +119,8 @@
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <meta property="fb:app_id" content="1401488693436528">
     <meta name="apple-itunes-app" content="app-id=1477376905" />
-      <meta name="twitter:image:src" content="https://opengraph.githubassets.com/cd14dbe2a5bbc9725d1c1699253fe0798ffb76799b70e3068bde34c5b827f465/XDCFoundation/XDC_Python_SDK_V1" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="XDC_Python_SDK_V1/.gitignore at 66fa7e5dea1afa40be77f29200876e9ab0088403 · XDCFoundation/XDC_Python_SDK_V1" /><meta name="twitter:description" content="python SDK for XDC. Contribute to XDCFoundation/XDC_Python_SDK_V1 development by creating an account on GitHub." />
-      <meta property="og:image" content="https://opengraph.githubassets.com/cd14dbe2a5bbc9725d1c1699253fe0798ffb76799b70e3068bde34c5b827f465/XDCFoundation/XDC_Python_SDK_V1" /><meta property="og:image:alt" content="python SDK for XDC. Contribute to XDCFoundation/XDC_Python_SDK_V1 development by creating an account on GitHub." /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="600" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="XDC_Python_SDK_V1/.gitignore at 66fa7e5dea1afa40be77f29200876e9ab0088403 · XDCFoundation/XDC_Python_SDK_V1" /><meta property="og:url" content="https://github.com/XDCFoundation/XDC_Python_SDK_V1" /><meta property="og:description" content="python SDK for XDC. Contribute to XDCFoundation/XDC_Python_SDK_V1 development by creating an account on GitHub." />
+      <meta name="twitter:image:src" content="https://opengraph.githubassets.com/cd14dbe2a5bbc9725d1c1699253fe0798ffb76799b70e3068bde34c5b827f465/XDCFoundation/XDC_Python_SDK_V1" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="XDC_Python_SDK_V1/LICENSE.txt at 66fa7e5dea1afa40be77f29200876e9ab0088403 · XDCFoundation/XDC_Python_SDK_V1" /><meta name="twitter:description" content="python SDK for XDC. Contribute to XDCFoundation/XDC_Python_SDK_V1 development by creating an account on GitHub." />
+      <meta property="og:image" content="https://opengraph.githubassets.com/cd14dbe2a5bbc9725d1c1699253fe0798ffb76799b70e3068bde34c5b827f465/XDCFoundation/XDC_Python_SDK_V1" /><meta property="og:image:alt" content="python SDK for XDC. Contribute to XDCFoundation/XDC_Python_SDK_V1 development by creating an account on GitHub." /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="600" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="XDC_Python_SDK_V1/LICENSE.txt at 66fa7e5dea1afa40be77f29200876e9ab0088403 · XDCFoundation/XDC_Python_SDK_V1" /><meta property="og:url" content="https://github.com/XDCFoundation/XDC_Python_SDK_V1" /><meta property="og:description" content="python SDK for XDC. Contribute to XDCFoundation/XDC_Python_SDK_V1 development by creating an account on GitHub." />
       
     <link rel="assets" href="https://github.githubassets.com/">
 
@@ -149,7 +149,7 @@
 
 
 
-    <link rel="canonical" href="https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore" data-turbo-transient>
+    <link rel="canonical" href="https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt" data-turbo-transient>
   <meta name="turbo-body-classes" content="logged-out env-production page-responsive page-blob">
 
 
@@ -204,7 +204,7 @@
         <div class="flex-1">
           <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&amp;source=header-repo"
             class="d-inline-block d-lg-none flex-order-1 f5 no-underline border color-border-default rounded-2 px-2 py-1 color-fg-inherit"
-            data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="d40f0cfede12c2dc781e51bf72854451d224e4f9de6ddb4ce73466998576d908"
+            data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="7a8ee9a1e18da01c621707e15dc53c1baa8b85eb6fe3e6183eb133e200b9a633"
           >
             Sign&nbsp;up
           </a>
@@ -587,7 +587,7 @@
           spellcheck="false"
           autocomplete="off"
         >
-        <input type="hidden" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" value="B/JPwMC2ZLAuBuCX+eqF/JBKkAtkiRTDTKAx1XHw9NsvRH+RA7h1brrx6sfa/Xmzu87X9TKAcra8hWugZC//mg==" />
+        <input type="hidden" data-csrf="true" class="js-data-jump-to-suggestions-path-csrf" value="FmPD74+keU2eqoRxHrY1Ij0pPJCUiWiqeH9zTK9sObTUv116EdVMv17mQ7vT01ZrernUQ10i882t0FV/NQJbgg==" />
         <input type="hidden" class="js-site-search-type-field" name="type" >
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" aria-hidden="true" class="mr-1 header-search-key-slash"><path fill="none" stroke="#979A9C" opacity=".4" d="M3.5.5h12c1.7 0 3 1.3 3 3v13c0 1.7-1.3 3-3 3h-12c-1.7 0-3-1.3-3-3v-13c0-1.7 1.3-3 3-3z"></path><path fill="#979A9C" d="M11.8 6L8 15.1h-.9L10.8 6h1z"></path></svg>
 
@@ -767,9 +767,9 @@
             </div>
 
           <div class="position-relative mr-lg-3 d-lg-inline-block">
-            <a href="/login?return_to=https%3A%2F%2Fgithub.com%2FXDCFoundation%2FXDC_Python_SDK_V1%2Fblob%2F66fa7e5dea1afa40be77f29200876e9ab0088403%2F.gitignore"
+            <a href="/login?return_to=https%3A%2F%2Fgithub.com%2FXDCFoundation%2FXDC_Python_SDK_V1%2Fblob%2F66fa7e5dea1afa40be77f29200876e9ab0088403%2FLICENSE.txt"
               class="HeaderMenu-link HeaderMenu-link--sign-in flex-shrink-0 no-underline d-block d-lg-inline-block border border-lg-0 rounded rounded-lg-0 p-2 p-lg-0"
-              data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="66a8a280d962ad721766455d3e150452afce465b8fbf2427009f8e91f35a358a"
+              data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="fec1a6e664c2cecd45dbd253ad3dcb1572a0ca684078c944cc7155405ae78f90"
               data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">
               Sign in
             </a>
@@ -777,7 +777,7 @@
 
             <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&amp;source=header-repo&amp;source_repo=XDCFoundation%2FXDC_Python_SDK_V1"
               class="HeaderMenu-link HeaderMenu-link--sign-up flex-shrink-0 d-none d-lg-inline-block no-underline border color-border-default rounded px-2 py-1"
-              data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="66a8a280d962ad721766455d3e150452afce465b8fbf2427009f8e91f35a358a"
+              data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;site header menu&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;SIGN_UP&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="fec1a6e664c2cecd45dbd253ad3dcb1572a0ca684078c944cc7155405ae78f90"
               data-analytics-event="{&quot;category&quot;:&quot;Sign up&quot;,&quot;action&quot;:&quot;click to sign up for account&quot;,&quot;label&quot;:&quot;ref_page:/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show;ref_cta:Sign up;ref_loc:header logged out&quot;}"
             >
               Sign up
@@ -890,13 +890,13 @@
       
 
   <li>
-            <a href="/login?return_to=%2FXDCFoundation%2FXDC_Python_SDK_V1" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="5148a3da17ff813cef2d7ab4cb67b30c79fa2dec13d67a9106734c4e719483ec" aria-label="You must be signed in to change notification settings" data-view-component="true" class="tooltipped tooltipped-s btn-sm btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-bell mr-2">
+            <a href="/login?return_to=%2FXDCFoundation%2FXDC_Python_SDK_V1" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;notification subscription menu watch&quot;,&quot;repository_id&quot;:null,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="4fec3a09bf2e8c8e2c00c139630c0d2a84bff6dfbe35557124be21d1cb271c37" aria-label="You must be signed in to change notification settings" data-view-component="true" class="tooltipped tooltipped-s btn-sm btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-bell mr-2">
     <path d="M8 16a2 2 0 0 0 1.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 0 0 8 16ZM3 5a5 5 0 0 1 10 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.519 1.519 0 0 1 13.482 13H2.518a1.516 1.516 0 0 1-1.263-2.36l1.703-2.554A.255.255 0 0 0 3 7.947Zm5-3.5A3.5 3.5 0 0 0 4.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.017.017 0 0 0-.003.01l.001.006c0 .002.002.004.004.006l.006.004.007.001h10.964l.007-.001.006-.004.004-.006.001-.007a.017.017 0 0 0-.003-.01l-1.703-2.554a1.745 1.745 0 0 1-.294-.97V5A3.5 3.5 0 0 0 8 1.5Z"></path>
 </svg>Notifications
 </a>  </li>
 
   <li>
-          <a icon="repo-forked" id="fork-button" href="/login?return_to=%2FXDCFoundation%2FXDC_Python_SDK_V1" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:481252407,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="2706b2a607e2abf2fbf16deb663aaedf931b2bce6420b971c6af456255f32c4f" data-view-component="true" class="btn-sm btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked mr-2">
+          <a icon="repo-forked" id="fork-button" href="/login?return_to=%2FXDCFoundation%2FXDC_Python_SDK_V1" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:481252407,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="edde456b3b5d644a79dc37a2115b6a9b24e3af5acc133d9df5fc509f4ff280dc" data-view-component="true" class="btn-sm btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked mr-2">
     <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"></path>
 </svg>Fork
     <span id="repo-network-counter" data-pjax-replace="true" data-turbo-replace="true" title="1" data-view-component="true" class="Counter">1</span>
@@ -905,7 +905,7 @@
 
   <li>
         <div data-view-component="true" class="BtnGroup d-flex">
-        <a href="/login?return_to=%2FXDCFoundation%2FXDC_Python_SDK_V1" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:481252407,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="01d62a879589d31865a6ba355902470ad36caad24ad33c31d5257e1ae1f947fc" aria-label="You must be signed in to star a repository" data-view-component="true" class="tooltipped tooltipped-s btn-sm btn BtnGroup-item">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star v-align-text-bottom d-inline-block mr-2">
+        <a href="/login?return_to=%2FXDCFoundation%2FXDC_Python_SDK_V1" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;star button&quot;,&quot;repository_id&quot;:481252407,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="c4a5596eb0667a6c09e1b7df875d9fee3f32d8ff538331ace72fddb0ed3278e4" aria-label="You must be signed in to star a repository" data-view-component="true" class="tooltipped tooltipped-s btn-sm btn BtnGroup-item">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-star v-align-text-bottom d-inline-block mr-2">
     <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
 </svg><span data-view-component="true" class="d-inline">
           Star
@@ -1065,7 +1065,7 @@
 
 
     
-<a class="d-none js-permalink-shortcut" data-hotkey="y" href="/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore">Permalink</a>
+<a class="d-none js-permalink-shortcut" data-hotkey="y" href="/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt">Permalink</a>
 
 <div class="d-flex flex-items-start flex-shrink-0 pb-3 flex-wrap flex-md-nowrap flex-justify-between flex-md-justify-start">
   
@@ -1073,7 +1073,7 @@
   <details
     class="js-branch-select-menu details-reset details-overlay mr-0 mb-0 "
     id="branch-select-menu"
-    data-hydro-click-payload="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;REFS_SELECTOR_MENU&quot;,&quot;repository_id&quot;:481252407,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="809ccbd1d6e082582cf530f24b36da99a965eea62e94be1f4c2efa950d63e244">
+    data-hydro-click-payload="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;REFS_SELECTOR_MENU&quot;,&quot;repository_id&quot;:481252407,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="22eed8eab39d6e068281d7cb1ed7f76a82cda78fac388b4497a0abbc797dcd30">
     <summary class="btn css-truncate"
             data-hotkey="w"
             title="Switch branches or tags">
@@ -1154,7 +1154,7 @@
               
 
 <template data-target="ref-selector.itemTemplate">
-  <a href="https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/{{ urlEncodedRefName }}/.gitignore" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}" >
+  <a href="https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/{{ urlEncodedRefName }}/LICENSE.txt" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}" >
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
 </svg>
@@ -1196,7 +1196,7 @@
               
 
 <template data-target="ref-selector.itemTemplate">
-  <a href="https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/{{ urlEncodedRefName }}/.gitignore" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}" >
+  <a href="https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/{{ urlEncodedRefName }}/LICENSE.txt" class="SelectMenu-item" role="menuitemradio" rel="nofollow" aria-checked="{{ isCurrent }}" data-index="{{ index }}" >
     <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check">
     <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
 </svg>
@@ -1257,7 +1257,7 @@
 
 
   <h2 id="blob-path" class="breadcrumb flex-auto flex-self-center min-width-0 text-normal mx-2 width-full width-md-auto flex-order-1 flex-md-order-none mt-3 mt-md-0">
-    <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-turbo-frame="repo-content-turbo-frame" rel="nofollow" href="/XDCFoundation/XDC_Python_SDK_V1/tree/66fa7e5dea1afa40be77f29200876e9ab0088403"><span>XDC_Python_SDK_V1</span></a></span></span><span class="separator">/</span><strong class="final-path">.gitignore</strong>
+    <span class="js-repo-root text-bold"><span class="js-path-segment d-inline-block wb-break-all"><a data-turbo-frame="repo-content-turbo-frame" rel="nofollow" href="/XDCFoundation/XDC_Python_SDK_V1/tree/66fa7e5dea1afa40be77f29200876e9ab0088403"><span>XDC_Python_SDK_V1</span></a></span></span><span class="separator">/</span><strong class="final-path">LICENSE.txt</strong>
   </h2>
     <a href="/XDCFoundation/XDC_Python_SDK_V1/find/66fa7e5dea1afa40be77f29200876e9ab0088403" data-pjax="" data-hotkey="t" data-view-component="true" class="btn mr-2 d-none d-md-block">    Go to file
 </a>
@@ -1268,7 +1268,7 @@
 </summary>
   <div data-view-component="true">      <ul class="dropdown-menu dropdown-menu-sw">
         <li class="d-block d-md-none">
-          <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:481252407,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="49dbb810e55b64ae28f358c159c478943674e285306c59e4e27b5982c5308d0e" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" href="/XDCFoundation/XDC_Python_SDK_V1/find/66fa7e5dea1afa40be77f29200876e9ab0088403">
+          <a class="dropdown-item d-flex flex-items-baseline" data-hydro-click="{&quot;event_type&quot;:&quot;repository.click&quot;,&quot;payload&quot;:{&quot;target&quot;:&quot;FIND_FILE_BUTTON&quot;,&quot;repository_id&quot;:481252407,&quot;originating_url&quot;:&quot;https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="1efcd3e947042b90360ea5fe51ee4058e109b55d8206b3354b51e154f10c4e58" data-ga-click="Repository, find file, location:repo overview" data-hotkey="t" href="/XDCFoundation/XDC_Python_SDK_V1/find/66fa7e5dea1afa40be77f29200876e9ab0088403">
             <span class="flex-auto">Go to file</span>
             <span class="text-small color-fg-muted" aria-hidden="true">T</span>
 </a>        </li>
@@ -1280,13 +1280,13 @@
 </button>        </li>
         <li class="dropdown-divider" role="none"></li>
         <li>
-          <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy path" value=".gitignore" data-view-component="true" class="dropdown-item cursor-pointer">
+          <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy path" value="LICENSE.txt" data-view-component="true" class="dropdown-item cursor-pointer">
     
             Copy path
 
 </clipboard-copy>        </li>
         <li>
-          <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy permalink" value="https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore" data-view-component="true" class="dropdown-item cursor-pointer">
+          <clipboard-copy data-toggle-for="blob-more-options-details" aria-label="Copy permalink" value="https://github.com/XDCFoundation/XDC_Python_SDK_V1/blob/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt" data-view-component="true" class="dropdown-item cursor-pointer">
     
             <span class="d-flex flex-items-baseline">
               <span class="flex-auto">Copy permalink</span>
@@ -1298,6 +1298,86 @@
 </details></div>
 
 
+
+      <div class="Box mb-3 clearfix">
+  <div class="d-flex flex-column flex-md-row">
+    <div class="p-3 col-md-6">
+      <svg height="32" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="32" data-view-component="true" class="octicon octicon-law color-fg-default float-left mr-2">
+    <path d="M12.75 2.75V4.5h1.975c.351 0 .694.106.984.303l1.697 1.154c.041.028.09.043.14.043h4.102a.75.75 0 0 1 0 1.5H20.07l3.366 7.68a.749.749 0 0 1-.23.896c-.1.074-.203.143-.31.206a6.296 6.296 0 0 1-.79.399 7.349 7.349 0 0 1-2.856.569 7.343 7.343 0 0 1-2.855-.568 6.205 6.205 0 0 1-.79-.4 3.205 3.205 0 0 1-.307-.202l-.005-.004a.749.749 0 0 1-.23-.896l3.368-7.68h-.886c-.351 0-.694-.106-.984-.303l-1.697-1.154a.246.246 0 0 0-.14-.043H12.75v14.5h4.487a.75.75 0 0 1 0 1.5H6.763a.75.75 0 0 1 0-1.5h4.487V6H9.275a.249.249 0 0 0-.14.043L7.439 7.197c-.29.197-.633.303-.984.303h-.886l3.368 7.68a.75.75 0 0 1-.209.878c-.08.065-.16.126-.31.223a6.077 6.077 0 0 1-.792.433 6.924 6.924 0 0 1-2.876.62 6.913 6.913 0 0 1-2.876-.62 6.077 6.077 0 0 1-.792-.433 3.483 3.483 0 0 1-.309-.221.762.762 0 0 1-.21-.88L3.93 7.5H2.353a.75.75 0 0 1 0-1.5h4.102c.05 0 .099-.015.141-.043l1.695-1.154c.29-.198.634-.303.985-.303h1.974V2.75a.75.75 0 0 1 1.5 0ZM2.193 15.198a5.414 5.414 0 0 0 2.557.635 5.414 5.414 0 0 0 2.557-.635L4.75 9.368Zm14.51-.024c.082.04.174.083.275.126.53.223 1.305.45 2.272.45a5.847 5.847 0 0 0 2.547-.576L19.25 9.367Z"></path>
+</svg>
+      <p class="text-small color-fg-muted mb-0 lh-condensed-ultra">
+        XDCFoundation/XDC_Python_SDK_V1
+        is licensed under  the
+      </p>
+      <h3 class="mt-0 mb-2 h4">MIT License</h3>
+      <p class="mb-0 color-fg-muted text-small pr-2">A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.</p>
+    </div>
+
+    <div class="d-flex px-3 col-md-6 flex-column flex-sm-row pb-sm-3">
+        <div class="pb-3 col-sm-4 pt-md-2">
+          <h4 class="mt-1 mb-2 h5">Permissions</h4>
+          <ul class="list-style-none">
+              <li class="text-small pl-3">
+                <svg width="13" class="octicon octicon-check color-fg-success ml-n3 v-align-middle" viewBox="0 0 16 16" version="1.1" height="13" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg>
+                <span class="v-align-middle" title="The licensed material and derivatives may be used for commercial purposes.">
+                  Commercial use
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" class="octicon octicon-check color-fg-success ml-n3 v-align-middle" viewBox="0 0 16 16" version="1.1" height="13" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg>
+                <span class="v-align-middle" title="The licensed material may be modified.">
+                  Modification
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" class="octicon octicon-check color-fg-success ml-n3 v-align-middle" viewBox="0 0 16 16" version="1.1" height="13" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg>
+                <span class="v-align-middle" title="The licensed material may be distributed.">
+                  Distribution
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" class="octicon octicon-check color-fg-success ml-n3 v-align-middle" viewBox="0 0 16 16" version="1.1" height="13" aria-hidden="true"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg>
+                <span class="v-align-middle" title="The licensed material may be used and modified in private.">
+                  Private use
+                </span>
+              </li>
+          </ul>
+        </div>
+        <div class="pb-3 col-sm-4 pt-md-2">
+          <h4 class="mt-1 mb-2 h5">Limitations</h4>
+          <ul class="list-style-none">
+              <li class="text-small pl-3">
+                <svg width="13" class="octicon octicon-x color-fg-danger ml-n3 v-align-middle" viewBox="0 0 16 16" version="1.1" height="13" aria-hidden="true"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg>
+                <span class="v-align-middle" title="This license includes a limitation of liability.">
+                  Liability
+                </span>
+              </li>
+              <li class="text-small pl-3">
+                <svg width="13" class="octicon octicon-x color-fg-danger ml-n3 v-align-middle" viewBox="0 0 16 16" version="1.1" height="13" aria-hidden="true"><path d="M3.72 3.72a.75.75 0 0 1 1.06 0L8 6.94l3.22-3.22a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l3.22 3.22a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-3.22 3.22a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L6.94 8 3.72 4.78a.75.75 0 0 1 0-1.06Z"></path></svg>
+                <span class="v-align-middle" title="This license explicitly states that it does NOT provide any warranty.">
+                  Warranty
+                </span>
+              </li>
+          </ul>
+        </div>
+        <div class="pb-3 col-sm-4 pt-md-2">
+          <h4 class="mt-1 mb-2 h5">Conditions</h4>
+          <ul class="list-style-none">
+              <li class="text-small pl-3">
+                <svg width="13" class="octicon octicon-info color-fg-accent ml-n3 v-align-middle" viewBox="0 0 16 16" version="1.1" height="13" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
+                <span class="v-align-middle" title="A copy of the license and copyright notice must be included with the licensed material.">
+                  License and copyright notice
+                </span>
+              </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <p class="color-fg-muted text-small mb-0 border-top col-12 float-left p-2 px-sm-3">
+    This is not legal advice.
+    <a href="https://docs.github.com/articles/licensing-a-repository/#disclaimer">Learn more about repository licenses</a>.
+  </p>
+</div>
 
 
 
@@ -1317,7 +1397,7 @@
     <include-fragment src="/XDCFoundation/XDC_Python_SDK_V1/spoofed_commit_check/66fa7e5dea1afa40be77f29200876e9ab0088403" data-test-selector="spoofed-commit-check"></include-fragment>
 
     <div class="Box d-flex flex-column flex-shrink-0 mb-3">
-  <include-fragment src="/XDCFoundation/XDC_Python_SDK_V1/contributors/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore" class="commit-loader">
+  <include-fragment src="/XDCFoundation/XDC_Python_SDK_V1/contributors/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt" class="commit-loader">
     <div class="Box-header d-flex flex-items-center">
       <div class="Skeleton avatar avatar-user flex-shrink-0 ml-n1 mr-n1 mt-n1 mb-n1" style="width:24px;height:24px;"></div>
       <div class="Skeleton Skeleton--text col-5 ml-2">&nbsp;</div>
@@ -1347,20 +1427,20 @@
 
   <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1">
 
-      50 lines (37 sloc)
+      7 lines (4 sloc)
       <span class="file-info-divider"></span>
-    624 Bytes
+    1.04 KB
   </div>
 
   <div class="d-flex py-1 py-md-0 flex-auto flex-order-1 flex-md-order-2 flex-sm-grow-0 flex-justify-between hide-sm hide-md">
       
 
     <div class="BtnGroup">
-        <a href="/XDCFoundation/XDC_Python_SDK_V1/raw/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore" id="raw-url" group_item="true" data-view-component="true" class="Button--secondary Button--small Button">    <span class="Button-content">
+        <a href="/XDCFoundation/XDC_Python_SDK_V1/raw/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt" id="raw-url" group_item="true" data-view-component="true" class="Button--secondary Button--small Button">    <span class="Button-content">
       <span class="Button-label">Raw</span>
     </span>
 </a>  
-          <a href="/XDCFoundation/XDC_Python_SDK_V1/blame/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore" group_item="true" data-hotkey="b" data-view-component="true" class="js-update-url-with-hash Button--secondary Button--small Button">    <span class="Button-content">
+          <a href="/XDCFoundation/XDC_Python_SDK_V1/blame/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt" group_item="true" data-hotkey="b" data-view-component="true" class="js-update-url-with-hash Button--secondary Button--small Button">    <span class="Button-content">
       <span class="Button-label">Blame</span>
     </span>
 </a>  
@@ -1369,7 +1449,7 @@
     <div class="d-flex">
         
 <div class="ml-1" >
-  <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="BtnGroup-parent js-update-url-with-hash " data-turbo="false" action="/XDCFoundation/XDC_Python_SDK_V1/edit/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="9cYetcZsRKyTDnBh9AbCIzuH2IEIUn0E997wKNMTiTShTCGNbWmtyzKxTarcZkWu2i54Fs_GbsYxDXdhxECsGQ" autocomplete="off" />
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="BtnGroup-parent js-update-url-with-hash " data-turbo="false" action="/XDCFoundation/XDC_Python_SDK_V1/edit/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="ShsXSB6PHy4gYrGRQ9vydmCTA877JAWvYgmYFVDTi0DfCZxshFveKfF-58oL2fBkLwFUZPQPMFFs8c5BlRHECg" autocomplete="off" />
       <button disabled="disabled" title="You must be signed in to make or propose changes" data-hotkey="e" data-disable-with="" type="submit" data-view-component="true" class="btn-sm BtnGroup-item btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-pencil">
     <path d="M11.013 1.427a1.75 1.75 0 0 1 2.474 0l1.086 1.086a1.75 1.75 0 0 1 0 2.474l-8.61 8.61c-.21.21-.47.364-.756.445l-3.251.93a.75.75 0 0 1-.927-.928l.929-3.25c.081-.286.235-.547.445-.758l8.61-8.61Zm.176 4.823L9.75 4.81l-6.286 6.287a.253.253 0 0 0-.064.108l-.558 1.953 1.953-.558a.253.253 0 0 0 .108-.064Zm1.238-3.763a.25.25 0 0 0-.354 0L10.811 3.75l1.439 1.44 1.263-1.263a.25.25 0 0 0 0-.354Z"></path>
 </svg>
@@ -1379,7 +1459,7 @@
 </summary>    <div class="SelectMenu right-0">
       <div class="SelectMenu-modal width-full">
         <div class="SelectMenu-list SelectMenu-list--borderless py-2">
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="SelectMenu-item js-update-url-with-hash " data-turbo="false" action="/XDCFoundation/XDC_Python_SDK_V1/edit/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="7bqPONSK6nUYyQWhj3AAIF0rzgv-AUSck0oQrFglR6e5MLAAf48DErl2OGqnEIetvIJunDmVV15VmZflT3Ziig" autocomplete="off" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="SelectMenu-item js-update-url-with-hash " data-turbo="false" action="/XDCFoundation/XDC_Python_SDK_V1/edit/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="UYrO2R9h6kqWdwN9jd94WTfvqcyVrxVGny2Aml7v5kLEmEX9hbUrTUdrVSbF3XpLeH3-ZpqEILiR1dbOmy2pCA" autocomplete="off" />
               <button disabled="disabled" title="You must be signed in to make or propose changes" type="submit" data-view-component="true" class="btn-invisible btn width-full d-flex flex-justify-between color-fg-muted text-normal p-0">    <div class="mr-5">Edit this file</div>
               <div class="color-fg-muted">E</div>
 </button></form>
@@ -1424,14 +1504,14 @@
             <li>
             </li>
           <li>
-            <a class="dropdown-item" href="/XDCFoundation/XDC_Python_SDK_V1/raw/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore">
+            <a class="dropdown-item" href="/XDCFoundation/XDC_Python_SDK_V1/raw/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt">
               View raw
             </a>
           </li>
             <li>
                           </li>
             <li>
-              <a class="dropdown-item" href="/XDCFoundation/XDC_Python_SDK_V1/blame/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore">
+              <a class="dropdown-item" href="/XDCFoundation/XDC_Python_SDK_V1/blame/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt">
                 View blame
               </a>
             </li>
@@ -1443,7 +1523,7 @@
 
 
       
-    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-ignore-list  gist-border-0">
+    <div itemprop="text" class="Box-body p-0 blob-wrapper data type-text  gist-border-0">
 
         
 <div class="js-check-bidi js-blob-code-container blob-code-content">
@@ -1470,219 +1550,37 @@
 </svg>
 </span></template>
 
-  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="Ignore List" data-tagsearch-path=".gitignore">
+  <table data-hpc class="highlight tab-size js-file-line-container js-code-nav-container js-tagsearch-file" data-tab-size="8" data-paste-markdown-skip data-tagsearch-lang="Text" data-tagsearch-path="LICENSE.txt">
         <tr>
           <td id="L1" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="1"></td>
-          <td id="LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> These are some examples of commonly ignored file patterns.</span></td>
+          <td id="LC1" class="blob-code blob-code-inner js-file-line">Copyright © 2022 XDC Foundation</td>
         </tr>
         <tr>
           <td id="L2" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="2"></td>
-          <td id="LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> You should customize this list as applicable to your project.</span></td>
+          <td id="LC2" class="blob-code blob-code-inner js-file-line">
+</td>
         </tr>
         <tr>
           <td id="L3" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="3"></td>
-          <td id="LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Learn more about .gitignore:</span></td>
+          <td id="LC3" class="blob-code blob-code-inner js-file-line">Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</td>
         </tr>
         <tr>
           <td id="L4" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="4"></td>
-          <td id="LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span>     https://www.atlassian.com/git/tutorials/saving-changes/gitignore</span></td>
+          <td id="LC4" class="blob-code blob-code-inner js-file-line">
+</td>
         </tr>
         <tr>
           <td id="L5" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="5"></td>
-          <td id="LC5" class="blob-code blob-code-inner js-file-line">
-</td>
+          <td id="LC5" class="blob-code blob-code-inner js-file-line">The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</td>
         </tr>
         <tr>
           <td id="L6" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="6"></td>
-          <td id="LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Node artifact files</span></td>
+          <td id="LC6" class="blob-code blob-code-inner js-file-line">
+</td>
         </tr>
         <tr>
           <td id="L7" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="7"></td>
-          <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-e">node_modules</span>/</td>
-        </tr>
-        <tr>
-          <td id="L8" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="8"></td>
-          <td id="LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-e">dist</span>/</td>
-        </tr>
-        <tr>
-          <td id="L9" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="9"></td>
-          <td id="LC9" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L10" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="10"></td>
-          <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Compiled Java class files</span></td>
-        </tr>
-        <tr>
-          <td id="L11" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="11"></td>
-          <td id="LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.class</span></td>
-        </tr>
-        <tr>
-          <td id="L12" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="12"></td>
-          <td id="LC12" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L13" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="13"></td>
-          <td id="LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Compiled Python bytecode</span></td>
-        </tr>
-        <tr>
-          <td id="L14" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="14"></td>
-          <td id="LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.py</span>[<span class="pl-c1">cod</span>]</td>
-        </tr>
-        <tr>
-          <td id="L15" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="15"></td>
-          <td id="LC15" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L16" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="16"></td>
-          <td id="LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Log files</span></td>
-        </tr>
-        <tr>
-          <td id="L17" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="17"></td>
-          <td id="LC17" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.log</span></td>
-        </tr>
-        <tr>
-          <td id="L18" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="18"></td>
-          <td id="LC18" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L19" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="19"></td>
-          <td id="LC19" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Package files</span></td>
-        </tr>
-        <tr>
-          <td id="L20" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="20"></td>
-          <td id="LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.jar</span></td>
-        </tr>
-        <tr>
-          <td id="L21" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="21"></td>
-          <td id="LC21" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L22" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="22"></td>
-          <td id="LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Maven</span></td>
-        </tr>
-        <tr>
-          <td id="L23" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="23"></td>
-          <td id="LC23" class="blob-code blob-code-inner js-file-line"><span class="pl-e">target</span>/</td>
-        </tr>
-        <tr>
-          <td id="L24" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="24"></td>
-          <td id="LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-e">dist</span>/</td>
-        </tr>
-        <tr>
-          <td id="L25" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="25"></td>
-          <td id="LC25" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L26" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="26"></td>
-          <td id="LC26" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> JetBrains IDE</span></td>
-        </tr>
-        <tr>
-          <td id="L27" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="27"></td>
-          <td id="LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-e">.idea</span>/</td>
-        </tr>
-        <tr>
-          <td id="L28" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="28"></td>
-          <td id="LC28" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L29" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="29"></td>
-          <td id="LC29" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Unit test reports</span></td>
-        </tr>
-        <tr>
-          <td id="L30" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="30"></td>
-          <td id="LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-e">TEST</span><span class="pl-k">*</span><span class="pl-e">.xml</span></td>
-        </tr>
-        <tr>
-          <td id="L31" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="31"></td>
-          <td id="LC31" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L32" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="32"></td>
-          <td id="LC32" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Generated by MacOS</span></td>
-        </tr>
-        <tr>
-          <td id="L33" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="33"></td>
-          <td id="LC33" class="blob-code blob-code-inner js-file-line"><span class="pl-e">.DS_Store</span></td>
-        </tr>
-        <tr>
-          <td id="L34" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="34"></td>
-          <td id="LC34" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L35" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="35"></td>
-          <td id="LC35" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Generated by Windows</span></td>
-        </tr>
-        <tr>
-          <td id="L36" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="36"></td>
-          <td id="LC36" class="blob-code blob-code-inner js-file-line"><span class="pl-e">Thumbs.db</span></td>
-        </tr>
-        <tr>
-          <td id="L37" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="37"></td>
-          <td id="LC37" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L38" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="38"></td>
-          <td id="LC38" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Applications</span></td>
-        </tr>
-        <tr>
-          <td id="L39" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="39"></td>
-          <td id="LC39" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.app</span></td>
-        </tr>
-        <tr>
-          <td id="L40" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="40"></td>
-          <td id="LC40" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.exe</span></td>
-        </tr>
-        <tr>
-          <td id="L41" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="41"></td>
-          <td id="LC41" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.war</span></td>
-        </tr>
-        <tr>
-          <td id="L42" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="42"></td>
-          <td id="LC42" class="blob-code blob-code-inner js-file-line">
-</td>
-        </tr>
-        <tr>
-          <td id="L43" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="43"></td>
-          <td id="LC43" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Large media files</span></td>
-        </tr>
-        <tr>
-          <td id="L44" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="44"></td>
-          <td id="LC44" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.mp4</span></td>
-        </tr>
-        <tr>
-          <td id="L45" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="45"></td>
-          <td id="LC45" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.tiff</span></td>
-        </tr>
-        <tr>
-          <td id="L46" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="46"></td>
-          <td id="LC46" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.avi</span></td>
-        </tr>
-        <tr>
-          <td id="L47" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="47"></td>
-          <td id="LC47" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.flv</span></td>
-        </tr>
-        <tr>
-          <td id="L48" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="48"></td>
-          <td id="LC48" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.mov</span></td>
-        </tr>
-        <tr>
-          <td id="L49" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="49"></td>
-          <td id="LC49" class="blob-code blob-code-inner js-file-line"><span class="pl-k">*</span><span class="pl-e">.wmv</span></td>
-        </tr>
-        <tr>
-          <td id="L50" class="blob-num js-line-number js-code-nav-line-number js-blob-rnum" data-line-number="50"></td>
-          <td id="LC50" class="blob-code blob-code-inner js-file-line">
-</td>
+          <td id="LC7" class="blob-code blob-code-inner js-file-line">THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</td>
         </tr>
   </table>
 </div>
@@ -1708,7 +1606,7 @@
             Copy permalink
           </clipboard-copy>
         </li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/XDCFoundation/XDC_Python_SDK_V1/blame/66fa7e5dea1afa40be77f29200876e9ab0088403/.gitignore">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/XDCFoundation/XDC_Python_SDK_V1/blame/66fa7e5dea1afa40be77f29200876e9ab0088403/LICENSE.txt">View git blame</a></li>
       </ul>
     </details-menu>
   </details>

@@ -153,7 +153,7 @@ Liveness means the blockchain makes progress and new transactions are included. 
 &#x20;The HotStuff protocol is optimistically responsive: in optimistic condition (honest leader and synchronous network), it only takes 3 block arrival time (BAT) to finalize a block and the transactions it contains. In practice, due to our strict network requirement on master nodes eligibility, the maximum network round-trip latency should be well below 2 seconds. Therefore, we can set BAT to be 2 seconds. This means that, in optimistic conditions, the finalization latency is only 6 seconds.&#x20;
 
 **`Algorithm 2 HotStuff protocol`** \
-**``**`1: tH ← dVALIDATOR_SET_SIZE × 2/3e . constant` \
+`1: tH ← dVALIDATOR_SET_SIZE × 2/3e . constant` \
 `2: highQC ← qcgenesis; lockQC ← qcgenesis . the latest QC and lock variable . Optimistic path` \
 `3: for curRound ← 1, 2, . . . do` \
 `4: as a leader` \
