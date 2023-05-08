@@ -78,6 +78,7 @@
     * [PHP SDK](tools/sdks-and-programming/php-sdk.md)
     * [DART SDK](tools/sdks-and-programming/dart-sdk.md)
     * [Rust SDK](tools/sdks-and-programming/rust-sdk.md)
+    * [Vyper](tools/sdks-and-programming/vyper.md)
   * [APIs & Packages](tools/apis-and-packages/README.md)
     * [XDC Connect](tools/apis-and-packages/npm-i-xdc-connect.md)
     * [Web3 Modal](tools/apis-and-packages/npm-i-xdc3.md)
@@ -96,9 +97,10 @@
 * [Run a Node](run-a-node/README.md)
   * [Masternode](run-a-node/masternode/README.md)
     * [How to Stake an XDC Masternode](run-a-node/masternode/how-to-stake-an-xdc-masternode.md)
-    * [Full Node (Docker version)](run-a-node/masternode/full-node.md)
     * [One-Click-Installer Masternode (Windows OS)](run-a-node/masternode/standby-node.md)
     * [One-Click-Installer Masternode (macOS)](run-a-node/masternode/one-click-installer-masternode-macos.md)
+  * [Full Node](run-a-node/full-node/README.md)
+    * [Full Node (Docker version)](run-a-node/full-node/full-node.md)
 
 ## Learn
 
