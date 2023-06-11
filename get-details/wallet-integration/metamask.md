@@ -24,9 +24,8 @@ description: What MetaMask is, what it is used for, and how to add XDC Network i
 
 ## 📰 Overview
 
-![hardhat](https://www.ledger.com/wp-content/uploads/2019/06/assets\_logo\_metamask.jpg)
+![Metamask Logo](https://www.ledger.com/wp-content/uploads/2019/06/assets\_logo\_metamask.jpg)
 
-[Hardhat](https://hardhat.org/) is a development environment to compile, deploy, test, and debug your Ethereum software. Get Solidity stack traces & console.log.
 
 #### What you will learn
 
@@ -85,7 +84,7 @@ To add `xinfin` mainnet, use following configuration:
 |                    |                                  |
 | ------------------ | -------------------------------- |
 | Network Name       | XinFin                           |
-| New RPC URL        | https://rpc.xinfin.network       |
+| New RPC URL        | https://erpc.xinfin.network       |
 | Chain ID           | 50                               |
 | Currency Symbol    | XDC                              |
 | Block Explorer URL | https://explorer.xinfin.network/ |
@@ -97,7 +96,7 @@ To connect `apothem` testnet, repeat steps with following network settings:
 |                    |                                   |
 | ------------------ | --------------------------------- |
 | Network Name       | Apothem                           |
-| New RPC URL        | https://rpc.apothem.network       |
+| New RPC URL        | https://erpc.apothem.network      |
 | Chain ID           | 51                                |
 | Currency Symbol    | TXDC                              |
 | Block Explorer URL | https://explorer.apothem.network/ |
