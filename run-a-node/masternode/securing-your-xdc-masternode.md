@@ -42,7 +42,7 @@ can see in the image below that Ubuntu 20.04LTS has hardware and maintenance
 updates until 2025 as well as Extended Security Maintenance until 2032.
 Ensure your OS is supported with current updates.
 
-![Ubuntu LTS Release Cycle](https://www.xdc.dev/uploads/articles/bwitngpypfywf72bfra9.png)
+![Ubuntu LTS Release Cycle](../../.gitbook/assets/image01-ubuntu-release-cycle-securing-masternode.png)
 
 To update the OS packages on your server we first need to connect to the remote
 server so we can then do all the following steps on the remote server. Remember
@@ -154,7 +154,7 @@ by brute force. Using the same length password but including random numbers,
 upper and lowercase letters as well as symbols, can increase the brute force
 time to 26 trillion years with the same computing power.
 
-![Hive Systems Password Brute Force Times](https://www.xdc.dev/uploads/articles/s4k9wjuqb4d3mpp9np1d.jpg)
+![Hive Systems Password Brute Force Times](../../.gitbook/assets/image02-brute-force-time-securing-masternode.jpg)
 
 Ensuring that a password is not reused is also important. If the same password
 is used on multiple sites then if ANY of those sites are compromised and your
@@ -165,7 +165,7 @@ If you have difficulty generating a random password with the criteria described
 above, there are online password generators from reputable vendors. One example
 of this is the [Norton Password Generator](https://my.norton.com/extspa/passwordmanager?path=pwd-gen)
 
-![Norton Password Generator](https://www.xdc.dev/uploads/articles/9t0dg33rothvfyldcxee.png)
+![Norton Password Generator](../../.gitbook/assets/image03-norton-pw-gen-securing-masternode.png)
 
 If you already have an existing password and would like to change it, you can
 do so by first connecting to your VPS as you normally would. Remember to
@@ -201,7 +201,7 @@ article. If there is demand, I'll consider covering it in a future article._
 Securing the server ports and RPC endpoint is important to prevent unauthorized
 access and potential security breaches such as execution of malicious code.
 
-![XDC Network Andromeda Upgrade](https://www.xdc.dev/uploads/articles/j0jr9q4855p78mbb5742.jpg)
+![XDC Network Andromeda Upgrade](../../.gitbook/assets/image04-andromeda-securing-masternode.jpg)
 
 Those who were around at the time may remember that the Andromeda update to the
 XDC network implemented an upgrade to Geth 1.9.X.
@@ -213,7 +213,7 @@ and connection to peers
 with the XDC blockchain
 - Port 8888 for secure Websocket communications to the XDC blockchain
 
-![XDC Node docker-compose.yml](https://www.xdc.dev/uploads/articles/8m6yrimgh0uj94tbxe9h.png)
+![XDC Node docker-compose.yml](../../.gitbook/assets/image05-yml-file-securing-masternode.png)
 
 In addition Linux servers normally have their SSH port set at 22 by default, and
 this is used to connect to the server and access its command line.
@@ -248,11 +248,11 @@ sudo nano /etc/ssh/sshd_config
 Look for the line that says "Port 22". If there is a `#` before "Port 22" as
 in the image below, you'll need to delete the `#` symbol:
 
-![Image description](https://www.xdc.dev/uploads/articles/kgnjxqd6zn05l4h5e32x.png)
+![Port22](../../.gitbook/assets/image06-port22-securing-masternode.png)
 
 Change the number 22 to whatever new port number you want to use for SSH connections:
 
-![Image description](https://www.xdc.dev/uploads/articles/c7k8sneupg1byt2o265y.png)
+![Your new SSH port](../../.gitbook/assets/image07-new-ssh-port-securing-masternode.png)
 
 Save the file:
 
@@ -271,7 +271,7 @@ to a VPS via SSH, this is specifying to ssh what port the remote server is using
 for ssh. From now on whenever you connect to your XDC node, you will need to
 change the 22 in "-p22" to your new port number instead._
 
-![UFW Uncomplicated Firewall](https://www.xdc.dev/uploads/articles/rnotl68nnsd6osg6rp2c.png)
+![UFW Uncomplicated Firewall](../../.gitbook/assets/image08-ufw-logo-securing-masternode.png)
 
 Now to implement a firewall we will use UFW (Uncomplicated Firewall) which is
 a front-end tool for managing firewall rules on Ubuntu.
@@ -349,7 +349,7 @@ Then logout of your VPS:
 logout
 ```
 
-_Note: In another planned future article we will be making some further
+_Note: In another section of this book we will be making some further
 adjustments allowing certain IP addresses restricted access to port 8989
 (HTTP JSON-RPC) in the firewall rules._
 
@@ -359,18 +359,20 @@ adjustments allowing certain IP addresses restricted access to port 8989
 
 SSL/TLS encryption makes things safer if external applications are using
 the JSON-RPC (HTTP/Websocket) functionalities of your node to communicate
-with the XDC blockchain. The assumption of this article is that your node
-is not being used for this so this issue will not be discussed here. If
-there is demand I will explore it in a future article
+with the XDC blockchain. The assumption of this page is that your node
+is not being used for this so this issue will be covered in another section.
 
 ---
 
 ## Implement access controls to limit who can interact with the node
 
-This involves configuring firewall rules to restrict access to the node
-from specific IP addresses or networks and we will be playing with this
-shortly in an upcoming article where we will be allowing restricted
-access to specific ports from only certain whitelisted IP addresses.
+This involves:
+* Configuring firewall rules to restrict access to the node from specific
+IP addresses or networks.
+* Setting up RPC authentication on Geth
+
+These are not relevant to a masternode (with its RPC port filtered) and
+will be covered in other sections of this book.
 
 ---
 
@@ -389,10 +391,9 @@ is already accessible via their control panel and generally includes
 alerts when certain preset VPS parameter limits (eg CPU usage, memory
 usage, network traffic, disk I/O) are breached. If your VPS provider does
 not provide this, third party solutions such as Netdata can be used to
-provide it. Use of Netdata will not be covered here. If there is demand
-I will cover it in a future article.
+provide it. Netdata will be covered in another section.
 
-![Fail2Ban](https://www.xdc.dev/uploads/articles/wyzx4b2zplcdygv1epcd.png)
+![Fail2Ban](../../.gitbook/assets/image09-fail2ban-logo-securing-masternode.png)
 
 Implementing the fail2ban linux package can also be useful for keeping
 your node safe by blocking IP addresses that attempt to access the node
@@ -418,7 +419,7 @@ sudo nano /etc/fail2ban/jail.local
 
 Scroll down until you find this sshd section:
 
-![The SSHD section you are looking for](https://www.xdc.dev/uploads/articles/6h9v11pewrmixth1hzgl.png)
+![The SSHD section you are looking for](../../.gitbook/assets/image10-fail2ban-sshd-original-securing-masternode.png)
 
 Replace the 3 white lines shown above with all of these lines:
 
@@ -432,7 +433,7 @@ Replace the 3 white lines shown above with all of these lines:
 > logpath = %(sshd_log)s
 > backend = %(sshd_backend)s
 
-![Reconfigured fail2ban](https://www.xdc.dev/uploads/articles/x1o78jtu6qkf6myhwix4.png)
+![Reconfigured fail2ban](../../.gitbook/assets/image11-fail2ban-sshd-new-securing-masternode.png)
 
 Save the file:
 
@@ -470,8 +471,6 @@ If you manage to ban yourself by using incorrect passwords etc, you can use
 the direct console on your VPS provider's control panel to access the command
 line of your VPS (same as described in the Firewall section above) and unban
 your IP address using the above command.
-
-_(Special thanks to [go140point6 GitHub](https://github.com/go140point6/pli-node-info/blob/main/fail2ban) re fail2ban)_
 
 ---
 
