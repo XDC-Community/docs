@@ -101,6 +101,7 @@
     * [One-Click-Installer Masternode (macOS)](run-a-node/masternode/one-click-installer-masternode-macos.md)
   * [Full Node](run-a-node/full-node/README.md)
     * [Full Node (Docker version)](run-a-node/full-node/full-node.md)
+    * [How to migrate an XDC Node](run-a-node/full-node/how-to-migrate-an-xdc-node.md)
 
 ## Learn
 
