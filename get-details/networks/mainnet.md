@@ -10,6 +10,8 @@ Users with an internet connection can easily access a public network. They can r
 
 * Chain id: `50`
 * RPC endpoint: `https://rpc.xinfin.network`
+* eRPC endpoint1: `https://erpc.xinfin.network`
+* eRPC endpoint2: `https://rpc.xdc.org`
 * Websocket endpoint: `wss://ws.xinfin.network`
 * Consensus: XDPoS
 * Block finality: `>75%`
