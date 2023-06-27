@@ -574,9 +574,7 @@ logout
 
 At present there is no upgrade script for the Apothem Testnet client.
 The Apothem tree can be [seen here](https://github.com/XinFinOrg/XDPoSChain/tree/apothem) and docker image versions
-can be [seen here](https://hub.docker.com/r/xinfinorg/xinfinnetwork/tags).
-
-There is nothing extra to do here.
+can be [seen here](https://hub.docker.com/r/xinfinorg/xinfinnetwork/tags). There is nothing extra to do here unless official guidance is received.
 
 ---
 
