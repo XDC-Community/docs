@@ -1,12 +1,14 @@
 # Securing your XDC Masternode 
 
-(Instructions are for a Docker node running on Ubuntu 20.04LTS)
-
-_Note: Although this guide refers to masternodes, it will also work for standby
+_Notes:_
+- _Although this guide refers to masternodes, it will also work for standby
 nodes as well as non-validator nodes (as long as they are reachable via a public
 IP address). For non-validator nodes using HTTP/Websocket JSON-RPC connection,
 you'll also need to take into account your specific port access requirements
 when dealing with ports 8888 and/or 8989._
+- _For Apothem Testnet Nodes, Appendix A at the base of this article shows what
+process modifications you will need._
+- _Instructions are for a Docker node running on Ubuntu 20.04LTS_
 
 ---
 
@@ -270,8 +272,10 @@ Change the number 22 to whatever new port number you want to use for SSH connect
 
 Save the file:
 
-> Press "CTRL+X" 
+> Press "CTRL+X"
+> 
 > Press "y"
+> 
 > Press "ENTER"
 
 Then restart the SSH service:
@@ -444,13 +448,21 @@ Scroll down until you find this sshd section:
 Replace the 3 white lines shown above with all of these lines:
 
 > enabled   = true
+> 
 > filter    = sshd
+> 
 > port      = ssh
+> 
 > banaction = iptables-multiport
+> 
 > findtime  = 86400 # 86400 seconds = 1 day
+> 
 > bantime   = -1 # -1 = ban forever
+> 
 > maxretry  = 3 # 3 attempts in 1 day = ban
+> 
 > logpath = %(sshd_log)s
+> 
 > backend = %(sshd_backend)s
 
 <p align="center">
@@ -459,8 +471,10 @@ Replace the 3 white lines shown above with all of these lines:
 
 Save the file:
 
-> Press "CTRL+X" 
+> Press "CTRL+X"
+> 
 > Press "y"
+> 
 > Press "ENTER"
 
 Restart fail2ban:
@@ -504,5 +518,196 @@ tools, node operators can significantly increase the security of their
 nodes. It is important to stay vigilant and proactive in maintaining
 node security to prevent any potential breaches. With these measures in
 place, the XDC network can continue to operate securely and efficiently.
+
+---
+
+<p align="center">
+  <img src="../../.gitbook/assets/image13-apothem-testnet.png" alt="Apothem Testnet">
+</p>
+
+
+# Appendix A - Securing your Apothem Testnet Masternode
+
+## Keeping your node up-to-date with the latest security patches
+
+Once again we separately consider the server OS and the Apothem Testnet
+client.
+
+### Regarding the Server OS
+
+Updating the OS packages on your server is very similar to the Mainnet
+instructions but with a minor path adjustment to the testnet directory
+when stopping and restarting the client. When using ssh to connect to
+your server, remember to replace “root” in the command with your actual
+username for the remote server, and replace ip.address with the actual
+IP address of the remote server:
+
+```
+ssh -lroot -p22 ip.address
+```
+
+Then:
+
+```
+sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y
+cd ~/XinFin-Node/testnet
+sudo ./docker-down.sh
+sudo reboot
+```
+
+After your server has rebooted we need to reconnect to it and restart
+the Apothem client. First step is to reconnect:
+
+```
+ssh -lroot -p22 ip.address
+```
+
+Then restart the client:
+
+```
+cd ~/XinFin-Node/testnet
+sudo ./docker-up.sh
+logout
+```
+
+### Regarding the Apothem Testnet Client
+
+At present there is no upgrade script for the Apothem Testnet client.
+The Apothem tree can be [seen here](https://github.com/XinFinOrg/XDPoSChain/tree/apothem) and docker image versions
+can be [seen here](https://hub.docker.com/r/xinfinorg/xinfinnetwork/tags). There is nothing extra to do here unless official guidance is received.
+
+---
+
+## Using a strong and unique password
+
+No changes from the Mainnet section of the page above.
+
+---
+
+## Change your SSH port and enable firewall rules to restrict access to the node
+
+Ports on the Apothem Testnet client are different to those on the Mainnet
+client. From examining an Apothem Testnet client's docker-compose.yml
+file shown in the image below, we can see that clients on the Apothem
+Testnet use:
+- Port 30304 for RLPx(TCP)/UDP peer-to-peer communications allowing node
+discovery and connection to peers
+- Port 8999 for HTTP JSON-RPC API which allows external applications to
+interact with the Apothem blockchain
+- Port 8898 for Websocket communications between external applications and
+the Apothem blockchain
+
+<p align="center">
+  <img src="../../.gitbook/assets/image12-apothem-yml-file.png" alt="Apothem Testnet docker-compose.yml">
+</p>
+
+The processes for securing the ports of your server running the Apothem
+Testnet client are similar to those for the Mainnet client. As previously,
+we will assume that your masternode is being used only for the purpose of
+maintaining the Apothem Testnet blockchain and does not require
+RPC/Websocket access for external applications to use. _(If you are using
+ports 8898 and/or 8999, you will need to ensure they are open for whatever
+access you require)._ The steps we will use are:
+- Change our SSH port from 22 to a different number to make it harder for
+random malcontents to connect
+- Use a firewall to block ALL incoming ports
+- Then open ONLY ports 30304 and our new SSH port
+- We will leave ports 8898 and 8999 blocked (filtered) as we are assuming
+that these are not needed as noted above
+
+Changing the SSH port from 22 to a different number uses exactly the same
+steps as in the Mainnet article. Please follow the steps in the Mainnet
+article to modify /etc/ssh/sshd_config
+
+Then restart your ssh service with:
+
+```
+sudo service ssh restart
+```
+
+_Note: Whenever we have previously used "-p22" as part of our command to
+connect to a VPS via SSH, this is specifying to ssh what port the remote
+server is using for ssh. From now on whenever you connect to your Apothem
+Testnet node, you will need to change the 22 in "-p22" to your new port
+number instead._
+
+<p align="center">
+  <img src="../../.gitbook/assets/image08-ufw-logo-securing-masternode.png" alt="UFW Uncomplicated Firewall">
+</p>
+
+Same as for the Mainnet nodes, we will use ufw for our firewall
+configuration. Install ufw:
+
+```
+sudo apt install ufw
+```
+
+Establish our default policies to block ALL incoming traffic and only
+allow outgoing traffic:
+
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+```
+
+Open up port 30304 so the Apothem Testnet client is discoverable by peers:
+
+```
+sudo ufw allow 30304
+```
+
+**IMPORTANT: Next we need to ensure that we open up our SSH port (22 or
+whatever port number you changed it to):**
+
+```
+sudo ufw allow <yourSSHport>
+```
+
+Enable UFW then stop the Apothem Testnet client and reboot the server:
+
+```
+sudo ufw enable
+cd ~/XinFin-Node/testnet
+sudo ./docker-down.sh
+sudo reboot
+```
+
+Now ssh to your server to test your new ssh port number. 
+
+If unable to connect, find the console for that VPS on your
+VPS-provider’s website. Use it to login and do whatever you need to do. 
+
+After rebooting, we need to restart the Apothem Testnet client, so first
+SSH to the VPS:
+
+```
+ssh -lroot -p<yourSSHport> ip.address
+```
+
+Restart the Apothem Testnet client and logout of your server:
+
+```
+cd ~/XinFin-Node/testnet
+sudo ./docker-up.sh
+logout
+```
+
+---
+
+## Use SSL/TLS encryption to secure communication with the node
+
+No changes from the Mainnet section of the page above.
+
+---
+
+## Implement access controls to limit who can interact with the node
+
+No changes from the Mainnet section of the page above.
+
+---
+
+## Regularly monitor it for any suspicious activity or unauthorized access attempts
+
+No changes from the Mainnet section of the page above.
 
 ---
