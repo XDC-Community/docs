@@ -103,6 +103,7 @@
   * [Full Node](run-a-node/full-node/README.md)
     * [Full Node (Docker version)](run-a-node/full-node/full-node.md)
     * [How to migrate an XDC Node](run-a-node/full-node/how-to-migrate-an-xdc-node.md)
+  * [RPC](run-a-node/rpc.md)
 
 ## Learn
 
