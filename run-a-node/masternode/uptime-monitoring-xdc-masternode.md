@@ -89,7 +89,7 @@ Towards the bottom of the page they provide some green coloured links to files c
 
 Store the link URL by pasting it to a notepad if needed. We will need to use it shortly on our Terminal.
 
-For the following steps to work, I am assuming that you have set up the firewall on your server using ufw as per the instructions in [THIS ARTICLE](https://www.xdc.dev/s4njk4n/securing-your-xdc-masternode-running-on-ubuntu-2004lts-57k8). If you have not done so, please go to that article and follow the instructions in the section on setting up your ssh port and firewall. 
+For the following steps to work, I am assuming that you have set up the firewall on your server using ufw as per the instructions on [THIS PAGE](./securing-your-xdc-masternode.md). If you have not done so, please go to that page and follow the instructions in the section on setting up your ssh port and firewall. 
 
 <p align="center">
   <img src="../../.gitbook/assets/image08-ufw-logo-securing-masternode.png" alt="UFW Uncomplicated Firewall">
@@ -237,7 +237,7 @@ Go to [THIS PAGE](https://uptimerobot.com/help/locations/) shown in the image be
 
 Right click on the green _"IPv4 and IPv6 combined (.txt)"_ link on that page and copy the link URL. This is a link to the file containing a list of the IP addresses we need to whitelist. Store the link URL by pasting it to a notepad if needed. We will need to use it shortly on our Terminal.
 
-For the following steps to work, we assume that you have set up the firewall on your server using ufw as per the instructions in [THIS ARTICLE](https://www.xdc.dev/s4njk4n/securing-your-apothem-testnet-masternode-4lj7-temp-slug-2031407?preview=87a1706443ac9b6762551d13b2d3f4e6fab9891794f2e0fdf081db67a7d1a2eff0d14bd191a839ff67f568f17e89c2ecd47db5a2f2ded39c28bd8471). If you have not done so, please go to that article and follow the instructions in the section on setting up your ssh port and firewall. 
+For the following steps to work, we assume that you have set up the firewall on your server using ufw as per the Apothem instructions in [THIS PAGE](./securing-your-xdc-masternode.md). If you have not done so, please go to that article and follow the instructions in the Apothem section on setting up your ssh port and firewall. 
 
 <p align="center">
   <img src="../../.gitbook/assets/image08-ufw-logo-securing-masternode.png" alt="UFW Uncomplicated Firewall">
@@ -319,7 +319,7 @@ Now back on the Uptime Robot website again, repeat the "Add a New Monitor" proce
 
 ---
 
-Individually test both of the monitors you have just created as per the process described in the [Mainnet article](https://www.xdc.dev/s4njk4n/how-to-ensure-your-xdc-network-node-is-online-3b19).
+Individually test both of the monitors you have just created as per the process described in the Mainnet section above.
 
 ---
 
