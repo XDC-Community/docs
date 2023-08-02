@@ -207,3 +207,125 @@ You now have an uptime monitor checking every 5 minutes that:
 This will help you to ensure that your XDC node is always online, which will help to prevent missed rewards, ensure the stability of the network, and allow you to identify and fix any problems with your node as soon as possible.
 
 ---
+
+<p align="center">
+  <img src="../../.gitbook/assets/image15-appendix-header.png" alt="Apothem Testnet">
+</p>
+
+
+# Appendix A - Uptime Monitoring for your Apothem Testnet Masternode
+
+## Registering on Uptime Robot
+
+No changes from the Mainnet instructions above.
+
+---
+
+## Creating a monitor that will intermittently ping your node server
+
+No changes from the Mainnet instructions above.
+
+---
+
+## Creating a monitor for your client's RPC endpoint
+
+Go to [THIS PAGE](https://uptimerobot.com/help/locations/) shown in the image below.
+
+<p align="center">
+  <img src="../../.gitbook/assets/image22-locations-and-ips.png" alt="Uptime Robot Locations and IPs">
+</p>
+
+Right click on the green _"IPv4 and IPv6 combined (.txt)"_ link on that page and copy the link URL. This is a link to the file containing a list of the IP addresses we need to whitelist. Store the link URL by pasting it to a notepad if needed. We will need to use it shortly on our Terminal.
+
+For the following steps to work, we assume that you have set up the firewall on your server using ufw as per the instructions in [THIS ARTICLE](https://www.xdc.dev/s4njk4n/securing-your-apothem-testnet-masternode-4lj7-temp-slug-2031407?preview=87a1706443ac9b6762551d13b2d3f4e6fab9891794f2e0fdf081db67a7d1a2eff0d14bd191a839ff67f568f17e89c2ecd47db5a2f2ded39c28bd8471). If you have not done so, please go to that article and follow the instructions in the section on setting up your ssh port and firewall. 
+
+<p align="center">
+  <img src="../../.gitbook/assets/image08-ufw-logo-securing-masternode.png" alt="UFW Uncomplicated Firewall">
+</p>
+
+After following the setup instructions there, you will have:
+- Moved your SSH port from 22 to something else
+- Have installed ufw
+- Established a default policy that blocks all incoming connections (with the 2 exceptions of port 30304 and whichever port you chose to use for SSH)
+- Left ports 8898 and 8999 blocked (filtered) on the assumption that the node is not being used by external applications to access the XDC blockchain via Websocket/HTTP JSON-RPC
+
+From this point on, we assume those steps are done and that is how your firewall setup looks.
+
+Now open up a terminal window and ssh to your node server. When using the following command, remember to replace “root” in this command with your actual username for the remote server, replace the "22" with whichever port you have set up for ssh on your server, and replace "ip.address" with the actual IP address of the remote server:
+```
+ssh -lroot -p22 ip.address
+```
+Use wget to download the Uptime Robot file containing the IP addresses we need to whitelist. Use the link URL we copied from the Uptime Robot website to specify the file location:
+
+```
+wget <URLtoIPaddresses>
+```
+It should look something like:
+
+<p align="center">
+  <img src="../../.gitbook/assets/image24-wget-ip-file.jpg" alt="wget IP file">
+</p>
+
+Install dos2unix:
+
+```
+sudo apt install dos2unix
+```
+Use dos2unix to convert the file to the Unix format:
+
+```
+dos2unix IPv4andIPv6.txt
+```
+
+Now run this command to provide restricted access to port 8999 on your VPS to only the IP addresses listed in the file:
+
+```
+while IFS= read -r ip; do sudo ufw allow from "$ip" to any port 8999; done < IPv4andIPv6.txt
+```
+You can check your firewall now and you should see ports 30304 and your SSH port open, along with now all of the port 8999 entries for each IP address you have just added:
+
+```
+sudo ufw status
+```
+Stop your Apothem Testnet client and reboot your server:
+
+```
+cd ~/XinFin-Node/testnet
+./docker-down.sh
+reboot
+```
+
+After allowing enough time for your server to reboot, ssh to it again. Remember to replace “root” in this command with your actual username for the remote server, replace the "22" with whichever port you have set up for ssh on your server, and replace "ip.address" with the actual IP address of the remote server:
+```
+ssh -lroot -p22 ip.address
+```
+Restart the Apothem Testnet client and logout of your server:
+
+```
+cd ~/XinFin-Node/testnet
+./docker-up.sh
+logout
+```
+Now back on the Uptime Robot website again, repeat the "Add a New Monitor" process again but this time:
+- For Monitor Type, select "HTTP(s)".
+- Give your monitor a different nickname.
+- Enter the address of your node's RPC endpoint. eg http://your.nodes.IP.address:8999
+- Set the Monitoring Interval to 5mins as before.
+- The Monitor Timeout just determines how long the monitor will wait for a response before determining that the RPC is offline. Should be ok to leave at 30sec.
+- If you haven't specifically set up an SSL certificate on your node then you can uncheck the boxes next to "Monitor SSL errors" and "Enable SSL expiry reminders".
+- Leave "HTTP Method" as HEAD.
+- Tick the box next to your email address.
+- Click the "Create Monitor" button.
+
+---
+
+Individually test both of the monitors you have just created as per the process described in the [Mainnet article](https://www.xdc.dev/s4njk4n/how-to-ensure-your-xdc-network-node-is-online-3b19).
+
+---
+
+You now have an uptime monitor checking every 5 minutes that:
+- Your server is pingable and therefore online/reachable on network; and
+- Your Apothem Testnet client is running as its RPC endpoint is up; and
+- You have secured the HTTP JSON-RPC endpoint by making it only accessible from the Uptime Robot IP addresses you have whitelisted on your firewall
+
+---
