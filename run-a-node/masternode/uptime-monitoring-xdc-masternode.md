@@ -18,7 +18,9 @@ Uptime Robot is a powerful tool that can be used to monitor the status of an XDC
 
 By setting up Uptime Robot to monitor your masternode, you can receive real-time notifications if your server goes offline or if your XDC client experiences any issues that have taken its RPC endpoint offline. This can help you ensure that your masternode is always up and running. In this guide, we will walk you through the process of safely setting up Uptime Robot to monitor your XDC masternode.
 
-![The Uptime Robot Website](https://www.xdc.dev/uploads/articles/x4u12mofsfqklzzykfhv.png)
+<p align="center">
+  <img src="../../.gitbook/assets/image16-uptime-robot-site.png" alt="The Uptime Robot Website">
+</p>
 
 ---
 
@@ -35,17 +37,36 @@ By setting up Uptime Robot to monitor your masternode, you can receive real-time
 ## Creating a monitor that will intermittently ping your node server
 1. Login to the Uptime Robot website.
 2. Click on the "Add new monitor" button to the top left of the page.
-![Add New Monitor Button](https://www.xdc.dev/uploads/articles/vvrm9y8ztjkvmysqk4cd.png)
+
+<p align="center">
+  <img src="../../.gitbook/assets/image17-UTrobot-add-new-monitor-button.png" alt="Add New Monitor Button">
+</p>
+
 3. From the "Monitor Type" select the "Ping" option.
-![Select the Ping option](https://www.xdc.dev/uploads/articles/1xvawkgi98zk8dtw4myb.png)
+
+<p align="center">
+  <img src="../../.gitbook/assets/image18-monitor-type-ping.png" alt="Select the Ping option">
+</p>
+
 4. Then in the "Friendly Name" field, type a nickname for this alert.
-![Details for the Ping Monitor](https://www.xdc.dev/uploads/articles/lim152qw09ci6g6vepdu.png)
+   
+<p align="center">
+  <img src="../../.gitbook/assets/image19-friendly-name.png" alt="Details for the Ping Monitor">
+</p>
+
 5. Put your node's IP address in the "IP" field.
 6. Move the "Monitoring Interval" slider bar to 5 mins. A free 5 minutely check will be great for our general purposes at this point. (Any more frequent checks than this require a paid account).
 7. In the yellow box you will see the “Select Alert Contacts to Notify” section. Place a check mark next to your email address.
-![Email checkbox](https://www.xdc.dev/uploads/articles/o11kx5ctsf79ce71glvx.png)
+
+<p align="center">
+  <img src="../../.gitbook/assets/image20-contacts-to-notify.png" alt="Email checkbox">
+</p>
+
 8. Then click on the blue "Create Monitor" button at the bottom right of the popup window.
-![Create Monitor Button](https://www.xdc.dev/uploads/articles/bmins4czqigttpbm361j.png)
+
+<p align="center">
+  <img src="../../.gitbook/assets/image21-create-monitor.png" alt="Create Monitor Button">
+</p>
 
 ---
 
@@ -56,17 +77,23 @@ One way we can securely do this is by restricting access to the RPC endpoint by 
 
 We first need to know which IP addresses Uptime Robot sends HTTP requests from. Uptime Robot helpfully provides this information on their website on [THIS PAGE](https://uptimerobot.com/help/locations/) shown in the image below.
 
-![Uptime Robot Locations and IPs](https://www.xdc.dev/uploads/articles/4qxfngu7k96eru6yx9lm.png)
+<p align="center">
+  <img src="../../.gitbook/assets/image22-locations-and-ips.png" alt="Uptime Robot Locations and IPs">
+</p>
 
 Towards the bottom of the page they provide some green coloured links to files containing a list of the relevant IPv4 and IPv6 addresses that we will need to whitelist on our firewall. Right click on the _"IPv4 and IPv6 combined (.txt)"_ link on that page and copy the link URL. 
 
-![Link to IP addresses we need to Whitelist](https://www.xdc.dev/uploads/articles/43umxmwrppphe99svowv.png)
+<p align="center">
+  <img src="../../.gitbook/assets/image23-whitelisting-file-links.png" alt="Link to IP addresses we need to Whitelist">
+</p>
 
 Store the link URL by pasting it to a notepad if needed. We will need to use it shortly on our Terminal.
 
 For the following steps to work, I am assuming that you have set up the firewall on your server using ufw as per the instructions in [THIS ARTICLE](https://www.xdc.dev/s4njk4n/securing-your-xdc-masternode-running-on-ubuntu-2004lts-57k8). If you have not done so, please go to that article and follow the instructions in the section on setting up your ssh port and firewall. 
 
-![UFW Uncomplicated Firewall](https://www.xdc.dev/uploads/articles/rnotl68nnsd6osg6rp2c.png)
+<p align="center">
+  <img src="../../.gitbook/assets/image08-ufw-logo-securing-masternode.png" alt="UFW Uncomplicated Firewall">
+</p>
 
 After following the setup instructions there, you will have:
 - Moved your SSH port from 22 to something else
@@ -86,7 +113,11 @@ In the terminal, we will now download the file containing the list of Uptime Rob
 wget <URLtoIPaddresses>
 ```
 It should look something like:
-![Image description](https://www.xdc.dev/uploads/articles/bgkz5k136zexh7t8fcre.jpg)
+
+<p align="center">
+  <img src="../../.gitbook/assets/image24-wget-ip-file.jpg" alt="wget IP file">
+</p>
+
 The file we have just downloaded with wget is actually in a DOS format (with CRLF line ends instead of the Unix format of LF line ends). This will cause errors with ufw so we first need to convert it to a unix format. Install dos2unix:
 
 ```
@@ -108,7 +139,11 @@ You can check your firewall now and you should see ports 30303 and your SSH port
 sudo ufw status
 ```
 You will see a long list of entries, somewhat like this:
-![Whitelisted IP addresses](https://www.xdc.dev/uploads/articles/dxz4ydgd4rpdh4ru7rdp.png)
+
+<p align="center">
+  <img src="../../.gitbook/assets/image25-whitelisted-ips.png" alt="Whitelisted IP addresses">
+</p>
+
 Now we need to take your node offline. Change to the XDC mainnet client directory:
 
 ```
@@ -155,12 +190,14 @@ Now back on the Uptime Robot website again, repeat the "Add a New Monitor" proce
 ---
 
 At this point, a list of the monitors you have just created should now be visible on the left side of the page. If you click on one of them you will see the "dashboard" for that monitor appear on the right side of the page. On the dashboard you can test your alert by clicking the "Test Notification setup" button and then clicking "Send Test Notifications" on the popup that comes up.
-![Test Notification Button](https://www.xdc.dev/uploads/articles/qxkk8t5fozboqdtva19h.png)
+
+<p align="center">
+  <img src="../../.gitbook/assets/image26-test-notification-setup.png" alt="Test Notification Button">
+</p>
+
 You can individually check both of the monitors you have just created in this way.
 
 ---
-
-![Your node is operating safely](https://www.xdc.dev/uploads/articles/hi66e4jylxijrfryf9sj.jpg)
 
 You now have an uptime monitor checking every 5 minutes that:
 - Your server is pingable and therefore online/reachable on network; and
