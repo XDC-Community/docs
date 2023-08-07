@@ -516,7 +516,7 @@ place, the XDC network can continue to operate securely and efficiently.
 ---
 
 <p align="center">
-  <img src="https://www.xdc.dev/images/gX5W-IoqrIjFowWGiqGXXMLw0xeXD7v6FF_G4ChhY0c/w:880/mb:500000/ar:1/aHR0cHM6Ly93d3cu/eGRjLmRldi91cGxv/YWRzL2FydGljbGVz/LzU0ZDJ4M2ZkdXEx/bXNoOGtzZGEzLnBu/Zw" alt="Apothem Testnet">
+  <img src="../../.gitbook/assets/image15-appendix-header.png" alt="Apothem Testnet">
 </p>
 
 
@@ -592,7 +592,7 @@ interact with the Apothem blockchain
 the Apothem blockchain
 
 <p align="center">
-  <img src="https://www.xdc.dev/images/6Kfr3oQeUw2FN6Uq-FhF51Y7XS7Yr-hTbwMz4Buq2Do/w:880/mb:500000/ar:1/aHR0cHM6Ly93d3cu/eGRjLmRldi91cGxv/YWRzL2FydGljbGVz/LzR3emRoc2hhM2gx/bGRqNXgxdjBmLnBu/Zw" alt="Apothem Testnet docker-compose.yml">
+  <img src="../../.gitbook/assets/image14-apothem-yml-file.png" alt="Apothem Testnet docker-compose.yml">
 </p>
 
 The processes for securing the ports of your server running the Apothem
