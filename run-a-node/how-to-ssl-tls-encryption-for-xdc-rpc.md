@@ -14,7 +14,9 @@ By protecting sensitive information and complying with security standards, SSL/T
 
 ---
 
-<center>![Nginx](https://www.xdc.dev/uploads/articles/d4cv1yy741sb8xxwkpnk.png)</center>
+<p align="center">
+  <img src="../.gitbook/assets/image27-nginx-logo.png" alt="Nginx Logo">
+</p>
 
 Nginx is a popular web server and reverse proxy server that efficiently handles and routes HTTP and other network protocols. We can use Nginx to establish SSL/TLS encryption for an XDC node's RPC by acting as a reverse proxy. 
 
