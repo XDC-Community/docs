@@ -72,7 +72,10 @@ sudo docker inspect mainnet_xinfinnetwork_1
 ```
 
 You will see a lot of configuration information relating to your Docker container shown in your terminal. The part you are looking for is the IP address shown after _"IPAddress":_. It is towards the end of the configuration information that is displayed in the terminal window. In the screenshot image below, we can see that this Docker container is using IP address _172.18.0.2_:
-<center>![Docker container IP address](https://www.xdc.dev/uploads/articles/nme1g29txvbjw0d39vyn.png)</center>
+
+<p align="center">
+  <img src="../.gitbook/assets/image28-docker-container-ip-address.png" alt="Docker Container IP Address">
+</p>
 
 Now open the Nginx configuration file in nano for editing:
 ```
