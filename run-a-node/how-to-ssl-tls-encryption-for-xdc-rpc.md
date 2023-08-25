@@ -83,7 +83,10 @@ sudo nano /etc/nginx/nginx.conf
 ```
 
 It will look like this:
-<center>![nginx.conf](https://www.xdc.dev/uploads/articles/pkcte6w7daf68t6hf28a.png)</center>
+
+<p align="center">
+  <img src="../.gitbook/assets/image29-nginx-config-file-original-on-opening.png" alt="nginx.conf original appearance">
+</p>
 
 Locate the http block in the nginx.conf file. It begins with the _http_ keyword and ends with a closing brace _}_. At the end of the http block (before the closing brace), add the following configuration:
 ```
