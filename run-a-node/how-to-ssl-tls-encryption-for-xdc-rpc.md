@@ -167,7 +167,9 @@ Congratulations you have just set up SSL/TLS encryption for your XDC Mainnet RPC
 
 ---
 
-<center>![Apothem Testnet](https://www.xdc.dev/uploads/articles/54d2x3fduq1msh8ksda3.png)</center>
+<p align="center">
+  <img src="../.gitbook/assets/image15-appendix-header.png" alt="Appendix A - Apothem Testnet">
+</p>
 
 ## Appendix A - Modifications for Apothem Testnet Nodes
 
