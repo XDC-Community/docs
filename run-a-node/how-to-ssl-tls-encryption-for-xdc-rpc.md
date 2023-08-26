@@ -110,7 +110,10 @@ Locate the http block in the nginx.conf file. It begins with the _http_ keyword 
 ```
 
 After adding it, the part you have added to the file should look like this:
-<center>![added section to nginx.conf](https://www.xdc.dev/uploads/articles/d6a1u5mlp4pnkqsubbbn.png)</center>
+
+<p align="center">
+  <img src="../.gitbook/assets/image30-nginx-config-file-modified.png" alt="nginx.conf added section">
+</p>
 
 In the configuration text you have just added we need to also:
 - replace `<your_ip_address>` with the public IP address of the XDC node server; and
