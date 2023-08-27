@@ -215,26 +215,3 @@ In the majority of cases, we should now block (filter) port 8999 with our firewa
 Congratulations you have just set up SSL/TLS encryption for your Apothem Testnet RPC!
 
 ---
-
-In case of any technical queries on XDC Network, feel free to drop your queries on [XDC.Dev](https://www.xdc.dev/) forum.
-
-**Quick links:**
-
-[XinFin.org](https://xinfin.org/)
-[XDC Chain Network Tools and Documents](https://xinfin.org/xdc-chain-network-tools-and-documents)
-[XDC Network Explorer](https://xdc.network/)
-[XDC Dev Forum](https://www.xdc.dev/)
-[Beta — XDC Web Wallet](https://betawallet.xinfin.network/)
-[XDC faucet](https://faucet.apothem.network/)
-[XDC faucet - Blocksscan](https://faucet.blocksscan.io/)
-
-**XinFin — XDC Social Links:**
-
-[Twitter](https://twitter.com/XinFin_Official)
-[GitHub](https://github.com/XinFinorg)
-[Telegram](https://t.me/xinfin)
-[Facebook](https://www.facebook.com/XinFinHybridBlockchain/)
-[LinkedIn](https://www.linkedin.com/company/xinfin/)
-[YouTube](https://www.youtube.com/channel/UCQaL6FixEQ80RJC0B2egX6g)
-
----
