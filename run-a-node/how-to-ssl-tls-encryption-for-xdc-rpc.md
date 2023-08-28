@@ -1,8 +1,9 @@
 # SSL/TLS Encryption for XDC Node RPCs
 
-_Note: These instructions relate to XDC Mainnet Nodes.
-Appendix A shows process modifications needed for Apothem Testnet nodes.
-Appendix B shows information for Secure Websocket._
+_Notes:_ 
+- _These instructions relate to XDC Mainnet Nodes._
+- _Appendix A shows process modifications needed for Apothem Testnet nodes._
+- _Appendix B shows information for Secure Websocket._
 
 ---
 
