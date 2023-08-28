@@ -3,7 +3,6 @@
 _Notes:_ 
 - _These instructions relate to XDC Mainnet Nodes._
 - _Appendix A shows process modifications needed for Apothem Testnet nodes._
-- _Appendix B shows information for Secure Websocket._
 
 ---
 
@@ -218,10 +217,3 @@ In the majority of cases, we should now block (filter) port 8999 with our firewa
 Congratulations you have just set up SSL/TLS encryption for your Apothem Testnet RPC!
 
 ---
-
-<p align="center">
-  <img src="../.gitbook/assets/image15-appendix-header.png" alt="Appendix B - Secure Websocket">
-</p>
-
-## Appendix B - Secure Websocket
-
