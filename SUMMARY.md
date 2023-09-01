@@ -100,10 +100,12 @@
     * [One-Click-Installer Masternode (Windows OS)](run-a-node/masternode/standby-node.md)
     * [One-Click-Installer Masternode (macOS)](run-a-node/masternode/one-click-installer-masternode-macos.md)
     * [How to Secure Masternode](run-a-node/masternode/securing-your-xdc-masternode.md)
+    * [How to Monitor Uptime](run-a-node/masternode/uptime-monitoring-xdc-masternode.md)
   * [Full Node](run-a-node/full-node/README.md)
     * [Full Node (Docker version)](run-a-node/full-node/full-node.md)
     * [How to migrate an XDC Node](run-a-node/full-node/how-to-migrate-an-xdc-node.md)
   * [RPC](run-a-node/rpc.md)
+    * [How to Encrypt RPC](run-a-node/how-to-ssl-tls-encryption-for-xdc-rpc.md)
 
 ## Learn
 
