@@ -1,3 +1,4 @@
+# Commands and Configuration Options for the XDC Mainnet Client
 
 As the XDC blockchain continues to gain further momentum as a scalable and secure ecosystem for decentralized applications and cross-chain interoperability, optimizing the deployment and management of XDC nodes remains crucial. In this article, we delve into the realm of XDC Client commands and also explore the wide array of configuration options available to streamline their deployment and operation. Whether you are an experienced blockchain developer or just beginning your journey with XDC, mastering commands and configuration for XDC nodes will empower you to leverage the full potential of this cutting-edge blockchain network, ensuring seamless scalability, robust security, and unwavering reliability.
 
