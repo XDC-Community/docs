@@ -8,7 +8,9 @@ sudo docker exec -it mainnet_xinfinnetwork_1 XDC --help
 ```
 By executing this command, we gain access to the XDC client within the Docker container named _mainnet_xinfinnetwork_1_. The inclusion of the _--help_ flag prompts the client to display its usage information, presenting an extensive list of commands and their respective options. The first page of output is shown here:
 
-![XDC Client Commands and Configuration Options](https://www.xdc.dev/uploads/articles/zhh0nfafvuslqm5zl3wj.png)
+<p align="center">
+  <img src="../.gitbook/assets/image31-xdc-client-commands.png" alt="XDC Client Commands and Configuration Options">
+</p>
 
 From the output, we can observe that the appropriate formatting for commands and options within the XDC client's Docker container is as follows:
 
