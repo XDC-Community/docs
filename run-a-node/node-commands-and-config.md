@@ -1013,7 +1013,9 @@ show help
 
 The "docker-compose.yml" file (contents shown below) is a configuration file written in YAML (YAML Ain't Markup Language) format used by Docker Compose. It defines the services, containers, and their configurations for the Dockerized implementation of the XDC Mainnet Client.
 
-<center> ![docker-compose.yml](https://www.xdc.dev/uploads/articles/lthjqtocqcogos70etaq.png) </center>
+<p align="center">
+  <img src="../.gitbook/assets/image32-docker-compose-yml-file.png" alt="docker-compose.yml">
+</p>
 
 Let's go through the contents of the file and their meanings:
 
