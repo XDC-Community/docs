@@ -1009,6 +1009,10 @@ show help
   
 ---
 
+<p align="center">
+  <img src="../.gitbook/assets/image15-appendix-header.png" alt="Appendix A - docker-compose.yml">
+</p>
+
 <center><h1>APPENDIX A - docker-compose.yml</h1></center>
 
 The "docker-compose.yml" file (contents shown below) is a configuration file written in YAML (YAML Ain't Markup Language) format used by Docker Compose. It defines the services, containers, and their configurations for the Dockerized implementation of the XDC Mainnet Client.
