@@ -484,7 +484,7 @@ After clicking in `Write`, you'll need to confirm the transaction on the XDCPay 
 
 You can check our successful transaction on the [Block Explorer!](https://explorer.xinfin.network/txs/0xa365a7edea3af9ed22c6dffb2f24987f1941f21dbd4d9bbb13b11022439de96a#overview)
 
-***
+
 
 For more information about Hardhat, Please Visit [Hardhat Documentation](https://hardhat.org/tutorial).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\

@@ -456,7 +456,7 @@ If everything is correctly filled out, your contract page on the block explorer 
 
 ![Verify 03](https://user-images.githubusercontent.com/78161484/190875780-6223b4b0-fecc-4e79-83bc-c810c5b0351c.png)
 
-***
+
 
 For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.community/).\

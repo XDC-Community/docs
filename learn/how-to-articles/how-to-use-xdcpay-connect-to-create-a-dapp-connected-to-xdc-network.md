@@ -613,8 +613,8 @@ If there are no erros, the next time you connect to XDCPay on the dApp you shoul
 
 Now you have created your first dApp on XDC Network using XDCPay! 🎉🥳
 
-***
+
 
 This dApp Scaffold is available in the [xdc-dapp-scaffold folder](https://github.com/menezesphill/docs/tree/main/how-to/XDCPay/Integration/xdc-dapp-scaffold).\
 This Dapp completed version (fully functional) is also available in the [xdc-dapp-scaffold-completed folder](https://github.com/menezesphill/docs/tree/main/how-to/XDCPay/Integration/xdc-dapp-scaffold-completed).\
-For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\
+For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\\

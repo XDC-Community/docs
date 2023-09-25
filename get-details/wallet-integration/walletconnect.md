@@ -1,5 +1,4 @@
 ---
-description: 'This article will teach you what WalletConnect is, what WalletConnect is used for, and how to connect WalletConnect to the XDC Network.'
 keywords:
   - docs
   - how to
@@ -11,15 +10,18 @@ keywords:
   - dapp
   - provider
   - walletconnect
+description: >-
+  This article will teach you what WalletConnect is, what WalletConnect is used
+  for, and how to connect WalletConnect to the XDC Network.
 ---
 
-# WalletConnect
+# Wallet Connect
 
 ![WalletConnect logo](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-header.png)
 
 The communications protocol for web3. [WalletConnect](https://walletconnect.com/) brings the ecosystem together by enabling wallets and apps to securely connect and interact. Opening up a whole world of Dapps that were once only available to specific wallets.
 
----
+
 
 ## For What is Used
 
@@ -31,45 +33,31 @@ The user can interact with any Dapp without comprising their private keys and wi
 
 To connect a Dapp on XDC Network and a Web3 wallet with WalletConnect, just open the app, and prepare your wallet. Click on WalletConnect link:
 
-<p align="center">
-  <img width=40% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-connect.png" alt="How to connect your Dapp to WalletConnect"/>
-</p>
+![How to connect your Dapp to WalletConnect](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-connect.png)
 
 A WalletConnect modal should pop-up, here you can connect your wallet by scanning the `QR Code` or going to `Desktop` tab, and choose another connection method:
 
-<p align="center">
-  <img width=45% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-modal-qrcode.png" alt="How to connect your Dapp to WalletConnect"/> <img width=45% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-modal-desktop.png" alt="How to connect your Dapp to WalletConnect"/>
-</p>
+![How to connect your Dapp to WalletConnect](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-modal-qrcode.png) ![How to connect your Dapp to WalletConnect](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-modal-desktop.png)
 
 After connecting and approving the connection on your wallet, now you have access to your Dapp:
 
-<p align="center">
-  <img width=80% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-use.png" alt="How to connect your Dapp to WalletConnect"/>
-</p>
+![How to connect your Dapp to WalletConnect](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-use.png)
 
 On your Dapp, try to click on a action button to trigger a wallet request, for example `eth_sign (standard)`:
 
-<p align="center">
-  <img width=30% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-actions.png" alt="How to connect your Dapp to WalletConnect"/>
-</p>
+![How to connect your Dapp to WalletConnect](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-actions.png)
 
-<p align="center">
-  <img width=70% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-pending.png" alt="How to connect your Dapp to WalletConnect"/>
-</p>
+![How to connect your Dapp to WalletConnect](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-pending.png)
 
 After approving the action on your wallet you will see a success message on Dapp :rocket:
 
-<p align="center">
-  <img width=70% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-approved.png" alt="How to connect your Dapp to WalletConnect"/>
-</p>
+![How to connect your Dapp to WalletConnect](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-dapp-approved.png)
 
 ## Understanding WalletConnect
 
 **How does it work**? It's based on a websocket JSON-RPC channel, WalletConnect is a simple infrastructure that can be setup by any developer. Using a Bridge server to relay the messages without having access to any of its contents.
 
-<p align="center">
-  <img width=85% src="https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-diagram.png" alt="How to connect your Dapp to WalletConnect"/>
-</p>
+![How to connect your Dapp to WalletConnect](https://raw.githubusercontent.com/XDC-Community/docs/main/.gitbook/assets/example-walletconnect-diagram.png)
 
 WalletConnect is an protocol for connecting Dapps to Wallets by scanning a QR code, the protocol establishes a remote connection between two apps and/or devices using a Bridge server to relay payloads. These payloads are symmetrically encrypted through a shared key between the two peers.
 
@@ -79,7 +67,7 @@ The connection is initiated by one peer displaying a QR Code or deep link with a
 
 You can easly test this with a prepared demo project (full code [here](https://github.com/XDC-Community/docs/tree/main/how-to/walletconnect/walletconnect-example-dapp)). Just download and and install dependencies by running this commands on terminal:
 
-> :information_source: The demo was made base on `Node.js v16.X` version.
+> :information\_source: The demo was made base on `Node.js v16.X` version.
 
 ```shell
 git clone git@github.com:XDC-Community/docs.git
@@ -87,7 +75,7 @@ cd docs/how-to/walletconnect/walletconnect-example-dapp
 npm install
 ```
 
-Now we just need to start the web app by running ```npm run start```. With your browser opened, visit the [`http://localhost:3000/`](http://localhost:3000/) url :rocket:
+Now we just need to start the web app by running `npm run start`. With your browser opened, visit the [`http://localhost:3000/`](http://localhost:3000/) url :rocket:
 
 ## How to connect a web Dapp with WalletConnect
 
@@ -99,7 +87,7 @@ npm install --save @walletconnect/client @walletconnect/qrcode-modal
 
 This code will initiate a WalletConnect session and integrate user's wallet, copy and paste this in your Javascript/Typescript project:
 
-> :information_source: Syntax shown below is Javascript ES6 which requires bundling and transpiling to run in web browsers. If unfamiliar we recommend setting up an environment using [Webpack Starter](https://github.com/wbkd/webpack-starter) or [Create React App](https://github.com/facebook/create-react-app)
+> :information\_source: Syntax shown below is Javascript ES6 which requires bundling and transpiling to run in web browsers. If unfamiliar we recommend setting up an environment using [Webpack Starter](https://github.com/wbkd/webpack-starter) or [Create React App](https://github.com/facebook/create-react-app)
 
 ```javascript
 import WalletConnect from "@walletconnect/client";
@@ -169,9 +157,9 @@ npm install --save web3 @walletconnect/web3-provider
 
 First, instantiate your WalletConnect web3-provider using the following options: Infura or Custom RPC mapping
 
-<p>
-<details><summary>Infura</summary>
-<p>
+<details>
+
+<summary>Infura</summary>
 
 ```javascript
 import WalletConnectProvider from "@walletconnect/web3-provider";
@@ -185,11 +173,11 @@ const provider = new WalletConnectProvider({
 await provider.enable();
 ```
 
-</p>
 </details>
 
-<details><summary>Custom RPC</summary>
-<p>
+<details>
+
+<summary>Custom RPC</summary>
 
 ```javascript
 import WalletConnectProvider from "@walletconnect/web3-provider";
@@ -209,15 +197,13 @@ const provider = new WalletConnectProvider({
 await provider.enable();
 ```
 
-</p>
 </details>
-</p>
 
 Then you can integrate your dapp using your favorite Ethereum library: ethers.js or web3.js
 
-<p>
-<details><summary>ethers.js</summary>
-<p>
+<details>
+
+<summary>ethers.js</summary>
 
 ```javascript
 import { providers } from "ethers";
@@ -226,11 +212,11 @@ import { providers } from "ethers";
 const web3Provider = new providers.Web3Provider(provider);
 ```
 
-</p>
 </details>
 
-<details><summary>web3.js</summary>
-<p>
+<details>
+
+<summary>web3.js</summary>
 
 ```javascript
 import Web3 from "web3";
@@ -239,9 +225,7 @@ import Web3 from "web3";
 const web3 = new Web3(provider);
 ```
 
-</p>
 </details>
-</p>
 
 After setting up your provider you should listen to EIP-1193 events to detect accounts and chain change and also disconnection.
 

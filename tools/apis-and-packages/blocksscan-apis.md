@@ -146,7 +146,7 @@ Once completed, you should see account info like this:
 }
 ```
 
-***
+
 
 For more information about BlockScan, Please Visit [BlockScan Website](https://blocksscan.io/).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\

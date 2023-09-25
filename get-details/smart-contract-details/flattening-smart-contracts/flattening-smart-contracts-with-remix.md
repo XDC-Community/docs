@@ -308,7 +308,7 @@ Add our newly minted token is available in our wallet.
 
 And we can check our successful transaction on the [Block Explorer!](https://explorer.apothem.network/txs/0xa95719657bee4d87068d3407e2c53acd9e955ad6eebe6f81d6cfcc59a42d7bb5#overview)
 
-***
+
 
 For more information about Remix IDE, Please Visit [Remix IDE Documentation](https://remix-ide.readthedocs.io/en/latest/).\
 For more information about XDC Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.community/).\

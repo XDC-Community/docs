@@ -387,7 +387,7 @@ After clicking on `Write`, you must confirm the transaction on the XDCPay wallet
 
 You can check your successful transaction on the [Block Explorer!](https://explorer.apothem.network/txs/0xf9e57c65e3415d661caf09f1bf01ed2b48ab1daf7c45b3eae42cd429804dfe71#overview)
 
-***
+
 
 For more information about Remix IDE, Please Visit [Remix IDE Documentation](https://remix-ide.readthedocs.io/en/latest/).\
-For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\
+For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\\

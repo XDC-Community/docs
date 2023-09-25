@@ -434,7 +434,7 @@ On this page you can read from, write to, or simply read the information tied to
 
 ![Verify 03](https://user-images.githubusercontent.com/78161484/190030842-4ab30b85-f87b-43d1-a8b2-8d089abb1a34.png)
 
-***
+
 
 For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\

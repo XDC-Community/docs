@@ -138,7 +138,7 @@ You can click on it to get more info:
 
 If you press `View on block explorer`, you will be redirected to Apothem Explorer website entry with your transaction.
 
-***
+
 
 For more information about MetaMask, Please Visit [MetaMask Website](https://metamask.io/).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\

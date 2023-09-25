@@ -248,7 +248,7 @@ This is how much you ended up paying for our transaction: ![txprice](https://use
 
 And here is how much tokens we sent: ![tokenamount](https://user-images.githubusercontent.com/102393474/191441729-eeb9d535-dd31-4cac-8aaa-fe19b7b2dce9.png)
 
-***
+
 
 For more information about ether.js check out [ethers.js github repo](https://github.com/ethers-io/ethers.js/) and [ethers.js documentation website](https://docs.ethers.io/v5/).\
 For more information about the XDC Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\

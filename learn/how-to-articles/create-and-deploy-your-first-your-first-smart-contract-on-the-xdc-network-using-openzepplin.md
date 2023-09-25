@@ -48,7 +48,7 @@ OpenZeppelin's [Contracts Wizard](https://wizard.openzeppelin.com/) as an intera
 
 Select the kind of contract that you want, set your parameters and desired features, and the Wizard will generate all of the code necessary. The resulting code is ready to be compiled and deployed, or it can serve as a starting point and be customized further.
 
-***
+
 
 ## Writing our first Non-Fungible Token (NFT)
 
