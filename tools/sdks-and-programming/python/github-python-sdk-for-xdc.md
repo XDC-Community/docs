@@ -2,13 +2,13 @@
 
 ### XDC3PYTHON
 
-XDC3PYTHON SDK with support for smart contracts, XDC20 & XRC721.
+XDC3PYTHON SDK with support for smart contracts, XRC20 & XRC721.
 
 ### Usage
 
 **pip install XDC3PYTHON**
 
-#### This SDK supports following Read & Write operations:-
+#### This SDK supports the following Read & Write operations:-
 
 * xrc20 methods.
   * Read methods.
@@ -38,7 +38,7 @@ if __name__=="__main__":
     print(tokenSymbol) 
 ```
 
-This example returns name of the specified address.
+This example returns the name of the specified address.
 
 #### Example for XRC721.
 
@@ -57,7 +57,7 @@ if __name__=="__main__":
     print(tokenSymbol) 
 ```
 
-This example returns symbol of the specified address.
+This example returns the symbol of the specified address.
 
 ### Transports
 
