@@ -134,6 +134,7 @@ sudo nginx -t
 
 We will need to set the ownership and permissions of the private key and certificate we created earlier. This makes sure they are secure. We also need to ensure that Nginx can access them when needed. The Nginx process usually runs as _www-data_, so we will add _www-data_ to the group _ssl-cert_ that has access to the credentials:
 ```
+sudo addgroup ssl-cert
 sudo chown root:ssl-cert /etc/ssl/certs/cert.pem
 sudo chmod 0644 /etc/ssl/certs/cert.pem
 sudo chown root:ssl-cert /etc/ssl/private/key.pem

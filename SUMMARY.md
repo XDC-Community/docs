@@ -86,6 +86,7 @@
     * [How to migrate an XDC Node](run-a-node/full-node/how-to-migrate-an-xdc-node.md)
   * [RPC](run-a-node/rpc.md)
     * [How to Encrypt RPC](run-a-node/how-to-ssl-tls-encryption-for-xdc-rpc.md)
+  * [Commands and Config Options](run-a-node/node-commands-and-config.md)
 
 ## Learn
 
