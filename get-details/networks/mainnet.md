@@ -18,13 +18,12 @@ Users with an internet connection and access the a full node RPC one can easily 
 **Useful Links**
 
 * [XinFin Status Page](https://xinfin.network/#stats)
-* [XinFin Explorer](https://explorer.xinfin.network/) (XinFin Scan)
+* [XDC Network Explorer](https://xdc.blocksscan.io/) (Blocksscan)
 * [XinFin MasterNode APP ](https://master.xinfin.network/)(MasterNodeApp)
-* [XinFin Web Wallet](https://wallet.xinfin.network/) (web Wallet)
-* [XinFin Mobile Wallet](https://play.google.com/store/apps/details?id=com.xdcwallet\&hl=en\_IN) (Mobile Wallet)
 
 **Useful Tools**
 
 * [XinFin Remix](https://remix.xinfin.network/)
-* [XDCPay](https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en)\
-  \\
+* [XDCPay](https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en)
+* [MetaMask](https://docs.xdc.community/get-details/wallet-integration/metamask)
+  
