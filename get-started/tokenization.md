@@ -1,6 +1,6 @@
 # Tokenization
 
-Tokenization is the act of digitizing something of value into the form of a token, or smart contract, on the blockchain. This can range from real-world assets like gold or real estate, to even data. As previously stated, anything that has value can be tokenized on the blockchain. Smart contracts allow these tokenized assets to be programmed for different use cases and provide adaptability to various types of value.
+Tokenization is the act of digitizing something valuable on a blockchain using smart contracts. This can range from real-world assets like gold or real estate, to even data. As previously stated, anything that has value can be tokenized on the blockchain. Smart contracts allow these tokenized assets to be programmed for different use cases and provide adaptability to various types of value.
 
 Tokenizing introduces these valuable assets to the benefits of blockchain, such as security, transparency, speed, and accountability. With blockchain being open-source, these assets can be easily accessed, verified, and transacted, which allows them the ability to easily participate in the evolving economy of Web3.
 
