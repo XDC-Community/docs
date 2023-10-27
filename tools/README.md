@@ -1,11 +1,11 @@
 ---
-description: XDC network SDKs, Frameworks, & Network Tools
+description: XDC network SDKs, programming languages Frameworks, & Network Tools
 ---
 
 # Tools
 
-The XDC network has prepared a set of EVM compatable tools that allow new developers and creators to have a tool set to help them contribute and build on the XDC Network. These tools consist of SDKs,APIS, deployment and test frameworks, as well as products created to help monitor the network like the explorer and network stats webpages and white papers needed to effectively build on the network.
+The XDC network's EVM compatibility allows developers to conveniently use tools they're familiar with, making their contributions and building experience on the XDC Network easier. Complimenting that are a set of SDKs,APIS, deployment and test frameworks. Finally, products created to help monitor the network such as explorer and network stats are available with white papers needed to effectively build on the network.
 
-As new tools are developed and have active developer comunities are built around them more can be added to the xdc network.
+As new tools and active developer communities are built, more can be added. 
 
 &#x20;
