@@ -187,7 +187,7 @@ Then hit `Deploy` button and you will be asked to confirm transaction.
 
 ![deploy\_contract](https://user-images.githubusercontent.com/102393474/196579097-7ab4e2cf-e1f8-45c7-9b03-e46de89be744.png)
 
-
+***
 
 For more information about Remix, Please Visit [Remix Documentation](https://remix-ide.readthedocs.io/en/latest/).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\

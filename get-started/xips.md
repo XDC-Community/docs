@@ -26,61 +26,17 @@ It is highly recommended that a single XIP contain a single key proposal or new 
 
 An XIP must meet certain minimum criteria. It must be a clear and complete description of the proposed enhancement. The enhancement must represent a net improvement. The proposed implementation, if applicable, must be solid and must not complicate the protocol unduly.
 
-### Special requirements for Core XIPs
+### Special Requirements for Core XIPs
 
 If a **Core** XIP mentions or proposes changes to the EVM (Ethereum Virtual Machine), an [EIP](https://eips.ethereum.org/) should be created that addresses the desired changes to the EVM.
 
-## XIP Work Flow
+## Creating an XIP
 
-### Shepherding an XIP
+### Contributing
 
-Parties involved in the process are you, the champion or _XIP author_, the [_XIP editors_](xips.md#XIP-editors), and the [_XDC Core Developers_](https://github.com/XDC-Community).
+First review XIP-1. Then clone the repository and add your XIP to it. There is a [template XIP here](https://github.com/XDC-Community/XIPs.github.io/blob/main/XIPS/xip-template.md). Then submit a Pull Request to XDC Community's [XIPs repository](https://github.com/XDC-Community/XIPs.github.io/pulls).
 
-Before you begin writing a formal XIP, you should vet your idea. Ask the XDC community first if an idea is original to avoid wasting time on something that will be rejected based on prior research. It is thus recommended to open a discussion thread on [XDC.dev](https://xdc.dev) to do this.
-
-Once the idea has been vetted, your next responsibility will be to present (by means of an XIP) the idea to the reviewers and all interested parties, invite editors, developers, and the community to give feedback on the aforementioned channels. You should try and gauge whether the interest in your XIP is commensurate with both the work involved in implementing it and how many parties will have to conform to it. For example, the work required for implementing a Core XIP will be much greater than for an XRC and the XIP will need sufficient interest from the XDC Network client teams. Negative community feedback will be taken into consideration and may prevent your XIP from moving past the Draft stage.
-
-### Core XIPs
-
-For Core XIPs, given that they require client implementations to be considered **Final** (see "XIPs Process" below), you will need to either provide an implementation for clients or convince clients to implement your XIP.
-
-The best way to get client implementers to review your XIP is to present it on an AllCoreDevs call. You can request to do so by posting a comment linking your XIP on an [AllCoreDevs agenda GitHub Issue](https://github.com/XDC-Community).
-
-The AllCoreDevs call serves as a way for client implementers to do three things. First, to discuss the technical merits of XIPs. Second, to gauge what other clients will be implementing. Third, to coordinate XIP implementation for network upgrades.
-
-These calls generally result in a "rough consensus" around what XIPs should be implemented. This "rough consensus" rests on the assumptions that XIPs are not contentious enough to cause a network split and that they are technically sound.
-
-:warning: The XIPs process and AllCoreDevs call were not designed to address contentious non-technical issues, but, due to the lack of other ways to address these, often end up entangled in them. This puts the burden on client implementers to try and gauge community sentiment, which hinders the technical coordination function of XIPs and AllCoreDevs calls. If you are shepherding an XIP, you can make the process of building community consensus easier by making sure that [the XDC.dev](https://xdc.dev) thread for your XIP includes or links to as much of the community discussion as possible and that various stakeholders are well-represented.
-
-_In short, your role as the champion is to write the XIP using the style and format described below, shepherd the discussions in the appropriate forums, and build community consensus around the idea._
-
-### XIP Process
-
-The following is the standardization process for all XIPs in all tracks:![](../.gitbook/assets/XIP-process-update.jpg)
-
-**Idea** - An idea that is pre-draft. This is not tracked within the XIP Repository.
-
-**Draft** - The first formally tracked stage of an XIP in development. An XIP is merged by an XIP Editor into the XIP repository when properly formatted.
-
-**Review** - An XIP Author marks an XIP as ready for and requesting Peer Review.
-
-**Last Call** - This is the final review window for an XIP before moving to `Final`. An XIP editor will assign `Last Call` status and set a review end date (`last-call-deadline`), typically 14 days later.
-
-If this period results in necessary normative changes it will revert the XIP to `Review`.
-
-**Final** - This XIP represents the final standard. A Final XIP exists in a state of finality and should only be updated to correct errata and add non-normative clarifications.
-
-**Stagnant** - Any XIP in `Draft` or `Review` or `Last Call` if inactive for a period of 6 months or greater is moved to `Stagnant`. An XIP may be resurrected from this state by Authors or XIP Editors through moving it back to `Draft` or it's earlier status. If not resurrected, a proposal may stay forever in this status.
-
-> _XIP Authors are notified of any algorithmic change to the status of their XIP_
-
-**Withdrawn** - The XIP Author(s) have withdrawn the proposed XIP. This state has finality and can no longer be resurrected using this XIP number. If the idea is pursued at later date it is considered a new proposal.
-
-**Living** - A special status for XIPs that are designed to be continually updated and not reach a state of finality. This includes most notably XIP-1.
-
-## What belongs in a successful XIP?
-
-Each XIP should have the following parts:
+**Each XIP should have the following parts:**
 
 * Preamble - RFC 822 style headers containing metadata about the XIP, including the XIP number, a short descriptive title (limited to a maximum of 44 characters), a description (limited to a maximum of 140 characters), and the author details. Irrespective of the category, the title and description should not include XIP number. See [below](XIP-1.md#XIP-header-preamble) for details.
 * Abstract - Abstract is a multi-sentence (short paragraph) technical summary. This should be a very terse and human-readable version of the specification section. Someone should be able to read only the abstract to get the gist of what this specification does.
@@ -93,11 +49,11 @@ Each XIP should have the following parts:
 * Security Considerations - All XIPs must contain a section that discusses the security implications/considerations relevant to the proposed change. Include information that might be important for security discussions, surfaces risks and can be used throughout the life-cycle of the proposal. E.g. include security-relevant design decisions, concerns, important discussions, implementation-specific guidance and pitfalls, an outline of threats and risks and how they are being addressed. XIP submissions missing the "Security Considerations" section will be rejected. An XIP cannot proceed to status "Final" without a Security Considerations discussion deemed sufficient by the reviewers.
 * Copyright Waiver - All XIPs must be in the public domain. The copyright waiver MUST link to the license file and use the following wording: `Copyright and related rights waived via [CC0](../LICENSE.md).`
 
-## XIP Formats and Templates
+### XIPs formats and templates
 
 XIPs should be written in [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) format. There is a [template](https://github.com/XDC-Community/XIPs.github.io/blob/main/XIPS/xip-template.md) to follow.
 
-## XIP Header Preamble
+### Header and Preamble
 
 Each XIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style header preamble, preceded and followed by three hyphens (`---`). This header is also termed ["front matter" by Jekyll](https://jekyllrb.com/docs/front-matter/). The headers must appear in the following order.
 
@@ -164,6 +120,54 @@ The `created` header records the date that the XIP was assigned a number. Both h
 #### `requires` header
 
 XIPs may have a `requires` header, indicating the XIP numbers that this XIP depends on.
+
+## XIP Work Flow
+
+### Shepherding an XIP
+
+Parties involved in the process are you, the champion or _XIP author_, the [_XIP editors_](xips.md#XIP-editors), and the [_XDC Core Developers_](https://github.com/XDC-Community).
+
+Before you begin writing a formal XIP, you should vet your idea. Ask the XDC community first if an idea is original to avoid wasting time on something that will be rejected based on prior research. It is thus recommended to open a discussion thread on [XDC.dev](https://xdc.dev) to do this.
+
+Once the idea has been vetted, your next responsibility will be to present (by means of an XIP) the idea to the reviewers and all interested parties, invite editors, developers, and the community to give feedback on the aforementioned channels. You should try and gauge whether the interest in your XIP is commensurate with both the work involved in implementing it and how many parties will have to conform to it. For example, the work required for implementing a Core XIP will be much greater than for an XRC and the XIP will need sufficient interest from the XDC Network client teams. Negative community feedback will be taken into consideration and may prevent your XIP from moving past the Draft stage.
+
+### Core XIPs
+
+For Core XIPs, given that they require client implementations to be considered **Final** (see "XIPs Process" below), you will need to either provide an implementation for clients or convince clients to implement your XIP.
+
+The best way to get client implementers to review your XIP is to present it on an AllCoreDevs call. You can request to do so by posting a comment linking your XIP on an [AllCoreDevs agenda GitHub Issue](https://github.com/XDC-Community).
+
+The AllCoreDevs call serves as a way for client implementers to do three things. First, to discuss the technical merits of XIPs. Second, to gauge what other clients will be implementing. Third, to coordinate XIP implementation for network upgrades.
+
+These calls generally result in a "rough consensus" around what XIPs should be implemented. This "rough consensus" rests on the assumptions that XIPs are not contentious enough to cause a network split and that they are technically sound.
+
+:warning: The XIPs process and AllCoreDevs call were not designed to address contentious non-technical issues, but, due to the lack of other ways to address these, often end up entangled in them. This puts the burden on client implementers to try and gauge community sentiment, which hinders the technical coordination function of XIPs and AllCoreDevs calls. If you are shepherding an XIP, you can make the process of building community consensus easier by making sure that [the XDC.dev](https://xdc.dev) thread for your XIP includes or links to as much of the community discussion as possible and that various stakeholders are well-represented.
+
+_In short, your role as the champion is to write the XIP using the style and format described below, shepherd the discussions in the appropriate forums, and build community consensus around the idea._
+
+### XIP Process
+
+The following is the standardization process for all XIPs in all tracks:![](../.gitbook/assets/XIP-process-update.jpg)
+
+**Idea** - An idea that is pre-draft. This is not tracked within the XIP Repository.
+
+**Draft** - The first formally tracked stage of an XIP in development. An XIP is merged by an XIP Editor into the XIP repository when properly formatted.
+
+**Review** - An XIP Author marks an XIP as ready for and requesting Peer Review.
+
+**Last Call** - This is the final review window for an XIP before moving to `Final`. An XIP editor will assign `Last Call` status and set a review end date (`last-call-deadline`), typically 14 days later.
+
+If this period results in necessary normative changes it will revert the XIP to `Review`.
+
+**Final** - This XIP represents the final standard. A Final XIP exists in a state of finality and should only be updated to correct errata and add non-normative clarifications.
+
+**Stagnant** - Any XIP in `Draft` or `Review` or `Last Call` if inactive for a period of 6 months or greater is moved to `Stagnant`. An XIP may be resurrected from this state by Authors or XIP Editors through moving it back to `Draft` or it's earlier status. If not resurrected, a proposal may stay forever in this status.
+
+> _XIP Authors are notified of any algorithmic change to the status of their XIP_
+
+**Withdrawn** - The XIP Author(s) have withdrawn the proposed XIP. This state has finality and can no longer be resurrected using this XIP number. If the idea is pursued at later date it is considered a new proposal.
+
+**Living** - A special status for XIPs that are designed to be continually updated and not reach a state of finality. This includes most notably XIP-1.
 
 ## Linking to External Resources
 
@@ -240,6 +244,8 @@ When referring to an XIP by number, it should be written in the hyphenated form 
 XIPs are encouraged to follow [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) for terminology and to insert the following at the beginning of the Specification section:
 
 > The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in RFC 2119.
+
+
 
 ## History
 

@@ -21,7 +21,7 @@ description: >-
 
 The communications protocol for web3. [WalletConnect](https://walletconnect.com/) brings the ecosystem together by enabling wallets and apps to securely connect and interact. Opening up a whole world of Dapps that were once only available to specific wallets.
 
-
+***
 
 ## For What is Used
 

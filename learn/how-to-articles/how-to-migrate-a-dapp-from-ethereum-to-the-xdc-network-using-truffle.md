@@ -430,7 +430,7 @@ In this page you can read from, write to, or simply read the information tied to
 
 ![Screenshot 2022-09-29 at 1 23 40 PM](https://user-images.githubusercontent.com/35517007/192988899-eb41c2ae-c4b9-4bab-89e8-227d42bfe2b3.png)
 
-
+***
 
 For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).\
 For more information about XDC Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.community/).\

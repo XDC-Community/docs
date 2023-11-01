@@ -1,35 +1,35 @@
-# SSL/TLS Encryption for XDC Node RPCs
+# How to Encrypt RPC
 
-_Notes:_ 
-- _These instructions relate to XDC Mainnet Nodes._
-- _Appendix A shows process modifications needed for Apothem Testnet nodes._
+_Notes:_
 
----
+* _These instructions relate to XDC Mainnet Nodes._
+* _Appendix A shows process modifications needed for Apothem Testnet nodes._
 
-Implementing SSL/TLS encryption for XDC node RPCs offers key advantages. 
+***
 
-- SSL/TLS ensures the confidentiality of data exchanged between clients and nodes, guarding against unauthorized access. 
-- It maintains data integrity, preventing tampering or unauthorized modifications during transit. 
-- SSL/TLS authentication enhances trust by verifying the identities of the communicating parties, thwarting man-in-the-middle attacks. 
+Implementing SSL/TLS encryption for XDC node RPCs offers key advantages.
+
+* SSL/TLS ensures the confidentiality of data exchanged between clients and nodes, guarding against unauthorized access.
+* It maintains data integrity, preventing tampering or unauthorized modifications during transit.
+* SSL/TLS authentication enhances trust by verifying the identities of the communicating parties, thwarting man-in-the-middle attacks.
 
 By protecting sensitive information and complying with security standards, SSL/TLS fortifies the overall security of XDC node RPCs.
 
----
+***
 
-<p align="center">
-  <img src="../.gitbook/assets/image27-nginx-logo.png" alt="Nginx Logo">
-</p>
+![Nginx Logo](../.gitbook/assets/image27-nginx-logo.png)
 
-Nginx is a popular web server and reverse proxy server that efficiently handles and routes HTTP and other network protocols. We can use Nginx to establish SSL/TLS encryption for an XDC node's RPC by acting as a reverse proxy. 
+Nginx is a popular web server and reverse proxy server that efficiently handles and routes HTTP and other network protocols. We can use Nginx to establish SSL/TLS encryption for an XDC node's RPC by acting as a reverse proxy.
 
 To accomplish this, we need to:
+
 1. Obtain an SSL/TLS certificate for the domain or IP address of the XDC node server
 2. Configure Nginx with the certificate and set it up to listen for incoming encrypted connections
 3. Configure Nginx to forward incoming encrypted connections to the local address and port of the XDC node's Docker container
 
 We will now walk through these processes. After they are completed, we will secure our ports and test the new encrypted RPC!
 
----
+***
 
 ## Obtain an SSL/TLS Certificate
 
@@ -44,53 +44,56 @@ ssh -lroot -p22 ip.address
 ```
 
 Install OpenSSL:
+
 ```
 sudo apt install openssl
 ```
 
-Run the following command on your XDC node server to generate a private key _(key.pem)_ and self-signed SSL/TLS certificate _(cert.pem)_. You can vary your certificate's period of validity as desired. It is set below to 3065 days (~10 years):
+Run the following command on your XDC node server to generate a private key _(key.pem)_ and self-signed SSL/TLS certificate _(cert.pem)_. You can vary your certificate's period of validity as desired. It is set below to 3065 days (\~10 years):
+
 ```
 sudo openssl req -x509 -nodes -days 3065 -newkey rsa:2048 -keyout /etc/ssl/private/key.pem -out /etc/ssl/certs/cert.pem
 ```
 
 Fill in the required information when prompted. _Note that the Common Name (CN) field should be the public IP address of your server (or the domain if people will be using that)._
 
----
+***
 
 ## Install and Configure Nginx
 
 First we need to install Nginx:
+
 ```
 sudo apt install nginx
 ```
 
 We will shortly need to edit the Nginx configuration file and customise it. In order to make the necessary changes, you will need 2 pieces of information:
-- the public IP address of your XDC node server (the same IP address you entered as the Common Name (CN) when setting up your SSL certificate above); and
-- the local IP address being used by the XDC node's Docker container
+
+* the public IP address of your XDC node server (the same IP address you entered as the Common Name (CN) when setting up your SSL certificate above); and
+* the local IP address being used by the XDC node's Docker container
 
 To obtain the local IP address being used by the Docker container, use:
+
 ```
 sudo docker inspect mainnet_xinfinnetwork_1
 ```
 
 You will see a lot of configuration information relating to your Docker container shown in your terminal. The part you are looking for is the IP address shown after _"IPAddress":_. It is towards the end of the configuration information that is displayed in the terminal window. In the screenshot image below, we can see that this Docker container is using IP address _172.18.0.2_:
 
-<p align="center">
-  <img src="../.gitbook/assets/image28-docker-container-ip-address.png" alt="Docker Container IP Address">
-</p>
+![Docker Container IP Address](../.gitbook/assets/image28-docker-container-ip-address.png)
 
 Now open the Nginx configuration file in nano for editing:
+
 ```
 sudo nano /etc/nginx/nginx.conf
 ```
 
 It will look like this:
 
-<p align="center">
-  <img src="../.gitbook/assets/image29-nginx-config-file-original-on-opening.png" alt="nginx.conf original appearance">
-</p>
+![nginx.conf original appearance](../.gitbook/assets/image29-nginx-config-file-original-on-opening.png)
 
 Locate the http block in the nginx.conf file. It begins with the _http_ keyword and ends with a closing brace _}_. At the end of the http block (before the closing brace), add the following configuration:
+
 ```
         ##
         # XDC Node RPC Reverse Proxy
@@ -113,26 +116,25 @@ Locate the http block in the nginx.conf file. It begins with the _http_ keyword 
 
 After adding it, the part you have added to the file should look like this:
 
-<p align="center">
-  <img src="../.gitbook/assets/image30-nginx-config-file-modified.png" alt="nginx.conf added section">
-</p>
+![nginx.conf added section](../.gitbook/assets/image30-nginx-config-file-modified.png)
 
 In the configuration text you have just added we need to also:
-- replace `<your_ip_address>` with the public IP address of the XDC node server; and
-- replace `<docker_container_ip>` with the IP address we obtained by using the _docker inspect_ command above
+
+* replace `<your_ip_address>` with the public IP address of the XDC node server; and
+* replace `<docker_container_ip>` with the IP address we obtained by using the _docker inspect_ command above
 
 Then save the changes and exit nano:
 
-> Press "CTRL+X" 
-> Press "y"
-> Press "ENTER"
+> Press "CTRL+X" Press "y" Press "ENTER"
 
 Check that the syntax you have entered in nginx.conf is ok:
+
 ```
 sudo nginx -t
 ```
 
 We will need to set the ownership and permissions of the private key and certificate we created earlier. This makes sure they are secure. We also need to ensure that Nginx can access them when needed. The Nginx process usually runs as _www-data_, so we will add _www-data_ to the group _ssl-cert_ that has access to the credentials:
+
 ```
 sudo addgroup ssl-cert
 sudo chown root:ssl-cert /etc/ssl/certs/cert.pem
@@ -143,22 +145,24 @@ sudo usermod -a -G ssl-cert www-data
 ```
 
 Restart the Nginx service:
+
 ```
 sudo systemctl restart nginx
 ```
 
----
+***
 
 ## Port Considerations
 
 At this point, your XDC Mainnet node is now using:
-- port 443 for HTTPS access to the XDC RPC; and
-- port 30303 for peer-to-peer communications; and
-- whichever port you have set to access the server by ssh
+
+* port 443 for HTTPS access to the XDC RPC; and
+* port 30303 for peer-to-peer communications; and
+* whichever port you have set to access the server by ssh
 
 In the majority of cases, we should now block (filter) port 8989 with our firewall as plain HTTP access to the RPC is no longer required and defeats the purpose of securing the RPC with SSL. You will of course need to consider your port requirements based on whatever your node is being used for.
 
----
+***
 
 ## Test your new SSL/TLS Encrypted RPC
 
@@ -168,17 +172,16 @@ As we are using a self-signed certificate, we expect that there would be an "Unt
 
 Congratulations you have just set up SSL/TLS encryption for your XDC Mainnet RPC!
 
----
+***
 
-<p align="center">
-  <img src="../.gitbook/assets/image15-appendix-header.png" alt="Appendix A - Apothem Testnet">
-</p>
+![Appendix A - Apothem Testnet](../.gitbook/assets/image15-appendix-header.png)
 
 ## Appendix A - Modifications for Apothem Testnet Nodes
 
 ### Modification 1
 
 When obtaining the local IP address being used by the Docker container, we need to use the testnet container name as shown here:
+
 ```
 sudo docker inspect testnet_xinfinnetwork_1
 ```
@@ -186,6 +189,7 @@ sudo docker inspect testnet_xinfinnetwork_1
 ### Modification 2
 
 When adding the extra configuration information to the nginx.conf file, we must allow for the different HTTP-RPC port used by the Apothem Testnet Client. We can use the following configuration text instead of the mainnet version above:
+
 ```
         ##
         # Apothem Node RPC Reverse Proxy
@@ -209,12 +213,13 @@ When adding the extra configuration information to the nginx.conf file, we must 
 ### Modification 3
 
 After restarting the Nginx service, we note that the Apothem Testnet node is now using:
-- port 443 for HTTPS access to the XDC RPC; and
-- port 30304 for peer-to-peer communications; and
-- whichever port you have set to access the server by ssh
+
+* port 443 for HTTPS access to the XDC RPC; and
+* port 30304 for peer-to-peer communications; and
+* whichever port you have set to access the server by ssh
 
 In the majority of cases, we should now block (filter) port 8999 with our firewall as plain HTTP access to the RPC is no longer required and defeats the purpose of securing the RPC with SSL. You will of course need to consider your port requirements based on whatever your node is being used for.
 
 Congratulations you have just set up SSL/TLS encryption for your Apothem Testnet RPC!
 
----
+***

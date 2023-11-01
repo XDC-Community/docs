@@ -741,7 +741,7 @@ If everything was filled out correctly, your contract page on the block explorer
 
 Repeat those steps if you want to verify `FarmToken.sol`, except this time `Contract Name` will be `FarmToken` and source code will be from `FarmToken_flat.sol`
 
-
+***
 
 For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).\
 For more information about XDC Network, Please Visit [XDC Community Documentation on GitBook](https://docs.xdc.community/).\

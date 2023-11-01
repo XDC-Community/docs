@@ -86,7 +86,7 @@ In this page you can Read from, Write to, or simply read the information tied to
 
 In case, you are importing some external packages or libraries within your code, you would have to [flatten out your smart contract](https://docs.xdc.community/get-details/smart-contract-details/flattening-smart-contracts) first and then verify that flattened smart contract on the Block Explorer. You can check out our tutorials to flatten the smart contracts on Remix IDE, Truffle and Hardhat also.
 
-
+***
 
 For more information about Remix IDE, Please Visit [Remix IDE Documentation](https://remix-ide.readthedocs.io/en/latest/).\
 For more information about XDC Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.community/).\

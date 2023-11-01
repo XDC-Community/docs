@@ -327,7 +327,7 @@ or on testnet:
 npx hardhat run scripts/myScript.js --network apothem
 ```
 
-
+***
 
 For more information about Hardhat, Please Visit [Hardhat Documentation](https://hardhat.org/tutorial).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\

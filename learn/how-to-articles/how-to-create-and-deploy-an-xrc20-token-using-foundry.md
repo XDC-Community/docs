@@ -571,7 +571,7 @@ forge flatten --output src/Contract.flattened.sol src/RoyaltyToken.sol
 
 If everything is correctly filled out, your contract page on the block explorer should display a new tab called Contract.
 
-
+***
 
 For more information about XDC Network, Please Visit [XDC Network Documention](https://docs.xdc.org/).\
 For more information about Foundry, Please Visit [Foundry Book](https://book.getfoundry.sh/).\

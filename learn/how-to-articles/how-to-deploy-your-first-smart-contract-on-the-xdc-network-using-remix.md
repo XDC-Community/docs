@@ -241,7 +241,7 @@ We can easily test our contract with the help of that contract address. To start
 
 * This transaction is immediately reflected in the corresponding block explorer, [as seen here!](https://explorer.apothem.network/txs/0xbd07e02b75269798aba446db913336e1250325a1c395ef5a003ab56a1a22013f#overview)
 
-
+***
 
 For more information about Remix IDE, Please Visit [Remix IDE Documentation](https://remix-ide.readthedocs.io/en/latest/).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\\

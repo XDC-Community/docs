@@ -1,6 +1,6 @@
 # How-to Articles
 
-
+***
 
 ## How to.. Access GoPlugin community support
 
@@ -34,7 +34,7 @@ Do NOT use the following provider(s) as previous nodes have experienced issues s
 
 **NOTE ::** _This is simply a list of current known providers and is not exhaustive. None of the providers listed here are in anyway officially endorsed by GoPlugin._
 
-
+***
 
 ## How to.. Monitor your node
 

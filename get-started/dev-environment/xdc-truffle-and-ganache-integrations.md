@@ -316,7 +316,7 @@ module.exports = {
 };
 ```
 
-
+***
 
 For more information about Truffle, Please Visit [Truffle Documentation](https://trufflesuite.com/truffle/).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\

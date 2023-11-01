@@ -354,7 +354,7 @@ In this page you can Read from, Write to, or simply read the information tied to
 
 ![Screenshot 2022-10-05 at 1 28 22 PM](https://user-images.githubusercontent.com/35517007/194010105-908c60ed-1261-4eac-b752-6b1f6feb8cc9.png)
 
-
+***
 
 For more information about Hardhat, Please Visit [Hardhat Documentation](https://hardhat.org/tutorial).\
 For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\
