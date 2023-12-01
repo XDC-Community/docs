@@ -11,6 +11,6 @@ If you would like to contribute to these documents, we encourage that and ask yo
 The XDC Network is a highly scalable, delegated proof of stake consensus network (XDPoS), with near-zero gas fees and 2 second block time. Operating the XDC Network is a global infrastructure of Masternodes that participate in network consensus. The network’s enterprise-grade architecture provides a high-performance, EVM-compatible blockchain suited to the needs of institutional use in trade finance, enterprise, and tokenization. As an open-source technology, the XDC ecosystem also thrives on a growing community of developers, contributors, and participants.
 
 
-READ more about the XDC Network [here]([url](https://docs.xdc.community/get-started/blockchain-basics/why-xdc-network)).
+READ more about the XDC Network [here](https://docs.xdc.community/get-started/blockchain-basics/why-xdc-network).
 
-DISCOVER what the upcoming release of XDC 2.0 will bring to the network and its participants [here]([url](https://docs.xdc.community/get-started/xdc-design/xdpos-2.0)https://docs.xdc.community/get-started/xdc-design/xdpos-2.0).
+DISCOVER what the upcoming release of XDC 2.0 will bring to the network and its participants [here](https://docs.xdc.community/get-started/xdc-design/xdpos-2.0).
