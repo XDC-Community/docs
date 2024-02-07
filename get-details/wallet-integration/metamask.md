@@ -108,7 +108,7 @@ To connect `apothem` testnet, repeat steps with following network settings:
 
 First, lets get sound funds from apothem faucet. Copy your address in MetaMask, then replace `0x` with `xdc`. So, if your address is `0xA4e66f4Cc17752f331eaC6A20C00756156719519`, it should be `xdcA4e66f4Cc17752f331eaC6A20C00756156719519` on XDC network.
 
-With this address in hand, we can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
+With this address in hand, we can head to the [Apothem Faucet](https://faucet.blocksscan.io/) and claim some TXDC for development purposes:
 
 ![Step 02](https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png)
 
