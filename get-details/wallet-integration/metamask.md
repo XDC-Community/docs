@@ -24,10 +24,6 @@ description: What MetaMask is, what it is used for, and how to add XDC Network i
 
 ## 📰 Overview
 
-![hardhat](https://www.ledger.com/wp-content/uploads/2019/06/assets\_logo\_metamask.jpg)
-
-[Hardhat](https://hardhat.org/) is a development environment to compile, deploy, test, and debug your Ethereum software. Get Solidity stack traces & console.log.
-
 #### What you will learn
 
 This article will teach you what MetaMask is, what MetaMask is used for, and how to connect MetaMask to the XDC Network.
