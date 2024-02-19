@@ -2,11 +2,11 @@
 
 * [Welcome](README.md)
 * [Get Started](get-started/README.md)
+  * [Why XDC Network](get-started/why-xdc-network.md)
   * [Blockchain Basics](get-started/blockchain-basics/README.md)
     * [What is a Blockchain](get-started/blockchain-basics/what-is-a-blockchain.md)
-    * [What is a dApp](get-started/blockchain-basics/what-is-a-dapp.md)
-    * [Why XDC Network](get-started/blockchain-basics/why-xdc-network.md)
     * [Wallets](get-started/blockchain-basics/xdc-wallets.md)
+    * [What is a dApp](get-started/blockchain-basics/what-is-a-dapp.md)
   * [XDC Design](get-started/xdc-design/README.md)
     * [Consensus Mechanism](get-started/xdc-design/consensus-mechanism.md)
     * [Masternodes](get-started/xdc-design/masternodes.md)
