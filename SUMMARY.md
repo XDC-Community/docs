@@ -35,10 +35,10 @@
       * [Flattening Smart Contracts with Hardhat](get-details/smart-contract-details/flattening-smart-contracts/flattening-smart-contracts-with-hardhat.md)
     * [Verifying Smart Contracts](get-details/smart-contract-details/verifying-smart-contracts.md)
   * [Wallet Integration](get-details/wallet-integration/README.md)
+    * [Metamask](get-details/wallet-integration/metamask.md)
     * [XDCPay](get-details/wallet-integration/xdcpay.md)
     * [XDCPay Changelist](get-details/wallet-integration/xdcpay-changelist.md)
     * [Wallet Connect](get-details/wallet-integration/walletconnect.md)
-    * [Metamask](get-details/wallet-integration/metamask.md)
   * [XDC Main & Test Networks Overviews](get-details/networks/README.md)
     * [Mainnet RPC](get-details/networks/mainnet.md)
     * [Apothem Testnet RPC](get-details/networks/apothem.md)
@@ -64,15 +64,7 @@
     * [XDC RPCs](tools/apis-and-packages/xdc-rpcs.md)
     * [Tatum APIs](tools/apis-and-packages/tatum-apis.md)
     * [Blocksscan APIs](tools/apis-and-packages/blocksscan-apis.md)
-    * [ISO20022 Data Set APIs](tools/apis-and-packages/iso20022-data-set-apis.md)
-  * [Network Tools](tools/network-tools/README.md)
-    * [XDC Network Status](https://xinfin.network/#stats)
-    * [XDC Network Explorer (XinFin)](https://explorer.xinfin.network/)
-    * [XDC Network Explorer (Blocksscan)](https://xdc.blocksscan.io/)
-    * [XDC Apothem Network Explorer](https://explorer.apothem.network/)
-    * [XDC Apothem Network Faucet](https://faucet.apothem.network/)
-    * [XDC Apothem Network Stats](https://apothem.network/#stats)
-    * [Business White Paper](https://github.com/XinFinOrg/Developer-Resource/blob/master/Docs/wp-and-research/whitepaper-tech.pdf)
+  * [Network Tools](tools/network-tools.md)
 * [Run a Node](run-a-node/README.md)
   * [Masternode](run-a-node/masternode/README.md)
     * [How to Stake an XDC Masternode](run-a-node/masternode/how-to-stake-an-xdc-masternode.md)
@@ -89,6 +81,9 @@
 
 ## Learn
 
+* [Community Support](learn/community-support.md)
+  * [How to Report an Issue](learn/community-support/how-to-report-an-issue.md)
+  * [Contributing and Feedback Guide](gitbook.md)
 * [How-to Articles](learn/how-to-articles/README.md)
   * [How To deploy your first smart contract on the XDC Network using Remix](learn/how-to-articles/how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-remix.md)
   * [How To deploy your first smart contract on the XDC Network using Hardhat](learn/how-to-articles/how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-hardhat.md)
@@ -113,9 +108,6 @@
   * [How to Migrate a dApp from Ethereum to the XDC Network Using Truffle](learn/how-to-articles/how-to-migrate-a-dapp-from-ethereum-to-the-xdc-network-using-truffle.md)
   * [How to Migrate from Solana to the XDC Network using Solang](learn/how-to-articles/how-to-migrate-from-solana-to-the-xdc-network-using-solang.md)
   * [How to Create and Deploy an XRC20 Token Using Foundry](learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-foundry.md)
-* [Community Support](learn/community-support.md)
-  * [How to Report an Issue](learn/community-support/how-to-report-an-issue.md)
-  * [Contributing and Feedback Guide](gitbook.md)
 
 ## GoPlugin
 
