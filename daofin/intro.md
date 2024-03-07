@@ -1,6 +1,5 @@
 # Introduction
 
-# Drafted Docs
 
 Decentralizing Ecosystem Development on the XDC Network
 Overview
@@ -199,3 +198,4 @@ Specify Proposal Type: Clearly indicate which type of proposal you are submittin
 Proposal Submission Cost: Make sure there is enough XDC tokens in the proposer wallet to cover submission cost. This cost is a mechanism to prevent spam and ensure proposers are serious.
 Step 4: Submit Your Proposal
 Use the DAOFIN Platform: Submit your proposal through the designated DAOFIN platform or submission tool, adhering to any guidelines and deadlines.
+

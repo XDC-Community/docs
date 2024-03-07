@@ -1,4 +1,4 @@
-# Apothem Testnet (XDPoS)
+# Apothem Testnet RPC
 
 ## XDC Apothem TestNet
 
@@ -27,5 +27,5 @@ Users with an internet connection can easily access a public network. They can r
 
 ### Useful Tools
 
-* [XinFin Remix](https://remix.xinfin.network/)
+*
 * [XDCPay](https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en)

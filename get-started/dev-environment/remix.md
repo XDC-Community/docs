@@ -27,8 +27,6 @@ description: >-
 * [🎧 Remix File Explorer](remix.md#-remix-file-explorer)
 * [🎧 Remix Compiler](remix.md#-remix-compiler)
 * [🎧 Remix Plugin Manager](remix.md#-remix-plugin-manager)
-* [🎧 Using XinFin Remix to develop on XDC](remix.md#-using-xinfin-remix-to-develop-on-xdc)
-  * [🎧 Configuring XDC Mainnet and Apothem Testnet on XinFin Remix](remix.md#-configuring-xdc-mainnet-and-apothem-testnet-on-xinfin-remix)
 
 ## 📰 Overview
 
@@ -172,20 +170,6 @@ Some of useful plugins for starting dApp development are:
 * `DGit`: adds git capabilites to Remix IDE
 * `Flattener`: flattens contracts which use dependency so you can verify them on Block Explorer.
 * `Solidity Unit Testing`: adds support of unit testing for your solidity contracts
-
-### 🎧 Using XinFin Remix to develop on XDC
-
-XDC provides its own version of Remix here on [remix.xinfin.network](https://remix.xinfin.network) which is optimized for development on XDC.
-
-### 🎧 Configuring XDC Mainnet and Apothem Testnet on XinFin Remix
-
-To deploy smart contract on XDC network, you need go to `Deploy & Run Transactions` panel, then select `Injected Web3` in `Environment` dropdown menu. Then connect XinFin Remix IDE to your browser wallet with XinFin or Apothem network configured.
-
-![injected\_env](https://user-images.githubusercontent.com/102393474/196579665-cfc55bd4-b49e-4f7a-a8e1-136c999e85ba.png)
-
-Then hit `Deploy` button and you will be asked to confirm transaction.
-
-![deploy\_contract](https://user-images.githubusercontent.com/102393474/196579097-7ab4e2cf-e1f8-45c7-9b03-e46de89be744.png)
 
 ***
 

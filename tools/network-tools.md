@@ -1,11 +1,10 @@
 ---
-description: >-
-  These documents will help you start learning more about the XDC Network’s
-  technology, terminology, and processes. If you are starting your journey with
-  the XDC Network, we recommend you start here.
+description: This page will give you details on useful tools for the XDC Network.
 ---
 
-# Get Started
+# Network Tools
+
+
 
 ### Mainnet
 
@@ -34,6 +33,8 @@ description: >-
 [https://faucet.blocksscan.io/\
 ](https://faucet.blocksscan.io/)[https://faucet.apothem.network/](https://faucet.apothem.network/)
 
+
+
 ### Useful Links
 
 **Wallets**\
@@ -52,11 +53,27 @@ description: >-
 **Discord**\
 [https://discord.gg/Yc4R2meFda](https://discord.gg/Yc4R2meFda)
 
-It is unnecessary to review every document to have a working knowledge of the XDC Network. Read through as needed for more details or head to a specific section.&#x20;
+####
+
+
 
 ###
 
 
 
-##
 
+
+
+
+####
+
+\
+\
+\
+
+
+
+
+
+
+\
