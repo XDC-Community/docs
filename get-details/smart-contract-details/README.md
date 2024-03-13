@@ -6,7 +6,7 @@ Now imagine self-executing contracts, converted to computer code, then stored an
 
 ## **What Are Smart Contracts?**
 
-A smart contract is a computer code running on a blockchain that establishes rules on which two or more parties can agree. If and when the pre-established rules are followed, the agreement is automatically enforced. A smart contract facilitates, verifies and enforces the execution of agreements or transactions between parties with divergent interests, without intermediaries and while eliminating the need for trust, unlike with traditional contract terms where contracting parties will incur the costs and risks of trusting one another or an intermediary while exchanging goods or services.
+A smart contract is computer code that executes on a blockchain and establishes rules on which two or more parties can agree. If and when the pre-established rules are followed, the agreement is automatically enforced. A smart contract facilitates, verifies and enforces the execution of agreements or transactions between parties with divergent interests, without intermediaries and while eliminating the need for trust, unlike with traditional contract terms where contracting parties will incur the costs and risks of trusting one another or an intermediary while exchanging goods or services.
 
 Bitcoin was the first blockchain to support basic smart contracts. Its network of nodes only validated transactions if certain conditions were met. Here, we have an example of a rudimentary smart contract, where we use Set and Get functions:
 
