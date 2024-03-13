@@ -109,7 +109,7 @@
   * [How to Migrate from Solana to the XDC Network using Solang](learn/how-to-articles/how-to-migrate-from-solana-to-the-xdc-network-using-solang.md)
   * [How to Create and Deploy an XRC20 Token Using Foundry](learn/how-to-articles/how-to-create-and-deploy-an-xrc20-token-using-foundry.md)
 
-## GoPlugin
+## DAOFIN
 
 * [Intro](daofin/intro.md)
 
