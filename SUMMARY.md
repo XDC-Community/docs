@@ -111,6 +111,11 @@
 
 ## GoPlugin
 
+* [Intro](daofin/intro.md)
+
+  
+## GoPlugin
+
 * [About](goplugin/about.md)
 * [How-to Articles](goplugin/how-to-articles.md)
 * [Frequently Asked Questions](goplugin/community-support/README.md)
