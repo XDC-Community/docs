@@ -23,9 +23,11 @@ Understanding the pivotal role of AI in technology evolution, we have integrated
 Introduction to DAOFIN
 DAOFIN is a decentralized autonomous organization (DAO) framework developed for the XDC Network, embodying a pioneering approach to decentralized governance and ecosystem development. It leverages blockchain technology to facilitate transparent, democratic decision-making processes, enabling community-driven growth and innovation. DAOFIN is designed to ensure the XDC Network remains at the forefront of decentralized technology, fostering an environment where community members can actively participate in shaping the network’s future.
 
+
 Objectives of DAOFIN
 The primary goal of DAOFIN is to democratize the decision-making process within the XDC ecosystem, ensuring that every stakeholder has a voice in its development. Key objectives include:
 
+=
 Decentralized Governance: Transitioning from centralized decision-making to a model where governance is distributed across the community.
 Ecosystem Development: Facilitating the funding and support of projects that contribute to the growth and sustainability of the XDC Network.
 Community Engagement: Encouraging active participation from a broad spectrum of the community, enhancing the network’s democratic and decentralized nature.
