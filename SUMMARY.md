@@ -113,10 +113,10 @@
 
 * [Intro](daofin/intro.md)
 * [About](daofin/about.md)
-* [About](daofin/DAOTreasury.md)
-* [About](daofin/VotingPeriods.md)
-* [About](daofin/ProposalTypes.md)
-* [About](daofin/MakingProposal.md)
+* [DAO Treasury](daofin/DAOTreasury.md)
+* [Voting Periods](daofin/VotingPeriods.md)
+* [Proposal Types](daofin/ProposalTypes.md)
+* [Making Proposal](daofin/MakingProposal.md)
   
 ## GoPlugin
 
