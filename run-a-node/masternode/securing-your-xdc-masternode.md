@@ -345,9 +345,12 @@ enabled   = true
 filter    = sshd
 port      = ssh
 banaction = iptables-multiport
-findtime  = 86400 # 86400 seconds = 1 day
-bantime   = -1 # -1 = ban forever
-maxretry  = 3 # 3 attempts in 1 day = ban
+findtime  = 86400
+# 86400 seconds = 1 day
+bantime   = -1
+# -1 = ban forever
+maxretry  = 3
+# 3 attempts in 1 day = ban
 logpath = %(sshd_log)s
 backend = %(sshd_backend)s
 ```
