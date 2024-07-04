@@ -65,6 +65,8 @@
     * [Tatum APIs](tools/apis-and-packages/tatum-apis.md)
     * [Blocksscan APIs](tools/apis-and-packages/blocksscan-apis.md)
   * [Network Tools](tools/network-tools.md)
+  * [Indexers](tools/indexers/README.md)
+    * [SubQuery](tools/indexers/subquery.md)
 * [Run a Node](run-a-node/README.md)
   * [Masternode](run-a-node/masternode/README.md)
     * [How to Stake an XDC Masternode](run-a-node/masternode/how-to-stake-an-xdc-masternode.md)
