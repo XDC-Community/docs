@@ -77,7 +77,7 @@ The following message should log on your console:
 
 ![hardhat config](https://user-images.githubusercontent.com/78161484/191259993-b817901f-7df9-4df1-bb1c-c4805c416974.png)
 
-Press `ENTER` to get started with a new JavaScript Hardhat Project. Then you will be presented with the following options:
+Press `ENTER` to get started with a new JavaScript Hardhat Project. Then, you will be presented with the following options:
 
 ```
 ? Hardhat project root: ‣ /home/path/to/MyCounter 
@@ -90,7 +90,7 @@ Press `ENTER` to get started with a new JavaScript Hardhat Project. Then you wil
 // Press ENTER or y
 ```
 
-The standard Hardhat project comes with a pre-created `Lock.sol` contract and `deploy.js` script. Lets clean up our working environment before moving forward:
+The standard Hardhat project comes with a pre-created `Lock.sol` contract and `deploy.js` script. Let's clean up our working environment before moving forward:
 
 ```
 rm -rf ./contracts/Lock.sol ./scripts/deploy.js ./test/Lock.js
@@ -108,13 +108,13 @@ In order to get started deploying new contracts on XDC Mainnet and/or Apothem, w
 npm install dotenv
 ```
 
-We will need to configure a `.env` file with XDC Mainnet and Apothem Testnet RPC endpoints, plus the _Private Key_ of the wallet we are using for deployment. Lets start by running:
+We will need to configure a `.env` file with XDC Mainnet and Apothem Testnet RPC endpoints, plus the _Private Key_ of the wallet we are using for deployment. Let's start by running:
 
 ```bash
 touch .env
 ```
 
-And writting the following info in our .env file:
+And writing the following info in our .env file:
 
 ```bash
 XINFIN_NETWORK_URL=https://erpc.xinfin.network
@@ -124,7 +124,7 @@ PRIVATE_KEY=202e3c9d30bbeca38d6578659919d4c3dc989ae18c16756690877fdc4dfa607f
 
 🚨 **Do not use the Private Key in the example above in production or you can risk losing your assets!** 🚨
 
-And finally, we can configure the `hardhat.config.js` file for both Apothem and XinFin Networks by writting:
+And finally, we can configure the `hardhat.config.js` file for both Apothem and XinFin Networks by writing:
 
 ```jsx
 require("@nomicfoundation/hardhat-toolbox");
@@ -145,15 +145,15 @@ module.exports = {
 };
 ```
 
-### ⚒ Adding Testnet XDC to Development Wallet
+### ⚒ Adding Testnet XDC to the Development Wallet
 
-Let's check our Signer's Address on Hardhat by accessing the hardhat console:
+Let's check our Signer's Address on Hardhat by accessing the Hardhat console:
 
 ```
 npx hardhat console --network xinfin
 ```
 
-If you get an error that hardhat is not installed locally and are running on a Windows OS you will need to execute:
+If you get an error that hardhat is not installed locally and is running on a Windows OS you will need to execute:
 
 ```
 npm install --save-dev @nomicfoundation/hardhat-toolbox
@@ -178,13 +178,13 @@ With this account in hand, we can head to the [Apothem Faucet](https://faucet.ap
 
 ## 💵 Writing Smart Contract
 
-We will be using OpenZeppelin for this guide so lets install it first:
+We will be using OpenZeppelin for this guide so let's install it first:
 
 ```
 npm install @openzeppelin/contracts
 ```
 
-Now lets create simple smart contract called `MyCounter.sol` in `contracts` folder:
+Now let's create simple smart contract called `MyCounter.sol` in `contracts` folder:
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -220,7 +220,7 @@ We can now compile our `MyCounter.sol` by running:
 npx hardhat compile
 ```
 
-If everything is correctly configured and there is no errors, you should see the following message on your console:
+If everything is correctly configured and there are no errors, you should see the following message on your console:
 
 ```
 Downloading compiler 0.8.16
@@ -233,7 +233,7 @@ And your folder should look like this:
 
 #### Testing
 
-Now lets create a simple test to see everything works as intended before we deploy our contract to live network. This will save us time and gas fees, so it is recommended you do as much as possible tests for your smart contracts before deploying.
+Now, let's create a simple test to see if everything works as intended before we deploy our contract to the live network. This will save us time and gas fees, so it is recommended that you do as many tests as possible for your smart contracts before deploying.
 
 Create file `MyCounter.js` under `test` directory:
 
@@ -313,21 +313,21 @@ main()
   });
 ```
 
-If the deployment script have no errors, we can go ahead and run the command:
+If the deployment script has no errors, we can go ahead and run the command:
 
 ```
 npx hardhat run scripts/deploy.js --network xinfin
 ```
 
-For deployment on XDC mainet, or:
+For deployment on XDC mainnet, or:
 
 ```
 npx hardhat run scripts/deploy.js --network apothem
 ```
 
-For deployment on the XDC Apothem Testnet. In either case, you need to have enough funds to pay for gas fees on the address that is being used for development.
+For deployment on the XDC Apothem Testnet. In either case, you need to have enough funds to pay for gas fees at the address that is being used for development.
 
-If the deployment is sucessful, the console should log the following message after migrations complete processing:
+If the deployment is successful, the console should log the following message after migrations complete processing:
 
 ```
 MyCounter Successfully Deployed!
@@ -336,9 +336,9 @@ MyCounter address: 0xfCd7d366048a50E0600C46Dd854Da343050EB3A1
 
 ### 💵 Flattening Contract
 
-If smart contract imports external files like ours, we need to flatten it before verifying on Block Explorer.
+If a smart contract imports external files like ours, we need to flatten it before verifying on Block Explorer.
 
-Now lets flatten our contract:
+Now let's flatten our contract:
 
 ```bash
 npx hardhat flatten contracts/MyCounter.sol > MyCounterFlatten.sol
@@ -346,15 +346,15 @@ npx hardhat flatten contracts/MyCounter.sol > MyCounterFlatten.sol
 
 Then open `MyCounterFlatten.sol` and remove every line which starts with `// SPDX-License-Identifier` except the first one. We do this because Block Explorer does not accepts contracts with mutliple license definitions.
 
-## 🔍 Veryfing Contracts on the Block Explorer
+## 🔍 Verifying Contracts on the Block Explorer
 
-Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify you contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
+Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify your contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
-Lets grab the `MyCounter.sol` address from the previous step: this address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
+Let's grab the `MyCounter.sol` address from the previous step: this address is in the Ethereum standard but we can simply swap the `0x` prefix for `xdc` and search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
 ![Verify 01](https://user-images.githubusercontent.com/78161484/190875518-828c0061-71de-42c2-b222-0b8427852d01.png)
 
-And click in the `Verify And Publish` Option.
+And click on the `Verify And Publish` Option.
 
 We will be redirected to the Contract verification page where we need to fill out:
 
