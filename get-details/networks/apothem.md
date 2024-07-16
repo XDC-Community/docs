@@ -10,7 +10,7 @@ Users with an internet connection can easily access a public network. They can r
 
 * Chain id: `51`
 * RPC endpoint: `https://rpc.apothem.network`
-* Websocket endpoint: `wss://ws.apothem.network`
+* WebSocket endpoint: `wss://ws.apothem.network`
 * Consensus: XDPoS
 * Block finality: `>75%`
 * Consensus nodes: up to 108 (masternodes)
@@ -22,10 +22,7 @@ Users with an internet connection can easily access a public network. They can r
 * [Apothem Status Page](https://apothem.network/#stats)
 * [Apothem Explorer](https://explorer.apothem.network/) (XinFin Scan)
 * [Apothem MasterNode APP ](https://master.apothem.network/)(MasterNodeApp)
-* [Apotehm Web Wallet](https://wallet.apothem.network/) (web Wallet)
-* [Apothem Mobile Wallet](https://play.google.com/store/apps/details?id=com.xdcwallet\&hl=en\_IN) (Mobile Wallet)
 
 ### Useful Tools
 
-*
 * [XDCPay](https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en)
