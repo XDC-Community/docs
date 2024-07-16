@@ -1,6 +1,6 @@
 # Migrating from EVM to XDC
 
-Migrating a Solidity contract from Ethereum to the XDC network with Truffle involves several steps. The XDC network is a public blockchain that is EVM compatible and designed to support enterprise-level applications. Truffle is a popular development framework for creating and deploying Solidity contracts.
+Migrating a Solidity contract from Ethereum to the XDC network with Truffle involves several steps. The XDC network is a public blockchain that is EVM-compatible and designed to support enterprise-level applications. Truffle is a popular development framework for creating and deploying Solidity contracts.
 
 Step 1: Install Truffle
 
@@ -28,7 +28,7 @@ The next step is to deploy the updated contract on the XDC network. This can be 
 
 Step 5: Test the Contract
 
-After deploying the contract, it is important to thoroughly test it on the XDC network. This includes testing all functions and features, as well as testing for security vulnerabilities. You can write test in truffle using Javascript to build debug and test contract ready to be deployed onto the network
+After deploying the contract, it is important to thoroughly test it on the XDC network. This includes testing all functions and features, as well as testing for security vulnerabilities. You can write tests in Truffle using Javascript to build debug and test contracts ready to be deployed onto the network
 
 {% embed url="https://trufflesuite.com/docs/truffle/how-to/debug-test/write-tests-in-javascript/" %}
 
