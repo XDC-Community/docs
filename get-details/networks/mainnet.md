@@ -2,7 +2,7 @@
 
 ## Public Networks
 
-Users with an internet connection and access the a full node RPC one can easily access a public network. They can read, create, or validate transactions executed on the blockchain, and a consensus mechanism makes agreement on the state of the network possible.&#x20;
+Users with an internet connection and access to a full node RPC can easily access a public network. They can read, create, or validate transactions executed on the blockchain, and a consensus mechanism makes agreement on the state of the network possible.&#x20;
 
 **XDC MainNet Specifications**
 
@@ -24,6 +24,6 @@ Users with an internet connection and access the a full node RPC one can easily 
 **Useful Tools**
 
 * [XinFin Remix](https://remix.xinfin.network/)
-* [XDCPay](https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en)
 * [MetaMask](https://docs.xdc.community/get-details/wallet-integration/metamask)
+* [ChainList](https://chainlist.org/chain/50)
   
