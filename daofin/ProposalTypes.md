@@ -49,7 +49,7 @@ When a proposal within the DAOFIN framework meets all the required criteria—ac
 **3. Execution of Financial Transactions**: For proposals requiring financial allocation, the DAO Treasury executes the transactions. This could involve:
 
 -   **Transferring Funds**: Direct transfer of XDC or other tokens to parties or projects specified in the proposal.
--   **Smart Contract Interaction**: Engaging with smart contracts to allocate funds or funding development projects.
+-   **Smart Contract Interaction**: Engaging with smart contracts to allocate funds or fund development projects.
 
 **4. Automated and Secure Process**: The execution process is typically automated through smart contracts to minimize human error and ensure security. These contracts are programmed to carry out the transactions exactly as specified in the approved proposal, adhering to the DAO's governance protocols(DAOFIN).
 
