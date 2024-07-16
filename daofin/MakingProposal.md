@@ -9,7 +9,7 @@ First, determine which category your proposal fits into based on its purpose and
 -   **Decision Making Proposal**: To suggest changes or new ideas related to the technical or business aspects of the XDC Network that do not require funding.
 -   **Updating Voting Periods**: Proposals to adjust the duration of voting periods to better suit the DAO's needs.
 -   **Update Voting Settings**: Proposals that seek to modify governance parameters, such as quorum and pass rate for each community.
--   **Judiciaries Replacement**: Aimed at changing the wallet addresses of judiciary members in line with DAOFIN's governance policies.
+-   **Judiciaries Replacement**: Aim to change the wallet addresses of judiciary members to be in line with DAOFIN's governance policies.
 -   **Changing Proposal Costs**: Proposals to alter the cost associated with submitting proposals to the DAO.
 
 #### Step 2: Prepare Your Proposal
@@ -22,7 +22,7 @@ First, determine which category your proposal fits into based on its purpose and
 
 -   **Draft Your Proposal**: Follow the format specified by DAOFIN for proposal submissions, which typically includes a title, summary, detailed description, and any relevant supporting documents or links.
 -   **Specify Proposal Type**: Clearly indicate which type of proposal you are submitting based on the categories provided.
-- **Proposal Submission Cost**: Make sure there is enough XDC tokens in the proposer wallet to cover submission cost. This cost is a mechanism to prevent spam and ensure proposers are serious.
+- **Proposal Submission Cost**: Make sure there are enough XDC tokens in the proposer wallet to cover the submission cost. This cost is a mechanism to prevent spam and ensure proposers are serious.
 
 
 #### Step 4: Submit Your Proposal
