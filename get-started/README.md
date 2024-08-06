@@ -31,8 +31,7 @@ description: >-
 [https://apothem.network/#stats](https://apothem.network/#stats)\
 \
 **Faucet**\
-[https://faucet.blocksscan.io/\
-](https://faucet.blocksscan.io/)[https://faucet.apothem.network/](https://faucet.apothem.network/)
+[https://faucet.blocksscan.io/](https://faucet.blocksscan.io/)
 
 ### Useful Links
 
