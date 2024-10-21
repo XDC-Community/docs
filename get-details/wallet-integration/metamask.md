@@ -81,7 +81,7 @@ To add `xinfin` mainnet, use following configuration:
 |                    |                                  |
 | ------------------ | -------------------------------- |
 | Network Name       | XDC Network                      |
-| New RPC URL        |  https://rpc.xdc.org             |
+| New RPC URL        |  https://erpc.xinfin.network             |
 | Chain ID           | 50                               |
 | Currency Symbol    | XDC                              |
 | Block Explorer URL | https://xdc.blocksscan.io/       |
