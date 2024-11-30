@@ -40,7 +40,7 @@ If the lock at the bottom left is locked <img src="https://help.apple.com/assets
 
 6\.  Click on "Open", and this will launch the application. Wait several minutes until the application connects to the network.&#x20;
 
-<figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 12.55.37 PM (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screen Shot 2022-10-13 at 12.55.37 PM.png" alt=""><figcaption></figcaption></figure>
 
 7\.  Once it starts syncing, you will notice the "Peers" number going up and "Blocks" going up.  If prompted by your MacOS to "allow incoming connections to XinFin Network" click "Allow."  You will see the application generate your account. &#x20;
 

@@ -131,7 +131,7 @@ Returns the symbol of the token, usually a shorter version of the name.
 Gets the total amount of tokens stored by the contract.
 
 `balanceOf(address account) → uint256`\
-Returns the number of NFTs in the owner's **** account.
+Returns the number of NFTs in the owner's account.
 
 `ownerOf(tokenId) → address`\
 Returns the owner of the NFT specified by `tokenId`.
@@ -212,7 +212,7 @@ To add module dependency in your project, follow the steps below:
 Now, we can interact with the XRC721 read methods.
 
 * `name() → string` Returns the name of the token.\
-  ****`tokenResponse.getName();`
+  `tokenResponse.getName();`
 * `balanceOf(address token,address account) → uint256` Returns the number of tokens owned by `account`.\
   `String balance = XDC721Client.getInstance().getBalance(tokenAddress, ownerAddress);`
 

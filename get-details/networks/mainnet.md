@@ -2,14 +2,12 @@
 
 ## Public Networks
 
-Users with an internet connection can easily access a public network. They can read, create, or validate transactions executed on the blockchain, and a consensus mechanism makes agreement on the state of the network possible.
-
-
+Users with an internet connection and access the a full node RPC one can easily access a public network. They can read, create, or validate transactions executed on the blockchain, and a consensus mechanism makes agreement on the state of the network possible.&#x20;
 
 **XDC MainNet Specifications**
 
 * Chain id: `50`
-* RPC endpoint: `https://rpc.xinfin.network`
+* RPC endpoint: `https://rpc.xdc.org`&#x20;
 * Websocket endpoint: `wss://ws.xinfin.network`
 * Consensus: XDPoS
 * Block finality: `>75%`
@@ -20,13 +18,12 @@ Users with an internet connection can easily access a public network. They can r
 **Useful Links**
 
 * [XinFin Status Page](https://xinfin.network/#stats)
-* [XinFin Explorer](https://explorer.xinfin.network/) (XinFin Scan)
+* [XDC Network Explorer](https://xdc.blocksscan.io/) (Blocksscan)
 * [XinFin MasterNode APP ](https://master.xinfin.network/)(MasterNodeApp)
-* [XinFin Web Wallet](https://wallet.xinfin.network/) (web Wallet)
-* [XinFin Mobile Wallet](https://play.google.com/store/apps/details?id=com.xdcwallet\&hl=en\_IN) (Mobile Wallet)
 
 **Useful Tools**
 
 * [XinFin Remix](https://remix.xinfin.network/)
-* [XDCPay](https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en)\
-  \
+* [XDCPay](https://chrome.google.com/webstore/detail/xinpay/bocpokimicclpaiekenaeelehdjllofo?hl=en)
+* [MetaMask](https://docs.xdc.community/get-details/wallet-integration/metamask)
+  

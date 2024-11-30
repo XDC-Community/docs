@@ -98,7 +98,7 @@ The protocol is a leader-based one proceeding in rounds. Each round has a differ
 
 The block data structure is similar to that in Ethereum, except that a parentQC field is added to the block header. Here QC stands for quorum certificate. It is created by the leader of round-r for the block in r −1 (the parent block) when at least tH = dVALIDATOR\_SET\_SIZE × 2/3e master nodes have voted for this parent block, certifying that this parent block has been approved by the super-majority of the nodes. A QC contains the parent block hash1 , the round number, and the metadata such as signatures of the vote messages. In case of no proposal and/or a timeout in a round r − 1, nodes will send a "timeout" message for this round, and the leader of round r will gather tH of them into a timeout certificate (TC), so that this round can be dropped from the 1This parent hash is the same as header.parentHash. But we do not override header.parentHash for the sake of backwards-compatibility. 6 blockchain. We note that round number is not the same as block number - round number might be skipped in the blockchain but block numbers are guaranteed to be consecutive. Figure 2 shows an example of the main chain with QCs. Note that round r + 2 is skipped in the main chain due to timeout. The specification of data structures is provided in Algorithm 1.
 
-<figure><img src="../../.gitbook/assets/2022-10-13_13-51-35 (1).png" alt=""><figcaption><p>Figure 2: XDC blockchain </p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/2022-10-13_13-51-35.png" alt=""><figcaption><p>Figure 2: XDC blockchain </p></figcaption></figure>
 
 `Algorithm 1 Data Structures in the protocol`&#x20;
 
@@ -153,7 +153,7 @@ Liveness means the blockchain makes progress and new transactions are included. 
 &#x20;The HotStuff protocol is optimistically responsive: in optimistic condition (honest leader and synchronous network), it only takes 3 block arrival time (BAT) to finalize a block and the transactions it contains. In practice, due to our strict network requirement on master nodes eligibility, the maximum network round-trip latency should be well below 2 seconds. Therefore, we can set BAT to be 2 seconds. This means that, in optimistic conditions, the finalization latency is only 6 seconds.&#x20;
 
 **`Algorithm 2 HotStuff protocol`** \
-**``**`1: tH ← dVALIDATOR_SET_SIZE × 2/3e . constant` \
+`1: tH ← dVALIDATOR_SET_SIZE × 2/3e . constant` \
 `2: highQC ← qcgenesis; lockQC ← qcgenesis . the latest QC and lock variable . Optimistic path` \
 `3: for curRound ← 1, 2, . . . do` \
 `4: as a leader` \

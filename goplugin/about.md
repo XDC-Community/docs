@@ -1,12 +1,11 @@
 # About
 
-<br/>
-<p align="center">
-<a href="https://goplugin.co" target="_blank">
-<img src="https://github.com/GoPlugin/Plugin/blob/main/docs/plugin.png" width="225" alt="Plugin logo">
-</a>
-</p>
-<br/>
+\
+
+
+[![Plugin logo](https://github.com/GoPlugin/Plugin/blob/main/docs/plugin.png)](https://goplugin.co)
+
+\
 
 
 Decentralized Oracle Platform, provides cost effective solutions to any smart contract which runs on the XDC Network Eco System.

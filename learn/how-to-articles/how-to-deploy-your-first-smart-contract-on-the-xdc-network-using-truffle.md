@@ -1,46 +1,51 @@
 ---
 id: truffle-example
 title: Using Truffle Example
-description:  "Use Truffle to deploy a Smart Contract."
 keywords:
   - docs
   - apothem
   - smart
   - contract
   - truffle
+description: Use Truffle to deploy a Smart Contract.
 ---
 
-# 🧭 Table of contents
+# How To deploy your first smart contract on the XDC Network using Truffle
 
-- [🧭 Table of contents](#-table-of-contents)
-- [📰 Overview](#-overview)
-- [🚀 Setting up the development environment](#-setting-up-the-development-environment)
-  - [⚒️ Starting a new Truffle Project](#-starting-a-new-truffle-project)
-  - [⚒️ Configuring XDC Mainnet and Apothem Testnet on Truffle](#-configuring-xdc-mainnet-and-apothem-testnet-on-truffle)
-  - [⚒️ Adding Testnet XDC to Development Wallet](#-adding-testnet-xdc-to-development-wallet)
-- [🍕 Writing your first Smart Contract](#-writing-our-first-smart-contract)
-  - [🍕 Compiling](#-compiling)
-  - [🍕 Deploying](#-deploying)
-  - [🍕 Interacting with your contract using Truffle Console](#-interacting-with-your-contract-using-truffle-console)
-- [🔍 Veryfing Contracts on the Block Explorer](#-veryfing-contracts-on-the-block-explorer)
+## 🧭 Table of contents
 
-# 📰 Overview
+* [🧭 Table of contents](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-table-of-contents)
+* [📰 Overview](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-overview)
+* [🚀 Setting up the development environment](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-setting-up-the-development-environment)
+  * [⚒️ Starting a new Truffle Project](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-starting-a-new-truffle-project)
+  * [⚒️ Configuring XDC Mainnet and Apothem Testnet on Truffle](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-configuring-xdc-mainnet-and-apothem-testnet-on-truffle)
+  * [⚒️ Adding Testnet XDC to Development Wallet](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-adding-testnet-xdc-to-development-wallet)
+* [🍕 Writing your first Smart Contract](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-writing-our-first-smart-contract)
+  * [🍕 Compiling](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-compiling)
+  * [🍕 Deploying](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-deploying)
+  * [🍕 Interacting with your contract using Truffle Console](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-interacting-with-your-contract-using-truffle-console)
+* [🔍 Veryfing Contracts on the Block Explorer](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-truffle.md#-veryfing-contracts-on-the-block-explorer)
+
+## 📰 Overview
+
 [Truffle](https://trufflesuite.com/) is a blockchain development environment, which you can use to create and test smart contracts by leveraging an Ethereum Virtual Machine.
 
-### What you will learn
+#### What you will learn
+
 This guide aims at teaching how to create a smart contract using Truffle and deploying it on the XDC Network.
 
-### What you will do
-- Install and set up Truffle
-- Deploy a contract on the XDC Network
-- Check the deployment status on [xinfin.network](https://xinfin.network/#stats).
+#### What you will do
 
-# 🚀 Setting up the development environment
+* Install and set up Truffle
+* Deploy a contract on the XDC Network
+* Check the deployment status on [xinfin.network](https://xinfin.network/#stats).
+
+## 🚀 Setting up the development environment
 
 There are a few technical requirements before we start. Please install the following:
 
-- [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
-- [Git](https://git-scm.com/)
+* [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
+* [Git](https://git-scm.com/)
 
 Once you have installed those, you only need one command to install Truffle:
 
@@ -48,7 +53,7 @@ Once you have installed those, you only need one command to install Truffle:
 npm install -g truffle
 ```
 
-To verify that Truffle is installed properly, type **`truffle version`** on a terminal. You should see something like:
+To verify that Truffle is installed properly, type **`truffle version`** on a terminal. You should see something like:
 
 ```bash
 Truffle v5.5.27 (core: 5.5.27)
@@ -60,7 +65,7 @@ Web3.js v1.7.4
 
 If you see an error instead, make sure that your npm modules are added to your path.
 
-## ⚒ Starting a new Truffle Project
+### ⚒ Starting a new Truffle Project
 
 You can start by setting up your folder. In this example, we are creating a project called `Pizza`. Create your new `Pizza` folder by running the following on terminal:
 
@@ -87,30 +92,28 @@ http://trufflesuite.com/docs
 
 Your folder files will look like this:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/189928139-f8448866-b691-486c-a300-2b7dd21f10c1.png" alt="Step 01"/>
-</p>
+![Step 01](https://user-images.githubusercontent.com/78161484/189928139-f8448866-b691-486c-a300-2b7dd21f10c1.png)
 
-## ⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle
+### ⚒ Configuring XDC Mainnet and Apothem Testnet on Truffle
 
 In order to get started deploying new contracts on the XDC Mainnet and/or Apothem, you will need to install two new dependencies that will be used in the `truffle-config.js` file. These dependencies are `@truffle/hdwallet-provider` and `dotenv`. First, choose your preferred package manager. In this example we are using `yarn` but you can also use `npm`.
 
- If you never used `yarn` before, you might need to install it first. You can skip this step if you already have yarn installed.
+If you never used `yarn` before, you might need to install it first. You can skip this step if you already have yarn installed.
 
-```sh
+```
 npm install --global yarn
 ```
 
 Initialize your package manager in your folder and install the required dependencies:
 
-```sh
+```
 yarn init -y
 yarn add @truffle/hdwallet-provider dotenv
 ```
 
 You will also need a **24-Word Mnemonic Phrase**. To configure your wallet, create a new `.env` file and write your mnemonic by running:
 
-```sh
+```
 touch .env
 echo MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe curve obey >> .env
 ```
@@ -120,7 +123,6 @@ Remember to change the **24-Word Mnemonic** above for your own mnemonic. The con
 ```jsx
 MNEMONIC=arm derive cupboard decade course garlic journey blast tribe describe curve obey
 ```
-
 
 🚨 **Do not use the mnemonic in the example above in production or you can risk losing your assets and/or the ownership of your smart contracts!** 🚨
 
@@ -165,17 +167,17 @@ module.exports = {
 };
 ```
 
-## ⚒ Adding Testnet XDC to Development Wallet
+### ⚒ Adding Testnet XDC to Development Wallet
 
 It is possible to list all XDC addresses bound to your mnemonic on Truffle by accessing the Truffle console:
 
-```sh
+```
 truffle console --network xinfin
 ```
 
 Once the truffle console CLI opens, you can run:
 
-```sh
+```
 truffle(xinfin)> accounts
 ```
 
@@ -200,21 +202,19 @@ These accounts are on the Ethereum standard format starting with `0x`, but we ca
 
 With this account, we can head to the [Apothem Faucet](https://faucet.apothem.network/) and claim some TXDC for development purposes:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png" alt="Step 02"/>
-</p>
+![Step 02](https://user-images.githubusercontent.com/78161484/189952656-eb7793cc-7dee-4307-88fc-7c351a75cec7.png)
 
-# 🍕 Writing our first Smart Contract
+## 🍕 Writing our first Smart Contract
 
 Lets create a simple `Pizza.sol` contract on Solidity, the Pizza contract should have:
 
- - a `constructor` where the deployer can define the pizza size, 
- - a `eatSlice` method to consume slices available, 
- - a `bakeNewPizza` method to refill all slices only if the previous pizza have been entirely eaten! 😋
+* a `constructor` where the deployer can define the pizza size,
+* a `eatSlice` method to consume slices available,
+* a `bakeNewPizza` method to refill all slices only if the previous pizza have been entirely eaten! 😋
 
 You can start by creating the `Pizza.sol` file:
 
-```sh
+```
 touch ./contracts/Pizza.sol
 ```
 
@@ -246,17 +246,17 @@ contract Pizza {
 }
 ```
 
-## 🍕 Compiling
+### 🍕 Compiling
 
 Next, try compiling the `Pizza.sol` contract by running:
 
-```sh
+```
 truffle compile
 ```
 
 If everything is correctly configured and there are no errors, you will see the following message on your console:
 
-```sh
+```
 Compiling your contracts...
 ===========================
 > Compiling ./contracts/Pizza.sol
@@ -267,15 +267,13 @@ Compiling your contracts...
 
 And your folder should look like this:
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/78161484/189987467-d1dc7cb8-623b-4e94-a4fa-f8732f46426d.png" alt="Step 03"/>
-</p>
+![Step 03](https://user-images.githubusercontent.com/78161484/189987467-d1dc7cb8-623b-4e94-a4fa-f8732f46426d.png)
 
-## 🍕 Deploying
+### 🍕 Deploying
 
 In order to deploy our newly-compiled contract artifacts to the blockchain, we need to create a deployment script in the migrations folder.
 
-```sh
+```
 touch ./migrations/1_pizza_migration.js
 ```
 
@@ -294,13 +292,13 @@ module.exports = function (deployer) {
 
 If the migration script has no errors, you can run the command:
 
-```sh
+```
 truffle migrate --network xinfin
 ```
 
 for deployment on XDC mainet. Or you can run:
 
-```sh
+```
 truffle migrate --network apothem
 ```
 
@@ -308,7 +306,7 @@ for deployment on the XDC Apothem Testnet. In either case, you must have enough 
 
 If the deployment is sucessful, the console should log the following message after migrations complete processing:
 
-```sh
+```
 1_pizza_migration.js
 ====================
 
@@ -336,13 +334,13 @@ Summary
 > Final cost:          0.0000880535 ETH
 ```
 
-## 🍕 Interacting with your contract using Truffle Console
+### 🍕 Interacting with your contract using Truffle Console
 
 Another amazing tool that allow us to try out our contracts straight from our development environment is the `truffle console` CLI.
 
 To start interacting with you smart contracts you can run:
 
-```sh
+```
 truffle console --network xinfin
 ```
 
@@ -368,7 +366,7 @@ truffle(xinfin)> instance.eatSlice()
 
 It should log a transaction confirmation (or rejection) object like this:
 
-```sh
+```
 {
   tx: '0x0153f15932d79ad7ac0b26df299defa1b55aded33284928b3e441d9fea5c3de7',
   receipt: {
@@ -392,19 +390,19 @@ It should log a transaction confirmation (or rejection) object like this:
 
 This transaction is immediately reflected in the corresponding block explorer, [as seen here!](https://explorer.xinfin.network/txs/0x0153f15932d79ad7ac0b26df299defa1b55aded33284928b3e441d9fea5c3de7)
 
-# 🔍 Veryfing Contracts on the Block Explorer
+## 🔍 Veryfing Contracts on the Block Explorer
 
 Once you have successfully deployed your smart contract to the blockchain, you may want to verify your contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
 
 First lets check the address our contract is deployed to by running:
 
-```sh
+```
 truffle networks
 ```
 
 If you have a contract already deployed, the console should log something like this:
 
-```sh
+```
 Network: apothem (id: 51)
   No contracts deployed.
 
@@ -414,45 +412,30 @@ Network: xinfin (id: 50)
 
 If your `Pizza` contract is deployed on the XDC Mainnet at `0xF899E5C79ccfa144fc76261Ad9A9F0300708FF24`. You can search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
 
-<p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190028078-ebc0f083-28a5-4772-88c1-ef49e91681fa.png" alt="Verify 01"/>
-</p>
+![Verify 01](https://user-images.githubusercontent.com/78161484/190028078-ebc0f083-28a5-4772-88c1-ef49e91681fa.png)
 
-Click in the `Verify And Publish` option. 
+Click in the `Verify And Publish` option.
 
 You will be redirected to the contract verification page where we need to fill out:
 
-- Contract Name: <em>Pizza</em>
-- Compiler: <em> Check your</em> `truffle-config.js` <em>file for Compiler Version</em>
-- Contract Code: <em> Just paste everything from your</em> `Pizza.sol` <em>file</em>
+* Contract Name: _Pizza_
+* Compiler: _Check your_ `truffle-config.js` _file for Compiler Version_
+* Contract Code: _Just paste everything from your_ `Pizza.sol` _file_
 
 Once everything is filled out, press Submit!
 
-<p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190028508-003c942d-685a-4d14-9d93-264e7ff4a0b5.png" alt="Verify 02"/>
-</p>
+![Verify 02](https://user-images.githubusercontent.com/78161484/190028508-003c942d-685a-4d14-9d93-264e7ff4a0b5.png)
 
 If everything is correctly filled out, your contract page on the block explorer should display a new tab called `Contract`:
 
-<p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190029029-2547af3f-d32c-48d6-a785-e47b1f7a91c5.png" alt="Verify 03"/>
-</p>
+![Verify 03](https://user-images.githubusercontent.com/78161484/190029029-2547af3f-d32c-48d6-a785-e47b1f7a91c5.png)
 
 On this page you can read from, write to, or simply read the information tied to your smart contract on the blockchain:
 
-<p align="center">
-  <img width=70% src="https://user-images.githubusercontent.com/78161484/190030842-4ab30b85-f87b-43d1-a8b2-8d089abb1a34.png" alt="Verify 03"/>
-</p>
+![Verify 03](https://user-images.githubusercontent.com/78161484/190030842-4ab30b85-f87b-43d1-a8b2-8d089abb1a34.png)
 
+***
 
----
-
-For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).<br>
-For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).<br>
-Resources used during the deployment of the Pizza smart contract can be found at [The Pizza Contract Folder](./Pizza).
-
-
-
-
-
-
+For more information about Truffle Suite, Please Visit [Truffle Suite Documentation](https://trufflesuite.com/docs/truffle/).\
+For more information about XinFin Network, Please Visit [XDC Network Documentation on GitBook](https://docs.xdc.org/).\
+Resources used during the deployment of the Pizza smart contract can be found at [The Pizza Contract Folder](Pizza/).

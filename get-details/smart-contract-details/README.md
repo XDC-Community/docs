@@ -10,24 +10,32 @@ A smart contract is a computer code running on a blockchain that establishes rul
 
 Bitcoin was the first blockchain to support basic smart contracts. Its network of nodes only validated transactions if certain conditions were met. Here, we have an example of a rudimentary smart contract, where we use Set and Get functions:
 
-`pragma solidity 0.4.0;`\
-`// Imagine a big integer that the whole world could share`\
-`contract SimpleStorage {`\
-`uint storedData;`\
-`function set(uint x) public {`\
-`storedData = x;`\
-`}`\
-`function get() constant public returns (uint) {`\
-`return storedData;`\
-`}`\
-`function increment (uint n) public {`\
-`storedData = storedData + n;`\
-`return;`\
-`}`\
-`function decrement (uint n) public {`\
-`storedData = storedData - n;`\
-`return;`\
-`}`
+```solidity
+pragma solidity 0.4.0;
+
+// Imagine a big integer that the whole world could share
+contract SimpleStorage {
+    uint storedData;
+    
+    function set(uint x) public {
+        storedData = x;
+    }
+
+    function get() constant public returns (uint) {
+        return storedData;
+    }
+
+    function increment (uint n) public {
+        storedData = storedData + n;
+        return;
+    }
+
+    function decrement (uint n) public {
+        storedData = storedData - n;
+        return;
+    }
+}
+```
 
 ## **Key Features of Smart Contracts**
 

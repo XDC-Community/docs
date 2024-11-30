@@ -141,7 +141,7 @@ This library provides a simple way to interact with XDC XRC20 & XRC721 tokens.
 
 XRC721 is the token standard for non-fungible tokens. These are unique tokens that hold different values than other tokens in the same smart contract. All NFTs have a uint256 variable called tokenId, so for any XRC-721 Contract, the pair contract address, uint256 tokenId must be globally unique.
 
-Every XRC-721 compliant contract must implement the **** `XRC721` and `XRC165` interfaces.
+Every XRC-721 compliant contract must implement the `XRC721` and `XRC165` interfaces.
 
 ### Read Methods
 
@@ -155,7 +155,7 @@ Provides the name of the token.
 Returns the total amount of tokens in the contract.
 
 `balanceOf(address account) → uint256`\
-Provides the number of non-fungible tokens in the owner's **** account.
+Provides the number of non-fungible tokens in the owner's account.
 
 `ownerOf(tokenId) → address`\
 Returns the NFT owner specified by `tokenId`.
