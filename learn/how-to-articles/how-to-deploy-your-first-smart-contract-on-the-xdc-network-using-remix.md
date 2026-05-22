@@ -7,10 +7,10 @@ keywords:
   - smart
   - contract
   - remix
-description: Use Remix to deploy a Smart Contract.
+description: Use Remix to deploy a smart contract on the XDC Apothem Testnet.
 ---
 
-# How To deploy your first smart contract on the XDC Network using Remix
+# How to deploy your first smart contract on the XDC Network using Remix
 
 ## 🧭 Table of contents
 
@@ -24,33 +24,34 @@ description: Use Remix to deploy a Smart Contract.
 * [🍕 Writing our first Smart Contract](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-remix.md#-writing-our-first-smart-contract)
   * [🍕 Compiling](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-remix.md#-compiling)
   * [🍕 Deploying](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-remix.md#-deploying)
-* [🔍 Veryfing Contracts on the Block Explorer](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-remix.md#-veryfing-contracts-on-the-block-explorer)
+* [🔍 Verifying Contracts on the Block Explorer](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-remix.md#-verifying-contracts-on-the-block-explorer)
   * [🍕 Interacting with your contract using Remix IDE](how-to-deploy-your-first-smart-contract-on-the-xdc-network-using-remix.md#-interacting-with-your-contract-using-remix-ide)
 
 ## 📰 Overview
 
-[Remix IDE](https://remix.xinfin.network/#optimize=false\&runs=200\&evmVersion=null\&version=soljson-v0.8.7+commit.e28d00a7.js) is a blockchain development environment, which you can use to create and test smart contracts by levering an Ethereum Virtual Machine.
+[Remix IDE](https://remix.xinfin.network/#optimize=false\&runs=200\&evmVersion=null\&version=soljson-v0.8.7+commit.e28d00a7.js) is a blockchain development environment that you can use to create, compile, deploy, and test smart contracts on EVM-compatible blockchains such as the XDC Network.
 
 #### What you will learn
 
-This guide aims to teach how to create a smart contract using Remix IDE and deploying it on XDC Network.
+This guide shows how to create a simple Solidity smart contract in Remix IDE, deploy it to the XDC Apothem Testnet, verify the deployment on the block explorer, and interact with the deployed contract.
 
 #### What you will do
 
-* Setup Remix IDE
-* Create an XDCPay Wallet and use faucet to test XDC tokens
-* Deploy contract on the XDC Network
-* Check the deployment status on [xinfin.network](https://xinfin.network/#stats).
+* Set up Remix IDE
+* Create a development wallet and request test XDC from the faucet
+* Configure the XDC Apothem Testnet if your wallet does not already include it
+* Deploy the contract on the XDC Network
+* Check the deployment status on the [XDC Apothem block explorer](https://explorer.apothem.network/).
 
 ## 🚀 Setting up the development environment
 
-Remix is an online solidity IDE for compiling and deploying solidity code to EVM-compatible blockchains. To begin working on a new smart contract, we must first create a new file in the contracts folder on the left side of the view pane.
+Remix is an online Solidity IDE for compiling and deploying Solidity code to EVM-compatible blockchains. To begin working on a new smart contract, we must first create a new file in the contracts folder on the left side of the view pane.
 
 ![](https://user-images.githubusercontent.com/60708843/190065372-1e43e443-f13b-463a-abb6-7497ae7c8b8c.png)
 
-### ⚒️ Creating XDCPay Wallet for signing transactions
+### ⚒️ Creating a wallet for signing transactions
 
-In order to get started deploying new contracts on XDC Mainnet and/or Apothem, we need to have an XDCPay wallet to sign our transactions and store XDC tokens.
+In order to deploy contracts on XDC Mainnet and/or Apothem, you need a wallet to sign transactions and hold XDC tokens. The screenshots in this guide use XDCPay, but any EVM-compatible wallet that can connect to custom networks, such as MetaMask, can also be used for the Remix deployment flow.
 
 * First we have to install the chrome extension of [XDCPay](https://chrome.google.com/webstore/detail/xdcpay/bocpokimicclpaiekenaeelehdjllofo).
 
@@ -92,15 +93,29 @@ Initially, your account would be empty, and it would require some XDC tokens to 
 
 * If you are currently connected to the XDC Mainnet, switch to the XDC Apothem Testnet.
 
+#### MetaMask network fallback
+
+If you are using MetaMask instead of XDCPay, add the XDC Apothem Testnet as a custom network before connecting Remix:
+
+| Field | Value |
+| --- | --- |
+| Network name | XDC Apothem Testnet |
+| RPC URL | `https://rpc.apothem.network` |
+| Chain ID | `51` |
+| Currency symbol | `TXDC` |
+| Block explorer URL | `https://explorer.apothem.network/` |
+
+After saving the network, switch MetaMask to XDC Apothem Testnet and confirm that your account has test XDC before continuing. Remix will use the active wallet network when you select **Injected Provider / Injected Web3** in the deployment panel.
+
 ## 🍕 Writing our first Smart Contract
 
-Lets create a simple `Pizza.sol` contract on Solidity, the Pizza contract should have:
+Let's create a simple `Pizza.sol` contract in Solidity. The Pizza contract should have:
 
 * a `constructor` where the deployer can define the pizza size,
 * a `eatSlice` method to consume slices available,
 * a `bakeNewPizza` method to refill all slices only if the previous pizza have been entirely eaten! 😋
 
-Lets start by creating the `Pizza.sol` file:
+Let's start by creating the `Pizza.sol` file:
 
 Click on the **`New File`** button on the center navigation or in the left navigation pane within the **`contracts`** folder.
 
@@ -134,19 +149,19 @@ contract Pizza {
 }
 ```
 
-The first line of code **`// SPDX-License-Identifier: MIT`** specifies the License Permissions. This line is required for error-free compilation.
+The first line of code **`// SPDX-License-Identifier: MIT`** specifies the license permissions. This line is required for error-free compilation.
 
 The line **`pragma solidity ^0.8.16;`** specifies the version used to write the solidity code. As we all know, Solidity is a rapidly evolving language, and there may be changes that will not work with a newer version of the Solidity compiler. As a result, we include this line to compile the code with a specific version. [Pragmas](https://docs.soliditylang.org/en/latest/layout-of-source-files.html#pragmas) are common instructions for compilers about how to treat the source code (e.g., pragma once).
 
 The line **`contract Pizza {}`** is used in our smart contract to create a Solidity contract. Contracts in Solidity are similar to classes in object-oriented languages. A Solidity contract is a collection of code (its functions) and data (its state) that is stored at a specific address on the Ethereum blockchain. The line **`uint256 public PIZZA_SIZE; uint256 public slices;`** declares state variables of type uint256 called PIZZA\_SIZE and slices. Both of these functions have a [public](https://docs.soliditylang.org/en/latest/contracts.html?highlight=public#state-variable-visibility) property that allows you to access the current value of the state variable from outside of the contract.
 
-We set initial value for **`PIZZA_SIZE`** in the constructor function and then place that value within the slices count.
+We set the initial value for **`PIZZA_SIZE`** in the constructor function and then place that value within the slices count.
 
 Then we create a function **`eatSlice`** that decrements the value in the **`slices`** variable. We also have a function called **`bakeNewPizza`** where we increase the count of **`slices`** of the value of **`PIZZA_SIZE`**. Both these functions are of **`public`** type.
 
 ### 🍕 Compiling
 
-Lets try compiling the `Pizza.sol` contract:
+Let's try compiling the `Pizza.sol` contract:
 
 * Open the Solidity Compiler in the left side navigation pane ![](https://user-images.githubusercontent.com/60708843/190066438-b1816a19-3051-4d04-87d2-a2b1ade198f4.png).
 * From the compiler option, select the compiler version **`v0.8.16`**.
@@ -156,7 +171,7 @@ Lets try compiling the `Pizza.sol` contract:
 
 ![](https://user-images.githubusercontent.com/60708843/191068355-eccc73c6-d7be-4d0b-ae69-e9cad4f94139.png)
 
-* After successful compilation, it will show ![alt](https://user-images.githubusercontent.com/60708843/190067983-4451282c-348c-4872-a57d-b2e698b59cad.png)
+* After successful compilation, Remix will show ![alt](https://user-images.githubusercontent.com/60708843/190067983-4451282c-348c-4872-a57d-b2e698b59cad.png)
 * Once our contract has been compiled, we can deploy it to the Apothem Test Network.
 
 ### 🍕 Deploying
@@ -167,17 +182,17 @@ To deploy on the XDC Apothem Testnet, you need to have enough funds to pay for g
 
 ![](https://user-images.githubusercontent.com/60708843/191068992-c110873f-6c01-4843-b50f-229220392231.png)
 
-* Choose Injected Web3 as the Environment.
+* Choose **Injected Provider / Injected Web3** as the environment.
 
 ![](https://user-images.githubusercontent.com/60708843/191069823-c1b9c78d-e217-49e5-b86b-972ba14f02c6.png)
 
-* Confirm the pop-up to add the account to Remix IDE now.
+* Confirm the wallet pop-up to connect your account to Remix IDE.
 * Next, choose the account to which you want to deploy the contract.
 
 ![](https://user-images.githubusercontent.com/60708843/191070126-3f4806f0-4e0d-4ea9-a8de-983c9b1f4d6f.png)
 
 * Choose the contract you want to use.
-* Add the number of pizza slices that you wish to create the pizza and deploy the contract.
+* Add the number of pizza slices that you wish to create and deploy the contract.
 
 ![](https://user-images.githubusercontent.com/60708843/191071346-650c1ea1-c254-4266-b41d-0ed08acaa4f5.png)
 
@@ -185,11 +200,11 @@ To deploy on the XDC Apothem Testnet, you need to have enough funds to pay for g
 
 ![](https://user-images.githubusercontent.com/60708843/190075747-c7d1f7a6-2737-49ac-bd72-681a84bd95b0.png)
 
-## 🔍 Veryfing Contracts on the Block Explorer
+## 🔍 Verifying Contracts on the Block Explorer
 
-Once you have successfully deployed your smart contract to the blockchain, it might be interesting to verify your contract on [XinFin Block Explorer](https://explorer.xinfin.network/).
+Once you have successfully deployed your smart contract to the blockchain, you can verify your contract on the [XDC Apothem block explorer](https://explorer.apothem.network/).
 
-First lets check the address our contract is deployed. Go to your wallet and get the most recent transaction details, then copy the transaction address.
+First let's check the address where our contract is deployed. Go to your wallet and open the most recent transaction details, then copy the transaction hash.
 
 ![](https://user-images.githubusercontent.com/60708843/190076901-179e4fac-d4e8-43c7-a657-ea525a4e3883.png)
 
@@ -201,7 +216,7 @@ From there, we need to get the transaction details as well as the **`To Address`
 
 ![](https://user-images.githubusercontent.com/60708843/191072000-7aed020a-bd12-4536-ab68-dd45f0044121.png)
 
-Here we have a `Pizza` contract deployed on XDC Apothem Testnet, we can search for our newly deployed contract on [XinFin Block Explorer](https://explorer.xinfin.network/):
+Here we have a `Pizza` contract deployed on XDC Apothem Testnet. We can search for our newly deployed contract on the [XDC Apothem block explorer](https://explorer.apothem.network/):
 
 ![Verify 01](https://user-images.githubusercontent.com/60708843/191072440-378183b9-0993-47d3-a7c8-9525b2ac1e04.png)
 
@@ -235,7 +250,7 @@ We can easily test our contract with the help of that contract address. To start
 ![Verify 03](https://user-images.githubusercontent.com/60708843/191074867-7287bc46-3e37-41e8-aa41-1ea55ac1d85a.png)
 
 * You will then be shown all of the different functions and variables that were available for us to see and use.
-* When you click that button after running our `eatSlice()` method, a transaction is started and its value is stored on the network. It should log a transaction confirmation (Or rejection) object
+* When you click that button after running our `eatSlice()` method, a transaction is started and its value is stored on the network. Remix should log a transaction confirmation or rejection object.
 
 ![Verify 03](https://user-images.githubusercontent.com/60708843/190078140-9cba86b1-40e7-46e2-b492-730db149d7fa.png)
 
