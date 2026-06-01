@@ -14,3 +14,5 @@ The XDC Network is a highly scalable, delegated proof of stake consensus network
 READ more about the XDC Network [here](https://docs.xdc.community/get-started/blockchain-basics/why-xdc-network).
 
 DISCOVER what the upcoming release of XDC 2.0 will bring to the network and its participants [here](https://docs.xdc.community/get-started/xdc-design/xdpos-2.0).
+
+<!-- fix #19: Gitcoin Bounty- Testing and Deploying on XDC Network -->
